@@ -22,4 +22,4 @@ if ( get_theme_mod( 'sidebar_position' ) === 'right' ) {
 
 <aside id="secondary" class="widget-area col-md-4 <?php echo esc_attr( $newsmandu_sidebar_order ); ?>">		
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside>
+</aside> i am sanatan limbu.
