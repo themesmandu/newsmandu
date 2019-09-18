@@ -1,0 +1,183 @@
+@import "dropdown.css";
+
+/* -- All Basic Styles Of Theme -- */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+#page {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+a {
+    color: #27b0ff;
+    transition: .3s;
+}
+
+a:link {
+    cursor: pointer;
+}
+
+a:focus,
+a:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    font-size: 17px;
+    color: #282b30;
+    line-height: 1.8;
+}
+
+figure,
+img,
+iframe {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #353638;
+    display: block;
+}
+
+input,
+textarea,
+select,
+.comment-respond input[type=text],
+.comment-respond input[type=email],
+.comment-respond .comment-form-comment textarea {
+    font-size: 15px;
+    color: #777777;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .14);
+    width: 100%;
+    padding: 12px 15px;
+}
+
+input[type="submit"] {
+    font-size: 14px;
+    background: #2e5ea2;
+    color: #ffffff;
+    width: auto;
+    border: none;
+    padding: 15px 25px;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+input[type="submit"]:hover,
+div.wpcf7 input[type=reset]:hover {
+    background: #e4be1a;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select {
+    padding-left: 8px;
+}
+
+blockquote {
+    border-left: 4px solid #1e4b8e;
+    padding-left: 20px;
+    position: relative;
+}
+
+blockquote:before {
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\f10d";
+    font-size: 52px;
+    font-weight: 900;
+    margin-right: 10px;
+    position: absolute;
+    color: #1e4b8e;
+    opacity: .2;
+}
+
+blockquote p {
+    font-style: italic;
+    color: #1e4b8e;
+}
+
+table {
+    font-size: 13px;
+    color: #556378;
+    width: 100%;
+    line-height: 2;
+}
+
+table th {
+    color: #27b0ff;
+}
+
+table caption {
+    font-size: 19px;
+    color: #153f7b;
+    caption-side: top;
+    padding: 0 0 10px;
+    line-height: 1.5;
+}
+
+
+/* -- Container Styles -- */
+
+.container {
+    max-width: 1230px;
+}
+
+.navbar-expand-lg>.container,
+.navbar-expand-lg>.container-fluid {
+    padding: 0 15px;
+}
+
+
+/* -- Main Navigation Styles -- */
+
+.main-navigation {
+    padding: 15px 0;
+    z-index: 9;
+}
+
+.main-navigation.fixed {
+    position: fixed;
+    top: 15px;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    transition: all 0.3s;
+}
+
+.main-navigation.fixed {
+    top: -70px;
+    transform: translate3d(0, 70px, 0);
+}
+
+.nav-search .navbar-nav {
+    margin: auto;
+}
