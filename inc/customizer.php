@@ -259,8 +259,48 @@ function newsmandu_customize_register( $wp_customize ) {
 			)
 		)
 	);
-
-
+	/* Section for entering the phone no.*/
+	$wp_customize->add_setting(
+		'phone_number',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'phone_number',
+			array(
+				'label'       => __( 'Phone Number', 'newsmandu' ),
+				'description' => __( 'Enter the phone number of the site.', 'newsmandu' ),
+				'section'     => 'general_options',
+				'type'        => 'text',
+			)
+		)
+	);
+		/* Section for entering the email of the site.*/
+		$wp_customize->add_setting(
+			'contact_email',
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'contact_email',
+				array(
+					'label'       => __( 'Email', 'newsmandu' ),
+					'description' => __( 'Enter the email address of the site.', 'newsmandu' ),
+					'section'     => 'general_options',
+					'type'        => 'text',
+				)
+			)
+		);
 
 	/**
 	 *
@@ -589,7 +629,7 @@ function newsmandu_customize_register( $wp_customize ) {
 			)
 		)
 	);
-	
+
 	$wp_customize->add_section(
 		'frontpage_slider',
 		array(
@@ -599,33 +639,33 @@ function newsmandu_customize_register( $wp_customize ) {
 		)
 	);
 		// setting article section post select.
-		for ( $i = 0; $i < 4; $i++ ) { 
-			$j=$i+1;
-			$wp_customize->add_setting(
+	for ( $i = 0; $i < 4; $i++ ) {
+		$j = $i + 1;
+		$wp_customize->add_setting(
+			'newsmandu_slider_post_' . $i,
+			array(
+				'sanitize_callback' => 'absint',
+			)
+		);
+		$wp_customize->add_control(
+			new Newsmandu_Dropdown_Posts_Control(
+				$wp_customize,
 				'newsmandu_slider_post_' . $i,
 				array(
-					'sanitize_callback' => 'absint',
+					/* translators: %d: slider number */
+					'label'       => sprintf( esc_html__( 'Select post for slider %d', 'newsmandu' ), $j ),
+
+					'section'     => 'frontpage_slider',
+
+					'input_attrs' => array(
+						'posts_per_page' => -1,
+						'orderby'        => 'name',
+						'order'          => 'ASC',
+					),
 				)
-			);
-			$wp_customize->add_control(
-				new Newsmandu_Dropdown_Posts_Control(
-					$wp_customize,
-					'newsmandu_slider_post_' . $i,
-					array(
-						/* translators: %d: slider number */
-						'label'       => sprintf( esc_html__( 'Select post for slider %d', 'newsmandu' ), $j ),
-	
-						'section'     => 'frontpage_slider',
-	
-						'input_attrs' => array(
-							'posts_per_page' => -1,
-							'orderby'        => 'name',
-							'order'          => 'ASC',
-						),
-					)
-				)
-			);
-		}
+			)
+		);
+	}
 
 	// END Options.
 }

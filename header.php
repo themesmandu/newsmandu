@@ -25,7 +25,11 @@
 			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu' ); ?></a>
 			<div class="container">
 				<div class="row">
-					<div class="secondary-menu">
+					<div class="site-info col-md-6">
+						<p><?php echo esc_html( get_theme_mod( 'contact_email' ) ); ?></p>
+						<p><?php echo esc_html( get_theme_mod( 'phone_number' ) ); ?></p>
+					</div>	
+					<div class="secondary-menu col-md-6">
 						<?php
 						if ( has_nav_menu( 'top_menu' ) ) :
 							wp_nav_menu(
@@ -116,14 +120,18 @@
 							$newsmandu_slider_post = new WP_Query( array( 'p' => get_theme_mod( 'newsmandu_slider_post_' . $i ) ) );
 							while ( $newsmandu_slider_post->have_posts() ) :
 								$newsmandu_slider_post->the_post();
+								$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu' ) );
+								if ( $categories_list ) {
+									?>
+									<span class="frontpage-cat-links"><?php echo wp_kses_post( $categories_list ); ?></span> 
+									<?php
+								}
 								?>
-
 							<h2><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 							</h2>
-							<p><a
-									href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_the_author(); ?></a>
-							</p>
-							<p><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo get_the_date(); ?></a>
+							<p><i class="fas fa-user-alt"><span class="detail"><a
+									href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_the_author(); ?></a></span></i>
+									<i class="far fa-calendar-alt"><span class="detail"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo get_the_date(); ?></a></span></i>
 							</p>
 								<?php
 							endwhile;
