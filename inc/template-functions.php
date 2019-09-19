@@ -191,3 +191,13 @@ function newsmandu_front_page( $template ) {
 	return is_home() ? '' : $template;
 }
 add_filter( 'frontpage_template', 'newsmandu_front_page' );
+/**
+ * Custom filter to add col class.
+ */
+function col_class_filter() {
+	if ( is_page( 'contact' ) ) {
+		return 'col-md-8';
+	}
+}
+add_filter( 'input_class', 'col_class_filter' );
+

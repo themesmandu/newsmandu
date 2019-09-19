@@ -16,24 +16,7 @@
 <nav class="navbar navbar-expand-lg main-navigation">
 <?php } ?>
 	<div class="container">
-		<?php if ( ! has_custom_logo() ) { ?>
-
-			<?php if ( is_front_page() && is_home() ) : ?>
-
-				<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
-			<?php else : ?>
-
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-			<?php endif; ?>
-
-
-			<?php
-		} else {
-			the_custom_logo();
-		}
-		?>
+		
 		<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmenus">
 			<span></span>
 			<span></span>

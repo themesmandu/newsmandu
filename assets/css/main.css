@@ -47,6 +47,8 @@ img,
 iframe {
     max-width: 100%;
     object-fit: cover;
+    max-height: 450px;
+    background-attachment: fixed;
 }
 
 ul {
@@ -180,4 +182,8 @@ table caption {
 
 .nav-search .navbar-nav {
     margin: auto;
+}
+/** Secondary Navigation **/
+.secondary-menu ul li {
+    float: left;
 }

@@ -50,7 +50,8 @@ if ( ! function_exists( 'newsmandu_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary', 'newsmandu' ),
+				'primary'  => esc_html__( 'Primary', 'newsmandu' ),
+				'top_menu' => esc_html__( 'Top Menu', 'newsmandu' ),
 			)
 		);
 
@@ -189,6 +190,12 @@ add_action( 'wp_enqueue_scripts', 'newsmandu_scripts' );
  */
 require get_template_directory() . '/inc/init.php';
 
+/**
+ * Adds custom classes to the array of body classes.
+ *
+ * @param array $classes Classes for the menu items.
+ * @return array
+ */
 function wildspirit_add_classes_on_link_attributes( $classes ) {
 	$classes['class'] = 'nav-link';
 	return $classes;

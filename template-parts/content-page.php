@@ -20,7 +20,7 @@
 	);
 	?>
 
-<div class="card-body">
+
 
 	<header class="entry-header pb-4">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -38,7 +38,6 @@
 		);
 		?>
 	</div>
-
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php

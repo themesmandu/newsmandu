@@ -29,7 +29,7 @@
 				?>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
-		<button class="up-btn" id="up-btn" title="<?php echo esc_html( __( 'Go to top', 'ghumgham' ) ); ?>" style="display: block;"><i class="fas fa-chevron-up"></i></button>
+		<button class="up-btn" id="up-btn" title="<?php echo esc_html( __( 'Go to top', 'newsmandu' ) ); ?>" style="display: block;"><i class="fas fa-chevron-up"></i></button>
 	</footer>
 
 </div><!-- #page -->
