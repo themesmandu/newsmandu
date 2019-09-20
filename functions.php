@@ -145,6 +145,31 @@ function newsmandu_widgets_init() {
 			'after_title'   => '</h5>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Newsletter-widget', 'newsmandu' ),
+			'id'            => 'newswidget',
+			'description'   => esc_html__( 'Add widgets here.', 'newsmandu' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h5 class="widget-title">',
+			'after_title'   => '</h5>',
+		)
+	);
+	for ( $i = 1; $i <= 4; $i++ ) {
+		register_sidebar(
+			array(
+				/* translators: %d: footer widget number. */
+				'name'          => sprintf( esc_html__( 'Footer Widgets %d', 'newsmandu' ), $i ),
+				'id'            => 'footer-' . $i,
+				'description'   => esc_html__( 'Add widgets here.', 'newsmandu' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+	}
 }
 add_action( 'widgets_init', 'newsmandu_widgets_init' );
 
@@ -176,8 +201,8 @@ function newsmandu_scripts() {
 	// Theme added JavaScript: Added by Developers.
 	wp_enqueue_script( 'newsmandu-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
-	// Font Nunito And Advent Pro
-	wp_enqueue_style( 'newsmandu-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600,700|Nunito:400,600,700&display=swap', false );
+	// Font Nunito And Advent Pro.
+	wp_enqueue_style( 'newsmandu-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600,700|Nunito:400,600,700&display=swap', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

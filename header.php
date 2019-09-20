@@ -25,7 +25,7 @@
 			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu' ); ?></a>
 			<div class="container">
 				<div class="row">
-					<div class="site-info col-md-6">
+					<div class="site-detail col-md-6">
 						<p><?php echo esc_html( get_theme_mod( 'contact_email' ) ); ?></p>
 						<p><?php echo esc_html( get_theme_mod( 'phone_number' ) ); ?></p>
 					</div>	
@@ -41,7 +41,7 @@
 						?>
 					</div>
 				</div>
-				<div class="row">
+				<div class="logo">
 					<div class="site-branding">
 						<?php if ( ! has_custom_logo() ) { ?>
 
@@ -86,7 +86,14 @@
 			}
 			if ( ! is_front_page() && ! is_home() ) {
 				// Header Image.
-				the_custom_header_markup();
+				get_header_image();
+				?>
+				<div class="header-img" style="background-image:url( <?php header_image(); ?> );">
+					<header class="entry-header pb-4">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</header>
+				</div>
+				<?php
 			}
 			if ( is_front_page() && ! is_home() ) {
 				// head banner on the front page if it enabled.
@@ -97,7 +104,7 @@
 		</header><!-- #masthead -->
 		<?php if ( is_front_page() ) : ?>
 		<!-- slider background -->
-		<div id="header-slider" class="carousel slide carousel-fade" data-ride="carousel">
+		<div id="header-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3900" >
 
 
 			<ul class="carousel-indicators">
@@ -114,6 +121,7 @@
 					$j = $i + 1;
 					?>
 				<div class="carousel-item <?php echo esc_html( 'carousel-item-' . $i ); ?> <?php echo esc_html( 0 === $i ? 'active' : '' ); ?>">
+				<div class="carousel-wrap">
 					<div class="header-content">
 						<div class="container">
 							<?php
@@ -160,6 +168,7 @@
 						color: white;
 					}
 					</style>
+					</div>
 				</div>
 				<?php endfor; ?>
 

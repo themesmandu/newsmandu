@@ -190,10 +190,16 @@ table caption {
 .secondary-menu ul li {
     float: left;
 }
-.site-info p {
+.site-detail p {
     float: left;
     margin: 8px 115px 40px 2px;
     font-size: 14px;
+}
+nav ul {
+    margin-right: auto;
+}
+nav ul li a {
+    padding: 5px 20px 0 0 !important;
 }
 /*
 * Front page slider
@@ -201,11 +207,11 @@ table caption {
 .header-content {
     text-align: center;
 }
-.carousel-item,
-.carousel-item .active {
+.carousel-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 .frontpage-cat-links a{
     background-color: #adb738;
@@ -219,4 +225,40 @@ table caption {
 .header-content h2 a,
 .header-content p a {
     color: #fefeff;
+}
+.card {
+    border: 0px !important; 
+}
+.carousel ul {
+    margin-right: 0%;
+    margin-left: 75%;
+}
+/*
+* Header
+*/
+.header-img {
+    width: 100%;
+    height: 750px;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    margin: 10px 0 50px 0;
+}
+.header-img .entry-header h1 {
+    color: #fefeff;
+    font-size: 70px;
+}
+/* Content Image */
+article p img {
+    width: 100%;
+}
+.entry-content {
+    margin: 50px 0 0 0;
+}
+article {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 15px;
 }

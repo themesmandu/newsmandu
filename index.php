@@ -22,8 +22,6 @@ if ( is_home() ) {
 	get_template_part( 'template-parts/post/featured' );
 }
 ?>
-
-
 <div class="container">
 	<div class="row">
 
@@ -87,9 +85,12 @@ if ( is_home() ) {
 
 		</main>
 		</div><!-- #primary -->
-
+		<?php
+			dynamic_sidebar( 'Newsletter-widget' );
+		?>
 <?php
 	/* Get Sidebar #secondary */
+
 	get_sidebar();
 ?>
 
