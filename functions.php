@@ -160,7 +160,21 @@ function newsmandu_widgets_init() {
 		register_sidebar(
 			array(
 				/* translators: %d: footer widget number. */
-				'name'          => sprintf( esc_html__( 'Footer Widgets %d', 'newsmandu' ), $i ),
+				'name'          => sprintf( esc_html__( 'Front-page %d', 'newsmandu' ), $i ),
+				'id'            => 'front-' . $i,
+				'description'   => esc_html__( 'Add widgets here.', 'newsmandu' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+	}
+	for ( $i = 1; $i <= 4; $i++ ) {
+		register_sidebar(
+			array(
+				/* translators: %d: footer widget number. */
+				'name'          => sprintf( esc_html__( 'Footer %d', 'newsmandu' ), $i ),
 				'id'            => 'footer-' . $i,
 				'description'   => esc_html__( 'Add widgets here.', 'newsmandu' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',

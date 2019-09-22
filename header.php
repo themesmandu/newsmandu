@@ -24,11 +24,18 @@
 		<header id="top-header" class="site-header" role="banner">
 			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu' ); ?></a>
 			<div class="container">
-				<div class="row">
+			<?php if ( ! get_theme_mod( 'hide_top_menu' ) ) : ?>
+				<div class="row navbar">
+					<?php if ( get_theme_mod( 'contact_email' ) || get_theme_mod( 'phone_number' ) ) : ?>
 					<div class="site-detail col-md-6">
+						<?php if ( get_theme_mod( 'contact_email' ) ) : ?>
 						<p><?php echo esc_html( get_theme_mod( 'contact_email' ) ); ?></p>
+						<?php endif; ?>	
+						<?php if ( get_theme_mod( 'phone_number' ) ) : ?>
 						<p><?php echo esc_html( get_theme_mod( 'phone_number' ) ); ?></p>
-					</div>	
+						<?php endif; ?>	
+					</div>
+					<?php endif; ?>	
 					<div class="secondary-menu col-md-6">
 						<?php
 						if ( has_nav_menu( 'top_menu' ) ) :
@@ -41,6 +48,7 @@
 						?>
 					</div>
 				</div>
+				<?php endif; ?>
 				<div class="logo">
 					<div class="site-branding">
 						<?php if ( ! has_custom_logo() ) { ?>
@@ -84,13 +92,13 @@
 				// left: logo - right: main menu.
 				get_template_part( 'template-parts/navigation/main-navbar' );
 			}
-			if ( ! is_front_page() && ! is_home() ) {
+			if ( ! is_front_page() ) {
 				// Header Image.
 				get_header_image();
 				?>
 				<div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 					<header class="entry-header pb-4">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<?php single_post_title( '<h1 class="entry-title">', '</h1>' ); ?>
 					</header>
 				</div>
 				<?php

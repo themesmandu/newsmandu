@@ -13,8 +13,12 @@
 
 get_header();
 ?>
-
-
-
+<section class="featured-section">
+    <div class="container">
+        <?php
+            
+        ?>
+    </div>
+</section>
 <?php
 get_footer();
