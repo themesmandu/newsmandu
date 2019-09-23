@@ -242,7 +242,6 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     background-attachment: fixed;
-    margin: 10px 0 50px 0;
 }
 .header-img .entry-header h1 {
     color: #fefeff;
@@ -255,17 +254,12 @@ article p img {
 .entry-content {
     margin: 50px 0 0 0;
 }
-article {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 15px;
-}
 
 /* -- Blog Page Syles -- */
 
 
-.blog #content {
+.blog #content,
+.single #content {
     position: relative;
 }
 
@@ -275,7 +269,8 @@ article {
     position: unset;
 }
 
-.blog #primary:before {
+.blog #primary:before,
+.single #primary:before {
     content: '';
     width: 30%;
     height: 80px;
@@ -286,4 +281,26 @@ article {
 }
 .entry-content img{
     max-height: 450px;
+
+/* -- Single Page Styles -- */
+
+.single #primary {
+    margin: -30px 0 0;
+    position: unset;
+}
+
+.single #primary:before {
+    height: 30px;
+    top: -30px;
+}
+
+.single article.card {
+    display: block;
+    background-color: transparent;
+}
+
+.single article .entry-meta {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 15px 15px 15px 0;
 }

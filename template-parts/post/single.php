@@ -13,14 +13,12 @@
 <?php
 if ( get_post_type() === 'post' ) {
 	?>
-	<hr>
 		<div class="entry-meta">
 		<?php
 			newsmandu_posted_on();
 			newsmandu_posted_by();
 		?>
 		</div>
-	<hr>
 	<?php
 }
 ?>
