@@ -10,15 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-<?php
-	the_post_thumbnail(
-		'newsmandu-featured-900-600',
-		array( 'class' => 'img-fluid rounded mb-2' )
-	);
-	?>
-
-<div class="card-body">
 <?php
 if ( get_post_type() === 'post' ) {
 	?>
@@ -33,6 +24,15 @@ if ( get_post_type() === 'post' ) {
 	<?php
 }
 ?>
+<?php
+	the_post_thumbnail(
+		'newsmandu-featured-900-600',
+		array( 'class' => 'img-fluid rounded mb-2' )
+	);
+	?>
+
+<div class="card-body">
+
 
 	<?php
 	if ( has_excerpt() ) :
