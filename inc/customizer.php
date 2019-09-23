@@ -34,8 +34,6 @@ function newsmandu_customize_register( $wp_customize ) {
 	 * Add settings to Colors section
 	 */
 	require get_template_directory() . '/inc/customizer/colors.php';
-
-}
 	/**
 	 *
 	 * Add Section
@@ -56,7 +54,7 @@ function newsmandu_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/general/sidebar.php';
 	/* Section for entering the phone no.*/
 	require get_template_directory() . '/inc/customizer/general/site-detail.php';
-
+	
 	/**
 	 *
 	 * Add Section
@@ -249,7 +247,7 @@ function newsmandu_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/frontpage/head-banner.php';
 	/* Add Section Slider to Panel */
 	require get_template_directory() . '/inc/customizer/frontpage/slider.php';
-
+}
 	// END Options.
 	add_action( 'customize_register', 'newsmandu_customize_register' );
 

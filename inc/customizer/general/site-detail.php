@@ -28,23 +28,23 @@
 		)
 	);
 		/* Section for entering the email of the site.*/
-		$wp_customize->add_setting(
+	$wp_customize->add_setting(
+		'contact_email',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
 			'contact_email',
 			array(
-				'default'           => '',
-				'sanitize_callback' => 'sanitize_text_field',
-				'capability'        => 'edit_theme_options',
+				'label'       => __( 'Email', 'newsmandu' ),
+				'description' => __( 'Enter the email address of the site.', 'newsmandu' ),
+				'section'     => 'general_options',
+				'type'        => 'text',
 			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'contact_email',
-				array(
-					'label'       => __( 'Email', 'newsmandu' ),
-					'description' => __( 'Enter the email address of the site.', 'newsmandu' ),
-					'section'     => 'general_options',
-					'type'        => 'text',
-				)
-			)
-		);
+		)
+	);
