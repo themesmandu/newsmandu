@@ -263,3 +263,26 @@ article {
     bottom: 0;
     top: 15px;
 }
+
+/* -- Blog Page Syles -- */
+
+
+.blog #content {
+    position: relative;
+}
+
+.blog #primary {
+    margin-top: -80px;
+    background-color: #ffffff;
+    position: unset;
+}
+
+.blog #primary:before {
+    content: '';
+    width: 30%;
+    height: 80px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -80px;
+    left: 0;
+}
