@@ -284,8 +284,11 @@ function newsmandu_set_content_class( $class = '' ) {
 
 	// Define classes array.
 	$classes = array();
-
+	if ( is_single() ) {
+		$classes[] = 'col-md-10';
+	}
 	$classes[] = 'col-md-8';
+
 
 	// Centered.
 	if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_position' ) === 'none' ) {

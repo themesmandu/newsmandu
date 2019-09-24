@@ -178,9 +178,7 @@ table caption {
     transform: translate3d(0, 70px, 0);
 }
 
-.nav-search .navbar-nav {
-    margin: auto;
-}
+
 /** Secondary Navigation **/
 .navbar .secondary-menu ul {
     float: right;
@@ -281,6 +279,7 @@ article p img {
 }
 .entry-content img{
     max-height: 450px;
+}
 
 /* -- Single Page Styles -- */
 
@@ -302,5 +301,8 @@ article p img {
 .single article .entry-meta {
     display: inline-block;
     background-color: #ffffff;
-    padding: 15px 15px 15px 0;
+    padding: 3px 15px 15px 0;
+}
+article {
+    padding: 15px 0 0 0;
 }

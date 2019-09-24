@@ -77,8 +77,6 @@ function newsmandu_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/post-page/featured.php';
 	// Layout.
 	require get_template_directory() . '/inc/customizer/post-page/layout.php';
-
-
 	/**
 	 *
 	 * Add Panel Front Page Settings
@@ -130,6 +128,8 @@ function newsmandu_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/frontpage/head-banner.php';
 	/* Add Section Slider to Panel */
 	require get_template_directory() . '/inc/customizer/frontpage/slider.php';
+	// Add Section for featured post.
+	require get_template_directory() . '/inc/customizer/frontpage/featuredpost.php';
 }
 	// END Options.
 	add_action( 'customize_register', 'newsmandu_customize_register' );
