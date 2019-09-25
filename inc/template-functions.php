@@ -201,3 +201,92 @@ function col_class_filter() {
 }
 add_filter( 'input_class', 'col_class_filter' );
 
+/**
+ * Displays latest post entries
+ */
+function newsmandu_latest_post() {
+	global $post;
+	$latest_posts = new WP_Query(
+		array(
+			'posts_per_page'      => 4,
+			'post_type'           => 'post',
+			'ignore_sticky_posts' => true,
+		)
+	);
+
+	while ( $latest_posts->have_posts() ) :
+		$latest_posts->the_post();
+		?>
+		<div class="col-md-3">
+			<div class="latest-image">
+				<?php
+				the_post_thumbnail(
+					'newsmandu-featured-900-600',
+					array(
+						'class' => 'img-fluid rounded mb-2',
+					)
+				);
+				$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu' ) );
+				if ( $categories_list ) {
+					/* translators: 1: list of categories. */
+					echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
+				}
+				?>
+			</div>
+			<div class="latest-entries">
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<?php newsmandu_posted_on(); ?>
+				<p><?php the_excerpt(); ?></p>
+			</div>	
+		</div>
+
+		<?php
+	endwhile;
+	wp_reset_postdata();
+}
+/**
+ * Displays skipped latest post entries
+ */
+function newsmandu_latest_skip_post() {
+	global $post;
+	$latest_posts = new WP_Query(
+		array(
+			'posts_per_page'      => 4,
+			'offset'              => 4,
+			'post_type'           => 'post',
+			'ignore_sticky_posts' => true,
+		)
+	);
+
+	while ( $latest_posts->have_posts() ) :
+		$latest_posts->the_post();
+		?>
+		<div class="row">
+			<div class="latest-image col-md-6">
+				<?php
+				the_post_thumbnail(
+					'newsmandu-featured-900-600',
+					array(
+						'class' => 'img-fluid rounded mb-2',
+					)
+				);
+
+				?>
+			</div>
+			<div class="latest-entries col-md-6">
+				<?php
+				$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu' ) );
+				if ( $categories_list ) {
+					/* translators: 1: list of categories. */
+					echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
+				}
+				?>
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<?php newsmandu_posted_on(); ?>
+				<p><?php the_excerpt(); ?></p>
+			</div>
+		</div>	
+		<?php
+	endwhile;
+	wp_reset_postdata();
+}

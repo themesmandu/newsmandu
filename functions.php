@@ -156,6 +156,17 @@ function newsmandu_widgets_init() {
 			'after_title'   => '</h5>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Front Page Sidebar', 'newsmandu' ),
+			'id'            => 'fpsidebar',
+			'description'   => esc_html__( 'Add widgets here.', 'newsmandu' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h5 class="widget-title">',
+			'after_title'   => '</h5>',
+		)
+	);
 	for ( $i = 1; $i <= 4; $i++ ) {
 		register_sidebar(
 			array(
@@ -240,3 +251,4 @@ function wildspirit_add_classes_on_link_attributes( $classes ) {
 	return $classes;
 }
 add_filter( 'nav_menu_link_attributes', 'wildspirit_add_classes_on_link_attributes' );
+
