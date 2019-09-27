@@ -23,8 +23,9 @@
 	<div id="page" class="site">
 		<header id="top-header" class="site-header" role="banner">
 			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu' ); ?></a>
-			<div class="container">
-			<?php if ( ! get_theme_mod( 'hide_top_menu' ) ) : ?>
+			<div class="top-menu">
+				<div class="container">
+				<?php if ( ! get_theme_mod( 'hide_top_menu' ) ) : ?>
 				<div class="row navbar">
 					<?php if ( get_theme_mod( 'contact_email' ) || get_theme_mod( 'phone_number' ) ) : ?>
 					<div class="site-detail col-md-6">
@@ -49,6 +50,9 @@
 					</div>
 				</div>
 				<?php endif; ?>
+				</div>
+			</div>
+			<div class="container">
 				<div class="logo">
 					<div class="site-branding">
 						<?php if ( ! has_custom_logo() ) { ?>

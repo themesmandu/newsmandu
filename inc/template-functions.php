@@ -195,12 +195,14 @@ add_filter( 'frontpage_template', 'newsmandu_front_page' );
  * Custom filter to add col class.
  */
 function col_class_filter() {
-	if ( is_page( 'contact' ) ) {
-		return 'col-md-8';
+	if ( is_single() && ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_position' ) === 'none' ) {
+		return 'col-md-12';
+	}
+	if ( is_single() && is_active_sidebar( 'sidebar-1' ) ) {
+		return 'col-md-8 offset-md-8';
 	}
 }
 add_filter( 'input_class', 'col_class_filter' );
-
 /**
  * Displays latest post entries
  */
@@ -290,3 +292,76 @@ function newsmandu_latest_skip_post() {
 	endwhile;
 	wp_reset_postdata();
 }
+/**
+ * Navigation for single post
+ */
+function newsmandu_navigation() {
+
+	if ( ! is_singular( 'post' ) ) {
+		return;
+	}
+	$prev_post = get_previous_post();
+	if ( $prev_post ) :
+		$pre_image = wp_get_attachment_url( get_post_thumbnail_id( $prev_post ) );
+		$pre_title = apply_filters( 'the_title', get_post( $prev_post )->post_title );
+		?>
+		<div class="previous">
+			<a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">
+				<div class="ytcont">
+					<div class="prev-img">
+						<img src="<?php echo esc_url( $pre_image ); ?>" alt="">
+					</div>
+					<div class="prev-title">
+						<span>Previous Post</span>
+						<h4 class="entry-title"><?php echo esc_html( $pre_title ); ?></h4>
+					</div>
+				</div>
+			</a>			
+		</div>
+		<?php
+endif;
+	$next_post = get_next_post();
+	if ( $next_post ) :
+		$next_image = wp_get_attachment_url( get_post_thumbnail_id( $next_post ) );
+		$next_title = apply_filters( 'the_title', get_post( $next_post )->post_title );
+		?>
+		<div class="next">
+			<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
+				<div class="ytcont">
+					<div class="nex-title">
+						<span>Next Post</span>
+						<h4 class="entry-title"><?php echo esc_html( $next_title ); ?></h4>
+					</div>
+					<div class="nex-img">
+						<img src="<?php echo esc_url( $next_image ); ?>" alt="">
+					</div>
+				</div>
+			</a>	
+		</div>
+		<?php
+endif;
+}
+/**
+ * Displays author details.
+ */
+function newsmandu_authors_profile() {
+	if ( get_the_author_meta( 'description' ) ) :
+		?>
+		<div class="row">
+			<div class="author-img">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), '150' ); ?>
+			</div>
+			<div class="author-detail">
+				<div class="author-name">
+					<h3>Author: <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php esc_html( the_author_meta( 'display_name' ) ); ?></a></h3>
+				</div>
+				<div class="author-desc">
+					<p><?php esc_textarea( the_author_meta( 'description' ) ); ?></p>
+				</div>
+			</div>
+		</div>
+		
+		<?php
+	endif;
+}
+

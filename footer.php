@@ -12,8 +12,6 @@
 ?>
 
 	</div><!-- #content -->
-
-
 	<footer id="footer">
 			<div class="newsletter-widgets col-md-6 offset-md-3">
 				<?php dynamic_sidebar( 'Newsletter-widget' ); ?>
@@ -38,10 +36,7 @@
 					</div><!-- .site-info -->
 				</div>
 			</div>
-
-			
-
-		<button class="up-btn" id="up-btn" title="<?php echo esc_html( __( 'Go to top', 'newsmandu' ) ); ?>" style="display: block;"><i class="fas fa-chevron-up"></i></button>
+				<button class="up-btn" id="up-btn" title="<?php echo esc_html( __( 'Go to top', 'newsmandu' ) ); ?>" style="display: block;"><i class="fas fa-chevron-up"></i></button>
 	</footer>
 
 </div><!-- #page -->

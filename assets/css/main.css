@@ -180,6 +180,12 @@ table caption {
 
 
 /** Secondary Navigation **/
+.top-menu {
+    background-color: #e5e5ee;
+}
+.top-menu .navbar {
+    padding: 0px !important;
+}
 .navbar .secondary-menu ul {
     float: right;
 }
@@ -268,7 +274,8 @@ article p img {
 }
 
 .blog #primary:before,
-.single #primary:before {
+.single #primary:before,
+.featured-section:before {
     content: '';
     width: 30%;
     height: 80px;
@@ -306,4 +313,75 @@ article p img {
 article {
     padding: 15px 0 0 0;
 }
-/* --- Front Page --*/
+/* --- Single author --*/
+.author-area {
+    border-top: 1px solid #aab3c8;
+    border-bottom: 1px solid #aab3c8;
+    padding: 25px;
+}
+.author-detail {
+    padding: 20px;
+}
+.author-name {
+    padding: 5px;
+}
+.author-desc {
+    text-align: center;
+}
+/* --- Single Post Navigation ---*/
+.previous img,
+.next img {
+    width: 150px;
+}
+.next {
+    float: right;
+}
+.previous {
+    float: left;
+}
+.next .nex-title h4,
+.previous .prev-title h4 {
+    font-size: 18px;
+}
+.nex-title,
+.prev-title {
+    padding: 16px;
+}
+.nex-title {
+    text-align: right;
+}
+.ytcont {
+    display: flex;
+    flex-wrap: wrap ;
+}
+.single .card-body {
+    padding: 0;
+}
+/*
+* Front page
+*/
+.featured-section{
+    position: relative;
+}
+.featured-section h2 {
+    padding-top: 30px;
+    padding-bottom: 10px; 
+}
+.featured-section h2 .slash {
+    font-size: 40px;
+    padding: 10px;
+}
+.featured-section h2 span {
+    font-size: 20px;
+}
+
+.featured-section:before {
+    height: 140px;
+    top: 0;
+}
+.featured-section .container {
+    max-width: 900px;
+    margin-top: -140px;
+    background: white;
+    position: relative;
+}

@@ -16,7 +16,6 @@ if ( get_post_type() === 'post' ) {
 		<div class="entry-meta">
 		<?php
 			newsmandu_posted_on();
-			newsmandu_posted_by();
 		?>
 		</div>
 	<?php
@@ -24,8 +23,8 @@ if ( get_post_type() === 'post' ) {
 ?>
 <?php
 	the_post_thumbnail(
-		'newsmandu-featured-900-600',
-		array( 'class' => 'img-fluid rounded mb-2' )
+		'newsmandu-featured-1080-400',
+		array( 'class' => 'img-fluid rounded mb-2 d-block' )
 	);
 	?>
 

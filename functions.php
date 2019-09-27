@@ -45,6 +45,7 @@ if ( ! function_exists( 'newsmandu_setup' ) ) :
 		// Custom Image Sizes.
 		add_image_size( 'newsmandu-thumb-750-300', 750, 300, true ); // crop.
 		add_image_size( 'newsmandu-featured-900-600', 900, 600, true ); // crop.
+		add_image_size( 'newsmandu-1080-400', 1080, 400, true );
 		add_image_size( 'newsmandu-cover-image', 1200, 9999 );
 
 		// This theme uses wp_nav_menu() in one location.
@@ -167,20 +168,6 @@ function newsmandu_widgets_init() {
 			'after_title'   => '</h5>',
 		)
 	);
-	for ( $i = 1; $i <= 4; $i++ ) {
-		register_sidebar(
-			array(
-				/* translators: %d: footer widget number. */
-				'name'          => sprintf( esc_html__( 'Front-page %d', 'newsmandu' ), $i ),
-				'id'            => 'front-' . $i,
-				'description'   => esc_html__( 'Add widgets here.', 'newsmandu' ),
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-	}
 	for ( $i = 1; $i <= 4; $i++ ) {
 		register_sidebar(
 			array(

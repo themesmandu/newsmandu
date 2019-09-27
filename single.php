@@ -13,7 +13,7 @@ get_header();
 <div class="container">
 	<div class="row">
 
-	<div id="primary" class="content-area<?php newsmandu_content_class(); ?>">
+	<div id="primary" class="content-area <?php echo esc_html( col_class_filter() ); ?> ">
 		<main id="main" class="site-main">
 
 		<?php
@@ -26,13 +26,24 @@ get_header();
 			 * called content-single-___.php (where ___ is the Post Format name) and that will be used instead.
 			 */
 			get_template_part( 'template-parts/post/single', get_post_format() );
-
-			the_post_navigation();
-
+			?>
+			<section class="author-area">
+				<div class="container">
+					<?php newsmandu_authors_profile(); ?>
+				</div>
+			</section>
+			<section class="latest-post">
+				<h2>You may also like</h2>
+				<div class="row top-post">
+					<?php newsmandu_latest_post(); ?>
+				</div>
+			</section>
+			<?php
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
+			newsmandu_navigation();
 
 		endwhile; // End of the loop.
 		?>

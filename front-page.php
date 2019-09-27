@@ -31,6 +31,7 @@ get_header();
 	<?php if ( 0 !== count( $activefeat ) || count( $activesec ) ) : ?>
 <section class="featured-section">
 	<div class="container">
+		<h2>Featured  <span class="slash">/</span> <span> Some of the featured posts</span></h2>
 		<?php if ( 0 !== count( $activefeat ) ) : ?>
 		<div class=" row featured-first">
 			<?php
@@ -85,17 +86,17 @@ get_header();
 </section>
 		<?php endif; ?>
 <section class="top-stories">
-<div class="container">
-	<div class="row top-post">
-		<?php newsmandu_latest_post(); ?>
-	</div>
-	<div class="row">
-	<div class="skip-post col-md-9">
-			<?php newsmandu_latest_skip_post(); ?>
-	</div>
-	<div class="sidebar col-md-3">
-		<?php dynamic_sidebar( 'Front Page Sidebar' ); ?>
-	</div>
+	<div class="container">
+		<div class="row top-post">
+			<?php newsmandu_latest_post(); ?>
+		</div>
+		<div class="row">
+		<div class="skip-post col-md-9">
+				<?php newsmandu_latest_skip_post(); ?>
+		</div>
+		<div class="sidebar col-md-3">
+			<?php dynamic_sidebar( 'Front Page Sidebar' ); ?>
+		</div>
 	</div>
 </div>
 </section>

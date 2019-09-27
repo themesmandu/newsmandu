@@ -74,9 +74,6 @@ if ( is_home() ) {
 
 		</main>
 		</div><!-- #primary -->
-		<?php
-			dynamic_sidebar( 'Newsletter-widget' );
-		?>
 <?php
 	/* Get Sidebar #secondary */
 
