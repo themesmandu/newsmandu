@@ -36,12 +36,13 @@ get_header();
 		<div class=" row featured-first">
 			<?php
 			foreach ( $activefeat as $key => $i ) :
-				$newsmandu_featured_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) );
-				$newsmandu_featured_title       = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_post_' . $i ) )->post_title );
-				$newsmandu_featured_date        = get_the_date( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_date );
-				$newsmandu_featured_author      = get_the_author_meta( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_author );
-				$newsmandu_featured_category    = get_the_term_list( get_theme_mod( 'newsmandu_featured_post_' . $i ), 'category' );
-				$newsmandu_featured_description = apply_filters( 'the_content', get_post( get_theme_mod( 'newsmandu_featured_post_' . $i ) )->post_content );
+				$newsmandu_featured_image    = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) );
+				$newsmandu_featured_title    = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_post_' . $i ) )->post_title );
+				$newsmandu_featured_date     = get_the_date( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_date );
+				$newsmandu_featured_author   = get_the_author_meta( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_author );
+				$newsmandu_featured_category = get_the_term_list( get_theme_mod( 'newsmandu_featured_post_' . $i ), 'category' );
+				//$newsmandu_featured_description = apply_filters( 'the_content', get_post( get_theme_mod( 'newsmandu_featured_post_' . $i ) )->post_content );
+				$newsmandu_featured_description = get_the_excerpt( get_theme_mod( 'newsmandu_featured_post_' . $i ) );
 				?>
 			<div class="entries col-md-4">
 				<div class="entries-visual">
