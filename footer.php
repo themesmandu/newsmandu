@@ -16,7 +16,7 @@
 			<div class="newsletter-widgets col-md-6 offset-md-3">
 				<?php dynamic_sidebar( 'Newsletter-widget' ); ?>
 			</div>
-			<div class="gallery">
+			<div class="footer-gallery">
 			<?php dynamic_sidebar( 'Footer 1' ); ?>
 			</div>
 			<div class="bottom-footer">
@@ -24,15 +24,17 @@
 					<div class="row footer-widgets">
 						<?php dynamic_sidebar( 'Footer 2' ); ?>
 					</div>
-					<div class="site-info">
-						<?php
-							/* translators: %s: CMS name, i.e. WordPress. */
-							printf( esc_html__( ' %s', 'newsmandu' ), '<a href="https://wordpress.org/">WordPress</a>' );
-						?>
-						<?php
-							/* translators: 1: Theme name, 2: Theme author. */
-							printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu' ), 'Newsmandu', '<a href="">Thememandu</a>' );
-						?>
+					<div class="site-info row">
+						<div class="copyright-text col-md-6">
+							<p><?php echo esc_html( get_theme_mod( 'footer_copyright_text' ) ); ?></p>
+						</div>
+						<div class="author col-md-6">
+							<?php
+								/* translators: 1: Theme name, 2: Theme author. */
+								printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu' ), 'Newsmandu', '<a href="">Thememandu</a>' );
+							?>
+						</div>
+						
 					</div><!-- .site-info -->
 				</div>
 			</div>

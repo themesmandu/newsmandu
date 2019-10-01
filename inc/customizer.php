@@ -130,6 +130,10 @@ function newsmandu_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/frontpage/slider.php';
 	// Add Section for featured post.
 	require get_template_directory() . '/inc/customizer/frontpage/featuredpost.php';
+
+	require get_template_directory() . '/inc/customizer/frontpage/postpage.php';
+	// Footer section.
+	require get_template_directory() . '/inc/customizer/footer.php';
 }
 	// END Options.
 	add_action( 'customize_register', 'newsmandu_customize_register' );
@@ -333,6 +337,8 @@ function newsmandu_customizer_css() {
 		newsmandu_generate_css( '.btn:hover', 'background-color', 'newsmandu_btn_hover_color' );
 		newsmandu_generate_css( '#footer', 'background-color', 'footer_bgcolor' );
 		newsmandu_generate_css( '#footer', 'color', 'footer_color' );
+		newsmandu_generate_css( '.bottom-footer .copyright-text p', 'color', 'site_info_text_color' );
+		newsmandu_generate_css( '.top-stories .entry-content h2, .top-stories .entry-content p', 'color', 'front_page_topstory_text_color' );
 	?>
 
 	</style>

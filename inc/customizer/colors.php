@@ -83,13 +83,13 @@ $theme_colors[] = array(
 $theme_colors[] = array(
 	'slug'      => 'themesmandu_starter_btn_color',
 	'default'   => '#0062cc',
-	'label'     => esc_html__( 'Themesmandu Starter Button Background Color', 'themesmandu-starter' ),
+	'label'     => esc_html__( 'Newsmandu Starter Button Background Color', 'themesmandu-starter' ),
 	'transport' => 'postMessage',
 );
 $theme_colors[] = array(
 	'slug'      => 'themesmandu_starter_btn_hover_color',
 	'default'   => '#0069d9',
-	'label'     => esc_html__( 'Themesmandu Starter Button Background: Hover Color', 'themesmandu-starter' ),
+	'label'     => esc_html__( 'Newsmandu Starter Button Background: Hover Color', 'themesmandu-starter' ),
 	'transport' => 'refresh',
 );
 $theme_colors[] = array(
@@ -102,6 +102,18 @@ $theme_colors[] = array(
 	'slug'      => 'footer_color',
 	'default'   => '#6c757d',
 	'label'     => esc_html__( 'Footer Text Color', 'themesmandu-starter' ),
+	'transport' => 'postMessage',
+);
+$theme_colors[] = array(
+	'slug'      => 'site_info_text_color',
+	'default'   => '#6c757d',
+	'label'     => esc_html__( 'Site Info Text Color', 'themesmandu-starter' ),
+	'transport' => 'postMessage',
+);
+$theme_colors[] = array(
+	'slug'      => 'front_page_topstory_text_color',
+	'default'   => '#6c757d',
+	'label'     => esc_html__( 'Site Info Text Color', 'themesmandu-starter' ),
 	'transport' => 'postMessage',
 );
 foreach ( $theme_colors as $color ) {

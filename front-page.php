@@ -43,14 +43,15 @@ get_header();
 				$newsmandu_featured_category    = get_the_term_list( get_theme_mod( 'newsmandu_featured_post_' . $i ), 'category' );
 				$newsmandu_featured_description = apply_filters( 'the_content', get_post( get_theme_mod( 'newsmandu_featured_post_' . $i ) )->post_content );
 				?>
-			<div class="col-md-4">
-				<?php newsmandu_posted_on( $newsmandu_featured_date ); ?>
-				<?php echo wp_kses_post( $newsmandu_featured_category ); ?>
-				<?php if ( $newsmandu_featured_image ) : ?>
-			<img src="<?php echo esc_url( $newsmandu_featured_image ); ?>" alt="">    
-			<?php endif; ?>
+			<div class="entries col-md-4">
+				<div class="entries-visual">
+					<?php if ( $newsmandu_featured_image ) : ?>
+					<img src="<?php echo esc_url( $newsmandu_featured_image ); ?>" alt="">    
+					<?php endif; ?>
+					<?php echo wp_kses_post( $newsmandu_featured_category ); ?>	<span>|</span><?php newsmandu_posted_on( $newsmandu_featured_date ); ?> 
+				</div>
 				<?php if ( $newsmandu_featured_title ) : ?>
-			<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_title ); ?></a></h2>
+			<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i, ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_title ); ?></a></h2>
 					<?php newsmandu_posted_by( $newsmandu_featured_author ); ?>
 					<?php if ( $newsmandu_featured_description ) : ?>
 						<?php echo wp_kses_post( $newsmandu_featured_description ); ?>
@@ -58,6 +59,9 @@ get_header();
 			<?php endif; ?>
 			</div>
 			<?php endforeach; ?>
+		</div>
+		<div class="ad">
+
 		</div>
 			<?php endif; ?>
 		<?php if ( 0 !== count( $activesec ) ) : ?>
@@ -86,9 +90,23 @@ get_header();
 </section>
 		<?php endif; ?>
 <section class="top-stories">
+	<?php
+		$newsmandu_top_stories_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_post_page_dropdown' ) ) );
+		$newsmandu_top_stories_title       = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_post_page_dropdown' ) )->post_title );
+		$newsmandu_top_stories_description = apply_filters( 'the_content', get_post( get_theme_mod( 'newsmandu_post_page_dropdown' ) )->post_content );
+	?>
+	<div class="bg-img">
+		<img src="<?php echo esc_url( $newsmandu_top_stories_image ); ?>" alt="">
+		<div class="entry-content container">
+			<h2><?php echo esc_html( $newsmandu_top_stories_title ); ?></h2>
+			<?php echo wp_kses_post( $newsmandu_top_stories_description ); ?>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row top-post">
 			<?php newsmandu_latest_post(); ?>
+		</div>
+		<div class="ad">
 		</div>
 		<div class="row">
 		<div class="skip-post col-md-9">

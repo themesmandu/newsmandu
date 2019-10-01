@@ -238,7 +238,9 @@ function newsmandu_latest_post() {
 			<div class="latest-entries">
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<?php newsmandu_posted_on(); ?>
+				<?php if (is_home() || is_front_page() ) : ?>
 				<p><?php the_excerpt(); ?></p>
+			<?php endif; ?>
 			</div>	
 		</div>
 
@@ -264,7 +266,7 @@ function newsmandu_latest_skip_post() {
 		$latest_posts->the_post();
 		?>
 		<div class="row">
-			<div class="latest-image col-md-6">
+			<div class="latest-image col-md-4">
 				<?php
 				the_post_thumbnail(
 					'newsmandu-featured-900-600',
@@ -284,7 +286,8 @@ function newsmandu_latest_skip_post() {
 				}
 				?>
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<?php newsmandu_posted_on(); ?>
+				<i class="fas fa-user-alt"><?php newsmandu_posted_by(); ?></i>
+				<i class="far fa-calendar-alt"><?php newsmandu_posted_on(); ?></i>
 				<p><?php the_excerpt(); ?></p>
 			</div>
 		</div>	

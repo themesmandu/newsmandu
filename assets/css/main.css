@@ -277,7 +277,7 @@ article p img {
 .single #primary:before,
 .featured-section:before {
     content: '';
-    width: 30%;
+    width: 42%;
     height: 80px;
     background-color: #ffffff;
     position: absolute;
@@ -357,6 +357,29 @@ article {
 .single .card-body {
     padding: 0;
 }
+.latest-post .top-post {
+    margin-top: 0;
+}
+.latest-post h2 {
+    text-align: center;
+}
+.single .previous,
+.single .next {
+    margin: 10px 0 20px 0;
+}
+.single .entry-meta span {
+    padding: 5px;
+}
+
+.single .entry-meta span:after {
+    content: '|';
+    display: inline-block;
+    margin-left: 5px;
+}
+.single .entry-meta span:last-child::after {
+    display: none;
+}
+
 /*
 * Front page
 */
@@ -384,4 +407,81 @@ article {
     margin-top: -140px;
     background: white;
     position: relative;
+}
+.top-stories .bg-img {
+    position: relative;
+}
+.top-post {
+    margin-top: -170px;
+}
+.top-stories .entry-content {
+    position: absolute;
+    top: 45%;
+    max-width: 900px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+}
+.latest-image {
+    position: relative;
+}
+.latest-image .cat-links {
+    background-color: white;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+}
+.top-post .latest-entries {
+    background-color: white;
+    box-shadow: 0px 8px 14px 1px #b5b5b5;
+    padding: 15px;
+    margin-top: -8px;
+    margin-bottom: 35px;
+
+}
+.top-stories .entry-content h2,
+.top-stories .entry-content p {
+    text-align: center;
+}
+.skip-post .latest-entries i {
+    margin: 5px;
+    color: #becbd2;
+}
+.skip-post .latest-entries span {
+    padding-left: 5px;
+}
+.skip-post .latest-entries .posted-on {
+    padding-left: 10px;
+}
+.skip-post .row {
+    margin: 20px;
+}
+.skip-post .latest-image img {
+    box-shadow: 0px 0px 15px 5px grey;
+}
+.featured-section,
+.top-stories {
+    margin: 0 0 40px 0;
+}
+.featured-first .entries-visual a{
+    font-size: 14px;
+}
+/* Footer */
+.bottom-footer .widget {
+    padding: 20px;
+}
+.bottom-footer .widget ul li a {
+    color: #cdcfd2;
+}
+.newsletter-widgets h5,
+.footer-gallery h3 {
+    text-align: center;
+}
+.site-info .author {
+    text-align: right;
+}
+/* Footer */
+.widgets {
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
