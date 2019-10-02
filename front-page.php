@@ -65,7 +65,6 @@ get_header();
 			<?php endforeach; ?>
 		</div>
 		<div class="ad">
-
 		</div>
 			<?php endif; ?>
 		<?php if ( 0 !== count( $activesec ) ) : ?>
@@ -77,23 +76,21 @@ get_header();
 				$newsmandu_featured_second_date   = get_the_date( get_theme_mod( 'newsmandu_featured_second_post_' . $i )->post_date );
 				$newsmandu_featured_second_author = get_the_author_meta( get_theme_mod( 'newsmandu_featured_second_post_' . $i )->post_author );
 				?>
-			
 				<?php if ( $newsmandu_featured_second_image ) : ?>
 			<div class="featured-content">
-			<img src="<?php echo esc_url( $newsmandu_featured_second_image ); ?>" alt="">    
-			<?php endif; ?>
-			<div class="content-meta">
-				<?php if ( $newsmandu_featured_second_title ) : ?>
-			<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
-			<?php endif; ?>
-			<div class="meta">
-				<i class="fas fa-user-alt"><?php newsmandu_posted_by( $newsmandu_featured_second_author ); ?></i>
-				<i class="far fa-calendar-alt"><?php newsmandu_posted_on( $newsmandu_featured_second_date ); ?></i>
-			</div>
-			</div>
+				<img src="<?php echo esc_url( $newsmandu_featured_second_image ); ?>" alt="">    
+				<?php endif; ?>
+				<div class="content-meta">
+					<?php if ( $newsmandu_featured_second_title ) : ?>
+					<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
+					<?php endif; ?>
+					<div class="meta">
+						<i class="fas fa-user-alt"><?php newsmandu_posted_by( $newsmandu_featured_second_author ); ?></i>
+						<i class="far fa-calendar-alt"><?php newsmandu_posted_on( $newsmandu_featured_second_date ); ?></i>
+					</div>
+				</div>
 			</div>
 			<?php endforeach; ?>
-			
 		</div>
 			<?php endif; ?>
 	</div>
@@ -119,9 +116,9 @@ get_header();
 		<div class="ad">
 		</div>
 		<div class="row">
-		<div class="skip-post col-md-9">
-				<?php newsmandu_latest_skip_post(); ?>
-		</div>
+			<div class="skip-post col-md-9">
+					<?php newsmandu_latest_skip_post(); ?>
+			</div>
 		<div class="sidebar col-md-3">
 			<?php dynamic_sidebar( 'Front Page Sidebar' ); ?>
 		</div>

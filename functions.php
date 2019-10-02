@@ -51,8 +51,9 @@ if ( ! function_exists( 'newsmandu_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary'  => esc_html__( 'Primary', 'newsmandu' ),
-				'top_menu' => esc_html__( 'Top Menu', 'newsmandu' ),
+				'primary'     => esc_html__( 'Primary', 'newsmandu' ),
+				'top_menu'    => esc_html__( 'Top Menu', 'newsmandu' ),
+				'social_menu' => esc_html__( 'Social Menu', 'newsmandu' ),
 			)
 		);
 

@@ -14,8 +14,6 @@
 if ( get_post_type() === 'post' ) {
 	?>
 		<div class="entry-meta">
-		<?php
-		?>
 			<i class="fas fa-user-alt"></i>
 		<?php
 			newsmandu_posted_by();

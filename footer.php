@@ -22,7 +22,18 @@
 			<div class="bottom-footer">
 				<div class="container">
 					<div class="row footer-widgets">
-						<?php dynamic_sidebar( 'Footer 2' ); ?>
+							<?php dynamic_sidebar( 'Footer 2' ); ?>
+					</div>
+					<div class="row footer-social">
+						<?php
+						if ( has_nav_menu( 'social_menu' ) ) :
+							wp_nav_menu(
+								array(
+									'theme_location' => 'social_menu',
+								)
+							);
+									endif;
+						?>
 					</div>
 					<div class="site-info row">
 						<div class="copyright-text col-md-6">

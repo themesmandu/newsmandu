@@ -33,7 +33,7 @@
 				// https://developer.wordpress.org/reference/functions/the_post_thumbnail/.
 				the_post_thumbnail(
 					array( 390, 260 ),
-					array( 'class' => 'align-self-center card-img-right flex-auto d-none d-lg-block' )
+					array( 'class' => 'align-self-center card-img-right flex-auto d-lg-block' )
 				);
 				?>
 

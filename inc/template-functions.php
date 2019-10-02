@@ -238,7 +238,7 @@ function newsmandu_latest_post() {
 			<div class="latest-entries">
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<?php newsmandu_posted_on(); ?>
-				<?php if (is_home() || is_front_page() ) : ?>
+				<?php if ( is_home() || is_front_page() ) : ?>
 				<p><?php the_excerpt(); ?></p>
 			<?php endif; ?>
 			</div>	

@@ -507,6 +507,9 @@ article {
     margin-top: -8px;
     margin-bottom: 35px;
 }
+.latest-image .cat-links a {
+    padding: 10px;
+}
 .featured-first {
     margin-bottom: 50px;
 }
@@ -562,7 +565,8 @@ article {
 }
 /* Footer */
 .bottom-footer .widget {
-    padding: 20px;
+    margin-top: 20px;
+    margin-right: 30px;
 }
 .bottom-footer .widget ul li a {
     color: #cdcfd2;
@@ -574,8 +578,630 @@ article {
 .site-info .author {
     text-align: right;
 }
-/* Footer */
-.widgets {
+.footer-social ul li {
+    float: left;
+    margin: 0 auto;
+}
+.footer-social li i {
+    color: #cdcfd2;
+    font-size: 20px;
+}
+.footer-social li a {
+    padding: 6px;
+}
+.footer-social li i:hover {
+    color: royalblue;
+}
+.site-info {
     margin-top: 20px;
-    margin-bottom: 20px;
+}
+/**
+* Responsive CSS
+**/
+@media (max-width: 1200px) {
+    p {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    /* Single Page CSS */
+    .single .entry-meta span {
+        padding: 0;
+    }
+    .single .entry-meta i,
+    .entry-meta span a {
+        font-size: 12px;
+    }
+    .single #primary:before {
+        height: 30px;
+        top: -20px;
+    }
+    .blog #primary:before,
+    .single #primary:before,
+    .featured-section:before {
+        width: 30%;
+    }
+
+    .header-img {
+        height: 450px;
+    }
+    .header-img .entry-header h1 {
+        font-size: 30px;
+    }
+    .top-menu .site-detail p {
+        margin: 0;
+        padding: 0px 10px 0px 15px;
+    }
+    .navbar .secondary-menu ul {
+        float: right;
+        margin-bottom: 0;
+    }
+    .card-body .entry-content {
+        margin: 0;
+    }
+    .card-body .entry-content p {
+        font-size: 16px;
+    }
+    .author-area .author-img {
+        text-align: end;
+        margin-left: 65px;
+    }
+    .author-area .author-img img {
+        max-width: 100%;
+    }
+    .author-area .author-detail {
+        max-width: 68%;
+    }
+    .author-area .author-detail h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .author-area .author-detail p {
+        font-size: 14px;
+        margin: 0;
+    }
+    .latest-post .top-post {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .latest-post h2 {
+        font-size: 20px;
+    }
+    .top-post .latest-entries h3 {
+        text-align: unset;
+        font-size: 16px;
+    }
+    .top-post .latest-entries span a {
+        margin-left: 0;
+        font-size: 12px;
+    }
+    .top-post .sidebar {
+        text-align: center;
+    }
+
+    .next .nex-title h4, 
+    .previous .prev-title h4 {
+        font-size: 15px;
+    }
+    .site-info {
+        text-align: unset;
+    }
+    /* Contact page */
+
+    .entry-content h2 {
+        text-align: unset;
+        font-size: 18px;
+    }
+    .entry-content p {
+        text-align: unset;
+    }
+    .wpcf7 {
+        padding: 40px !important;
+    }
+    .wpcf7 p{
+        text-align: unset;
+    }
+    /* Front Page CSS */
+    .featured-section .container{
+        max-width: 900px;
+    }
+    .featured-section h2,
+    .featured-section h2 span {
+        font-size: 18px;
+        text-align: unset;
+    }
+    .featured-section h2 .slash {
+        font-size: 20px;
+        padding: 0;
+    }
+    .featured-section:before {
+        height: 92px;
+        top: 0px;
+    }
+    .carousel ul {
+        margin-bottom: 25px;
+        margin-left: 90%
+    }
+    .featured-section .entries {
+        margin-bottom: 20px;
+    }
+    .entries .entries-desc {
+        text-align: unset;
+    }
+    .top-stories .top-post {
+        margin-top: -70px;
+    }
+    .skip-post .latest-entries {
+        text-align: unset;
+    }
+    .skip-post .latest-entries p {
+        font-size: 12px;
+    }
+    .featured-content:nth-child(1) {
+        width: 66.66667%;
+    }
+    
+    .featured-content:nth-child(2) {
+        width: 33.33337%;
+    }
+    
+    .featured-content:nth-child(3),
+    .featured-content:nth-child(4),
+    .featured-content:nth-child(5) {
+        width: 33.333337%;
+        margin-top: 30px;
+        height: 250px;
+    }
+    .navbar-collapse ul {
+        text-align: center;
+    }
+}
+@media (max-width: 991px) {
+    p {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    /* Single Page CSS */
+    .single .entry-meta span {
+        padding: 0;
+    }
+    .single .entry-meta i,
+    .entry-meta span a {
+        font-size: 12px;
+    }
+    .single #primary:before {
+        height: 30px;
+        top: -20px;
+    }
+    .blog #primary:before,
+    .single #primary:before,
+    .featured-section:before {
+        width: 34%;
+    }
+
+    .header-img {
+        height: 400px;
+    }
+    .header-img .entry-header h1 {
+        font-size: 26px;
+    }
+    .top-menu .site-detail p {
+        margin: 0;
+        padding: 0px 10px 0px 15px;
+    }
+    .navbar .secondary-menu ul {
+        float: right;
+        margin-bottom: 0;
+    }
+    .card-body .entry-content {
+        margin: 0;
+    }
+    .card-body .entry-content p {
+        font-size: 16px;
+    }
+    .author-area .author-img {
+        text-align: end;
+        margin-left: 65px;
+    }
+    .author-area .author-img img {
+        max-width: 100%;
+    }
+    .author-area .author-detail {
+        max-width: 68%;
+    }
+    .author-area .author-detail h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .author-area .author-detail p {
+        font-size: 14px;
+        margin: 0;
+    }
+    .latest-post .top-post {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .latest-post h2 {
+        font-size: 20px;
+    }
+    .top-post .latest-entries h3 {
+        text-align: unset;
+        font-size: 16px;
+    }
+    .top-post .latest-entries span a {
+        margin-left: 0;
+        font-size: 12px;
+    }
+    .top-post .sidebar {
+        text-align: center;
+    }
+
+    .next .nex-title h4, 
+    .previous .prev-title h4 {
+        font-size: 15px;
+    }
+    .site-info {
+        text-align: unset;
+    }
+    /* Contact page */
+
+    .entry-content h2 {
+        text-align: center;
+        font-size: 18px;
+    }
+    .entry-content p {
+        text-align: center;
+    }
+    .wpcf7 {
+        padding: 40px !important;
+    }
+    .wpcf7 p{
+        text-align: unset;
+    }
+    /* Front Page CSS */
+    .featured-section h2,
+    .featured-section h2 span {
+        font-size: 18px;
+        text-align: unset;
+    }
+    .featured-section h2 .slash {
+        font-size: 20px;
+        padding: 0;
+    }
+    .carousel ul {
+        margin-bottom: 95px;
+    }
+    .featured-section .entries {
+        margin-bottom: 20px;
+    }
+    .entries .entries-desc {
+        text-align: unset;
+    }
+    .top-stories .top-post {
+        margin-top: -70px;
+    }
+    .skip-post .latest-entries {
+        text-align: unset;
+    }
+    .skip-post .latest-entries p {
+        font-size: 12px;
+    }
+    .featured-content:nth-child(1) {
+        width: 66.66667%;
+    }
+    
+    .featured-content:nth-child(2) {
+        width: 33.33337%;
+    }
+    
+    .featured-content:nth-child(3),
+    .featured-content:nth-child(4),
+    .featured-content:nth-child(5) {
+        width: 33.333337%;
+        margin-top: 30px;
+        height: 250px;
+    }
+    .navbar-collapse ul {
+        text-align: center;
+    }
+}
+@media (max-width: 767px) {
+    
+    p {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    /* Single Page CSS */
+    .single .entry-meta span {
+        padding: 0;
+    }
+    .single .entry-meta i,
+    .entry-meta span a {
+        font-size: 12px;
+    }
+    .single #primary:before {
+        height: 30px;
+        top: -20px;
+    }
+    .blog #primary:before,
+    .single #primary:before,
+    .featured-section:before {
+        width: 64%;
+    }
+
+    .header-img {
+        height: 300px;
+    }
+    .header-img .entry-header h1 {
+        font-size: 26px;
+    }
+    .top-menu .site-detail p {
+        margin: 0;
+        padding: 0px 10px 0px 15px;
+    }
+    .navbar .secondary-menu ul {
+        float: right;
+        margin-bottom: 0;
+    }
+    .card-body .entry-content {
+        margin: 0;
+    }
+    .card-body .entry-content p {
+        font-size: 16px;
+    }
+    .author-area .author-img {
+        text-align: end;
+        margin-left: 65px;
+    }
+    .author-area .author-img img {
+        max-width: 100%;
+    }
+    .author-area .author-detail {
+        max-width: 68%;
+    }
+    .author-area .author-detail h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .author-area .author-detail p {
+        font-size: 14px;
+        margin: 0;
+    }
+    .latest-post .top-post {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .latest-post h2 {
+        font-size: 20px;
+    }
+    .top-post .latest-entries h3 {
+        text-align: center;
+        font-size: 16px;
+    }
+    .top-post .latest-entries span a {
+        margin-left: 254px;
+        font-size: 12px;
+    }
+    .top-post .sidebar {
+        text-align: center;
+    }
+    .previous,
+    .next {
+        width: 49%;
+    }
+    .next .nex-title h4, 
+    .previous .prev-title h4 {
+        font-size: 15px;
+    }
+    .site-info {
+        text-align: unset;
+    }
+    /* Contact page */
+    .entry-content {
+        margin: 0;
+    }
+    .entry-content h2 {
+        text-align: center;
+        font-size: 18px;
+    }
+    .entry-content p {
+        text-align: center;
+    }
+    .wpcf7 {
+        padding: 40px !important;
+    }
+    .wpcf7 p{
+        text-align: unset;
+    }
+    /* Front Page CSS */
+    .featured-section h2,
+    .featured-section h2 span {
+        font-size: 18px;
+        text-align: center;
+    }
+    .featured-section h2 .slash {
+        font-size: 20px;
+        padding: 0;
+    }
+    .carousel ul {
+        margin-bottom: 95px;
+    }
+    .featured-section .entries {
+        margin-bottom: 20px;
+    }
+    .entries .entries-desc {
+        text-align: center;
+    }
+    .top-stories .top-post {
+        margin-top: 8px;
+    }
+    .skip-post .latest-entries {
+        text-align: center;
+    }
+    .featured-content:nth-child(1),
+    .featured-content:nth-child(2),
+    .featured-content:nth-child(3),
+    .featured-content:nth-child(4),
+    .featured-content:nth-child(5) {
+        width: 100%;
+    }
+    .featured-content:nth-child(1) {
+        margin-bottom: 30px;
+    }
+    .navbar-collapse ul {
+        text-align: center;
+    }
+}
+@media (max-width: 576px) {
+    p {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    /* Single Page CSS */
+    .single .entry-meta span {
+        padding: 0;
+    }
+    .single .entry-meta i,
+    .entry-meta span a {
+        font-size: 12px;
+    }
+    .single #primary:before {
+        height: 30px;
+        top: -20px;
+    }
+    .blog #primary:before,
+    .single #primary:before,
+    .featured-section:before {
+        width: 64%;
+    }
+
+    .header-img {
+        height: 300px;
+    }
+    .header-img .entry-header h1 {
+        font-size: 26px;
+    }
+    .top-menu .site-detail p {
+        margin: 0;
+        padding: 0px 10px 0px 30px;
+    }
+    .navbar .secondary-menu ul {
+        float: left;
+        margin-bottom: 0;
+    }
+    .card-body .entry-content {
+        margin: 0;
+    }
+    .card-body .entry-content p {
+        font-size: 16px;
+    }
+    .author-area .author-img {
+        text-align: end;
+        margin-left: 65px;
+    }
+    .author-area .author-img img {
+        max-width: 66%;
+    }
+    .author-area .author-detail {
+        max-width: 100%;
+    }
+    .author-area .author-detail h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .author-area .author-detail p {
+        font-size: 14px;
+        margin: 0;
+    }
+    .latest-post .top-post {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .latest-post h2 {
+        font-size: 20px;
+    }
+    .top-post .latest-entries h3 {
+        text-align: center;
+        font-size: 16px;
+    }
+    .top-post .latest-entries span a {
+        margin-left: 118px;
+        font-size: 12px;
+    }
+    .top-post .sidebar {
+        text-align: center;
+    }
+    .previous,
+    .next {
+        width: 30%;
+    }
+    .next .nex-title h4, 
+    .previous .prev-title h4 {
+        font-size: 15px;
+    }
+    .site-info {
+        text-align: center;
+    }
+    /* Contact page */
+    .entry-content {
+        margin: 0;
+    }
+    .entry-content h2 {
+        text-align: center;
+        font-size: 18px;
+    }
+    .entry-content p {
+        text-align: center;
+    }
+    .wpcf7 {
+        padding: 20px !important;
+    }
+    .wpcf7 p{
+        text-align: unset;
+    }
+    /* Front Page CSS */
+    .featured-section h2,
+    .featured-section h2 span {
+        font-size: 18px;
+        text-align: center;
+    }
+    .featured-section h2 .slash {
+        font-size: 20px;
+        padding: 0;
+    }
+    .carousel ul {
+        margin-bottom: 95px;
+    }
+    .featured-section .entries {
+        margin-bottom: 20px;
+    }
+    .entries .entries-desc {
+        text-align: center;
+    }
+    .top-stories .top-post {
+        margin-top: 8px;
+    }
+    .skip-post .latest-entries {
+        text-align: center;
+    }
+    .featured-content:nth-child(1),
+    .featured-content:nth-child(2),
+    .featured-content:nth-child(3),
+    .featured-content:nth-child(4),
+    .featured-content:nth-child(5) {
+        width: 100%;
+    }
+    .featured-content:nth-child(1) {
+        margin-bottom: 30px;
+    }
+    .navbar-collapse ul {
+        text-align: center;
+    }
 }
