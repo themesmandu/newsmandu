@@ -16,9 +16,16 @@
 			<div class="newsletter-widgets col-md-6 offset-md-3">
 				<?php dynamic_sidebar( 'Newsletter-widget' ); ?>
 			</div>
+			<?php if ( get_theme_mod( 'footer_instagram_title' ) || get_theme_mod( 'footer_instagram' ) ) : ?>
 			<div class="footer-gallery">
-			<?php dynamic_sidebar( 'smashballoon' ); ?>
+				<?php if ( get_theme_mod( 'footer_instagram_title' ) ) : ?>
+					<h2><?php echo esc_html( get_theme_mod( 'footer_instagram_title' ) ); ?></h2>
+				<?php endif; ?>
+				<?php if ( get_theme_mod( 'footer_instagram' ) ) : ?>
+					<?php echo do_shortcode( get_theme_mod( 'footer_instagram' ) ); ?>
+				<?php endif; ?>
 			</div>
+			<?php endif;?>
 			<div class="bottom-footer">
 				<div class="container">
 					<?php

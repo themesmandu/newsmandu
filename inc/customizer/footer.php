@@ -22,6 +22,41 @@ $wp_customize->add_section(
 		'panel'       => 'footer_option',
 	)
 );
+// setting instagram feeds text.
+$wp_customize->add_setting(
+	'footer_instagram_title',
+	array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control(
+	'footer_instagram_title',
+	array(
+		'label'       => esc_html__( 'Footer Instagram Title', 'newsmandu' ),
+		'description' => esc_html__( 'Enter the title for the instagram feeds ', 'newsmandu' ),
+		'section'     => 'newsmandu_footer_section',
+		'type'        => 'text',
+	)
+);
+$wp_customize->add_setting(
+	'footer_instagram',
+	array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control(
+	'footer_instagram',
+	array(
+		'label'       => esc_html__( 'Footer Instagram Shortcode', 'newsmandu' ),
+		'description' => esc_html__( 'Paste the shortcode of smash balloon plugin to display the instagram feeds ', 'newsmandu' ),
+		'section'     => 'newsmandu_footer_section',
+		'type'        => 'text',
+	)
+);
 // setting footer copyright text.
 $wp_customize->add_setting(
 	'footer_copyright_text',
