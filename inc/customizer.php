@@ -25,7 +25,7 @@ function newsmandu_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.navbar-brand',
-				'render_callback' => 'themesmandu_starter_customize_partial_blogname',
+				'render_callback' => 'newsmandu_starter_customize_partial_blogname',
 			)
 		);
 	}
@@ -335,10 +335,14 @@ function newsmandu_customizer_css() {
 		newsmandu_generate_css( '.widget-title', 'color', 'wgt_title_color' );
 		newsmandu_generate_css( '.btn', 'background-color', 'newsmandu_btn_color' );
 		newsmandu_generate_css( '.btn:hover', 'background-color', 'newsmandu_btn_hover_color' );
-		newsmandu_generate_css( '#footer', 'background-color', 'footer_bgcolor' );
+		newsmandu_generate_css( '#footer .bottom-footer', 'background-color', 'footer_bgcolor' );
 		newsmandu_generate_css( '#footer', 'color', 'footer_color' );
 		newsmandu_generate_css( '.bottom-footer .copyright-text p', 'color', 'site_info_text_color' );
 		newsmandu_generate_css( '.top-stories .entry-content h2, .top-stories .entry-content p', 'color', 'front_page_topstory_text_color' );
+		newsmandu_generate_css( '#footer .newsletter-widgets', 'background-color', 'newsletter_section_bg_color' );
+		newsmandu_generate_css( '#footer .footer-gallery', 'background-color', 'instagram_section_bg_color' );
+		newsmandu_generate_css( '#footer .newsletter-widgets h5', 'color', 'newsletter_section_text_color' );
+		newsmandu_generate_css( '#footer .footer-gallery h2', 'color', 'instagram_section_text_color' );
 	?>
 
 	</style>

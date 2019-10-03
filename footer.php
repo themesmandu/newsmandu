@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 	<footer id="footer">
-			<div class="newsletter-widgets col-md-6 offset-md-3">
+			<div class="newsletter-widgets">
 				<?php dynamic_sidebar( 'Newsletter-widget' ); ?>
 			</div>
 			<?php if ( get_theme_mod( 'footer_instagram_title' ) || get_theme_mod( 'footer_instagram' ) ) : ?>
@@ -25,7 +25,7 @@
 					<?php echo do_shortcode( get_theme_mod( 'footer_instagram' ) ); ?>
 				<?php endif; ?>
 			</div>
-			<?php endif;?>
+			<?php endif; ?>
 			<div class="bottom-footer">
 				<div class="container">
 					<?php

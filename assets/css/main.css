@@ -598,6 +598,20 @@ article {
 .site-info {
     margin-top: 20px;
 }
+.newsletter-widgets{
+    padding: 50px;
+}
+.newsletter-widgets h5 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.newsletter-widgets .tnp {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+.footer-gallery h2 {
+    font-size: 40px;
+}
 /**
 * Responsive CSS
 **/
@@ -759,6 +773,20 @@ article {
     .navbar-collapse ul {
         text-align: center;
     }
+    .newsletter-widgets{
+        padding: 40px;
+    }
+    .newsletter-widgets h5 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    .newsletter-widgets .tnp {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .footer-gallery h2 {
+        font-size: 38px;
+    }
 }
 @media (max-width: 991px) {
     p {
@@ -910,6 +938,20 @@ article {
     .navbar-collapse ul {
         text-align: center;
     }
+    .newsletter-widgets{
+        padding: 35px;
+    }
+    .newsletter-widgets h5 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    .newsletter-widgets .tnp {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .footer-gallery h2 {
+        font-size: 32px;
+    }
 }
 @media (max-width: 767px) {
     
@@ -1059,6 +1101,20 @@ article {
     .navbar-collapse ul {
         text-align: center;
     }
+    .newsletter-widgets{
+        padding: 30px;
+    }
+    .newsletter-widgets h5 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .newsletter-widgets .tnp {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .footer-gallery h2 {
+        font-size: 28px;
+    }
 }
 @media (max-width: 576px) {
     p {
@@ -1206,5 +1262,19 @@ article {
     }
     .navbar-collapse ul {
         text-align: center;
+    }
+    .newsletter-widgets{
+        padding: 30px;
+    }
+    .newsletter-widgets h5 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .newsletter-widgets .tnp {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .footer-gallery h2 {
+        font-size: 22px;
     }
 }
