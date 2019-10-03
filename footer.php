@@ -17,13 +17,27 @@
 				<?php dynamic_sidebar( 'Newsletter-widget' ); ?>
 			</div>
 			<div class="footer-gallery">
-			<?php dynamic_sidebar( 'Footer 1' ); ?>
+			<?php dynamic_sidebar( 'smashballoon' ); ?>
 			</div>
 			<div class="bottom-footer">
 				<div class="container">
-					<div class="row footer-widgets">
-							<?php dynamic_sidebar( 'Footer 2' ); ?>
+					<?php
+					$active = array();
+					for ( $i = 1; $i <= 4; $i++ ) {
+						if ( is_active_sidebar( 'footer-' . $i ) ) {
+							$active[] = $i;
+						}
+					}
+					?>
+					<?php if ( 0 !== count( $active ) ) { ?>
+					<div id="footer-widgets" class="row footer-widgets">
+					<?php foreach ( $active as $footer_widget_id ) : ?>
+						<div class="col-lg-3 col-sm-6 column">
+							<?php dynamic_sidebar( 'footer-' . $footer_widget_id ); ?>
+						</div>
+					<?php endforeach; ?>
 					</div>
+					<?php } ?>
 					<div class="row footer-social">
 						<?php
 						if ( has_nav_menu( 'social_menu' ) ) :

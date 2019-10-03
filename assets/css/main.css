@@ -572,8 +572,11 @@ article {
     color: #cdcfd2;
 }
 .newsletter-widgets h5,
-.footer-gallery h3 {
+.footer-gallery h5 {
     text-align: center;
+}
+.footer-gallery {
+    margin-top: 25px;
 }
 .site-info .author {
     text-align: right;
