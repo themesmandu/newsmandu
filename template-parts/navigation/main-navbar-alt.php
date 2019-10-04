@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template part for alternative displaying main navigation top-bar.
  *
@@ -9,7 +8,7 @@
  */
 
 ?>
-<?php if (get_theme_mod('mainmenu_dropdown_mode') !== 'bootstrap') { ?>
+<?php if ( get_theme_mod( 'mainmenu_dropdown_mode' ) !== 'bootstrap' ) { ?>
 
 	<nav class="navbar navbar-expand-lg main-navigation nav-search appear-left">
 	<?php } else { ?>
@@ -39,7 +38,7 @@
 			?>
 
 			<?php
-			get_template_part('template-parts/navigation/add-item', 'search-form');
+			get_template_part( 'template-parts/navigation/add-item', 'search-form' );
 			?>
 
 

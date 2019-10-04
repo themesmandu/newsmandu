@@ -65,8 +65,7 @@
 								/* translators: 1: Theme name, 2: Theme author. */
 								printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu' ), 'Newsmandu', '<a href="">Thememandu</a>' );
 							?>
-						</div>
-						
+						</div>	
 					</div><!-- .site-info -->
 				</div>
 			</div>

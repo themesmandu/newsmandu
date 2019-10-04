@@ -363,7 +363,6 @@ function newsmandu_authors_profile() {
 				</div>
 			</div>
 		</div>
-		
 		<?php
 	endif;
 }
