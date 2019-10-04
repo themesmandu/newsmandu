@@ -29,20 +29,21 @@ get_header();
 	}
 	?>
 	<?php if ( 0 !== count( $activefeat ) || count( $activesec ) ) : ?>
+		<?php if ( get_theme_mod( 'featured_post_toggle' ) ) : ?>
 <section class="featured-section">
 	<div class="container">
 		<h2>Featured  <span class="slash">/</span> <span> Some of the featured posts</span></h2>
-		<?php if ( 0 !== count( $activefeat ) ) : ?>
+			<?php if ( 0 !== count( $activefeat ) ) : ?>
 		<div class=" row featured-first">
-			<?php
-			foreach ( $activefeat as $key => $i ) :
-				$newsmandu_featured_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) );
-				$newsmandu_featured_title       = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_post_' . $i ) )->post_title );
-				$newsmandu_featured_date        = get_the_date( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_date );
-				$newsmandu_featured_author      = get_the_author_meta( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_author );
-				$newsmandu_featured_category    = get_the_term_list( get_theme_mod( 'newsmandu_featured_post_' . $i ), 'category' );
-				$newsmandu_featured_description = get_the_excerpt( get_theme_mod( 'newsmandu_featured_post_' . $i ) );
-				?>
+				<?php
+				foreach ( $activefeat as $key => $i ) :
+					$newsmandu_featured_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) );
+					$newsmandu_featured_title       = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_post_' . $i ) )->post_title );
+					$newsmandu_featured_date        = get_the_date( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_date );
+					$newsmandu_featured_author      = get_the_author_meta( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_author );
+					$newsmandu_featured_category    = get_the_term_list( get_theme_mod( 'newsmandu_featured_post_' . $i ), 'category' );
+					$newsmandu_featured_description = get_the_excerpt( get_theme_mod( 'newsmandu_featured_post_' . $i ) );
+					?>
 			<div class="entries col-md-4">
 				<div class="entries-visual">
 					<?php if ( $newsmandu_featured_image ) : ?>
@@ -50,7 +51,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 				<div class="entries-desc">
-				<?php echo wp_kses_post( $newsmandu_featured_category ); ?>	<span>|</span><?php newsmandu_posted_on( $newsmandu_featured_date ); ?> 
+					<?php echo wp_kses_post( $newsmandu_featured_category ); ?>	<span>|</span><?php newsmandu_posted_on( $newsmandu_featured_date ); ?> 
 					<?php if ( $newsmandu_featured_title ) : ?>
 						<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_title ); ?></a></h2>
 					<?php endif; ?>
@@ -62,21 +63,23 @@ get_header();
 					<?php endif; ?>
 				</div>	
 			</div>
-			<?php endforeach; ?>
+				<?php endforeach; ?>
 		</div>
 		<div class="ad">
 		</div>
+		<?php endif; ?>
 			<?php endif; ?>
 		<?php if ( 0 !== count( $activesec ) ) : ?>
+			<?php if ( get_theme_mod( 'featured_post_second_toggle' ) ) : ?>
 		<div class="featured-second">
-			<?php
-			foreach ( $activesec as $key => $i ) :
-				$newsmandu_featured_second_image  = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) );
-				$newsmandu_featured_second_title  = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) )->post_title );
-				$newsmandu_featured_second_date   = get_the_date( get_theme_mod( 'newsmandu_featured_second_post_' . $i )->post_date );
-				$newsmandu_featured_second_author = get_the_author_meta( get_theme_mod( 'newsmandu_featured_second_post_' . $i )->post_author );
-				?>
-				<?php if ( $newsmandu_featured_second_image ) : ?>
+				<?php
+				foreach ( $activesec as $key => $i ) :
+					$newsmandu_featured_second_image  = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) );
+					$newsmandu_featured_second_title  = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) )->post_title );
+					$newsmandu_featured_second_date   = get_the_date( get_theme_mod( 'newsmandu_featured_second_post_' . $i )->post_date );
+					$newsmandu_featured_second_author = get_the_author_meta( get_theme_mod( 'newsmandu_featured_second_post_' . $i )->post_author );
+					?>
+					<?php if ( $newsmandu_featured_second_image ) : ?>
 			<div class="featured-content">
 				<img src="<?php echo esc_url( $newsmandu_featured_second_image ); ?>" alt="">    
 				<?php endif; ?>
@@ -90,12 +93,14 @@ get_header();
 					</div>
 				</div>
 			</div>
-			<?php endforeach; ?>
+				<?php endforeach; ?>
 		</div>
 			<?php endif; ?>
 	</div>
 </section>
 		<?php endif; ?>
+			<?php endif; ?>
+<?php if ( get_theme_mod( 'top_stories_toggle' ) ) : ?>
 <section class="top-stories">
 	<?php
 		$newsmandu_top_stories_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_post_page_dropdown' ) ) );
@@ -125,5 +130,6 @@ get_header();
 	</div>
 </div>
 </section>
+<?php endif; ?>
 <?php
 get_footer();

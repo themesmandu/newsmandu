@@ -26,6 +26,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Sanitize functions.
+ */
+require get_template_directory() . '/inc/sanitize.php';
+
+/**
  * Include tgm required plaugins functionality.
  */
 require get_template_directory() . '/inc/tgm-plugin/tgm-required-plugins.php';

@@ -29,6 +29,13 @@ function newsmandu_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	if ( class_exists( 'WP_Customize_Control' ) ) {
+		/**
+		* Custom customizer controls.
+		*/
+		require get_template_directory() . '/inc/customizer/custom-controls/class-newsmandu-toggle-switch-custom-control.php';
+	}
 	/**
 	 *
 	 * Add settings to Colors section
@@ -46,8 +53,6 @@ function newsmandu_customize_register( $wp_customize ) {
 			'priority'   => 160,
 		)
 	);
-	/* Hide top menu */
-	require get_template_directory() . '/inc/customizer/general/top-menu.php';
 	/* Menu bar mode */
 	require get_template_directory() . '/inc/customizer/general/menubar.php';
 	/* Sidebar section */
@@ -138,119 +143,6 @@ function newsmandu_customize_register( $wp_customize ) {
 	// END Options.
 	add_action( 'customize_register', 'newsmandu_customize_register' );
 
-	/**
-	 * Render the site title for the selective refresh partial.
-	 *
-	 * @return void
-	 */
-function newsmandu_customize_partial_blogname() {
-		bloginfo( 'name' );
-}
-
-	/**
-	 * Sanitize the menu bar layout options.
-	 *
-	 * @param string $input Menu bar layout.
-	 */
-function newsmandu_sanitize_menubar_mode( $input ) {
-	$valid = array(
-		'standard' => __( 'Standard', 'newsmandu' ),
-		'alt'      => __( 'Alternative', 'newsmandu' ),
-	);
-
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	}
-
-	return '';
-}
-
-/**
- * Sanitize the main menu drop-down mode option.
- *
- * @param string $input options.
- */
-function newsmandu_sanitize_mainmenu_dropdown_mode( $input ) {
-	$valid = array(
-		'default'   => __( 'Default', 'newsmandu' ),
-		'bootstrap' => __( 'Bootstrap', 'newsmandu' ),
-	);
-
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	}
-
-	return '';
-}
-
-/**
- * Sanitize the sidebar position options.
- *
- * @param string $input Sidebar position options.
- */
-function newsmandu_sanitize_sidebar_position( $input ) {
-	$valid = array(
-		'right' => __( 'Right sidebar', 'newsmandu' ),
-		'left'  => __( 'Left sidebar', 'newsmandu' ),
-		'none'  => __( 'No sidebar', 'newsmandu' ),
-	);
-
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	}
-
-	return '';
-}
-
-	/**
-	 * Sanitize the navigation mode options.
-	 *
-	 * @param string $input navigation mode options.
-	 */
-function newsmandu_sanitize_blog_pagination_mode( $input ) {
-	$valid = array(
-		'standard' => __( 'Standard', 'newsmandu' ),
-		'numeric'  => __( 'Numeric', 'newsmandu' ),
-	);
-
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	}
-
-	return '';
-}
-
-	/**
-	 * Sanitize the blog layout options.
-	 *
-	 * @param string $input blog layout options.
-	 */
-function newsmandu_sanitize_blog_layout( $input ) {
-	$valid = array(
-		'list'     => esc_html__( 'List', 'newsmandu' ),
-		'standard' => esc_html__( 'Standard', 'newsmandu' ),
-	);
-
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	}
-
-	return '';
-}
-
-	/**
-	 * Checkbox sanitization callback example.
-	 *
-	 * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
-	 * as a boolean value, either TRUE or FALSE.
-	 *
-	 * @param bool $checked Whether the checkbox is checked.
-	 * @return bool Whether the checkbox is checked.
-	 */
-function newsmandu_sanitize_checkbox( $checked ) {
-	// Boolean check.
-	return ( ( isset( $checked ) && true === $checked ) ? true : false );
-}
 
 	/**
 	 *
@@ -343,6 +235,7 @@ function newsmandu_customizer_css() {
 		newsmandu_generate_css( '#footer .footer-gallery', 'background-color', 'instagram_section_bg_color' );
 		newsmandu_generate_css( '#footer .newsletter-widgets h5', 'color', 'newsletter_section_text_color' );
 		newsmandu_generate_css( '#footer .footer-gallery h2', 'color', 'instagram_section_text_color' );
+		newsmandu_generate_css( '#footer .site-info .author a', 'color', 'author_section_text_color' );
 	?>
 
 	</style>

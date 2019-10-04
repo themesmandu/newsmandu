@@ -140,6 +140,12 @@ $theme_colors[] = array(
 	'label'     => esc_html__( 'Instragram Title Text Color', 'newsmandu' ),
 	'transport' => 'postMessage',
 );
+$theme_colors[] = array(
+	'slug'      => 'author_section_text_color',
+	'default'   => '#f1f1f2',
+	'label'     => esc_html__( 'Footer Author Text Color', 'newsmandu' ),
+	'transport' => 'postMessage',
+);
 foreach ( $theme_colors as $color ) {
 	$wp_customize->add_setting(
 		$color['slug'],

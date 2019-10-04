@@ -17,6 +17,25 @@ $wp_customize->add_section(
 		'priority' => 25,
 	)
 );
+// Setting toggle section.
+$wp_customize->add_setting(
+	'slider_toggle',
+	array(
+		'default'           => 0,
+		'sanitize_callback' => 'newsmandu_switch_sanitize',
+	)
+);
+
+$wp_customize->add_control(
+	new Newsmandu_Toggle_Switch_Custom_Control(
+		$wp_customize,
+		'slider_toggle',
+		array(
+			'label'   => esc_html__( 'Show Slider Section' ),
+			'section' => 'frontpage_slider',
+		)
+	)
+);
 		// setting article section post select.
 for ( $i = 0; $i < 4; $i++ ) {
 	$j = $i + 1;

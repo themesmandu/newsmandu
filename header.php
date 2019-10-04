@@ -15,56 +15,50 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
 		<header id="top-header" class="site-header" role="banner">
 			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu' ); ?></a>
+			<?php if ( get_theme_mod( 'top_menu_toggle' ) ) : ?>
 			<div class="top-menu">
 				<div class="container">
-				<?php if ( ! get_theme_mod( 'hide_top_menu' ) ) : ?>
-				<div class="row navbar">
-					<?php if ( get_theme_mod( 'contact_email' ) || get_theme_mod( 'phone_number' ) ) : ?>
-					<div class="site-detail col-md-6">
-						<?php if ( get_theme_mod( 'contact_email' ) ) : ?>
-						<p><?php echo esc_html( get_theme_mod( 'contact_email' ) ); ?></p>
+					<div class="row navbar">
+						<?php if ( get_theme_mod( 'contact_email' ) || get_theme_mod( 'phone_number' ) ) : ?>
+						<div class="site-detail col-md-6">
+							<?php if ( get_theme_mod( 'contact_email' ) ) : ?>
+							<p><?php echo esc_html( get_theme_mod( 'contact_email' ) ); ?></p>
+							<?php endif; ?>	
+							<?php if ( get_theme_mod( 'phone_number' ) ) : ?>
+							<p><?php echo esc_html( get_theme_mod( 'phone_number' ) ); ?></p>
+							<?php endif; ?>	
+						</div>
 						<?php endif; ?>	
-						<?php if ( get_theme_mod( 'phone_number' ) ) : ?>
-						<p><?php echo esc_html( get_theme_mod( 'phone_number' ) ); ?></p>
-						<?php endif; ?>	
+						<div class="secondary-menu col-md-6">
+							<?php
+							if ( has_nav_menu( 'top_menu' ) ) :
+								wp_nav_menu(
+									array(
+										'theme_location' => 'top_menu',
+									)
+								);
+							endif;
+							?>
+						</div>
 					</div>
-					<?php endif; ?>	
-					<div class="secondary-menu col-md-6">
-						<?php
-						if ( has_nav_menu( 'top_menu' ) ) :
-							wp_nav_menu(
-								array(
-									'theme_location' => 'top_menu',
-								)
-							);
-						endif;
-						?>
-					</div>
-				</div>
-				<?php endif; ?>
 				</div>
 			</div>
+			<?php endif; ?>
 			<div class="container">
 				<div class="logo">
 					<div class="site-branding">
 						<?php if ( ! has_custom_logo() ) { ?>
-
 							<?php if ( is_front_page() && is_home() ) : ?>
-
 						<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
 								title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
 								itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
 						<?php else : ?>
-
 						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
 							title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
 							itemprop="url"><?php bloginfo( 'name' ); ?></a>
@@ -75,8 +69,6 @@
 							?>
 						<p class="site-description"><?php echo wp_kses_post( $newsmandu_description ); ?></p>
 						<?php endif; ?>
-
-
 							<?php
 						} else {
 							the_custom_logo();
@@ -85,7 +77,6 @@
 					</div>
 				</div>
 			</div>
-
 			<?php
 			if ( get_theme_mod( 'menubar_mode' ) === 'alt' ) {
 				// alternative navigation bar:
@@ -112,13 +103,11 @@
 				get_template_part( 'template-parts/jumbotron' );
 			}
 			?>
-
 		</header><!-- #masthead -->
 		<?php if ( is_front_page() ) : ?>
 		<!-- slider background -->
+			<?php if ( get_theme_mod( 'slider_toggle' ) ) : ?>
 		<div id="header-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3900" >
-
-
 			<ul class="carousel-indicators">
 				<?php
 				for ( $i = 0; $i < 4; $i++ ) :
@@ -126,7 +115,6 @@
 				<li data-target="#header-slider" data-slide-to="<?php echo esc_html( $i ); ?>" class="<?php echo esc_html( 0 === $i ? 'active' : '' ); ?>"></li>
 				<?php endfor; ?>
 			</ul>
-
 			<div class="carousel-inner">
 				<?php
 				for ( $i = 0; $i < 4; $i++ ) :
@@ -183,10 +171,8 @@
 					</div>
 				</div>
 				<?php endfor; ?>
-
 			</div>
-
 		</div>
 		<?php endif; ?>
-
+		<?php endif; ?>
 		<div id="content" class="content-wrap">
