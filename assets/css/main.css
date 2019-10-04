@@ -576,7 +576,7 @@ article {
     text-align: center;
 }
 .footer-gallery {
-    margin-top: 25px;
+    margin-top: 50px;
 }
 .site-info .author {
     text-align: right;
@@ -609,8 +609,35 @@ article {
     padding-left: 30%;
     padding-right: 30%;
 }
+#footer .newsletter-widgets .widget .tnp-widget-minimal form {
+    position: relative;
+    height: 60px;
+    background-color: #ffffff;
+    margin: 60px;
+}
+#footer .newsletter-widgets .widget .tnp-widget-minimal input.tnp-submit {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    background-color: #ffffff;
+    color: #010101;
+    border-left: 1px solid #bfc4c8;
+    padding: 5px;
+    top: 0;
+    bottom: 0;
+    height: 30px;
+    margin: auto;;
+}
+#footer .newsletter-widgets .widget .tnp-widget-minimal input.tnp-email {
+    padding-right: 110px;
+    border: none;
+    background-color: #ffffff;
+    height: 60px;
+    color: #999999
+}
 .footer-gallery h2 {
     font-size: 40px;
+    margin-bottom: 30px;
 }
 /**
 * Responsive CSS
