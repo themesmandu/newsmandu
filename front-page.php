@@ -29,11 +29,11 @@ get_header();
 	}
 	?>
 	<?php if ( 0 !== count( $activefeat ) || count( $activesec ) ) : ?>
-		<?php if ( get_theme_mod( 'featured_post_toggle' ) ) : ?>
 <section class="featured-section">
 	<div class="container">
 		<h2>Featured  <span class="slash">/</span> <span> Some of the featured posts</span></h2>
-			<?php if ( 0 !== count( $activefeat ) ) : ?>
+		<?php if ( 0 !== count( $activefeat ) ) : ?>
+			<?php if ( get_theme_mod( 'featured_post_toggle' ) ) : ?>
 		<div class=" row featured-first">
 				<?php
 				foreach ( $activefeat as $key => $i ) :
@@ -65,10 +65,10 @@ get_header();
 			</div>
 				<?php endforeach; ?>
 		</div>
+			<?php endif; ?><!-- End of featured post toggle -->
+		<?php endif; ?><!-- End of Active count Loop -->
 		<div class="ad">
 		</div>
-		<?php endif; ?>
-			<?php endif; ?>
 		<?php if ( 0 !== count( $activesec ) ) : ?>
 			<?php if ( get_theme_mod( 'featured_post_second_toggle' ) ) : ?>
 		<div class="featured-second">
@@ -79,9 +79,9 @@ get_header();
 					$newsmandu_featured_second_date   = get_the_date( get_theme_mod( 'newsmandu_featured_second_post_' . $i )->post_date );
 					$newsmandu_featured_second_author = get_the_author_meta( get_theme_mod( 'newsmandu_featured_second_post_' . $i )->post_author );
 					?>
-					<?php if ( $newsmandu_featured_second_image ) : ?>
 			<div class="featured-content">
-				<img src="<?php echo esc_url( $newsmandu_featured_second_image ); ?>" alt="">    
+					<?php if ( $newsmandu_featured_second_image ) : ?>
+				<img src="<?php echo esc_url( $newsmandu_featured_second_image ); ?>" alt="">  
 				<?php endif; ?>
 				<div class="content-meta">
 					<?php if ( $newsmandu_featured_second_title ) : ?>
@@ -95,11 +95,11 @@ get_header();
 			</div>
 				<?php endforeach; ?>
 		</div>
-			<?php endif; ?>
+		<?php endif; ?><!-- End of featured second post toggle -->
+		<?php endif; ?><!-- End of Active count Loop -->
 	</div>
 </section>
-		<?php endif; ?>
-			<?php endif; ?>
+<?php endif; ?> <!-- End of Active Loop -->
 <?php if ( get_theme_mod( 'top_stories_toggle' ) ) : ?>
 <section class="top-stories">
 	<?php
@@ -130,6 +130,6 @@ get_header();
 	</div>
 </div>
 </section>
-<?php endif; ?>
+<?php endif; ?><!-- End of top story post toggle -->
 <?php
 get_footer();
