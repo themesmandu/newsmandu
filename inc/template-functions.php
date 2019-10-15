@@ -356,10 +356,10 @@ function newsmandu_authors_profile() {
 			</div>
 			<div class="author-detail">
 				<div class="author-name">
-					<h3>Author: <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php esc_html( the_author_meta( 'display_name' ) ); ?></a></h3>
+					<h3>Author: <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( the_author_meta( 'display_name' ) ); ?></a></h3>
 				</div>
 				<div class="author-desc">
-					<p><?php esc_textarea( the_author_meta( 'description' ) ); ?></p>
+					<p><?php echo esc_textarea( the_author_meta( 'description' ) ); ?></p>
 				</div>
 			</div>
 		</div>

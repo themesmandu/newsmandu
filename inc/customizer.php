@@ -6,7 +6,6 @@
  *
  * @package Newsmandu
  */
-
 /**
  * Register different customizer features.
  *
@@ -29,18 +28,12 @@ function newsmandu_customize_register( $wp_customize ) {
 			)
 		);
 	}
-
 	if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		* Custom customizer controls.
 		*/
 		require get_template_directory() . '/inc/customizer/custom-controls/class-newsmandu-toggle-switch-custom-control.php';
 	}
-	/**
-	 *
-	 * Add settings to Colors section
-	 */
-	require get_template_directory() . '/inc/customizer/colors.php';
 	/**
 	 *
 	 * Add Section
@@ -71,9 +64,7 @@ function newsmandu_customize_register( $wp_customize ) {
 			'priority'   => 170,
 		)
 	);
-
 	// Settings.
-
 	// Blog Pagination.
 	require get_template_directory() . '/inc/customizer/post-page/blog-pagination.php';
 	// More Link.
@@ -94,7 +85,6 @@ function newsmandu_customize_register( $wp_customize ) {
 			'active_callback' => 'newsmandu_set_front_page',
 		)
 	);
-
 	/**
 	 *
 	 * Add Section General to Panel
@@ -107,7 +97,6 @@ function newsmandu_customize_register( $wp_customize ) {
 			'priority' => 10,
 		)
 	);
-
 	$wp_customize->add_setting(
 		'hide_page_title',
 		array(
@@ -116,7 +105,6 @@ function newsmandu_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'newsmandu_sanitize_checkbox',
 		)
 	);
-
 	$wp_customize->add_control(
 		'hide_page_title',
 		array(
@@ -125,7 +113,6 @@ function newsmandu_customize_register( $wp_customize ) {
 			'section' => 'frontpage_general',
 		)
 	);
-
 	/**
 	 *
 	 * Add Section Head Banner to Panel
@@ -135,15 +122,14 @@ function newsmandu_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/frontpage/slider.php';
 	// Add Section for featured post.
 	require get_template_directory() . '/inc/customizer/frontpage/featuredpost.php';
-
 	require get_template_directory() . '/inc/customizer/frontpage/postpage.php';
 	// Footer section.
 	require get_template_directory() . '/inc/customizer/footer.php';
+	// load destination color picker option.
+	require get_template_directory() . '/inc/customizer/theme-options/category-color.php';
 }
 	// END Options.
 	add_action( 'customize_register', 'newsmandu_customize_register' );
-
-
 	/**
 	 *
 	 * Helper function for Contextual Control
@@ -155,7 +141,6 @@ function newsmandu_set_front_page() {
 		return true;
 	}
 }
-
 	/**
 	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 	 */
@@ -163,7 +148,6 @@ function newsmandu_customize_preview_js() {
 	wp_enqueue_script( 'newsmandu-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '25032018', true );
 }
 	add_action( 'customize_preview_init', 'newsmandu_customize_preview_js' );
-
 	/**
 	 * This will generate a line of CSS for use in header output. If the setting
 	 * ($mod_name) has no defined value, the CSS will not be output.
@@ -195,50 +179,3 @@ function newsmandu_generate_css( $selector, $style, $mod_name, $prefix = '', $po
 	}
 	return $return;
 }
-
-
-	/**
-	 * Output generated a line of CSS from customizer values in header output.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Customization_API#Sample_Theme_Customization_Class
-	 *
-	 * Used by hook: 'wp_head'
-	 *
-	 * @see add_action('wp_head',$func)
-	 */
-function newsmandu_customizer_css() {
-	?>
-	<!--Customizer CSS--> 
-	<style type="text/css">
-	<?php
-		newsmandu_generate_css( '.front-page .jumbotron', 'background-color', 'banner_bg_color' );
-		newsmandu_generate_css( '.navbar', 'background-color', 'menu_bar_bgcolor' );
-		newsmandu_generate_css( '.navbar .navbar-nav .nav-link', 'color', 'menu_color' );
-		newsmandu_generate_css( '.menu-item-has-children:after', 'color', 'menu_color' );
-		newsmandu_generate_css( '.navbar .navbar-nav .nav-link:hover', 'color', 'menu_hover_color' );
-		newsmandu_generate_css( '.navbar .navbar-brand, .navbar .navbar-brand:hover', 'color', 'site_title_color' );
-		newsmandu_generate_css( 'body', 'color', 'main_color' );
-		newsmandu_generate_css( '.entry-title, .entry-title a, .page-title', 'color', 'title_color' );
-		newsmandu_generate_css( 'a', 'color', 'link_color' );
-		newsmandu_generate_css( 'a:hover', 'color', 'link_hover_color' );
-		newsmandu_generate_css( '.entry-footer, .entry-meta', 'color', 'meta_color' );
-		newsmandu_generate_css( '.post .card-body', 'background-color', 'entry_bgcolor' );
-		newsmandu_generate_css( '.post .card-footer', 'background-color', 'entry_footer_bgcolor' );
-		newsmandu_generate_css( '.widget-title', 'color', 'wgt_title_color' );
-		newsmandu_generate_css( '.btn', 'background-color', 'newsmandu_btn_color' );
-		newsmandu_generate_css( '.btn:hover', 'background-color', 'newsmandu_btn_hover_color' );
-		newsmandu_generate_css( '#footer .bottom-footer', 'background-color', 'footer_bgcolor' );
-		newsmandu_generate_css( '#footer', 'color', 'footer_color' );
-		newsmandu_generate_css( '.bottom-footer .copyright-text p', 'color', 'site_info_text_color' );
-		newsmandu_generate_css( '.top-stories .entry-content h2, .top-stories .entry-content p', 'color', 'front_page_topstory_text_color' );
-		newsmandu_generate_css( '#footer .newsletter-widgets', 'background-color', 'newsletter_section_bg_color' );
-		newsmandu_generate_css( '#footer .footer-gallery', 'background-color', 'instagram_section_bg_color' );
-		newsmandu_generate_css( '#footer .newsletter-widgets h5', 'color', 'newsletter_section_text_color' );
-		newsmandu_generate_css( '#footer .footer-gallery h2', 'color', 'instagram_section_text_color' );
-		newsmandu_generate_css( '#footer .site-info .author a', 'color', 'author_section_text_color' );
-	?>
-
-	</style>
-	<?php
-}
-	add_action( 'wp_head', 'newsmandu_customizer_css' );
