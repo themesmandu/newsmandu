@@ -25,7 +25,7 @@
 		$wp_customize->add_setting(
 			'category_bg_color_' . $category->term_id,
 			array(
-				'default'           => '#8ead10',
+				'default'           => '#ffffff',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -43,7 +43,7 @@
 		$wp_customize->add_setting(
 			'category_color_' . $category->term_id,
 			array(
-				'default'           => '#8ead10',
+				'default'           => '#000000',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
