@@ -6,6 +6,7 @@
  *
  * @package Newsmandu
  */
+
 /**
  * Register different customizer features.
  *

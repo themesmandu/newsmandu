@@ -23,7 +23,7 @@
 	foreach ( $categories as $category ) {
 		// Background Color.
 		$wp_customize->add_setting(
-			'newsmandu_theme_options[category_bg_color_' . $category->term_id . ']',
+			'category_bg_color_' . $category->term_id,
 			array(
 				'default'           => '#8ead10',
 				'sanitize_callback' => 'sanitize_hex_color',
