@@ -4,7 +4,6 @@
  *
  * @package Newsmandu
  */
-
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
@@ -14,7 +13,6 @@ function newsmandu_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'newsmandu_pingback_header' );
-
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -52,11 +50,9 @@ function newsmandu_body_classes( $classes ) {
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar';
 	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'newsmandu_body_classes' );
-
 /**
  * Adds custom classes to the array of post classes.
  *
@@ -65,23 +61,18 @@ add_filter( 'body_class', 'newsmandu_body_classes' );
  */
 function newsmandu_post_classes( $classes ) {
 	$classes[] = ( has_post_thumbnail() ? 'has-thumbnail' : 'no-thumbnail' );
-
 	if ( is_front_page() || is_home() || is_archive() ) {
 		$classes[] = 'post-preview';
 	}
-
 	if ( is_singular( array( 'post', 'page' ) ) && ! is_front_page() ) {
 		$classes[] = 'card mb-4';
 	}
-
 	if ( is_home() || is_archive() ) {
 		$classes[] = 'card mb-4';
 	}
-
 	return $classes;
 }
 add_action( 'post_class', 'newsmandu_post_classes' );
-
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
  * a 'Continue reading' link.
@@ -108,7 +99,6 @@ function newsmandu_excerpt_more( $link ) {
 }
 add_filter( 'excerpt_more', 'newsmandu_excerpt_more' );
 add_filter( 'the_content_more_link', 'newsmandu_excerpt_more' );
-
 /**
  * Responsive Image class from Bootstrap
  * which appended to automatically generated image classes
@@ -126,7 +116,6 @@ function newsmandu_bootstrap_class_images( $html ) {
 	return $html;
 }
 add_filter( 'the_content', 'newsmandu_bootstrap_class_images', 10 );
-
 /**
  * Added table class from Bootstrap
  *
@@ -136,7 +125,6 @@ function newsmandu_bootstrap_table_class( $content ) {
 	return str_replace( '<table', '<table class="table"', $content );
 }
 add_filter( 'the_content', 'newsmandu_bootstrap_table_class' );
-
 /**
  * Adds a class to the navigation links of posts
  */
@@ -145,14 +133,12 @@ function newsmandu_posts_link_attributes() {
 }
 add_filter( 'next_posts_link_attributes', 'newsmandu_posts_link_attributes' );
 add_filter( 'previous_posts_link_attributes', 'newsmandu_posts_link_attributes' );
-
 /**
  * Comment form container.
  */
 function newsmandu_comment_form_wrap_start() {
 	echo '<div class="card my-4"><div class="card-body">';
 }
-
 /**
  * Comment form wrapper.
  */
@@ -161,7 +147,6 @@ function newsmandu_comment_form_wrap_end() {
 }
 add_action( 'comment_form_after', 'newsmandu_comment_form_wrap_end' );
 add_action( 'comment_form_before', 'newsmandu_comment_form_wrap_start' );
-
 /**
  * Add custom class to comment reply link.
  *
@@ -172,7 +157,6 @@ function newsmandu_comment_reply_link( $content ) {
 	return preg_replace( '/comment-reply-link/', 'comment-reply-link ' . $extra_classes, $content );
 }
 add_filter( 'comment_reply_link', 'newsmandu_comment_reply_link', 99 );
-
 /**
  * Custom Excerpt lengths.
  */
@@ -180,7 +164,6 @@ function newsmandu_custom_excerpt_length() {
 	return 16;
 }
 add_filter( 'excerpt_length', 'newsmandu_custom_excerpt_length' );
-
 /**
  * Use front-page.php when Front page displays is set to a static page.
  *
@@ -215,7 +198,6 @@ function newsmandu_latest_post() {
 			'ignore_sticky_posts' => true,
 		)
 	);
-
 	while ( $latest_posts->have_posts() ) :
 		$latest_posts->the_post();
 		?>
@@ -228,11 +210,7 @@ function newsmandu_latest_post() {
 						'class' => 'img-fluid rounded mb-2',
 					)
 				);
-				$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu' ) );
-				if ( $categories_list ) {
-					/* translators: 1: list of categories. */
-					echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
-				}
+				newsmandu_category( get_the_id() );
 				?>
 			</div>
 			<div class="latest-entries">
@@ -261,7 +239,6 @@ function newsmandu_latest_skip_post() {
 			'ignore_sticky_posts' => true,
 		)
 	);
-
 	while ( $latest_posts->have_posts() ) :
 		$latest_posts->the_post();
 		?>
@@ -274,7 +251,6 @@ function newsmandu_latest_skip_post() {
 						'class' => 'img-fluid rounded mb-2',
 					)
 				);
-
 				?>
 			</div>
 			<div class="latest-entries col-md-6">
@@ -299,7 +275,6 @@ function newsmandu_latest_skip_post() {
  * Navigation for single post
  */
 function newsmandu_navigation() {
-
 	if ( ! is_singular( 'post' ) ) {
 		return;
 	}
@@ -367,3 +342,20 @@ function newsmandu_authors_profile() {
 	endif;
 }
 
+/**
+ * Display category name and styles on front page.
+ *
+ * @since 1.0.0
+ *
+ * @param string $post_id Id of the category taxonomy.
+ */
+function newsmandu_category( $post_id ) {
+	$cats = wp_get_post_terms( $post_id, 'category' );
+	foreach ( $cats as $cat ) {
+		?>
+		<span class="cat-links" style="background-color:<?php echo esc_html( get_theme_mod( 'category_bg_color_' . $cat->term_id ) ); ?>" > <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" style="color:<?php echo esc_html( get_theme_mod( 'category_color_' . $cat->term_id ) ); ?>"><?php echo esc_html( $cat->name ); ?> </a> </span> 
+
+
+		<?php
+	}
+}

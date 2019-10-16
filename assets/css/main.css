@@ -507,10 +507,10 @@ article {
     position: relative;
 }
 .latest-image .cat-links {
-    background-color: white;
     position: absolute;
     top: 75%;
     left: 5%;
+    padding: 0 10px 0 10px;
 }
 .top-post .latest-entries {
     background-color: white;
@@ -519,8 +519,8 @@ article {
     margin-top: -8px;
     margin-bottom: 35px;
 }
-.latest-image .cat-links a {
-    padding: 10px;
+.latest-image .cat-links a:hover {
+    color: #007bff !important;
 }
 .featured-first {
     margin-bottom: 50px;
@@ -568,6 +568,10 @@ article {
 }
 .top-stories .latest-entries span a {
     font-size: 12px;
+    color: #757575;
+}
+.top-stories .latest-entries span a:hover {
+    color: #007bff;
 }
 .top-stories .latest-entries h3 {
     font-size: 16px;
@@ -584,8 +588,14 @@ article {
     margin-top: 20px;
     margin-right: 30px;
 }
+.bottom-footer .footer-widgets h3 {
+    color: #cdcfd2;
+}
 .bottom-footer .widget ul li a {
     color: #cdcfd2;
+}
+.bottom-footer .widget ul li a:hover{
+    color: #0056b3;
 }
 .newsletter-widgets h5,
 .footer-gallery h2 {
@@ -609,7 +619,7 @@ article {
     padding: 6px;
 }
 .footer-social li i:hover {
-    color: royalblue;
+    color: #0056b3;
 }
 .site-info {
     margin-top: 20px;
@@ -623,6 +633,7 @@ article {
 .newsletter-widgets h5 {
     font-size: 30px;
     margin-bottom: 40px;
+    color: #303132;
 }
 .newsletter-widgets .tnp {
     padding-left: 30%;
@@ -657,7 +668,9 @@ article {
 .footer-gallery h2 {
     font-size: 40px;
     margin-bottom: 30px;
+    color: #5285c4;
 }
+
 /**
 * Responsive CSS
 **/
@@ -851,7 +864,7 @@ article {
     }
     .single #primary:before {
         height: 30px;
-        top: -20px;
+        top: -15px;
     }
     .blog #primary:before,
     .single #primary:before,
@@ -963,7 +976,7 @@ article {
     .latest-image .cat-links {
         top: 65%;
     }
-    .skip-post .latest-entries {
+    .skip-post .latest-entries { 
         text-align: unset;
     }
     .skip-post .latest-entries p {
@@ -1020,12 +1033,12 @@ article {
     }
     .single #primary:before {
         height: 30px;
-        top: -20px;
+        top: -15px;
     }
     .blog #primary:before,
     .single #primary:before,
     .featured-section:before {
-        width: 64%;
+        width: 38%;
     }
 
     .header-img {
@@ -1182,7 +1195,7 @@ article {
     }
     .single #primary:before {
         height: 30px;
-        top: -20px;
+        top: -15px;
     }
     .blog #primary:before,
     .single #primary:before,
