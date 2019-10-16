@@ -211,8 +211,10 @@ function newsmandu_latest_post() {
 						'class' => 'img-fluid rounded mb-2',
 					)
 				);
-				newsmandu_category( get_the_id() );
 				?>
+				<div class="categories">
+					<?php newsmandu_category( get_the_id() ); ?>
+				</div>
 			</div>
 			<div class="latest-entries">
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

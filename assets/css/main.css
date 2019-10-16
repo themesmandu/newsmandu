@@ -506,11 +506,14 @@ article {
 .latest-image {
     position: relative;
 }
-.latest-image .cat-links {
+.latest-image .categories {
     position: absolute;
     top: 75%;
     left: 5%;
-    padding: 0 10px 0 10px;
+   
+}
+.latest-image .categories .cat-links {
+    padding: 0 7px 2px 7px;
 }
 .top-post .latest-entries {
     background-color: white;
