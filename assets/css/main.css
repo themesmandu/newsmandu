@@ -205,8 +205,8 @@ table caption {
 nav ul {
     margin-right: auto;
 }
-nav ul li a {
-    padding: 5px 20px 0 0 !important;
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 5px 20px 0 0;
 }
 /*
 * Front page slider

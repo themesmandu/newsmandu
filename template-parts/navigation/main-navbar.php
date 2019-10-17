@@ -12,18 +12,24 @@
 <?php if ( get_theme_mod( 'mainmenu_dropdown_mode' ) !== 'bootstrap' ) { ?>
 
 <nav class="navbar navbar-expand-lg main-navigation appear-left">
-<?php } else { ?>
-<nav class="navbar navbar-expand-lg main-navigation">
-<?php } ?>
-	<div class="container">
-		
-		<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmenus">
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
+    <?php } else { ?>
+    <nav class="navbar navbar-expand-lg main-navigation">
+        <?php } ?>
+        <div class="container">
 
-		<?php
+            <div class="menu-overlay-bg">
+                <span></span>
+                <span></span>
+            </div>
+
+            <button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarmenus">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <?php
 		wp_nav_menu(
 			array(
 				'theme_location'  => 'primary',
@@ -38,5 +44,5 @@
 		);
 		?>
 
-	</div>
-</nav>
+        </div>
+    </nav>

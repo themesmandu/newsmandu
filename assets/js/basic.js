@@ -44,4 +44,14 @@ jQuery(document).ready(function($) {
     $('#up-btn').click(function() {
         $('html, body').animate({ scrollTop: 0 }, 1000);
     });
+
+    // Menu close in clicking on background
+
+    $('.navbar-toggler').click(function(){
+        $('.menu-overlay-bg').addClass('show');
+    });
+
+    $('.menu-overlay-bg').click(function(){
+        $('.menu-overlay-bg, .navbar-collapse').removeClass('show');
+    });
 });
