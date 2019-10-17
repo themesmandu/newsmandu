@@ -609,6 +609,13 @@ article {
 }
 .site-info .author {
     text-align: right;
+    color: #cdcfd2;
+}
+.site-info .author a {
+    color: #cdcfd2;
+}
+.site-info .author a:hover {
+    color: #007bff;
 }
 .footer-social ul li {
     float: left;
@@ -626,6 +633,9 @@ article {
 }
 .site-info {
     margin-top: 20px;
+}
+#footer .bottom-footer .copyright-text p {
+    color: #cdcfd2;
 }
 #footer .newsletter-widgets {
     background-color: #eaebec;
