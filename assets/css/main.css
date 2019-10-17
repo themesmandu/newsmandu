@@ -1291,6 +1291,12 @@ article {
         text-align: unset;
     }
     /* Front Page CSS */
+    ..carousel-inner {
+        height: 600px;
+    }
+    .carousel-wrap .header-content {
+        margin-bottom: 15%;
+    }
     .featured-section h2,
     .featured-section h2 span {
         font-size: 18px;
