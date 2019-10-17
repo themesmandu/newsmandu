@@ -1291,11 +1291,11 @@ article {
         text-align: unset;
     }
     /* Front Page CSS */
-    ..carousel-inner {
+    .carousel-inner {
         height: 600px;
     }
     .carousel-wrap .header-content {
-        margin-bottom: 15%;
+        margin-bottom: 40%;
     }
     .featured-section h2,
     .featured-section h2 span {
