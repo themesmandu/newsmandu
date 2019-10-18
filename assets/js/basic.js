@@ -54,4 +54,12 @@ jQuery(document).ready(function($) {
     $('.menu-overlay-bg').click(function(){
         $('.menu-overlay-bg, .navbar-collapse').removeClass('show');
     });
+
+    $('.navbar-toggler').click(function(){
+        $('.appear-left').addClass('show');
+    });
+
+    $('.menu-overlay-bg').click(function(){
+        $('.appear-left').removeClass('show');
+    });
 });

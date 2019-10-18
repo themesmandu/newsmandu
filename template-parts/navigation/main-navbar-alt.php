@@ -16,11 +16,6 @@
         <?php } ?>
         <div class="container">
 
-            <div class="menu-overlay-bg">
-                <span></span>
-                <span></span>
-            </div>
-
             <button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                 data-target="#navbarmenus">
                 <span></span>

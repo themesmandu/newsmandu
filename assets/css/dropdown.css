@@ -152,6 +152,11 @@
 
 @media (max-width: 991px) {
 
+    .main-navigation.appear-left.show {
+        background-color: transparent;
+        transform: unset;
+    }
+
     .menu-overlay-bg {
         display: block;
         position: fixed;
@@ -159,6 +164,7 @@
         bottom: 0;
         left: 100%;
         right: 0;
+        z-index: 9;
         background-color: rgba(255, 255, 255, .85);
         transition: all 0.4s ease-in-out;
     }
