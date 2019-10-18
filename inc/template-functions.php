@@ -202,7 +202,7 @@ function newsmandu_latest_post() {
 	while ( $latest_posts->have_posts() ) :
 		$latest_posts->the_post();
 		?>
-		<div class="col-md-3">
+		<div class="col-lg-3 col-sm-6">
 			<div class="latest-image">
 				<?php
 				the_post_thumbnail(

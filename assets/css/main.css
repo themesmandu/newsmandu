@@ -1086,7 +1086,6 @@ article {
     }
     .author-area .author-detail h3 {
         font-size: 16px;
-        text-align: center;
     }
     .author-area .author-detail p {
         font-size: 14px;
@@ -1100,11 +1099,9 @@ article {
         font-size: 20px;
     }
     .top-post .latest-entries h3 {
-        text-align: center;
         font-size: 16px;
     }
     .top-post .latest-entries span a {
-        margin-left: 254px;
         font-size: 12px;
     }
     .top-post .sidebar {
@@ -1262,11 +1259,9 @@ article {
         font-size: 20px;
     }
     .top-post .latest-entries h3 {
-        text-align: center;
         font-size: 16px;
     }
     .top-post .latest-entries span a {
-        margin-left: 118px;
         font-size: 12px;
     }
     .top-post .sidebar {
