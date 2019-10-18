@@ -244,6 +244,7 @@ nav ul {
 .header-content h2 a,
 .header-content p a {
     color: #fefeff;
+    font-weight: 300;
 }
 .header-content h2 a:hover, 
 .header-content p a:hover{
@@ -499,6 +500,9 @@ article {
     background: white;
     position: relative;
 }
+.featured-second .content-meta h2 {
+    font-weight: 400;
+}
 .top-stories .bg-img {
     position: relative;
 }
@@ -520,7 +524,6 @@ article {
     position: absolute;
     top: 75%;
     left: 5%;
-   
 }
 .latest-image .categories .cat-links {
     padding: 0 7px 2px 7px;
@@ -542,6 +545,9 @@ article {
     box-shadow: 0px 8px 14px 1px #b5b5b5;
     padding: 10px;
 }
+.entries-desc .desc {
+    color: #030304;
+}
 .entries-desc span {
     font-size: 12px;
     margin-right: 3px;
@@ -552,7 +558,12 @@ article {
 }
 .entries-desc h2 a {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
+    color: #030304;
+}
+.top-stories .entry-content h2 {
+    font-size: 55px;
+    font-weight: 300;
 }
 .top-stories .entry-content h2,
 .top-stories .entry-content p {
@@ -603,9 +614,11 @@ article {
 }
 .bottom-footer .footer-widgets h3 {
     color: #cdcfd2;
+    font-weight: 300;
 }
 .bottom-footer .widget ul li a {
     color: #cdcfd2;
+    font-weight: 400;
 }
 .bottom-footer .widget ul li a:hover{
     color: #0056b3;
@@ -679,7 +692,7 @@ article {
     top: 0;
     bottom: 0;
     height: 30px;
-    margin: auto;;
+    margin: auto;
 }
 #footer .newsletter-widgets .widget .tnp-widget-minimal input.tnp-email {
     padding-right: 110px;
@@ -690,6 +703,7 @@ article {
 }
 .footer-gallery h2 {
     font-size: 40px;
+    font-weight: 300;
     margin-bottom: 30px;
     color: #5285c4;
 }
