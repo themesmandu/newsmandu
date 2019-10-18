@@ -859,6 +859,10 @@ article {
     .footer-gallery h2 {
         font-size: 38px;
     }
+    /** Blog Page **/
+    .blog article .card-body {
+        order: -1;
+    }
 }
 @media (max-width: 991px) {
     p {
@@ -1027,6 +1031,10 @@ article {
     .footer-gallery h2 {
         font-size: 32px;
     }
+        /** Blog Page **/
+        .blog article.post  {
+            display: block;
+        }
 }
 @media (max-width: 767px) {
     
@@ -1186,6 +1194,17 @@ article {
     }
     .footer-gallery h2 {
         font-size: 28px;
+    }
+    /** Blog Page **/
+    .blog #primary {
+        max-width: 570px;
+        margin: auto;
+    }
+    .blog #primary:before, .single #primary:before, .featured-section:before {
+        display: none;
+    }
+    .single #primary {
+        margin-top: 0;
     }
 }
 @media (max-width: 576px) {
