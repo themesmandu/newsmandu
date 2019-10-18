@@ -271,6 +271,8 @@ nav ul {
 .header-img .entry-header h1 {
     color: #fefeff;
     font-size: 70px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
 }
 /* Content Image */
 article p img {
@@ -307,6 +309,11 @@ article p img {
 }
 .entry-content img{
     max-height: 450px;
+}
+.blog #primary .post .card-body h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    
 }
 
 /* -- Single Page Styles -- */
@@ -349,6 +356,10 @@ article {
 .author-desc {
     text-align: center;
 }
+.author-name h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
 /* --- Single Post Navigation ---*/
 .previous img,
 .next img {
@@ -379,10 +390,12 @@ article {
     padding: 0;
 }
 .latest-post .top-post {
-    margin-top: 0;
+    margin-top: 35px;
 }
 .latest-post h2 {
     text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
 }
 .single .previous,
 .single .next {
@@ -534,6 +547,11 @@ article {
     padding: 15px;
     margin-top: -8px;
     margin-bottom: 35px;
+}
+.top-post .latest-entries h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 .latest-image .cat-links a:hover {
     color: #007bff !important;
