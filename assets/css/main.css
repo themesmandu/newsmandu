@@ -683,7 +683,10 @@ article {
     margin-bottom: 30px;
     color: #5285c4;
 }
-
+    /** Blog Page **/
+    .blog article .card-body {
+        order: -1;
+    }
 /**
 * Responsive CSS
 **/
@@ -859,10 +862,7 @@ article {
     .footer-gallery h2 {
         font-size: 38px;
     }
-    /** Blog Page **/
-    .blog article .card-body {
-        order: -1;
-    }
+
 }
 @media (max-width: 991px) {
     p {
