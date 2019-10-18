@@ -6,7 +6,8 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
     font-size: 16px;
     line-height: 1.5;
     word-break: break-word;
@@ -220,6 +221,14 @@ nav ul {
     justify-content: center;
     height: 100%;
 }
+.carousel-indicators .active {
+    background-color: #adb738;
+}
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+}
 .frontpage-cat-links a{
     background-color: #adb738;
     color: black;
@@ -400,6 +409,7 @@ article {
 .featured-section h2 {
     padding-top: 10px;
     padding-bottom: 10px; 
+    font-weight: 300;
 }
 .featured-section h2 .slash {
     font-size: 40px;

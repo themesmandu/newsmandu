@@ -215,7 +215,7 @@ function newsmandu_scripts() {
 	wp_enqueue_script( 'newsmandu-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
 	// Font Nunito And Advent Pro.
-	wp_enqueue_style( 'newsmandu-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600,700|Nunito:400,600,700&display=swap', true );
+	wp_enqueue_style( 'newsmandu-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
