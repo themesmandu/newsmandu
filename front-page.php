@@ -31,7 +31,7 @@ get_header();
 	<?php if ( 0 !== count( $activefeat ) || count( $activesec ) ) : ?>
 <section class="featured-section">
 	<div class="container">
-		<h2>Featured  <span class="slash">/</span> <span> Some of the featured posts</span></h2>
+		<h2 class="feat-title">Featured  <span class="slash">/</span> <span> Some of the featured posts</span></h2>
 		<?php if ( 0 !== count( $activefeat ) ) : ?>
 			<?php if ( get_theme_mod( 'featured_post_toggle' ) ) : ?>
 		<div class=" row featured-first">

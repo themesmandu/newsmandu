@@ -31,6 +31,16 @@ jQuery(document).ready(function($) {
         });
     }
 
+    // Add class in navigation alt search form
+
+    $('.search-form .search-icon').click(function() {
+        $('.search-form').toggleClass('search-form-show');
+    });
+
+    $('.search-form .close-icon').click(function() {
+        $('.search-form').removeClass('search-form-show');
+    });
+
     // To top Java Script
 
     $(window).scroll(function() {

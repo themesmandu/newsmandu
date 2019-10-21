@@ -183,7 +183,34 @@ table caption {
     font-family: 'Maven Pro', sans-serif;
     font-size: 14px;
 }
+/** Seach Form alternative **/
+.search-form .form {
+    display: none;
 
+}
+.search-form-show .form {
+    display: block;
+}
+.search-form .fa-search{
+    color: #131b26;
+    display: block;
+}
+.search-form-show .search-icon, 
+.search-form .close-icon {
+    display: none;
+}
+.search-form-show .close-icon {
+    display: block;
+    margin: 6px 6px 0 0;
+    color:#131b26;
+}
+.search-form .form .submit {
+    background-color: #ffffff;
+    border: 1px #131b26 solid;
+}
+.search-form .form input.field {
+    height: 30px;
+}
 /** Secondary Navigation **/
 .top-menu {
     background-color: #e5e5ee;
@@ -198,10 +225,9 @@ table caption {
     float: left;
 }
 .navbar .site-detail p {
-    margin: 8px 115px 40px 2px;
+    margin-right: 25px;
     font-size: 14px;
     display: inline-block;
-    padding: 15px 0 0 0;
 }
 nav ul {
     margin-right: auto;
@@ -288,6 +314,31 @@ article p img {
 .blog #content,
 .single #content {
     position: relative;
+}
+.single #comments {
+    background-color: #f7f7f7;
+    padding: 44px;
+}
+.single #comments .card-body {
+    background-color: #f7f7f7;
+}
+.single #comments .comment-form .comment-form-cookies-consent {
+    display: flex;
+    margin: 32px 0;
+}
+#commentform .comment-form-cookies-consent input {
+    width: 20px;
+    margin: auto 0;
+}
+#commentform .comment-form-cookies-consent label {
+    font-weight: 300;
+    color: #777777;
+    margin: auto 0 auto 5px;
+}
+
+.single #comments .comment-respond .form-submit .btn-primary {
+    background-color: #393941;
+    color: #ffffff;
 }
 
 .blog #primary {
@@ -425,12 +476,16 @@ article {
     padding-bottom: 10px; 
     font-weight: 300;
 }
+.featured-section h2.feat-title{
+    padding: 78px 0 39px 0;
+    font-size: 49px;
+}
 .featured-section h2 .slash {
-    font-size: 40px;
+    font-size: 49px;
     padding: 10px;
 }
 .featured-section h2 span {
-    font-size: 20px;
+    font-size: 25px;
 }
 .featured-second p,
 .top-stories .latest-entries p {
@@ -505,11 +560,11 @@ article {
 }
 
 .featured-section:before {
-    height: 90px;
+    height: 188px;
     top: 0;
 }
 .featured-section .container {
-    margin-top: -90px;
+    margin-top: -188px;
     background: white;
     position: relative;
 }
