@@ -214,3 +214,15 @@ function newsmandu_sanitize_player_atc_style( $input ) {
 
 	return '';
 }
+if ( ! function_exists( 'newsmandu_iframe_sanitize' ) ) {
+	/**
+	 * Iframe sanitization.
+	 *
+	 * @param  string       input value
+	 * @return integer  Sanitized value
+	 */
+	function newsmandu_iframe_sanitize( $input ) {
+		return wp_kses( $input, expanded_alowed_tags() );
+	}
+}
+

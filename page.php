@@ -18,7 +18,7 @@ get_header();
 <div class="container">
 	<div class="row">
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="col-md-8">
 		<main id="main" class="site-main">
 
 		<?php
@@ -42,8 +42,12 @@ get_header();
 /* Get Sidebar #secondary */
 get_sidebar();
 ?>
-
-	</div><!-- /.row -->
+</div><!-- /.row -->
+	<?php if ( get_theme_mod( 'ad_setting3' ) ) : ?>
+		<div class = 'ad-area'>
+			<?php echo wp_kses( get_theme_mod( 'ad_setting3' ), $my_allowed ); ?>
+		</div>
+		<?php endif; ?> <!-- End of ad-area1 -->
 </div><!-- /.container -->
 
 <?php

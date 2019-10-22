@@ -68,8 +68,6 @@ function newsmandu_customize_register( $wp_customize ) {
 	// Settings.
 	// Blog Pagination.
 	require get_template_directory() . '/inc/customizer/post-page/blog-pagination.php';
-	// More Link.
-	require get_template_directory() . '/inc/customizer/post-page/more-link.php';
 	// Featured.
 	require get_template_directory() . '/inc/customizer/post-page/featured.php';
 	// Layout.
@@ -124,10 +122,27 @@ function newsmandu_customize_register( $wp_customize ) {
 	// Add Section for featured post.
 	require get_template_directory() . '/inc/customizer/frontpage/featuredpost.php';
 	require get_template_directory() . '/inc/customizer/frontpage/postpage.php';
+	// More Link.
+	require get_template_directory() . '/inc/customizer/frontpage/more-link.php';
 	// Footer section.
 	require get_template_directory() . '/inc/customizer/footer.php';
 	// load destination color picker option.
 	require get_template_directory() . '/inc/customizer/theme-options/category-color.php';
+
+	/**
+	 *
+	 * Add Panel Advertisment Section Settings
+	 */
+	$wp_customize->add_section(
+		'ad_section',
+		array(
+			'title'      => __( 'Advertisement Settings', 'newsmandu' ),
+			'capability' => 'edit_theme_options',
+			'priority'   => 160,
+		)
+	);
+	// load destination color picker option.
+	require get_template_directory() . '/inc/customizer/ad.php';
 }
 	// END Options.
 	add_action( 'customize_register', 'newsmandu_customize_register' );

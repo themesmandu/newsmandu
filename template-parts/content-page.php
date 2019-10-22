@@ -46,6 +46,4 @@
 			?>
 		</footer>
 	<?php endif; ?>
-
-</div><!-- .card-body -->
 </article><!-- #post-<?php the_ID(); ?> -->

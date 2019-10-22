@@ -22,7 +22,7 @@
 			array(
 				'label'       => __( 'Read More button', 'newsmandu' ),
 				'description' => __( 'Enter the button name which is a link to the full post. You can leave this blank if you want to hide the button.', 'newsmandu' ),
-				'section'     => 'blog_options',
+				'section'     => 'top_stories',
 				'type'        => 'text',
 			)
 		)

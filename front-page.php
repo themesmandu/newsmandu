@@ -42,7 +42,7 @@ get_header();
 					$newsmandu_featured_date        = get_the_date( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_date );
 					$newsmandu_featured_author      = get_the_author_meta( get_theme_mod( 'newsmandu_featured_post_' . $i )->post_author );
 					$newsmandu_featured_category    = get_the_term_list( get_theme_mod( 'newsmandu_featured_post_' . $i ), 'category' );
-					$newsmandu_featured_description = get_the_excerpt( get_theme_mod( 'newsmandu_featured_post_' . $i ) );
+					$newsmandu_featured_description = apply_filters( 'the_excerpt', get_the_excerpt( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) );
 					?>
 			<div class="entries col-md-4">
 				<div class="entries-visual">
@@ -67,8 +67,11 @@ get_header();
 		</div>
 			<?php endif; ?><!-- End of featured post toggle -->
 		<?php endif; ?><!-- End of Active count Loop -->
-		<div class="ad">
+		<?php if ( get_theme_mod( 'ad_setting1' ) ) : ?>
+		<div class = 'ad-area'>
+			<?php echo wp_kses( get_theme_mod( 'ad_setting1' ), expanded_alowed_tags() ); ?>
 		</div>
+		<?php endif; ?> <!-- End of ad-area1 -->
 		<?php if ( 0 !== count( $activesec ) ) : ?>
 			<?php if ( get_theme_mod( 'featured_post_second_toggle' ) ) : ?>
 		<div class="featured-second">
@@ -118,8 +121,11 @@ get_header();
 		<div class="row top-post">
 			<?php newsmandu_latest_post(); ?>
 		</div>
-		<div class="ad">
+		<?php if ( get_theme_mod( 'ad_setting2' ) ) : ?>
+		<div class = 'ad-area'>
+			<?php echo wp_kses( get_theme_mod( 'ad_setting2' ), expanded_alowed_tags() ); ?>
 		</div>
+		<?php endif; ?> <!-- End of ad-area2 -->
 		<div class="row">
 			<div class="skip-post col-md-9">
 					<?php newsmandu_latest_skip_post(); ?>

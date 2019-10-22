@@ -211,6 +211,7 @@ table caption {
 .search-form .form input.field {
     height: 30px;
 }
+
 /** Secondary Navigation **/
 .top-menu {
     background-color: #e5e5ee;
@@ -300,6 +301,26 @@ nav ul {
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
 }
+/*Search Form */
+.widget_search .form .submit{
+    background-color: #535356;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+}
+.widget-area .widget {
+    margin: 35px 20px;
+    padding: 5px;
+}
+.widget_search .form .field {
+    border: none;
+}
+.widget_search .form .input-group {
+    box-shadow: 2px 1px 25px 2px grey;
+}
+.widget-area .widget h5 {
+    margin-bottom: 25px;
+}
 /* Content Image */
 article p img {
     width: 100%;
@@ -365,6 +386,32 @@ article p img {
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
     
+}
+.posts-navigation .nav-links a {
+    background-color: #060606;
+    color: #ffffff;
+}
+.navigation .nav-links a:hover {
+    color: #007bff;
+}
+.navigation h2.screen-reader-text {
+    font-size: 20px;
+}
+.pagination .nav-links {
+    text-align: center;
+    margin: 0 auto;
+}
+.pagination .nav-links a.page-numbers {
+    border: 1px #000000 solid;
+    padding: 5px 10px;
+    color: #393939;
+    display: inline-block;
+}
+.pagination .nav-links span.current {
+    background-color: #060606;
+    color: #ffffff;
+    border: 1px #000000 solid;
+    padding: 5px 10px;
 }
 
 /* -- Single Page Styles -- */
@@ -627,7 +674,7 @@ article {
 }
 .entries-desc p,
 .entries-desc a {
-    font-size: 12px;
+    font-size: 17px;
 }
 .entries-desc h2 a {
     font-size: 16px;

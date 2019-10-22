@@ -90,15 +90,20 @@ function newsmandu_excerpt_more( $link ) {
 		$link .= sprintf(
 			'<p><a href="%1$s" class="more-link btn btn-primary">%2$s</a></p>',
 			esc_url( get_permalink( get_the_ID() ) ),
-			/* translators: %2$s: Name of current post */
-			sprintf( __( '%1$s<span class="screen-reader-text">%2$s</span>', 'newsmandu' ), esc_html( get_theme_mod( 'more_link' ) ), get_the_title( get_the_ID() ) )
+			esc_html( get_theme_mod( 'more_link' ) )
 		);
 	} else {
 		$link = '...';
 	}
 	return $link;
 }
-add_filter( 'excerpt_more', 'newsmandu_excerpt_more' );
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with ...
+ */
+function newsmandu_remove_box() {
+	return '';
+}
+add_filter( 'excerpt_more', 'newsmandu_remove_box' );
 add_filter( 'the_content_more_link', 'newsmandu_excerpt_more' );
 /**
  * Responsive Image class from Bootstrap
@@ -191,7 +196,6 @@ add_filter( 'input_class', 'col_class_filter' );
  * Displays latest post entries
  */
 function newsmandu_latest_post() {
-	global $post;
 	$latest_posts = new WP_Query(
 		array(
 			'posts_per_page'      => 4,
@@ -222,9 +226,9 @@ function newsmandu_latest_post() {
 				<?php if ( is_home() || is_front_page() ) : ?>
 				<p><?php the_excerpt(); ?></p>
 			<?php endif; ?>
+			<p><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_theme_mod( 'more_link' ) ); ?></a></p>
 			</div>	
 		</div>
-
 		<?php
 	endwhile;
 	wp_reset_postdata();
