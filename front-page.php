@@ -127,10 +127,10 @@ get_header();
 		</div>
 		<?php endif; ?> <!-- End of ad-area2 -->
 		<div class="row">
-			<div class="skip-post col-md-9">
+			<div class="skip-post col-md-8">
 					<?php newsmandu_latest_skip_post(); ?>
 			</div>
-		<div class="sidebar col-md-3">
+		<div class="sidebar col-md-4">
 			<?php dynamic_sidebar( 'Front Page Sidebar' ); ?>
 		</div>
 	</div>

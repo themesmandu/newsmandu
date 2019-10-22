@@ -623,6 +623,7 @@ article {
 }
 .top-post {
     margin-top: -170px;
+    margin-bottom: 30px;
 }
 .top-stories .entry-content {
     position: absolute;
