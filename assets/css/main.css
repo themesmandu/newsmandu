@@ -682,6 +682,9 @@ article {
     font-weight: 400;
     color: #030304;
 }
+.entries-desc h2 a:hover {
+    color: #007bff;
+}
 .top-stories .entry-content h2 {
     font-size: 55px;
     font-weight: 300;
@@ -1388,7 +1391,7 @@ article {
         padding: 0px 10px 0px 30px;
     }
     .navbar .secondary-menu ul {
-        float: left;
+        float: right;
         margin-bottom: 0;
     }
     .card-body .entry-content {

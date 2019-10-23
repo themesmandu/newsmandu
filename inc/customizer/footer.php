@@ -1,6 +1,6 @@
 <?php
 /**
- * Footer theme options
+ * Newsmandu Theme customizer Footer option.
  *
  * @package Newsmandu
  */

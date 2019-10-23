@@ -1,8 +1,6 @@
 <?php
 /**
- * Newsmandu functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * Newsmandu theme customizer for read more button
  *
  * @package Newsmandu
  */

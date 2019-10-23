@@ -1,6 +1,6 @@
 <?php
 /**
- * Newsmandu Theme Customizer
+ * Newsmandu Theme Customizer for top menu site info section.
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object.
  *

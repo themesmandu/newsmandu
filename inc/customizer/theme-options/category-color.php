@@ -1,6 +1,6 @@
 <?php
 /**
- * Destination color selector
+ * Newsmandu Theme color selector for category.
  *
  * @package Newsmandu
  */

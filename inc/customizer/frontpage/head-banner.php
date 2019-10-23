@@ -2,7 +2,7 @@
 /**
  * Newsmandu Theme Customizer
  *
- * @param WP_Customize_Manager $wp_customize the Customizer object.
+ * @param WP_Customize_Manager $wp_customize the Customizer object for front page banner.
  *
  * @package Newsmandu
  */

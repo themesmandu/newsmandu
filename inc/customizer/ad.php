@@ -1,8 +1,6 @@
 <?php
 /**
- * Newsmandu functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * Newsmandu Theme Customizer for advertisment.
  *
  * @package Newsmandu
  */
@@ -46,8 +44,8 @@
 				'type'        => 'textarea',
 			)
 		)
-    );
-    $wp_customize->add_setting(
+	);
+	$wp_customize->add_setting(
 		'ad_setting3',
 		array(
 			'default'           => '',

@@ -1,6 +1,6 @@
 <?php
 /**
- * Newsmandu Theme Customizer
+ * Newsmandu Theme Customizer for blog post layout.
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object.
  *

@@ -1,8 +1,6 @@
 <?php
 /**
- * Newsmandu Theme Customizer
- *
- * @param WP_Customize_Manager $wp_customize the Customizer object.
+ * Newsmandu Theme Customizer for front page slider section
  *
  * @package Newsmandu
  */

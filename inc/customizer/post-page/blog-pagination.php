@@ -1,8 +1,6 @@
 <?php
 /**
- * Newsmandu functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * Newsmandu functions and definitions for blog page pagination.
  *
  * @package Newsmandu
  */
