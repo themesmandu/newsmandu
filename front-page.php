@@ -55,7 +55,7 @@ get_header();
 					<?php if ( $newsmandu_featured_title ) : ?>
 						<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_title ); ?></a></h2>
 					<?php endif; ?>
-					<p>By <?php newsmandu_posted_by( $newsmandu_featured_author ); ?></p>
+					<p><?php newsmandu_posted_by( $newsmandu_featured_author ); ?></p>
 						<?php if ( $newsmandu_featured_description ) : ?>
 						<div class="desc">
 							<?php echo wp_kses_post( $newsmandu_featured_description ); ?>
