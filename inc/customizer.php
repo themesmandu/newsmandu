@@ -127,7 +127,7 @@ function newsmandu_customize_register( $wp_customize ) {
 	// Footer section.
 	require get_template_directory() . '/inc/customizer/footer.php';
 	// load destination color picker option.
-	require get_template_directory() . '/inc/customizer/theme-options/category-color.php';
+	require get_template_directory() . '/inc/customizer/theme-options/cat-color.php';
 
 	/**
 	 *

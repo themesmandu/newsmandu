@@ -21,7 +21,7 @@
 			$wp_customize,
 			'top_menu_toggle',
 			array(
-				'label'   => esc_html__( 'Show Top Menu Section' ),
+				'label'   => esc_html__( 'Show Top Menu Section', 'newsmandu' ),
 				'section' => 'general_options',
 			)
 		)

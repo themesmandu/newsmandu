@@ -81,9 +81,9 @@ if ( is_home() ) {
 ?>
 
 	</div><!-- /.row -->
-	<?php if ( get_theme_mod( 'ad_setting3' ) ) : ?>
+	<?php if ( get_theme_mod( 'ad_setting4' ) ) : ?>
 		<div class = 'ad-area'>
-			<?php echo wp_kses( get_theme_mod( 'ad_setting3' ), expanded_alowed_tags() ); ?>
+			<?php echo wp_kses( get_theme_mod( 'ad_setting4' ), expanded_alowed_tags() ); ?>
 		</div>
 	<?php endif; ?> <!-- End of ad-area1 -->
 </div><!-- /.container -->

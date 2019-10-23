@@ -67,9 +67,9 @@ get_header();
 		</div>
 			<?php endif; ?><!-- End of featured post toggle -->
 		<?php endif; ?><!-- End of Active count Loop -->
-		<?php if ( get_theme_mod( 'ad_setting1' ) ) : ?>
+		<?php if ( get_theme_mod( 'ad_setting2' ) ) : ?>
 		<div class = 'ad-area'>
-			<?php echo wp_kses( get_theme_mod( 'ad_setting1' ), expanded_alowed_tags() ); ?>
+			<?php echo wp_kses( get_theme_mod( 'ad_setting2' ), expanded_alowed_tags() ); ?>
 		</div>
 		<?php endif; ?> <!-- End of ad-area1 -->
 		<?php if ( 0 !== count( $activesec ) ) : ?>
@@ -121,9 +121,9 @@ get_header();
 		<div class="row top-post">
 			<?php newsmandu_latest_post(); ?>
 		</div>
-		<?php if ( get_theme_mod( 'ad_setting2' ) ) : ?>
+		<?php if ( get_theme_mod( 'ad_setting3' ) ) : ?>
 		<div class = 'ad-area'>
-			<?php echo wp_kses( get_theme_mod( 'ad_setting2' ), expanded_alowed_tags() ); ?>
+			<?php echo wp_kses( get_theme_mod( 'ad_setting3' ), expanded_alowed_tags() ); ?>
 		</div>
 		<?php endif; ?> <!-- End of ad-area2 -->
 		<div class="row">

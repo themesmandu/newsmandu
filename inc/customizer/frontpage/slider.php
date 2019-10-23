@@ -29,7 +29,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'slider_toggle',
 		array(
-			'label'   => esc_html__( 'Show Slider Section' ),
+			'label'   => esc_html__( 'Show Slider Section', 'newsmandu' ),
 			'section' => 'frontpage_slider',
 		)
 	)

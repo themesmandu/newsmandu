@@ -28,7 +28,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'featured_post_toggle',
 		array(
-			'label'   => esc_html__( 'Show Featured Area 1 Section' ),
+			'label'   => esc_html__( 'Show Featured Area 1 Section', 'newsmandu' ),
 			'section' => 'featured_post',
 		)
 	)
@@ -83,7 +83,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'featured_post_second_toggle',
 		array(
-			'label'   => esc_html__( 'Show Featured Area 2 Section' ),
+			'label'   => esc_html__( 'Show Featured Area 2 Section', 'newsmandu' ),
 			'section' => 'featured_post_Second',
 		)
 	)
@@ -138,7 +138,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'top_stories_toggle',
 		array(
-			'label'   => esc_html__( 'Show Top Stories Post Section' ),
+			'label'   => esc_html__( 'Show Top Stories Post Section', 'newsmandu' ),
 			'section' => 'top_stories',
 		)
 	)

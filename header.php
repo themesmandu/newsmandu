@@ -55,31 +55,38 @@
 				</div>
 			</div>
 			<?php endif; ?>
-			<div class="container">
-				<div class="logo">
-					<div class="site-branding">
-						<?php if ( ! has_custom_logo() ) { ?>
-							<?php if ( is_front_page() && is_home() ) : ?>
-						<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+			<div class="site-logo">
+				<div class="container">
+					<div class="logo col-md-6">
+						<div class="site-branding">
+							<?php if ( ! has_custom_logo() ) { ?>
+								<?php if ( is_front_page() && is_home() ) : ?>
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+									title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+									itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+							<?php else : ?>
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
 								title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-								itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php else : ?>
-						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
-							title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-							itemprop="url"><?php bloginfo( 'name' ); ?></a>
-							<?php
-						endif;
-						$newsmandu_description = get_bloginfo( 'description', 'display' );
-						if ( $newsmandu_description || is_customize_preview() ) :
+								itemprop="url"><?php bloginfo( 'name' ); ?></a>
+								<?php
+							endif;
+							$newsmandu_description = get_bloginfo( 'description', 'display' );
+							if ( $newsmandu_description || is_customize_preview() ) :
+								?>
+							<p class="site-description"><?php echo wp_kses_post( $newsmandu_description ); ?></p>
+							<?php endif; ?>
+								<?php
+							} else {
+								the_custom_logo();
+							}
 							?>
-						<p class="site-description"><?php echo wp_kses_post( $newsmandu_description ); ?></p>
-						<?php endif; ?>
-							<?php
-						} else {
-							the_custom_logo();
-						}
-						?>
+						</div>
 					</div>
+					<?php if ( get_theme_mod( 'ad_setting1' ) ) : ?>
+					<div class = 'ad-area col-md-6'>
+							<?php echo wp_kses( get_theme_mod( 'ad_setting1' ), expanded_alowed_tags() ); ?>
+					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 			<?php

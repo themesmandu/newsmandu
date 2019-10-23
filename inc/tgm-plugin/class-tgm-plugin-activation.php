@@ -321,77 +321,77 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			// Load class strings.
 			$this->strings = array(
-				'page_title'                      => __( 'Install Required Plugins', 'Newsmandu' ),
-				'menu_title'                      => __( 'Install Plugins', 'Newsmandu' ),
+				'page_title'                      => __( 'Install Required Plugins', 'newsmandu' ),
+				'menu_title'                      => __( 'Install Plugins', 'newsmandu' ),
 				/* translators: %s: plugin name. */
-				'installing'                      => __( 'Installing Plugin: %s', 'Newsmandu' ),
+				'installing'                      => __( 'Installing Plugin: %s', 'newsmandu' ),
 				/* translators: %s: plugin name. */
-				'updating'                        => __( 'Updating Plugin: %s', 'Newsmandu' ),
-				'oops'                            => __( 'Something went wrong with the plugin API.', 'Newsmandu' ),
+				'updating'                        => __( 'Updating Plugin: %s', 'newsmandu' ),
+				'oops'                            => __( 'Something went wrong with the plugin API.', 'newsmandu' ),
 				'notice_can_install_required'     => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'This theme requires the following plugin: %1$s.',
 					'This theme requires the following plugins: %1$s.',
-					'Newsmandu'
+					'newsmandu'
 				),
 				'notice_can_install_recommended'  => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'This theme recommends the following plugin: %1$s.',
 					'This theme recommends the following plugins: %1$s.',
-					'Newsmandu'
+					'newsmandu'
 				),
 				'notice_ask_to_update'            => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 					'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-					'Newsmandu'
+					'newsmandu'
 				),
 				'notice_ask_to_update_maybe'      => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'There is an update available for: %1$s.',
 					'There are updates available for the following plugins: %1$s.',
-					'Newsmandu'
+					'newsmandu'
 				),
 				'notice_can_activate_required'    => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following required plugin is currently inactive: %1$s.',
 					'The following required plugins are currently inactive: %1$s.',
-					'Newsmandu'
+					'newsmandu'
 				),
 				'notice_can_activate_recommended' => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following recommended plugin is currently inactive: %1$s.',
 					'The following recommended plugins are currently inactive: %1$s.',
-					'Newsmandu'
+					'newsmandu'
 				),
 				'install_link'                    => _n_noop(
 					'Begin installing plugin',
 					'Begin installing plugins',
-					'Newsmandu'
+					'newsmandu'
 				),
 				'update_link'                     => _n_noop(
 					'Begin updating plugin',
 					'Begin updating plugins',
-					'Newsmandu'
+					'newsmandu'
 				),
 				'activate_link'                   => _n_noop(
 					'Begin activating plugin',
 					'Begin activating plugins',
-					'Newsmandu'
+					'newsmandu'
 				),
-				'return'                          => __( 'Return to Required Plugins Installer', 'Newsmandu' ),
-				'dashboard'                       => __( 'Return to the Dashboard', 'Newsmandu' ),
-				'plugin_activated'                => __( 'Plugin activated successfully.', 'Newsmandu' ),
-				'activated_successfully'          => __( 'The following plugin was activated successfully:', 'Newsmandu' ),
+				'return'                          => __( 'Return to Required Plugins Installer', 'newsmandu' ),
+				'dashboard'                       => __( 'Return to the Dashboard', 'newsmandu' ),
+				'plugin_activated'                => __( 'Plugin activated successfully.', 'newsmandu' ),
+				'activated_successfully'          => __( 'The following plugin was activated successfully:', 'newsmandu' ),
 				/* translators: 1: plugin name. */
-				'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'Newsmandu' ),
+				'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'newsmandu' ),
 				/* translators: 1: plugin name. */
-				'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'Newsmandu' ),
+				'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'newsmandu' ),
 				/* translators: 1: dashboard link. */
-				'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'Newsmandu' ),
-				'dismiss'                         => __( 'Dismiss this notice', 'Newsmandu' ),
-				'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'Newsmandu' ),
-				'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'Newsmandu' ),
+				'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'newsmandu' ),
+				'dismiss'                         => __( 'Dismiss this notice', 'newsmandu' ),
+				'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'newsmandu' ),
+				'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'newsmandu' ),
 			);
 
 			do_action( 'tgmpa_register' );
@@ -516,8 +516,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			$actions['update'] = sprintf(
 				'<a href="%1$s" title="%2$s" class="edit">%3$s</a>',
 				esc_url( $this->get_tgmpa_status_url( 'update' ) ),
-				esc_attr__( 'This plugin needs to be updated to be compatible with your theme.', 'Newsmandu' ),
-				esc_html__( 'Update Required', 'Newsmandu' )
+				esc_attr__( 'This plugin needs to be updated to be compatible with your theme.', 'newsmandu' ),
+				esc_html__( 'Update Required', 'newsmandu' )
 			);
 
 			return $actions;
@@ -821,7 +821,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 				// Display message based on if all plugins are now active or not.
 				if ( $this->is_tgmpa_complete() ) {
-					echo '<p>', sprintf( esc_html( $this->strings['complete'] ), '<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'Newsmandu' ) . '</a>' ), '</p>';
+					echo '<p>', sprintf( esc_html( $this->strings['complete'] ), '<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'newsmandu' ) . '</a>' ), '</p>';
 					echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 				} else {
 					echo '<p><a href="', esc_url( $this->get_tgmpa_url() ), '" target="_parent">', esc_html( $this->strings['return'] ), '</a></p>';
@@ -930,7 +930,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					} else {
 						return new WP_Error(
 							'rename_failed',
-							esc_html__( 'The remote plugin package does not contain a folder with the desired slug and renaming did not work.', 'Newsmandu' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'Newsmandu' ),
+							esc_html__( 'The remote plugin package does not contain a folder with the desired slug and renaming did not work.', 'newsmandu' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'newsmandu' ),
 							array(
 								'found'    => $subdir_name,
 								'expected' => $desired_slug,
@@ -940,7 +940,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				} elseif ( empty( $subdir_name ) ) {
 					return new WP_Error(
 						'packaged_wrong',
-						esc_html__( 'The remote plugin package consists of more than one file, but the files are not packaged in a folder.', 'Newsmandu' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'Newsmandu' ),
+						esc_html__( 'The remote plugin package consists of more than one file, but the files are not packaged in a folder.', 'newsmandu' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'newsmandu' ),
 						array(
 							'found'    => $subdir_name,
 							'expected' => $desired_slug,
@@ -1129,12 +1129,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						$count          = count( $plugin_group );
 						$linked_plugins = array_map( array( 'TGMPA_Utils', 'wrap_in_em' ), $linked_plugins );
 						$last_plugin    = array_pop( $linked_plugins ); // Pop off last name to prep for readability.
-						$imploded       = empty( $linked_plugins ) ? $last_plugin : ( implode( ', ', $linked_plugins ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'Newsmandu' ) . ' ' . $last_plugin );
+						$imploded       = empty( $linked_plugins ) ? $last_plugin : ( implode( ', ', $linked_plugins ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'newsmandu' ) . ' ' . $last_plugin );
 
 						$rendered .= sprintf(
 							$line_template,
 							sprintf(
-								translate_nooped_plural( $this->strings[ $type ], $count, 'Newsmandu' ),
+								translate_nooped_plural( $this->strings[ $type ], $count, 'newsmandu' ),
 								$imploded,
 								$count
 							)
@@ -1182,14 +1182,14 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				if ( $install_count > 0 ) {
 					$action_links['install'] = sprintf(
 						$link_template,
-						translate_nooped_plural( $this->strings['install_link'], $install_count, 'Newsmandu' ),
+						translate_nooped_plural( $this->strings['install_link'], $install_count, 'newsmandu' ),
 						esc_url( $this->get_tgmpa_status_url( 'install' ) )
 					);
 				}
 				if ( $update_count > 0 ) {
 					$action_links['update'] = sprintf(
 						$link_template,
-						translate_nooped_plural( $this->strings['update_link'], $update_count, 'Newsmandu' ),
+						translate_nooped_plural( $this->strings['update_link'], $update_count, 'newsmandu' ),
 						esc_url( $this->get_tgmpa_status_url( 'update' ) )
 					);
 				}
@@ -1198,7 +1198,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			if ( current_user_can( 'activate_plugins' ) && $activate_count > 0 ) {
 				$action_links['activate'] = sprintf(
 					$link_template,
-					translate_nooped_plural( $this->strings['activate_link'], $activate_count, 'Newsmandu' ),
+					translate_nooped_plural( $this->strings['activate_link'], $activate_count, 'newsmandu' ),
 					esc_url( $this->get_tgmpa_status_url( 'activate' ) )
 				);
 			}
@@ -1996,7 +1996,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				esc_html(
 					sprintf(
 						/* translators: %s: version number */
-						__( 'TGMPA v%s', 'Newsmandu' ),
+						__( 'TGMPA v%s', 'newsmandu' ),
 						self::TGMPA_VERSION
 					)
 				),
@@ -2287,10 +2287,10 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function get_plugin_advise_type_text( $required ) {
 			if ( true === $required ) {
-				return __( 'Required', 'Newsmandu' );
+				return __( 'Required', 'newsmandu' );
 			}
 
-			return __( 'Recommended', 'Newsmandu' );
+			return __( 'Recommended', 'newsmandu' );
 		}
 
 		/**
@@ -2306,13 +2306,13 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			switch ( $type ) {
 				case 'repo':
-					$string = __( 'WordPress Repository', 'Newsmandu' );
+					$string = __( 'WordPress Repository', 'newsmandu' );
 					break;
 				case 'external':
-					$string = __( 'External Source', 'Newsmandu' );
+					$string = __( 'External Source', 'newsmandu' );
 					break;
 				case 'bundled':
-					$string = __( 'Pre-Packaged', 'Newsmandu' );
+					$string = __( 'Pre-Packaged', 'newsmandu' );
 					break;
 			}
 
@@ -2329,25 +2329,25 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function get_plugin_status_text( $slug ) {
 			if ( ! $this->tgmpa->is_plugin_installed( $slug ) ) {
-				return __( 'Not Installed', 'Newsmandu' );
+				return __( 'Not Installed', 'newsmandu' );
 			}
 
 			if ( ! $this->tgmpa->is_plugin_active( $slug ) ) {
-				$install_status = __( 'Installed But Not Activated', 'Newsmandu' );
+				$install_status = __( 'Installed But Not Activated', 'newsmandu' );
 			} else {
-				$install_status = __( 'Active', 'Newsmandu' );
+				$install_status = __( 'Active', 'newsmandu' );
 			}
 
 			$update_status = '';
 
 			if ( $this->tgmpa->does_plugin_require_update( $slug ) && false === $this->tgmpa->does_plugin_have_update( $slug ) ) {
-				$update_status = __( 'Required Update not Available', 'Newsmandu' );
+				$update_status = __( 'Required Update not Available', 'newsmandu' );
 
 			} elseif ( $this->tgmpa->does_plugin_require_update( $slug ) ) {
-				$update_status = __( 'Requires Update', 'Newsmandu' );
+				$update_status = __( 'Requires Update', 'newsmandu' );
 
 			} elseif ( false !== $this->tgmpa->does_plugin_have_update( $slug ) ) {
-				$update_status = __( 'Update recommended', 'Newsmandu' );
+				$update_status = __( 'Update recommended', 'newsmandu' );
 			}
 
 			if ( '' === $update_status ) {
@@ -2356,7 +2356,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			return sprintf(
 				/* translators: 1: install status, 2: update status */
-				_x( '%1$s, %2$s', 'Install/Update Status', 'Newsmandu' ),
+				_x( '%1$s, %2$s', 'Install/Update Status', 'newsmandu' ),
 				$install_status,
 				$update_status
 			);
@@ -2402,19 +2402,19 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				switch ( $type ) {
 					case 'all':
 						/* translators: 1: number of plugins. */
-						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'Newsmandu' );
+						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'newsmandu' );
 						break;
 					case 'install':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'Newsmandu' );
+						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'newsmandu' );
 						break;
 					case 'update':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'Newsmandu' );
+						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'newsmandu' );
 						break;
 					case 'activate':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'Newsmandu' );
+						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'newsmandu' );
 						break;
 					default:
 						$text = '';
@@ -2496,7 +2496,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			$output = array();
 
 			if ( $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
-				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'Newsmandu' );
+				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'newsmandu' );
 
 				$color = '';
 				if ( ! empty( $item['minimum_version'] ) && $this->tgmpa->does_plugin_require_update( $item['slug'] ) ) {
@@ -2504,7 +2504,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . __( 'Installed version:', 'Newsmandu' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . __( 'Installed version:', 'newsmandu' ) . '</p>',
 					$color,
 					$installed
 				);
@@ -2512,7 +2512,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			if ( ! empty( $item['minimum_version'] ) ) {
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;">%1$s</span>' . __( 'Minimum required version:', 'Newsmandu' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;">%1$s</span>' . __( 'Minimum required version:', 'newsmandu' ) . '</p>',
 					$item['minimum_version']
 				);
 			}
@@ -2524,7 +2524,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . __( 'Available version:', 'Newsmandu' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . __( 'Available version:', 'newsmandu' ) . '</p>',
 					$color,
 					$item['available_version']
 				);
@@ -2547,7 +2547,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @since 2.2.0
 		 */
 		public function no_items() {
-			echo esc_html__( 'No plugins to install, update or activate.', 'Newsmandu' ) . ' <a href="' . esc_url( self_admin_url() ) . '"> ' . esc_html__( 'Return to the Dashboard', 'Newsmandu' ) . '</a>';
+			echo esc_html__( 'No plugins to install, update or activate.', 'newsmandu' ) . ' <a href="' . esc_url( self_admin_url() ) . '"> ' . esc_html__( 'Return to the Dashboard', 'newsmandu' ) . '</a>';
 			echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 		}
 
@@ -2561,14 +2561,14 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		public function get_columns() {
 			$columns = array(
 				'cb'     => '<input type="checkbox" />',
-				'plugin' => __( 'Plugin', 'Newsmandu' ),
-				'source' => __( 'Source', 'Newsmandu' ),
-				'type'   => __( 'Type', 'Newsmandu' ),
+				'plugin' => __( 'Plugin', 'newsmandu' ),
+				'source' => __( 'Source', 'newsmandu' ),
+				'type'   => __( 'Type', 'newsmandu' ),
 			);
 
 			if ( 'all' === $this->view_context || 'update' === $this->view_context ) {
-				$columns['version'] = __( 'Version', 'Newsmandu' );
-				$columns['status']  = __( 'Status', 'Newsmandu' );
+				$columns['version'] = __( 'Version', 'newsmandu' );
+				$columns['status']  = __( 'Status', 'newsmandu' );
 			}
 
 			return apply_filters( 'tgmpa_table_columns', $columns );
@@ -2617,18 +2617,18 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			// Display the 'Install' action link if the plugin is not yet available.
 			if ( ! $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
 				/* translators: %2$s: plugin name in screen reader markup */
-				$actions['install'] = __( 'Install %2$s', 'Newsmandu' );
+				$actions['install'] = __( 'Install %2$s', 'newsmandu' );
 			} else {
 				// Display the 'Update' action link if an update is available and WP complies with plugin minimum.
 				if ( false !== $this->tgmpa->does_plugin_have_update( $item['slug'] ) && $this->tgmpa->can_plugin_update( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['update'] = __( 'Update %2$s', 'Newsmandu' );
+					$actions['update'] = __( 'Update %2$s', 'newsmandu' );
 				}
 
 				// Display the 'Activate' action link, but only if the plugin meets the minimum version.
 				if ( $this->tgmpa->can_plugin_activate( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['activate'] = __( 'Activate %2$s', 'Newsmandu' );
+					$actions['activate'] = __( 'Activate %2$s', 'newsmandu' );
 				}
 			}
 
@@ -2698,7 +2698,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				<tr class="plugin-update-tr">
 					<td colspan="', absint( $this->get_column_count() ), '" class="plugin-update colspanchange">
 						<div class="update-message">',
-							esc_html__( 'Upgrade message from the plugin author:', 'Newsmandu' ),
+							esc_html__( 'Upgrade message from the plugin author:', 'newsmandu' ),
 							' <strong>', wp_kses_data( $item['upgrade_notice'] ), '</strong>
 						</div>
 					</td>
@@ -2731,16 +2731,16 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			if ( 'update' !== $this->view_context && 'activate' !== $this->view_context ) {
 				if ( current_user_can( 'install_plugins' ) ) {
-					$actions['tgmpa-bulk-install'] = __( 'Install', 'Newsmandu' );
+					$actions['tgmpa-bulk-install'] = __( 'Install', 'newsmandu' );
 				}
 			}
 
 			if ( 'install' !== $this->view_context ) {
 				if ( current_user_can( 'update_plugins' ) ) {
-					$actions['tgmpa-bulk-update'] = __( 'Update', 'Newsmandu' );
+					$actions['tgmpa-bulk-update'] = __( 'Update', 'newsmandu' );
 				}
 				if ( current_user_can( 'activate_plugins' ) ) {
-					$actions['tgmpa-bulk-activate'] = __( 'Activate', 'Newsmandu' );
+					$actions['tgmpa-bulk-activate'] = __( 'Activate', 'newsmandu' );
 				}
 			}
 
@@ -2771,9 +2771,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// Did user actually select any plugins to install/update ?
 				if ( empty( $_POST['plugin'] ) ) {
 					if ( 'install' === $install_type ) {
-						$message = __( 'No plugins were selected to be installed. No action taken.', 'Newsmandu' );
+						$message = __( 'No plugins were selected to be installed. No action taken.', 'newsmandu' );
 					} else {
-						$message = __( 'No plugins were selected to be updated. No action taken.', 'Newsmandu' );
+						$message = __( 'No plugins were selected to be updated. No action taken.', 'newsmandu' );
 					}
 
 					echo '<div id="message" class="error"><p>', esc_html( $message ), '</p></div>';
@@ -2814,9 +2814,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// No need to proceed further if we have no plugins to handle.
 				if ( empty( $plugins_to_install ) ) {
 					if ( 'install' === $install_type ) {
-						$message = __( 'No plugins are available to be installed at this time.', 'Newsmandu' );
+						$message = __( 'No plugins are available to be installed at this time.', 'newsmandu' );
 					} else {
-						$message = __( 'No plugins are available to be updated at this time.', 'Newsmandu' );
+						$message = __( 'No plugins are available to be updated at this time.', 'newsmandu' );
 					}
 
 					echo '<div id="message" class="error"><p>', esc_html( $message ), '</p></div>';
@@ -2922,7 +2922,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Did user actually select any plugins to activate ?
 				if ( empty( $_POST['plugin'] ) ) {
-					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins were selected to be activated. No action taken.', 'Newsmandu' ), '</p></div>';
+					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins were selected to be activated. No action taken.', 'newsmandu' ), '</p></div>';
 
 					return false;
 				}
@@ -2948,7 +2948,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Return early if there are no plugins to activate.
 				if ( empty( $plugins_to_activate ) ) {
-					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins are available to be activated at this time.', 'Newsmandu' ), '</p></div>';
+					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins are available to be activated at this time.', 'newsmandu' ), '</p></div>';
 
 					return false;
 				}
@@ -2962,11 +2962,11 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					$count        = count( $plugin_names ); // Count so we can use _n function.
 					$plugin_names = array_map( array( 'TGMPA_Utils', 'wrap_in_strong' ), $plugin_names );
 					$last_plugin  = array_pop( $plugin_names ); // Pop off last name to prep for readability.
-					$imploded     = empty( $plugin_names ) ? $last_plugin : ( implode( ', ', $plugin_names ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'Newsmandu' ) . ' ' . $last_plugin );
+					$imploded     = empty( $plugin_names ) ? $last_plugin : ( implode( ', ', $plugin_names ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'newsmandu' ) . ' ' . $last_plugin );
 
 					printf( // WPCS: xss ok.
 						'<div id="message" class="updated"><p>%1$s %2$s.</p></div>',
-						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'Newsmandu' ) ),
+						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'newsmandu' ) ),
 						$imploded
 					);
 
@@ -3172,8 +3172,8 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 * @since 2.2.0
 					 */
 					public function activate_strings() {
-						$this->strings['activation_failed']  = __( 'Plugin activation failed.', 'Newsmandu' );
-						$this->strings['activation_success'] = __( 'Plugin activated successfully.', 'Newsmandu' );
+						$this->strings['activation_failed']  = __( 'Plugin activation failed.', 'newsmandu' );
+						$this->strings['activation_success'] = __( 'Plugin activated successfully.', 'newsmandu' );
 					}
 
 					/**
@@ -3516,29 +3516,29 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						if ( 'update' === $this->options['install_type'] ) {
 							parent::add_strings();
 							/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-							$this->upgrader->strings['skin_before_update_header'] = __( 'Updating Plugin %1$s (%2$d/%3$d)', 'Newsmandu' );
+							$this->upgrader->strings['skin_before_update_header'] = __( 'Updating Plugin %1$s (%2$d/%3$d)', 'newsmandu' );
 						} else {
 							/* translators: 1: plugin name, 2: error message. */
-							$this->upgrader->strings['skin_update_failed_error'] = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'Newsmandu' );
+							$this->upgrader->strings['skin_update_failed_error'] = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'newsmandu' );
 							/* translators: 1: plugin name. */
-							$this->upgrader->strings['skin_update_failed'] = __( 'The installation of %1$s failed.', 'Newsmandu' );
+							$this->upgrader->strings['skin_update_failed'] = __( 'The installation of %1$s failed.', 'newsmandu' );
 
 							if ( $this->tgmpa->is_automatic ) {
 								// Automatic activation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'Newsmandu' );
+								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'newsmandu' );
 								/* translators: 1: plugin name. */
-								$this->upgrader->strings['skin_update_successful'] = __( '%1$s installed and activated successfully.', 'Newsmandu' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'Newsmandu' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'Newsmandu' ) . '</span>.</a>';
-								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations and activations have been completed.', 'Newsmandu' );
+								$this->upgrader->strings['skin_update_successful'] = __( '%1$s installed and activated successfully.', 'newsmandu' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'newsmandu' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'newsmandu' ) . '</span>.</a>';
+								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations and activations have been completed.', 'newsmandu' );
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'Newsmandu' );
+								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'newsmandu' );
 							} else {
 								// Default installation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'Newsmandu' );
+								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'newsmandu' );
 								/* translators: 1: plugin name. */
-								$this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed successfully.', 'Newsmandu' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'Newsmandu' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'Newsmandu' ) . '</span>.</a>';
-								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations have been completed.', 'Newsmandu' );
+								$this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed successfully.', 'newsmandu' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'newsmandu' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'newsmandu' ) . '</span>.</a>';
+								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations have been completed.', 'newsmandu' );
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', 'Newsmandu' );
+								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', 'newsmandu' );
 							}
 						}
 					}
@@ -3598,7 +3598,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 							echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 							$update_actions['dashboard'] = sprintf(
 								esc_html( $this->tgmpa->strings['complete'] ),
-								'<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'Newsmandu' ) . '</a>'
+								'<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'newsmandu' ) . '</a>'
 							);
 						} else {
 							$update_actions['tgmpa_page'] = '<a href="' . esc_url( $this->tgmpa->get_tgmpa_url() ) . '" target="_parent">' . esc_html( $this->tgmpa->strings['return'] ) . '</a>';

@@ -12,7 +12,9 @@ body {
     line-height: 1.5;
     word-break: break-word;
 }
-
+#top-header .site-logo .logo {
+    padding: 0;
+}
 #page {
     max-width: 1920px;
     margin: 0 auto;
@@ -511,6 +513,7 @@ article {
 .single .entry-meta span:last-child::after {
     display: none;
 }
+
 
 /*
 * Front page
