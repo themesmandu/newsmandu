@@ -46,8 +46,8 @@
 				'type'        => 'textarea',
 			)
 		)
-    );
-    $wp_customize->add_setting(
+	);
+	$wp_customize->add_setting(
 		'ad_setting3',
 		array(
 			'default'           => '',
