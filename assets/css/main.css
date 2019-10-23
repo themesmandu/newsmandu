@@ -1394,8 +1394,9 @@ article {
         padding: 0px 10px 0px 30px;
     }
     .navbar .secondary-menu ul {
-        float: right;
+        float: left;
         margin-bottom: 0;
+        margin-left: 14px;
     }
     .card-body .entry-content {
         margin: 0;
