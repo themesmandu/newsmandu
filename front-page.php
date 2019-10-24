@@ -131,9 +131,11 @@ get_header();
 			<div class="skip-post col-md-8">
 					<?php newsmandu_latest_skip_post(); ?>
 			</div>
+		<?php if ( dynamic_sidebar( 'Front Page Sidebar' ) ) : ?>	
 		<div class="sidebar col-md-4">
 			<?php dynamic_sidebar( 'Front Page Sidebar' ); ?>
 		</div>
+		<?php endif; ?>
 	</div>
 </div>
 </section>

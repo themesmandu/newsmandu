@@ -6,7 +6,9 @@
  *
  * @package Newsmandu
  */
+
 ?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 

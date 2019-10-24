@@ -990,7 +990,7 @@ article {
 }
 
 .skip-post .latest-image img {
-    box-shadow: 0px 0px 15px 5px grey;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .2);
 }
 
 .featured-section,
@@ -1152,6 +1152,83 @@ article {
 .blog article .card-body {
     order: -1;
 }
+/** Search result styles **/
+.search .site .content-wrap .content-area {
+    margin: 40px 0;
+}
+.search .site .content-wrap .content-area .site-main .page-header h1.page-title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+}
+.search .site .content-wrap .content-area .site-main ul li a,
+.search .site .content-wrap .content-area .site-main .not-found p{
+    font-size: 18px;
+    font-weight: 400;
+}
+/** 404 page styles **/
+.error404 .site .content-wrap .content-area {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.error404 .site .content-wrap .content-area h1.page-title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+.error404 .site .content-wrap .content-area .not-found .form .submit {
+    background-color: #535356;
+    color: white;
+    border: none;
+    padding: 0 20px;
+}
+.error404 .site .content-wrap .content-area .not-found .form .submit:hover {
+    background-color: #007bff;
+    color: #535356;
+}
+/** search form alt nav **/
+.search-form .form .submit {
+    background-color: #535356;
+    border: none;
+    padding: 0 10px;
+}
+.search-form .search-icon:hover {
+    color: #007bff;
+}
+.search-form .form .submit:hover {
+    background-color: #007bff;
+}
+.search-form-show .fa-search {
+    color: #ffffff;
+}
+/** contact from **/
+.page .content-wrap .site-main .page .wpcf7 .wpcf7-form input,
+.page .content-wrap .site-main .page .wpcf7 .wpcf7-form textarea {
+    background-color: #f2f2f9;
+}
+.page .content-wrap .site-main .page .wpcf7 .wpcf7-form .wpcf7-submit {
+    background-color: #535356;
+    color: #ffffff;
+}
+.page .content-wrap .site-main .page .wpcf7 .wpcf7-form .wpcf7-submit:hover {
+    background-color: #007bff;
+}
+/** Over lay **/
+.top-stories .bg-img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color:#535356;
+    opacity: .5;
+}
+/** Side bar **/
+.widget_search .form .submit:hover {
+    background-color: #007bff;
+    color: #535356;
+}
 
 /**
 * Responsive CSS
@@ -1167,7 +1244,7 @@ article {
 
 @media (max-width: 1440px) {
      /* Front Page CSS */
-     .featured-section .container {
+    .featured-section .container {
         margin: 0 auto;
         padding: 0 15px;
     }
