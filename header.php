@@ -31,7 +31,7 @@
 				<div class="container">
 					<div class="row navbar">
 						<?php if ( get_theme_mod( 'contact_email' ) || get_theme_mod( 'phone_number' ) ) : ?>
-						<div class="site-detail col-md-6 col-sm-6">
+						<div class="site-detail col-sm-6">
 							<?php if ( get_theme_mod( 'contact_email' ) ) : ?>
 							<p><?php echo esc_html( get_theme_mod( 'contact_email' ) ); ?></p>
 							<?php endif; ?>
@@ -40,7 +40,7 @@
 							<?php endif; ?>
 						</div>
 						<?php endif; ?>
-						<div class="secondary-menu col-md-6 col-sm-6">
+						<div class="secondary-menu col-sm-6">
 							<?php
 							if ( has_nav_menu( 'top_menu' ) ) :
 								wp_nav_menu(
@@ -57,7 +57,6 @@
 			<?php endif; ?>
 			<div class="site-logo">
 				<div class="container">
-					<div class="logo col-md-6">
 						<div class="site-branding">
 							<?php if ( ! has_custom_logo() ) { ?>
 								<?php if ( is_front_page() && is_home() ) : ?>
@@ -81,12 +80,9 @@
 							}
 							?>
 						</div>
+					<div class = 'ad-area'>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/beats-bg.jpg" />
 					</div>
-					<?php if ( get_theme_mod( 'ad_setting1' ) ) : ?>
-					<div class = 'ad-area col-md-6'>
-							<?php echo wp_kses( get_theme_mod( 'ad_setting1' ), expanded_alowed_tags() ); ?>
-					</div>
-					<?php endif; ?>
 				</div>
 			</div>
 			<?php
