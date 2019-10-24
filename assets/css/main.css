@@ -1016,6 +1016,11 @@ article {
     font-size: 14px;
 }
 
+.top-stories .sidebar {
+    border-left: 1px solid #cecece;
+    padding-left: 36px;
+}
+
 /* Footer */
 .bottom-footer {
     background-color: #343a40;
@@ -1778,6 +1783,11 @@ article {
 
     .featured-content:nth-child(1) {
         margin-bottom: 30px;
+    }
+    
+    .top-stories .sidebar  {
+        padding: 0 15px;
+        border: none;
     }
 
     .navbar-collapse ul {
