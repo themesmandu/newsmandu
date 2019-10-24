@@ -33,6 +33,47 @@ $wp_customize->add_control(
 		)
 	)
 );
+$wp_customize->add_setting(
+	'featured_title',
+	array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Control(
+		$wp_customize,
+		'featured_title',
+		array(
+			'label'       => __( 'Featured Section Title', 'newsmandu' ),
+			'description' => __( 'Enter the title for the featured section.', 'newsmandu' ),
+			'section'     => 'featured_post',
+			'type'        => 'text',
+		)
+	)
+);
+$wp_customize->add_setting(
+	'featured_sub_title',
+	array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Control(
+		$wp_customize,
+		'featured_sub_title',
+		array(
+			'label'       => __( 'Featured Section Sub Title', 'newsmandu' ),
+			'description' => __( 'Enter the sub title for the featured section.', 'newsmandu' ),
+			'section'     => 'featured_post',
+			'type'        => 'text',
+		)
+	)
+);
+
 		// setting article section post select.
 for ( $i = 0; $i < 3; $i++ ) {
 	$j = $i + 1;

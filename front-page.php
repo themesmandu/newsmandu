@@ -31,7 +31,7 @@ get_header();
 	<?php if ( 0 !== count( $activefeat ) || count( $activesec ) ) : ?>
 <section class="featured-section">
 	<div class="container">
-		<h2 class="feat-title">Featured  <span class="slash">/</span> <span> Some of the featured posts</span></h2>
+		<h2 class="feat-title"><?php echo esc_html( get_theme_mod( 'featured_title' ) ); ?><span> <?php echo esc_html( get_theme_mod( 'featured_sub_title' ) ); ?></span></h2>
 		<?php if ( 0 !== count( $activefeat ) ) : ?>
 			<?php if ( get_theme_mod( 'featured_post_toggle' ) ) : ?>
 		<div class=" row featured-first">
@@ -111,6 +111,7 @@ get_header();
 		$newsmandu_top_stories_description = apply_filters( 'the_content', get_post( get_theme_mod( 'newsmandu_post_page_dropdown' ) )->post_content );
 	?>
 	<div class="bg-img">
+		<div class="overlay"></div>
 		<img src="<?php echo esc_url( $newsmandu_top_stories_image ); ?>" alt="">
 		<div class="entry-content container">
 			<h2><?php echo esc_html( $newsmandu_top_stories_title ); ?></h2>
