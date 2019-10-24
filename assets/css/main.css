@@ -845,8 +845,8 @@ article {
 .content-meta {
     position: absolute;
     bottom: 0;
-    right: 0;
-    left: 0;
+    right: 15px;
+    left: 15px;
     text-align: center;
     background-image: linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0.6) 50%, rgba(0,0,0,.9) 100%);
 }
