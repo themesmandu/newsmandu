@@ -6,7 +6,6 @@
  *
  * @package Newsmandu
  */
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -57,32 +56,34 @@
 			<?php endif; ?>
 			<div class="site-logo">
 				<div class="container">
-						<div class="site-branding">
-							<?php if ( ! has_custom_logo() ) { ?>
-								<?php if ( is_front_page() && is_home() ) : ?>
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
-									title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-									itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-							<?php else : ?>
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
-								title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-								itemprop="url"><?php bloginfo( 'name' ); ?></a>
-								<?php
-							endif;
-							$newsmandu_description = get_bloginfo( 'description', 'display' );
-							if ( $newsmandu_description || is_customize_preview() ) :
-								?>
-							<p class="site-description"><?php echo wp_kses_post( $newsmandu_description ); ?></p>
-							<?php endif; ?>
-								<?php
-							} else {
-								the_custom_logo();
-							}
+					<div class="site-branding">
+						<?php if ( ! has_custom_logo() ) { ?>
+							<?php if ( is_front_page() && is_home() ) : ?>
+						<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+						title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+						itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php else : ?>
+						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+							title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+							itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							<?php
+						endif;
+						$newsmandu_description = get_bloginfo( 'description', 'display' );
+						if ( $newsmandu_description || is_customize_preview() ) :
 							?>
-						</div>
-					<div class = 'ad-area'>
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/beats-bg.jpg" />
+						<p class="site-description"><?php echo wp_kses_post( $newsmandu_description ); ?></p>
+						<?php endif; ?>
+							<?php
+						} else {
+							the_custom_logo();
+						}
+						?>
 					</div>
+					<?php if ( get_theme_mod( 'ad_setting2' ) ) : ?>
+					<div class = 'ad-area'>
+						<?php echo wp_kses( get_theme_mod( 'ad_setting2' ), expanded_alowed_tags() ); ?>
+					</div>
+					<?php endif; ?> <!-- End of ad-area1 -->
 				</div>
 			</div>
 			<?php
