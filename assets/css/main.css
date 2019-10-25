@@ -193,6 +193,10 @@ table caption {
     top: -70px;
     transform: translate3d(0, 70px, 0);
 }
+.main-navigation .navbar-collapse ul {
+	display: block;
+}
+
 
 .site-logo {
     padding: 32px 0;
@@ -374,6 +378,8 @@ nav ul {
 
 .main-navigation .menu-item {
     margin: 0 25px;
+	line-height: 2;
+    display: inline-block;
 }
 
 .main-navigation .menu-item:first-child {

@@ -136,7 +136,6 @@ get_header();
 				<?php dynamic_sidebar( 'Front Page Sidebar' ); ?>
 			</div>
 			<?php endif; ?>
-
 		</div>
 	</div>
 </section>
