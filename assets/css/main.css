@@ -664,6 +664,7 @@ article {
     border-top: 1px solid #aab3c8;
     border-bottom: 1px solid #aab3c8;
     padding: 25px;
+	margin-bottom: 30px;
 }
 
 .author-detail {
@@ -898,12 +899,13 @@ article {
 
 .latest-image .categories {
     position: absolute;
-    top: 75%;
+    top: 65%;
     left: 5%;
 }
 
 .latest-image .categories .cat-links {
-    padding: 0 7px 2px 7px;
+	background-color: #ffffff;
+	padding: 0 7px 2px 7px;
 }
 
 .top-post .latest-entries {
@@ -1338,6 +1340,9 @@ article {
     .author-area .author-detail h3 {
         font-size: 16px;
         text-align: center;
+    }
+    .latest-image .categories .cat-links {
+        font-size: 12px;
     }
 
     .author-area .author-detail p {
