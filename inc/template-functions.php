@@ -333,10 +333,10 @@ function newsmandu_authors_profile() {
 	if ( get_the_author_meta( 'description' ) ) :
 		?>
 		<div class="row">
-			<div class="author-img">
+			<div class="author-img col-md-3">
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), '150' ); ?>
 			</div>
-			<div class="author-detail">
+			<div class="author-detail col-md-9">
 				<div class="author-name">
 					<h3>Author: <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( the_author_meta( 'display_name' ) ); ?></a></h3>
 				</div>

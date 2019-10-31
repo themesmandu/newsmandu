@@ -682,6 +682,7 @@ article {
 .author-name h3 {
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
+	text-align: center;
 }
 
 /* --- Single Post Navigation ---*/
@@ -1325,8 +1326,8 @@ article {
     }
 
     .author-area .author-img {
-        text-align: end;
-        margin-left: 65px;
+        text-align: center;
+    	margin: 0 auto;
     }
 
     .author-area .author-img img {
@@ -1531,8 +1532,8 @@ article {
     }
 
     .author-area .author-img {
-        text-align: end;
-        margin-left: 65px;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .author-area .author-img img {
@@ -1755,8 +1756,8 @@ article {
     }
 
     .author-area .author-img {
-        text-align: end;
-        margin-left: 65px;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .author-area .author-img img {
@@ -1764,7 +1765,7 @@ article {
     }
 
     .author-area .author-detail {
-        max-width: 68%;
+        max-width: 100%;
     }
 
     .author-area .author-detail h3 {
@@ -1975,8 +1976,8 @@ article {
     }
 
     .author-area .author-img {
-        text-align: end;
-        margin-left: 65px;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .author-area .author-img img {
