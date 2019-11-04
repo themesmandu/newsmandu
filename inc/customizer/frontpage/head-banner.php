@@ -103,6 +103,67 @@ $wp_customize->add_control(
 	)
 );
 
+// Setting for text color.
+$wp_customize->add_setting(
+	'banner_text_color',
+	array(
+		'default'           => '#000',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'refresh',
+	)
+);
+
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'banner_text_color',
+		array(
+			'label'   => esc_html__( 'Text Color For Heading And Sub-Heading', 'newsmandu' ),
+			'section' => 'frontpage_banner',
+		)
+	)
+);
+// Setting for button text color.
+$wp_customize->add_setting(
+	'banner_button_text_color',
+	array(
+		'default'           => '#000',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'refresh',
+	)
+);
+
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'banner_button_text_color',
+		array(
+			'label'   => esc_html__( 'Button Text Color', 'newsmandu' ),
+			'section' => 'frontpage_banner',
+		)
+	)
+);
+// Setting for button background color.
+$wp_customize->add_setting(
+	'banner_button_bg_color',
+	array(
+		'default'           => '#000',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'refresh',
+	)
+);
+
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'banner_button_bg_color',
+		array(
+			'label'   => esc_html__( 'Button Background Color', 'newsmandu' ),
+			'section' => 'frontpage_banner',
+		)
+	)
+);
+
 // Setting.
 $wp_customize->add_setting(
 	'banner_bg_color',

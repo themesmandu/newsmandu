@@ -10,7 +10,7 @@
 		'newsmandu_category_color',
 		array(
 			'title'       => esc_html__( 'Category Color Select', 'newsmandu' ),
-			'description' => esc_html__( 'Category Section Color Selector.', 'newsmandu' ),
+			'description' => esc_html__( 'Category Section Color Selector. (Category color will change only in top story section.)', 'newsmandu' ),
 			'panel'       => 'frontpage_options',
 		)
 	);

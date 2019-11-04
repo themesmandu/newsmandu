@@ -167,3 +167,27 @@ function newsmandu_generate_css( $selector, $style, $mod_name, $prefix = '', $po
 	}
 	return $return;
 }
+
+/**
+ * Output generated a line of CSS from customizer values in header output.
+ *
+ * @link https://codex.wordpress.org/Theme_Customization_API#Sample_Theme_Customization_Class
+ *
+ * Used by hook: 'wp_head'
+ *
+ * @see add_action('wp_head',$func)
+ */
+function newsmandu_customizer_css() {
+	?>
+<!--Customizer CSS-->
+<style type="text/css">
+	<?php
+	newsmandu_generate_css( '.front-page .jumbotron', 'background-color', 'banner_bg_color' );
+	newsmandu_generate_css( '.front-page .jumbotron h1, .front-page .jumbotron p', 'color', 'banner_text_color' );
+	newsmandu_generate_css( '.front-page .jumbotron a.btn', 'color', 'banner_button_text_color' );
+	newsmandu_generate_css( '.front-page .jumbotron a.btn', 'background-color', 'banner_button_bg_color' );
+	?>
+</style>
+	<?php
+}
+add_action( 'wp_head', 'newsmandu_customizer_css' );

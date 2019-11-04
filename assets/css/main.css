@@ -56,6 +56,7 @@ img,
 iframe {
     max-width: 100%;
     object-fit: cover;
+    align-self: center;
 }
 
 ul {
@@ -209,14 +210,15 @@ table caption {
 }
 
 .site-branding {
-    width: 30%;
     display: inline-block;
+    max-width: 350px;
 }
 
 .navbar-brand {
     font-size: 32px;
     margin: 0;
     padding: 0;
+    white-space: pre-wrap;
 }
 
 .site-branding p {
@@ -512,6 +514,9 @@ nav ul {
     margin: 35px 20px;
     padding: 5px;
 }
+.widget-area .widget ul li {
+    margin-bottom: 5px;
+}
 
 .widget_search .form .field {
     border: none;
@@ -599,7 +604,13 @@ article p img {
     font-weight: 300;
 
 }
-
+.posts-navigation .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+.posts-navigation .nav-links .nav-next {
+    margin-left: auto;
+}
 .posts-navigation .nav-links a {
     background-color: #060606;
     color: #ffffff;
@@ -885,13 +896,14 @@ article {
     margin-bottom: 30px;
 }
 
-.top-stories .entry-content {
-    position: absolute;
-    top: 45%;
-    max-width: 900px;
-    margin: 0 auto;
-    right: 0;
-    left: 0;
+.top-stories .top-stories-content {
+    padding: 200px 0;
+    text-align: center;
+    position: relative;
+}
+.top-stories .top-stories-content h2,
+.top-stories .top-stories-content p {
+    color: #ffffff;
 }
 
 .latest-image {
@@ -1028,6 +1040,9 @@ article {
 .top-stories .sidebar {
     border-left: 1px solid #cecece;
     padding-left: 36px;
+}
+.top-stories .sidebar .widget ul li {
+    margin-bottom: 5px;
 }
 
 /* Footer */

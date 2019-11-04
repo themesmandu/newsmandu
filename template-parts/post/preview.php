@@ -14,7 +14,7 @@
 	<?php
 	the_post_thumbnail(
 		'newsmandu-thumb-750-300',
-		array( 'class' => 'card-img-top' )
+		array()
 	);
 	?>
 
