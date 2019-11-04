@@ -193,7 +193,7 @@ table caption {
     top: -70px;
     transform: translate3d(0, 70px, 0);
 }
-.main-navigation .navbar-collapse ul {
+.main-navigation .navbar-collapse .navbar-nav {
 	display: block;
 }
 

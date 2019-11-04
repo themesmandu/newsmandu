@@ -86,34 +86,6 @@ function newsmandu_customize_register( $wp_customize ) {
 	);
 	/**
 	 *
-	 * Add Section General to Panel
-	 */
-	$wp_customize->add_section(
-		'frontpage_general',
-		array(
-			'title'    => __( 'General', 'newsmandu' ),
-			'panel'    => 'frontpage_options',
-			'priority' => 10,
-		)
-	);
-	$wp_customize->add_setting(
-		'hide_page_title',
-		array(
-			'default'           => false,
-			'transport'         => 'refresh',
-			'sanitize_callback' => 'newsmandu_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control(
-		'hide_page_title',
-		array(
-			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Hide Page Title', 'newsmandu' ),
-			'section' => 'frontpage_general',
-		)
-	);
-	/**
-	 *
 	 * Add Section Head Banner to Panel
 	 */
 	require get_template_directory() . '/inc/customizer/frontpage/head-banner.php';
