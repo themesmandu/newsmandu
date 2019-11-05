@@ -501,6 +501,9 @@ nav ul {
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
 }
+.home #top-header .jumbotron {
+    padding-bottom: 168px;
+}
 
 /*Search Form */
 .widget_search .form .submit {
@@ -1321,7 +1324,9 @@ article {
     .header-img .entry-header h1 {
         font-size: 30px;
     }
-
+    .home #top-header .jumbotron {
+        padding-bottom: 75px;
+    }
     .top-menu .site-detail p {
         margin: 0;
         padding: 0px 10px 0px 15px;
@@ -1527,7 +1532,9 @@ article {
     .header-img .entry-header h1 {
         font-size: 26px;
     }
-
+    .home #top-header .jumbotron {
+        padding-bottom: 70px;
+    }
     .top-menu .site-detail p {
         margin: 0;
         padding: 0px 10px 0px 15px;
@@ -1751,7 +1758,9 @@ article {
     .header-img .entry-header h1 {
         font-size: 26px;
     }
-
+    .home #top-header .jumbotron {
+        padding-bottom: 64px;
+    }
     .top-menu .site-detail p {
         margin: 0;
         padding: 0px 10px 0px 15px;
@@ -1970,7 +1979,9 @@ article {
     .header-img .entry-header h1 {
         font-size: 26px;
     }
-
+    .home #top-header .jumbotron {
+        padding-bottom: 60px;
+    }
     .top-menu .site-detail p {
         margin: 0;
         padding: 0px 10px 0px 30px;
