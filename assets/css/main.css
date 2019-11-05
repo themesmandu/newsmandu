@@ -159,7 +159,9 @@ table caption {
     line-height: 1.5;
 }
 
-
+.media-body {
+    max-width: 100%;
+}
 /* -- Container Styles -- */
 
 .container {
@@ -563,7 +565,17 @@ article p img {
     display: flex;
     margin: 32px 0;
 }
-
+.single .content-wrap .content-area .post .entry-footer span {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+.single .content-wrap .content-area .post .entry-footer span a {
+    font-weight: 400;
+}
+.single .content-wrap .content-area .post .entry-footer span.screen-reader-text {
+    font-weight: 400;
+}
 #commentform .comment-form-cookies-consent input {
     width: 20px;
     margin: auto 0;
