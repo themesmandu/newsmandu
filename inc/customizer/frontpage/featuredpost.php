@@ -184,4 +184,22 @@ $wp_customize->add_control(
 		)
 	)
 );
+$wp_customize->add_setting(
+	'newsmandu_post_page_dropdown',
+	array(
+		'sanitize_callback' => 'absint',
+	)
+);
+$wp_customize->add_control(
+	'newsmandu_post_page_dropdown',
+	array(
+		'label'       => esc_html__( 'Select page for description and background image of top stories section', 'newsmandu' ),
+		'description' => esc_html__(
+			'Note: Selected page\'s title, description and featured image will be used in top stories section as a background.',
+			'newsmandu'
+		),
+		'section'     => 'top_stories',
+		'type'        => 'dropdown-pages',
+	)
+);
 

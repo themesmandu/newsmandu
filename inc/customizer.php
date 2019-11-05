@@ -93,7 +93,6 @@ function newsmandu_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/frontpage/slider.php';
 	// Add Section for featured post.
 	require get_template_directory() . '/inc/customizer/frontpage/featuredpost.php';
-	require get_template_directory() . '/inc/customizer/frontpage/postpage.php';
 	// More Link.
 	require get_template_directory() . '/inc/customizer/frontpage/more-link.php';
 	// Footer section.
