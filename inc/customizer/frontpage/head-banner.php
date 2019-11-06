@@ -29,7 +29,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'header_toggle',
 		array(
-			'label'   => esc_html__( 'Show Top Stories Post Section', 'newsmandu' ),
+			'label'   => esc_html__( 'Show Header Section', 'newsmandu' ),
 			'section' => 'frontpage_banner',
 		)
 	)
