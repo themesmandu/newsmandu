@@ -98,17 +98,10 @@
 				// left: logo - right: main menu.
 				get_template_part( 'template-parts/navigation/main-navbar' );
 			}
-			if ( ! is_front_page() ) {
-				// Header Image.
-				get_header_image();
-				?>
-			<div class="header-img" style="background-image:url( <?php header_image(); ?> );">
-				<header class="entry-header pb-4">
-					<?php single_post_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				</header>
-			</div>
-				<?php
-			}
+
+			// header page title.
+			newsmandu_header_page_title();
+
 			if ( is_front_page() && ! is_home() ) {
 				// head banner on the front page if it enabled.
 				get_template_part( 'template-parts/jumbotron' );

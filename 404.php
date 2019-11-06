@@ -14,17 +14,6 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-			<header class="py-5 text-center">
-				<h1 class="page-title">
-					<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'newsmandu' ); ?>
-				</h1>
-			</header>
-
-			<div class="error-404 not-found">
-				<?php get_search_form(); ?>
-			</div>
-
 		</main>
 	</div><!-- #primary -->
 

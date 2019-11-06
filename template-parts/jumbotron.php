@@ -22,12 +22,12 @@ if ( empty( $heading ) && empty( $subheading ) && empty( $bg_img ) && empty( $bt
 	return;
 }
 ?>
-
+<?php if ( get_theme_mod( 'header_toggle' ) ) : ?>
 <section class="jumbotron text-center"
-<?php
-if ( ! empty( $bg_img ) ) {
-	echo ' style="background: url(' . esc_url( $img_url ) . ');"';}
-?>
+	<?php
+	if ( ! empty( $bg_img ) ) {
+		echo ' style="background: url(' . esc_url( $img_url ) . ');"';}
+	?>
 >
 	<div class="container">
 		<h1 class="jumbotron-heading
@@ -52,3 +52,4 @@ if ( ! empty( $bg_img ) ) {
 	<?php } ?>
 	</div>
 </section>
+<?php endif; ?>

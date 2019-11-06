@@ -130,7 +130,7 @@ $wp_customize->add_control(
 	)
 );
 		// setting article section post select.
-for ( $i = 0; $i <= 4; $i++ ) {
+for ( $i = 0; $i <= 3; $i++ ) {
 	$j = $i + 1;
 	$wp_customize->add_setting(
 		'newsmandu_featured_second_post_' . $i,

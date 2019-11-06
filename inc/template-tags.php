@@ -98,12 +98,12 @@ if ( ! function_exists( 'newsmandu_entry_footer' ) ) :
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			echo '<span class="comments-link">Leave a Comment on';
 			comments_popup_link(
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'newsmandu' ),
+						__( '<span class="screen-reader-text"> %s</span>', 'newsmandu' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -145,86 +145,102 @@ if ( ! function_exists( 'newsmandu_comment' ) ) :
 	 * @param string $depth depth.
 	 */
 	function newsmandu_comment( $comment, $args, $depth ) {
-		if ( 'pingback' === $comment->comment_type || 'trackback' === $comment->comment_type ) : ?>
+		// Get correct tag used for the comments.
+		if ( 'div' === $args['style'] ) {
+			$tag       = 'div';
+			$add_below = 'comment';
+		} else {
+			$tag       = 'li';
+			$add_below = 'div-comment';
+		} ?>
 
-			<li id="comment-<?php comment_ID(); ?>" <?php comment_class( 'media' ); ?>>
-			<div class="comment-body">
-				<?php esc_html_e( 'Pingback:', 'newsmandu' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'newsmandu' ), '<span class="edit-link">', '</span>' ); ?>
-			</div>
+<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
+	id="comment-<?php comment_ID(); ?>">
 
-			<?php
-		else :
-			?>
+		<?php
+			// Switch between different comment types.
+		switch ( $comment->comment_type ) :
+			case 'pingback':
+			case 'trackback':
+				?>
+	<div class="pingback-entry"><span class="pingback-heading"><?php esc_html_e( 'Pingback:', 'newsmandu' ); ?></span>
+				<?php comment_author_link(); ?></div>
+				<?php
+				break;
+			default:
+				if ( 'div' != $args['style'] ) {
+					?>
+	<div id="div-comment-<?php comment_ID(); ?>" class="comment-meta">
+			<?php } ?>
+		<div class="comment-author vcard">
+			<figure>
+				<?php
+						// Display avatar unless size is set to 0.
+				if ( $args['avatar_size'] != 0 ) {
+					$avatar_size = ! empty( $args['avatar_size'] ) ? $args['avatar_size'] : 70; // set default avatar size
+					echo get_avatar( $comment, $avatar_size );
+				}
+				?>
+			</figure>
 
-			<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
-			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body media mb-4">
-				<a class="pull-left" href="#">
+			<div class="comment-metadata">
+				<?php
+						// Display author name.
+						printf( __( '<span class="fn">%s</span> ', 'newsmandu' ), get_comment_author_link() );
+				?>
+				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" class="date">
 					<?php
-					if ( 0 !== $args['avatar_size'] ) {
-						echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'rounded-circle' ) );}
+							/* translators: 1: date, 2: time */
+							printf(
+								__( '%1$s at %2$s', 'newsmandu' ),
+								get_comment_date(),
+								get_comment_time()
+							);
 					?>
 				</a>
 
-				<div class="media-body">
-					<div class="media-body-wrap card">
-						<div class="card-header">
-							/* translators: %s: comment author link */
-							<h5 class="mt-0">
-							<?php
-							printf( /* translators: %s: comment author link */
-								esc_html__( '%s <span class="says">says:</span>', 'newsmandu' ),
-								sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() )
-							);
-							?>
-								</h5>
-							<div class="comment-meta">
-								<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-									<time datetime="<?php comment_time( 'c' ); ?>">
-										<?php
-										printf( /* translators: %s: comment time */
-											esc_html_x( '%1$s at %2$s', '1: date, 2: time', 'newsmandu' ),
-											get_comment_date(),
-											get_comment_time()
-										); // WPCS: XSS OK.
-										?>
-									</time>
-								</a>
-								<?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'newsmandu' ), '<span class="edit-link">', '</span>' ); ?>
-							</div>
-						</div>
-
-						<?php if ( '0' === $comment->comment_approved ) : ?>
-							<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'newsmandu' ); ?></p>
-						<?php endif; ?>
-
-						<div class="comment-content card-block">
-							<?php comment_text(); ?>
-						</div><!-- .comment-content -->
-
+				<div class="comment-details">
+					<div class="comment-text"><?php comment_text(); ?></div><!-- .comment-text -->
+					<?php
+							// Display comment moderation text.
+					if ( $comment->comment_approved === '0' ) {
+						?>
+					<em
+						class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'newsmandu' ); ?></em><br />
 						<?php
-						$args = array();
+					}
+					?>
+
+				</div><!-- .comment-details -->
+					<?php
+						edit_comment_link( __( '(Edit)', 'newsmandu' ), '  ', '' );
+					?>
+			</div><!-- .comment-meta -->
+			<div class="reply">
+					<?php
+						// Display comment reply link.
 						comment_reply_link(
 							array_merge(
 								$args,
 								array(
-									'add_below' => 'div-comment',
+									'add_below' => $add_below,
 									'depth'     => $depth,
 									'max_depth' => $args['max_depth'],
-									'before'    => '<footer class="reply comment-reply card-footer">',
-									'after'     => '</footer>',
 								)
 							)
 						);
-						?>
-
-					</div>
-				</div><!-- .media-body -->
-
-			</article>
-			</li>
-
-			<?php
-		endif;
+					?>
+			</div>
+		</div><!-- .comment-author -->
+				<?php
+				if ( 'div' !== $args['style'] ) {
+					?>
+	</div>
+					<?php
+				}
+				// IMPORTANT: Note that we do NOT close the opening tag, WordPress does this for us.
+				break;
+		endswitch; // End comment_type check.
 	}
 endif;
 

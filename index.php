@@ -30,16 +30,6 @@ if ( is_home() ) {
 
 	<?php
 	if ( have_posts() ) :
-		if ( is_archive() ) :
-			?>
-				<header class="archive-header pb-4">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-				</header>
-			<?php
-			endif;
 
 		/* Start the Loop */
 		while ( have_posts() ) :

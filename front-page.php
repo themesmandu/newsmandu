@@ -76,7 +76,7 @@ get_header();
 		<?php endif; ?> <!-- End of ad-area1 -->
 			<?php if ( 0 !== count( $activesec ) ) : ?>
 				<?php if ( get_theme_mod( 'featured_post_second_toggle' ) ) : ?>
-		<div class="featured-second">
+		<div class="featured-second row">
 					<?php
 					foreach ( $activesec as $key => $i ) :
 						$newsmandu_featured_second_image  = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) );
@@ -85,12 +85,38 @@ get_header();
 						$author_id_2                      = get_post_field( 'post_author', get_theme_mod( 'newsmandu_featured_second_post_' . $i ) );
 						$newsmandu_featured_second_author = get_the_author_meta( 'display_name', $author_id_2 );
 						?>
-			<div class="featured-content">
-						<?php if ( $newsmandu_featured_second_image ) : ?>
+						<?php if ( $i < 3 ) : ?>
+							<?php if ( 0 === $i ) : ?>
+			<div class="col-md-8">
+				<div class="row">
+				<?php endif; ?>
+					<div class="col-sm-<?php echo ( 0 === $i ? '12 bot-space' : '6 last-space' ); ?>">
+							<?php if ( $newsmandu_featured_second_image ) : ?>
+						<img src="<?php echo esc_url( $newsmandu_featured_second_image ); ?>" alt="">  
+						<?php endif; ?>
+						<div class="content-meta">
+							<?php if ( $newsmandu_featured_second_title ) : ?>
+							<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
+							<?php endif; ?>
+							<div class="meta">
+								<i class="fas fa-user-alt"><?php newsmandu_posted_by( $newsmandu_featured_second_author ); ?></i>
+								<i class="far fa-calendar-alt"><?php newsmandu_posted_on( $newsmandu_featured_second_date ); ?></i>
+							</div>
+						</div>
+					</div>
+							<?php if ( 2 === $i ) : ?>
+				</div>
+			</div>
+			<?php endif; ?>
+			<?php endif; ?>
+
+						<?php if ( 3 === $i ) : ?>
+			<div class="col-md-4 col-sm-6 last-div">
+							<?php if ( $newsmandu_featured_second_image ) : ?>
 				<img src="<?php echo esc_url( $newsmandu_featured_second_image ); ?>" alt="">  
 				<?php endif; ?>
 				<div class="content-meta">
-						<?php if ( $newsmandu_featured_second_title ) : ?>
+							<?php if ( $newsmandu_featured_second_title ) : ?>
 					<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
 					<?php endif; ?>
 					<div class="meta">
@@ -99,7 +125,8 @@ get_header();
 					</div>
 				</div>
 			</div>
-					<?php endforeach; ?>
+			<?php endif; ?>
+			<?php endforeach; ?>
 		</div>
 		<?php endif; ?><!-- End of featured second post toggle -->
 		<?php endif; ?><!-- End of Active count Loop -->

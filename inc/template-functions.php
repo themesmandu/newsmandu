@@ -212,7 +212,7 @@ function newsmandu_latest_post() {
 				the_post_thumbnail(
 					'newsmandu-featured-900-600',
 					array(
-						'class' => 'img-fluid rounded mb-2',
+						'class' => 'img-fluid mb-2',
 					)
 				);
 				?>
@@ -366,3 +366,58 @@ function newsmandu_category( $post_id ) {
 		<?php
 	}
 }
+
+if ( ! function_exists( 'newsmandu_header_page_title' ) ) :
+
+	/**
+	 * Display page title on header.
+	 *
+	 * @since 1.0.0
+	 */
+	function newsmandu_header_page_title() {
+		if ( is_front_page() ) :
+			return;
+		elseif ( is_home() || is_singular() ) :
+			?>
+<div class="header-img" style="background-image:url( <?php header_image(); ?> );">
+	<header class="entry-header pb-4">
+		<h1 class="entry-title"><?php single_post_title(); ?></h1>
+	</header>
+</div>
+			<?php
+		elseif ( is_archive() ) :
+			?>
+<div class="header-img" style="background-image:url( <?php header_image(); ?> );">
+<header class="entry-header pb-4">
+		<h1 class="entry-title"><?php the_archive_title(); ?></h1>
+		</header>
+</div>
+			<?php
+		elseif ( is_search() ) :
+			?>
+<div class="header-img" style="background-image:url( <?php header_image(); ?> );">
+<header class="entry-header pb-4">
+		<h1 class="entry-title">
+			<?php /* translators: %s: search query. */ ?>
+			<?php printf( esc_html__( 'Search Results for: %s', 'newsmandu' ), get_search_query() ); ?></h1>
+			</header>
+</div>
+			<?php
+		elseif ( is_404() ) :
+			?>
+<div class="header-img" style="background-image:url( <?php header_image(); ?> );">
+<header class="entry-header pb-4">
+		<h1 class="entry-title">
+			<span><?php echo esc_html__( 'Oops!', 'newsmandu' ); ?></span><?php echo esc_html__( ' That page can&#39;t be found.', 'newsmandu' ); ?>
+		</h1>
+
+		<div class="error-404 not-found">
+			<?php get_search_form(); ?>
+		</div>
+		</header>
+</div>
+			<?php
+		endif;
+	}
+
+endif;
