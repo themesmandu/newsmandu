@@ -1111,6 +1111,9 @@ article {
 .featured-second .meta i {
     color: #ffffff;
 }
+.featured-second .meta i a {
+    padding-left: 5px;
+}
 
 .featured-second h2 a:hover,
 .featured-second .meta a:hover {
@@ -1174,6 +1177,15 @@ article {
 
 .featured-second .content-meta h2 {
     font-weight: 400;
+}
+.featured-second .bot-space .content-meta h2 {
+    font-size: 30px;
+}
+.featured-second .last-space .content-meta h2 {
+    font-size: 20px;
+}
+.featured-second .last-div .content-meta h2 {
+    font-size: 24px;
 }
 
 .top-stories .bg-img {
