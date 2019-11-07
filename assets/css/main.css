@@ -501,6 +501,23 @@ nav ul {
     font-weight: 400;
 }
 
+/* -- Standard Post styles -- */
+
+.format-standard {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.format-standard .entry-footer span {
+    display: block;
+}
+
+.format-standard img {
+    height: auto;
+}
+
 /*
 * Header
 */

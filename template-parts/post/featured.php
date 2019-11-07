@@ -28,7 +28,7 @@ while ( $query->have_posts() ) :
 <!-- Begin Featured Post -->
 
 	<div class="container">
-		<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark"
+		<div class="jumbotron"
 		<?php
 		if ( ! empty( $thumbnail ) ) {
 			echo ' style="background: url(' . esc_url( $thumbnail[0] ) . ');"'; }
