@@ -24,7 +24,7 @@
 		<?php
 		if ( get_post_type() === 'post' ) {
 			?>
-			<div class="entry-meta mb-1">
+			<div class="entry-meta">
 			<?php newsmandu_posted_on(); ?>
 			<?php newsmandu_posted_by(); ?>
 			</div>

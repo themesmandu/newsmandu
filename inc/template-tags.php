@@ -37,18 +37,27 @@ if ( ! function_exists( 'newsmandu_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function newsmandu_posted_on() {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+		$time_string = '<time class="entry-date published updated" datetime="%1$s"><i class="far fa-calendar"></i>%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s"><i class="far fa-calendar"></i>%2$s</time>
+			<time class="updated" datetime="%3$s"><i class="far fa-calendar-alt"></i>%4$s</time>';
 		}
 
 		$time_string = sprintf(
 			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() )
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() )
 		);
 
-		echo '<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>'; // WPCS: XSS OK.
+		$posted_on = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( ' %s', 'post date', 'newsmandu' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
+
+		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -60,11 +69,11 @@ if ( ! function_exists( 'newsmandu_posted_by' ) ) :
 	function newsmandu_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'By %s', 'post author', 'newsmandu' ),
+			esc_html_x( ' %s', 'post author', 'newsmandu' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="byline"><i class="far fa-user"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -80,33 +89,21 @@ if ( ! function_exists( 'newsmandu_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'newsmandu' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links fot-tag"><i class="far fa-folder"></i>' . esc_html__( ' %1$s', 'newsmandu' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'newsmandu' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'newsmandu' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links fot-tag"><i class="fas fa-tags"></i>' . esc_html__( ' %1$s', 'newsmandu' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">Leave a Comment on';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( '<span class="screen-reader-text"> %s</span>', 'newsmandu' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
+			echo '<span class="comments-link fot-tag">';
+			comments_popup_link( 'Leave a Comment', '<i class="far fa-comment"></i> 1', '<i class="far fa-comments"></i> %', '', 'Comments are off for this post');
+
 			echo '</span>';
 		}
 
@@ -114,7 +111,7 @@ if ( ! function_exists( 'newsmandu_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( '<a class="screen-reader-text">%s</a>', 'newsmandu' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'newsmandu' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -123,7 +120,7 @@ if ( ! function_exists( 'newsmandu_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<span class="edit-link"> Edit ',
+			'<span class="edit-link">',
 			'</span>'
 		);
 	}

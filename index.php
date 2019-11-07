@@ -22,10 +22,10 @@ if ( is_home() ) {
 	get_template_part( 'template-parts/post/featured' );
 }
 ?>
-<div class="container">
+<div class="container <?php echo ( get_theme_mod( 'post_dropdown_setting' ) ? 'standard-container' : ' ' ); ?>">
 	<div class="row">
 
-		<div id="primary" class="content-area<?php newsmandu_content_class(); ?> <?php echo ( get_theme_mod( 'blog_layout' ) !== 'list' ? 'standard-format' : ' ' ); ?>">
+		<div id="primary" class="content-area<?php newsmandu_content_class(); ?>">
 		<main id="main" class="site-main" role="main">
 
 	<?php
