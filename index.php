@@ -25,7 +25,7 @@ if ( is_home() ) {
 <div class="container">
 	<div class="row">
 
-		<div id="primary" class="content-area<?php newsmandu_content_class(); ?>">
+		<div id="primary" class="content-area<?php newsmandu_content_class(); ?> <?php echo ( get_theme_mod( 'blog_layout' ) !== 'list' ? 'standard-format' : ' ' ); ?>">
 		<main id="main" class="site-main" role="main">
 
 	<?php
