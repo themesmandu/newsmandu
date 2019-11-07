@@ -37,12 +37,13 @@ get_header();
 				<?php if ( get_theme_mod( 'featured_post_toggle' ) ) : ?>
 		<div class=" row featured-first">
 					<?php
-					foreach ( $activefeat as $key => $i ) :
+					foreach ( $activefeat as $i ) :
 						$newsmandu_featured_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) );
 						$newsmandu_featured_title       = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_post_' . $i ) )->post_title );
 						$newsmandu_featured_date        = get_the_date( '', get_theme_mod( 'newsmandu_featured_post_' . $i ) );
 						$author_id                      = get_post_field( 'post_author', get_theme_mod( 'newsmandu_featured_post_' . $i ) );
 						$newsmandu_featured_author      = get_the_author_meta( 'display_name', $author_id );
+						$newsmandu_featured_author_link = get_author_posts_url( $author_id );
 						$newsmandu_featured_category    = get_the_term_list( get_theme_mod( 'newsmandu_featured_post_' . $i ), 'category' );
 						$newsmandu_featured_description = apply_filters( 'the_excerpt', get_the_excerpt( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) );
 						?>
@@ -53,11 +54,11 @@ get_header();
 					<?php endif; ?>
 				</div>
 				<div class="entries-desc">
-						<?php echo wp_kses_post( $newsmandu_featured_category ); ?>	<span>|</span><?php newsmandu_posted_on( $newsmandu_featured_date ); ?> 
+						<?php echo wp_kses_post( $newsmandu_featured_category ); ?>	<span>|</span><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo $newsmandu_featured_date . 'yes'; ?></a> 
 						<?php if ( $newsmandu_featured_title ) : ?>
 						<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_title ); ?></a></h2>
 					<?php endif; ?>
-					<p><?php newsmandu_posted_by( $newsmandu_featured_author ); ?></p>
+					<p><a href="<?php echo esc_url( $newsmandu_featured_author_link ); ?>"><?php echo esc_html( $newsmandu_featured_author ); ?></a> </p>
 						<?php if ( $newsmandu_featured_description ) : ?>
 						<div class="desc">
 							<?php echo wp_kses_post( $newsmandu_featured_description ); ?>
@@ -84,6 +85,7 @@ get_header();
 						$newsmandu_featured_second_date   = get_the_date( '', get_theme_mod( 'newsmandu_featured_second_post_' . $i ) );
 						$author_id_2                      = get_post_field( 'post_author', get_theme_mod( 'newsmandu_featured_second_post_' . $i ) );
 						$newsmandu_featured_second_author = get_the_author_meta( 'display_name', $author_id_2 );
+						$newsmandu_featured_second_author_link   = get_author_posts_url( $author_id_2 );
 						?>
 						<?php if ( $i < 3 ) : ?>
 							<?php if ( 0 === $i ) : ?>
@@ -99,8 +101,8 @@ get_header();
 							<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
 							<?php endif; ?>
 							<div class="meta">
-								<i class="fas fa-user-alt"><?php newsmandu_posted_by( $newsmandu_featured_second_author ); ?></i>
-								<i class="far fa-calendar-alt"><?php newsmandu_posted_on( $newsmandu_featured_second_date ); ?></i>
+								<i class="fas fa-user-alt"><?php ; ?></i>
+								<i class="far fa-calendar-alt"><?php newsmandu_posted_on(); ?></i>
 							</div>
 						</div>
 					</div>
@@ -120,8 +122,8 @@ get_header();
 					<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
 					<?php endif; ?>
 					<div class="meta">
-						<i class="fas fa-user-alt"><?php newsmandu_posted_by( $newsmandu_featured_second_author ); ?></i>
-						<i class="far fa-calendar-alt"><?php newsmandu_posted_on( $newsmandu_featured_second_date ); ?></i>
+						<i class="fas fa-user-alt"><?php newsmandu_posted_by(); ?></i>
+						<i class="far fa-calendar-alt"><?php newsmandu_posted_on(); ?></i>
 					</div>
 				</div>
 			</div>
