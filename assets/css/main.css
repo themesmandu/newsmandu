@@ -1294,7 +1294,7 @@ article {
 }
 
 .skip-post .latest-entries .posted-on {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .skip-post .latest-image img {
@@ -1311,9 +1311,13 @@ article {
     text-transform: uppercase;
 }
 
-.top-stories .latest-entries span a {
-    font-size: 12px;
+.top-stories .latest-entries span a,
+.top-stories .latest-entries span.byline {
+    font-size: 13px;
     color: #757575;
+}
+.top-stories .latest-entries span.byline {
+    padding-left: 5px;
 }
 
 .top-stories .latest-entries span a:hover {

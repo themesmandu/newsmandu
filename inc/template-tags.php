@@ -37,12 +37,12 @@ if ( ! function_exists( 'newsmandu_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function newsmandu_posted_on() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s"><i class="far fa-calendar"></i>%2$s</time>';
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s"><i class="far fa-calendar"></i>%2$s</time>
-			<time class="updated" datetime="%3$s"><i class="far fa-calendar-alt"></i>%4$s</time>';
+			$time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
+		} else {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 		}
-
 		$time_string = sprintf(
 			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
@@ -69,11 +69,11 @@ if ( ! function_exists( 'newsmandu_posted_by' ) ) :
 	function newsmandu_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( ' %s', 'post author', 'newsmandu' ),
+			esc_html_x( 'By %s', 'post author', 'newsmandu' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="byline"><i class="far fa-user"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -102,7 +102,7 @@ if ( ! function_exists( 'newsmandu_entry_footer' ) ) :
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link fot-tag">';
-			comments_popup_link( 'Leave a Comment', '<i class="far fa-comment"></i> 1', '<i class="far fa-comments"></i> %', '', 'Comments are off for this post');
+			comments_popup_link( 'Leave a Comment', '<i class="far fa-comment"></i> 1', '<i class="far fa-comments"></i> %', '', 'Comments are off for this post' );
 
 			echo '</span>';
 		}

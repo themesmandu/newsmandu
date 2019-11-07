@@ -30,7 +30,7 @@ get_header();
 	?>
 	<?php if ( 0 !== count( $activefeat ) || count( $activesec ) ) : ?>
 		<?php if ( get_theme_mod( 'featured_post_toggle' ) || get_theme_mod( 'featured_post_second_toggle' ) ) : ?>
-<section class="featured-section <?php echo (  get_theme_mod( 'slider_toggle' ) ? 'with-slider' : ' ' ); ?>">
+<section class="featured-section <?php echo ( get_theme_mod( 'slider_toggle' ) ? 'with-slider' : ' ' ); ?>">
 	<div class="container">
 		<h2 class="feat-title"><?php echo esc_html( get_theme_mod( 'featured_title' ) ); ?><span> <?php echo esc_html( get_theme_mod( 'featured_sub_title' ) ); ?></span></h2>
 			<?php if ( 0 !== count( $activefeat ) ) : ?>
@@ -58,7 +58,7 @@ get_header();
 						<?php if ( $newsmandu_featured_title ) : ?>
 						<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_title ); ?></a></h2>
 					<?php endif; ?>
-					<p><a href="<?php echo esc_url( $newsmandu_featured_author_link ); ?>"><?php echo esc_html( $newsmandu_featured_author ); ?></a> </p>
+					<p><a href="<?php echo esc_url( $newsmandu_featured_author_link ); ?>">By <?php echo esc_html( $newsmandu_featured_author ); ?></a> </p>
 						<?php if ( $newsmandu_featured_description ) : ?>
 						<div class="desc">
 							<?php echo wp_kses_post( $newsmandu_featured_description ); ?>
@@ -101,7 +101,7 @@ get_header();
 							<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
 							<?php endif; ?>
 							<div class="meta">
-								<i class="fas fa-user-alt"><a href="<?php echo esc_url( $newsmandu_featured_second_author_link ); ?>"><?php echo esc_html( $newsmandu_featured_second_author ); ?></a></i>
+								<i class="fas fa-user-alt"><a href="<?php echo esc_url( $newsmandu_featured_second_author_link ); ?>">By <?php echo esc_html( $newsmandu_featured_second_author ); ?></a></i>
 								<i class="far fa-calendar-alt"><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_date ); ?></a></i>
 							</div>
 						</div>
