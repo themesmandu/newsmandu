@@ -30,7 +30,7 @@ get_header();
 	?>
 	<?php if ( 0 !== count( $activefeat ) || count( $activesec ) ) : ?>
 		<?php if ( get_theme_mod( 'featured_post_toggle' ) || get_theme_mod( 'featured_post_second_toggle' ) ) : ?>
-<section class="featured-section">
+<section class="featured-section <?php echo (  get_theme_mod( 'slider_toggle' ) ? 'with-slider' : ' ' ); ?>">
 	<div class="container">
 		<h2 class="feat-title"><?php echo esc_html( get_theme_mod( 'featured_title' ) ); ?><span> <?php echo esc_html( get_theme_mod( 'featured_sub_title' ) ); ?></span></h2>
 			<?php if ( 0 !== count( $activefeat ) ) : ?>
