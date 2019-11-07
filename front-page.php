@@ -54,7 +54,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 				<div class="entries-desc">
-						<?php echo wp_kses_post( $newsmandu_featured_category ); ?>	<span>|</span><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo $newsmandu_featured_date . 'yes'; ?></a> 
+						<?php echo wp_kses_post( $newsmandu_featured_category ); ?>	<span>|</span><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_date ); ?></a> 
 						<?php if ( $newsmandu_featured_title ) : ?>
 						<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_title ); ?></a></h2>
 					<?php endif; ?>
@@ -80,12 +80,12 @@ get_header();
 		<div class="featured-second row">
 					<?php
 					foreach ( $activesec as $key => $i ) :
-						$newsmandu_featured_second_image  = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) );
-						$newsmandu_featured_second_title  = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) )->post_title );
-						$newsmandu_featured_second_date   = get_the_date( '', get_theme_mod( 'newsmandu_featured_second_post_' . $i ) );
-						$author_id_2                      = get_post_field( 'post_author', get_theme_mod( 'newsmandu_featured_second_post_' . $i ) );
-						$newsmandu_featured_second_author = get_the_author_meta( 'display_name', $author_id_2 );
-						$newsmandu_featured_second_author_link   = get_author_posts_url( $author_id_2 );
+						$newsmandu_featured_second_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) );
+						$newsmandu_featured_second_title       = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) )->post_title );
+						$newsmandu_featured_second_date        = get_the_date( '', get_theme_mod( 'newsmandu_featured_second_post_' . $i ) );
+						$author_id_2                           = get_post_field( 'post_author', get_theme_mod( 'newsmandu_featured_second_post_' . $i ) );
+						$newsmandu_featured_second_author      = get_the_author_meta( 'display_name', $author_id_2 );
+						$newsmandu_featured_second_author_link = get_author_posts_url( $author_id_2 );
 						?>
 						<?php if ( $i < 3 ) : ?>
 							<?php if ( 0 === $i ) : ?>
@@ -101,8 +101,8 @@ get_header();
 							<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
 							<?php endif; ?>
 							<div class="meta">
-								<i class="fas fa-user-alt"><?php ; ?></i>
-								<i class="far fa-calendar-alt"><?php newsmandu_posted_on(); ?></i>
+								<i class="fas fa-user-alt"><a href="<?php echo esc_url( $newsmandu_featured_second_author_link ); ?>"><?php echo esc_html( $newsmandu_featured_second_author ); ?></a></i>
+								<i class="far fa-calendar-alt"><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_date ); ?></a></i>
 							</div>
 						</div>
 					</div>
@@ -122,8 +122,8 @@ get_header();
 					<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_title ); ?></a></h2>
 					<?php endif; ?>
 					<div class="meta">
-						<i class="fas fa-user-alt"><?php newsmandu_posted_by(); ?></i>
-						<i class="far fa-calendar-alt"><?php newsmandu_posted_on(); ?></i>
+					<i class="fas fa-user-alt"><a href="<?php echo esc_url( $newsmandu_featured_second_author_link ); ?>"><?php echo esc_html( $newsmandu_featured_second_author ); ?></a></i>
+					<i class="far fa-calendar-alt"><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_featured_second_date ); ?></a></i>
 					</div>
 				</div>
 			</div>
