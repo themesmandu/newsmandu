@@ -249,8 +249,8 @@ function newsmandu_latest_skip_post() {
 	while ( $latest_posts->have_posts() ) :
 		$latest_posts->the_post();
 		?>
-		<div class="row">
-			<div class="latest-image col-md-5">
+		<div class="row top-stories-skiped">
+			<div class="latest-image col-md-4">
 				<?php
 				the_post_thumbnail(
 					'newsmandu-featured-900-600',
@@ -260,7 +260,7 @@ function newsmandu_latest_skip_post() {
 				);
 				?>
 			</div>
-			<div class="latest-entries col-md-7">
+			<div class="latest-entries col-md-8">
 				<?php
 				$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu' ) );
 				if ( $categories_list ) {

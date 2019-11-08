@@ -1014,6 +1014,9 @@ article {
 .latest-post .top-post {
     margin-top: 35px;
 }
+.top-stories .skip-post .top-stories-skiped {
+    margin-bottom: 50px;
+}
 
 .latest-post h2 {
     text-align: center;
