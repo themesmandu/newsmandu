@@ -573,11 +573,6 @@ nav ul {
     font-weight: 500;
     color: #777777;
 }
-
-article time.updated {
-    margin-left: 12px;
-}
-
 article time.published.updated {
     margin: 0;
 }
