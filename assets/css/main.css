@@ -1519,6 +1519,10 @@ article {
 .blog article .card-body {
     order: -1;
 }
+.blog .content-area article .entry-meta .byline,
+.archive .content-area article .entry-meta .byline {
+    font-size: 12px;
+}
 
 /** Search result styles **/
 .search .site .content-wrap .content-area {
