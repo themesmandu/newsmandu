@@ -1352,6 +1352,9 @@ article {
 .top-stories .sidebar .widget ul li {
     margin-bottom: 5px;
 }
+.top-stories .sidebar .widget ul li span {
+    display: block;
+}
 
 /* Footer */
 .bottom-footer {
@@ -1371,6 +1374,10 @@ article {
     color: #cdcfd2;
     font-weight: 300;
 }
+.bottom-footer .widget ul li {
+    color: #cdcfd2;
+    margin-bottom: 10px;
+}
 
 .bottom-footer .widget ul li a {
     color: #cdcfd2;
@@ -1379,6 +1386,9 @@ article {
 
 .bottom-footer .widget ul li a:hover {
     color: #0056b3;
+}
+.bottom-footer .widget ul li span {
+    display: block;
 }
 
 .newsletter-widgets h5,
