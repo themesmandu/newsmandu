@@ -543,14 +543,14 @@ nav ul {
     text-transform: uppercase;
 }
 
-.format-standard .entry-footer .fot-tag:after,
+.entry-footer .fot-tag:after,
 .entry-meta span:after {
     content: '|';
     margin: 0 15px;
     color: #000000;
 }
 
-.format-standard .entry-footer .fot-tag:last-child:after,
+.entry-footer .fot-tag:last-child:after,
 .entry-meta span:last-child:after {
     content: unset;
 }
@@ -668,7 +668,6 @@ article p img {
 
 .single .content-wrap .content-area .post .entry-footer span {
     font-weight: 700;
-    display: block;
     margin-bottom: 10px;
 }
 
@@ -1450,7 +1449,9 @@ article {
     position: absolute;
     right: 0;
     width: auto;
-    max-width: 100%;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
     background-color: #ffffff;
     color: #010101;
     border-left: 1px solid #bfc4c8;
@@ -1459,6 +1460,7 @@ article {
     bottom: 0;
     height: 30px;
     margin: auto;
+    cursor: pointer;
 }
 
 #footer .newsletter-widgets .widget .tnp-widget-minimal input.tnp-email {

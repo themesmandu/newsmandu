@@ -32,7 +32,7 @@ while ( $query->have_posts() ) :
 			echo ' style="background: url(' . esc_url( $thumbnail[0] ) . ');"'; }
 		?>>
 
-        <div class="col-md-6 px-0">
+        <div class="col-md-12 px-0">
             <?php
 			the_title( sprintf( '<h1 class="display-4"><a href="%s" class="featured-title title text-white" rel="bookmark">', esc_url( get_permalink( $post->ID ) ) ), '</a></h1>' );
 		?>
