@@ -109,8 +109,8 @@ if ( ! function_exists( 'newsmandu_setup' ) ) :
 			array(
 				'height'      => 80,
 				'width'       => 250,
-				'flex-width'  => true,
-				'flex-height' => true,
+				'flex-width'  => false,
+				'flex-height' => false,
 			)
 		);
 	}
