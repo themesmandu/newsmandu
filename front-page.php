@@ -162,12 +162,12 @@ get_header();
 		</div>
 		<?php endif; ?> <!-- End of ad-area2 -->
 		<div class="row">
-			<div class="skip-post col-md-<?php echo ( is_active_sidebar( 'Front Page Sidebar' ) ? '8' : '12' ); ?>">
+			<div class="skip-post col-md-<?php echo ( is_active_sidebar( 'fpsidebar' ) ? '8' : '12' ); ?>">
 					<?php newsmandu_latest_skip_post(); ?>
 			</div>
-			<?php if ( is_active_sidebar( 'Front Page Sidebar' ) ) : ?>	
+			<?php if ( is_active_sidebar( 'fpsidebar' ) ) : ?>	
 			<div class="sidebar col-md-4">
-				<?php dynamic_sidebar( 'Front Page Sidebar' ); ?>
+				<?php dynamic_sidebar( 'fpsidebar' ); ?>
 			</div>
 			<?php endif; ?>
 		</div>
