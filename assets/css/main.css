@@ -1014,9 +1014,7 @@ article {
 .latest-post .top-post {
     margin-top: 35px;
 }
-.top-stories .skip-post .top-stories-skiped {
-    margin-bottom: 50px;
-}
+
 
 .latest-post h2 {
     text-align: center;
@@ -1203,6 +1201,9 @@ article {
 .top-stories .top-stories-content h2,
 .top-stories .top-stories-content p {
     color: #ffffff;
+}
+.top-stories .skip-post .top-stories-skiped {
+    margin-bottom: 50px;
 }
 
 .latest-image {
