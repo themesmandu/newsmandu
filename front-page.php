@@ -113,7 +113,7 @@ get_header();
 			<?php endif; ?>
 
 						<?php if ( 3 === $i ) : ?>
-			<div class="col-md-4 col-sm-6 last-div">
+			<div class="col-md-4 last-div">
 							<?php if ( $newsmandu_featured_second_image ) : ?>
 				<img src="<?php echo esc_url( $newsmandu_featured_second_image ); ?>" alt="">  
 				<?php endif; ?>
