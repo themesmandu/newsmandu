@@ -41,7 +41,7 @@
 			<?php if ( 0 !== count( $active ) ) { ?>
 			<div id="footer-widgets" class="footer-widgets row">
 				<?php foreach ( $active as $footer_widget_id ) : ?>
-				<div class="<div class="col-lg-3 col-sm-6 column"> ">
+				<div class="col-lg-3 col-sm-6 column">
 					<?php dynamic_sidebar( 'footer-' . $footer_widget_id ); ?>
 				</div>
 				<?php endforeach; ?>
