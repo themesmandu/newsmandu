@@ -1496,6 +1496,10 @@ article {
     color: #5285c4;
 }
 
+#footer-widgets .column {
+    margin: 0 auto;
+}
+
 /** Blog Page **/
 .blog article .card-body {
     order: -1;
@@ -2030,6 +2034,19 @@ article {
 
     .footer-gallery h2 {
         font-size: 32px;
+    }
+
+    #footer-widgets .column {
+        margin-bottom: 32px;
+    }
+
+    #footer-widgets .column:last-child,
+    #footer-widgets .column:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+
+    #footer-widgets .column:nth-child(3) {
+        margin: 0;
     }
 
     /** Blog Page **/
