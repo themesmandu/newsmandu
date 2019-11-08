@@ -1430,13 +1430,24 @@ article {
     background-color: #eaebec;
     padding: 100px 0;
 }
-
+.newsletter-widgets {
+    text-align: center;
+    color: #303132;
+}
 .newsletter-widgets h5 {
     font-size: 30px;
     margin-bottom: 40px;
     color: #303132;
 }
-
+#footer .newsletter-widgets .tnp-submit {
+    max-width: 100%;
+    width: 200px;
+    margin: 0 auto;
+}
+#footer .newsletter-widgets .widget .tnp-widget form {
+    max-width: 657px;
+    margin: 0 auto;
+}
 #footer .newsletter-widgets .widget .tnp-widget-minimal form {
     position: relative;
     height: 60px;
@@ -1469,6 +1480,13 @@ article {
     background-color: #ffffff;
     height: 60px;
     color: #999999
+}
+#footer .newsletter-widgets .widget .tnp-widget .tnp-field-firstname .tnp-firstname,
+#footer .newsletter-widgets .widget .tnp-widget .tnp-field-email .tnp-email {
+    border: none;
+    background-color: #ffffff;
+    height: 60px;
+    color: #999999;
 }
 
 .footer-gallery h2 {
