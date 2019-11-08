@@ -1419,7 +1419,7 @@ article {
 }
 
 .site-info {
-    margin-top: 20px;
+    padding: 50px 0;
 }
 
 #footer .bottom-footer .copyright-text p {
@@ -2254,6 +2254,10 @@ article {
     .single #primary {
         margin-top: 0;
     }
+    .site-info .author,
+    .site-info .copyright-text {
+        text-align: center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -2464,6 +2468,9 @@ article {
     }
     #footer .newsletter-widgets {
         padding: 32px 0;
+    }
+    .site-info .author {
+        text-align: center;
     }
 }
 
