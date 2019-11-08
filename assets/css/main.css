@@ -1360,8 +1360,11 @@ article {
 }
 
 .bottom-footer .widget {
-    margin-top: 20px;
-    margin-right: 30px;
+    margin-bottom: 32px;
+}
+
+.bottom-footer .widget:last-child {
+    margin-bottom: 0;
 }
 
 .bottom-footer .footer-widgets h3 {
@@ -1400,9 +1403,14 @@ article {
     color: #007bff;
 }
 
+.footer-social ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 18px 0 0;
+}
+
 .footer-social ul li {
-    float: left;
-    margin: 0 auto;
+    margin-right: 16px;
 }
 
 .footer-social li i {
@@ -1411,7 +1419,7 @@ article {
 }
 
 .footer-social li a {
-    padding: 6px;
+    padding: 0;
 }
 
 .footer-social li i:hover {
@@ -1419,7 +1427,7 @@ article {
 }
 
 .site-info {
-    padding: 50px 0;
+    margin-top: 50px;
 }
 
 #footer .bottom-footer .copyright-text p {
