@@ -2168,7 +2168,9 @@ article {
         margin-left: 30px;
         margin-right: 30px;
     }
-
+    .top-stories .top-stories-content {
+        padding: 80px 0;
+    }
     .latest-post h2 {
         font-size: 20px;
     }
@@ -2406,6 +2408,9 @@ article {
 
     .latest-post h2 {
         font-size: 20px;
+    }
+    .top-stories .top-stories-content {
+        padding: 50px 0;
     }
 
     .top-post .latest-entries h3 {
