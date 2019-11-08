@@ -374,8 +374,6 @@ table caption {
 .navbar .site-detail p {
     margin: 0 25px 0 0;
 }
-
-.navbar .site-detail p:last-child,
 .navbar .secondary-menu li:last-child,
 .header-content p i:last-child {
     margin: 0;
@@ -1683,12 +1681,6 @@ article {
     .header-img .entry-header h1 {
         font-size: 30px;
     }
-
-    .top-menu .site-detail p {
-        margin: 0;
-        padding: 0px 10px 0px 15px;
-    }
-
     .navbar .secondary-menu ul {
         float: right;
         margin-bottom: 0;
@@ -1888,12 +1880,6 @@ article {
     .header-img .entry-header h1 {
         font-size: 26px;
     }
-
-    .top-menu .site-detail p {
-        margin: 0;
-        padding: 0px 10px 0px 15px;
-    }
-
     .navbar .secondary-menu ul {
         float: right;
         margin-bottom: 0;
@@ -2123,12 +2109,6 @@ article {
     .header-img .entry-header h1 {
         font-size: 26px;
     }
-
-    .top-menu .site-detail p {
-        margin: 0;
-        padding: 0px 10px 0px 15px;
-    }
-
     .navbar .secondary-menu ul {
         float: right;
         margin-bottom: 0;
@@ -2329,6 +2309,10 @@ article {
     h2 {
         font-size: 18px;
     }
+    .top-menu .site-detail,
+    .top-menu .secondary-menu {
+        text-align: center;
+    }
 
     /* Single Page CSS */
     .single .entry-meta span {
@@ -2358,12 +2342,6 @@ article {
     .header-img .entry-header h1 {
         font-size: 26px;
     }
-
-    .top-menu .site-detail p {
-        margin: 0;
-        padding: 0px 10px 0px 30px;
-    }
-
     .navbar .secondary-menu ul {
         float: left;
         margin-bottom: 0;
