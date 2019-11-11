@@ -1526,7 +1526,9 @@ article {
 .archive .content-area article .entry-meta .byline {
     font-size: 12px;
 }
-
+.blog #main .pagination {
+    padding-top: 20px;
+}
 /** Search result styles **/
 .search .site .content-wrap .content-area {
     margin: 40px auto;
