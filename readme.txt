@@ -9,8 +9,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Newsmandu is best suited for blog website.
 
 == Description ==
-Newsmandu is a free WordPress theme with responsive and eye-catching design. The theme is designed for blogging, news portal, tour operator or anyone related to tourism industry. The theme makes it easier to add trips, trips details, destination and trip activities. Visitors can book a trip right from the website. With its translation ready feature, it’s a perfect  theme for travel industry.
-This theme can be used by traveller as a travel/journey blog or as a travel diary. It is cross-browser compatible, SEO-friendly, lightweight for speedy loading and compatible with almost all WordPress plugins. This theme doesn’t require you to have any programming skills, the theme documentation comes with step by step guide on how to install, configure and customize the theme. Documentation http://themesmandu.com/documentation/newsmandu/
+Newsmandu is a free WordPress theme with responsive and eye-catching design. The theme is designed for for bloggers, newspapers or journalist writing. It is ideal for bloggers, people who wants to share their thoughts online. Newsmandu theme allows you to write an article, post a blog post with ease.
+This theme is easy and simple to setup, and comes with various options for customization. It is cross-browser compatible, SEO-friendly, lightweight for speedy loading and compatible with almost all WordPress plugins. This theme doesn’t require you to have any programming skills, the theme documentation comes with step by step guide on how to install, configure and customize the theme. Documentation http://themesmandu.com/documentation/newsmandu/
 
 == Installation ==
 
@@ -42,7 +42,7 @@ GNU General Public License for more details.
 
 == Resources ==
 
-* Underscores, (C) 2012-2017 Automattic, Inc.,
+* Underscores, (C) 2012-2019 Automattic, Inc.,
 License: [GPLv2 or later]
 Source: https://underscores.me/
 
@@ -63,9 +63,8 @@ Source: http://tgmpluginactivation.com/
 * Stocksnap
 * Popper.js © 2016-2019 FEDERICO ZIVOLO & CONTRIBUTORS
 
-Themesmandu declares these self designed images under GPL license version 3.0
 
 == Changelog ==
 
-= 1.0 - June 19 2019 =
+= 1.0 - November 12 2019 =
 * Initial release
