@@ -752,6 +752,9 @@ article p img {
     color: #393939;
     display: inline-block;
 }
+.pagination .nav-links a.next {
+    margin-left: 5px;
+}
 
 .pagination .nav-links span.current {
     background-color: #060606;
