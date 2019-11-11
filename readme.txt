@@ -1,10 +1,12 @@
 === Newsmandu ===
 Contributors: Themesmandu
-Requires at least: 5.0
-Tested up to: 5.2
-Requires PHP: 5.6
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog
+Requires at least: 5.2.2
+Tested up to: 4.8
+Requires PHP: 5.2.4
+Stable tag: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
 
 Newsmandu is best suited for blog website.
 
@@ -42,6 +44,8 @@ GNU General Public License for more details.
 
 == Resources ==
 
+Newsmandu bundles the following third-party resources:
+
 * Underscores, (C) 2012-2019 Automattic, Inc.,
 License: [GPLv2 or later]
 Source: https://underscores.me/
@@ -67,4 +71,9 @@ Source: http://tgmpluginactivation.com/
 == Changelog ==
 
 = 1.0 - November 12 2019 =
-* Initial release
+* Initial release.
+
+== Upgrade Notice ==
+
+= 1.0 - November 12 2019 =
+* Initial release.
