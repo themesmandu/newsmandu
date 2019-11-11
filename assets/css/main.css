@@ -529,6 +529,9 @@ nav ul {
     padding: 48px 0;
     position: relative;
 }
+.single #main .format-standard {
+    padding: 17px 0;
+}
 
 .format-standard .entry-footer {
     margin: 15px 0;
@@ -1526,7 +1529,7 @@ article {
 
 /** Search result styles **/
 .search .site .content-wrap .content-area {
-    margin: 40px 0;
+    margin: 40px auto;
 }
 
 .search .site .content-wrap .content-area .site-main .page-header h1.page-title {

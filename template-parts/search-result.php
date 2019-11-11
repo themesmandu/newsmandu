@@ -7,11 +7,19 @@
  * @package Newsmandu
  */
 
-the_title(
-	sprintf(
-		'<li class="list-group-item"><a href="%s" rel="bookmark">',
-		esc_url( get_permalink() )
-	),
-	'</a></li>'
-);
+$newsmandu_content = get_theme_mod( 'blog_layout' ) === 'list' ? '-list' : '';
+?>
+
+<?php
+
+	/*
+	 * Include the Post-Format-specific template for the content.
+	 */
+
+	get_template_part(
+		'template-parts/post/preview' . $newsmandu_content,
+		get_post_format()
+	);
+
+
 
