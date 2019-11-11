@@ -192,10 +192,10 @@ add_action( 'widgets_init', 'newsmandu_widgets_init' );
 function newsmandu_scripts() {
 
 	// Bootstrap reboot styles.
-	wp_enqueue_style( 'newsmandu-bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'newsmandu-style' ), '4.1.2' );
+	wp_enqueue_style( 'bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'newsmandu-style' ), '4.1.2' );
 
 	// Bootstrap styles.
-	wp_enqueue_style( 'newsmandu-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'newsmandu-style' ), '4.1.2' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'newsmandu-style' ), '4.1.2' );
 
 	// Theme styles.
 	wp_enqueue_style( 'newsmandu-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
@@ -208,14 +208,14 @@ function newsmandu_scripts() {
 
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'newsmandu-popper', get_template_directory_uri() . '/vendor/bootstrap-src/js/popper.min.js', array(), '1.14.3', true );
-	wp_enqueue_script( 'newsmandu-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.min.js', array(), '4.1.2', true );
+	wp_enqueue_script( 'popper', get_template_directory_uri() . '/vendor/bootstrap-src/js/popper.min.js', array(), '1.14.3', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.min.js', array(), '4.1.2', true );
 
 	// Theme added JavaScript: Added by Developers.
 	wp_enqueue_script( 'newsmandu-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
 	// Font Nunito And Advent Pro.
-	wp_enqueue_style( 'newsmandu-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap', true );
+	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
