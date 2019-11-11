@@ -47,13 +47,7 @@ if ( ! function_exists( 'newsmandu_posted_on' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( ' %s', 'post date', 'newsmandu' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
-
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -84,15 +78,13 @@ if ( ! function_exists( 'newsmandu_entry_footer' ) ) :
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu' ) );
 			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links fot-tag"><i class="far fa-folder"></i>' . esc_html__( ' %1$s', 'newsmandu' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				echo '<span class="cat-links fot-tag"><i class="far fa-folder"></i>' . $categories_list . '</span>'; // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'newsmandu' ) );
 			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links fot-tag"><i class="fas fa-tags"></i>' . esc_html__( ' %1$s', 'newsmandu' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				echo '<span class="tags-links fot-tag"><i class="fas fa-tags"></i>' . $tags_list . '</span>'; // WPCS: XSS OK.
 			}
 		}
 
@@ -155,7 +147,7 @@ if ( ! function_exists( 'newsmandu_comment' ) ) :
 				<?php
 				break;
 			default:
-				if ( 'div' != $args['style'] ) {
+				if ( 'div' !== $args['style'] ) {
 					?>
 	<div id="div-comment-<?php comment_ID(); ?>" class="comment-meta">
 			<?php } ?>
@@ -163,7 +155,7 @@ if ( ! function_exists( 'newsmandu_comment' ) ) :
 			<figure>
 				<?php
 						// Display avatar unless size is set to 0.
-				if ( $args['avatar_size'] != 0 ) {
+				if ( $args['avatar_size'] !== 0 ) {
 					$avatar_size = ! empty( $args['avatar_size'] ) ? $args['avatar_size'] : 70; // set default avatar size
 					echo get_avatar( $comment, $avatar_size );
 				}
@@ -177,8 +169,8 @@ if ( ! function_exists( 'newsmandu_comment' ) ) :
 				?>
 				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" class="date">
 					<?php
-							/* translators: 1: date, 2: time */
-							printf(
+
+							printf(/* translators: 1: date, 2: time */
 								__( '%1$s at %2$s', 'newsmandu' ),
 								get_comment_date(),
 								get_comment_time()
