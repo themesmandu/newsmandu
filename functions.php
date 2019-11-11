@@ -204,7 +204,7 @@ function newsmandu_scripts() {
 	wp_enqueue_style( 'main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'newsmandu-style' ), wp_get_theme()->get( 'Version' ) );
 
 	// Add font-awesome fonts, used in the main stylesheet.
-	wp_enqueue_style( 'newsmandu-font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'newsmandu-style' ), '5.7.2' );
+	wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'newsmandu-style' ), '5.7.2' );
 
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
 	wp_enqueue_script( 'jquery' );
