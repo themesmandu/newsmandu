@@ -165,7 +165,6 @@ table caption {
 .media-body {
     max-width: 100%;
 }
-
 /* -- Container Styles -- */
 
 .container {
@@ -568,7 +567,8 @@ nav ul {
 }
 
 .entry-meta a,
-.entry-footer a {
+.entry-footer a,
+.bypostauthor  {
     font-size: 14px;
     font-weight: 500;
     color: #777777;
