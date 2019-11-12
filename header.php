@@ -124,7 +124,6 @@
 			<div class="carousel-inner">
 				<?php
 				for ( $i = 0; $i < 4; $i++ ) :
-					$j = $i + 1;
 					?>
 				<div class="carousel-item <?php echo esc_html( 'carousel-item-' . $i ); ?> <?php echo esc_html( 0 === $i ? 'active' : '' ); ?>">
 					<div class="carousel-wrap">
@@ -155,24 +154,6 @@
 								<?php wp_reset_postdata(); ?>
 							</div>
 						</div>
-						<!-- Style for slider background -->
-						<style>
-						.carousel-item-<?php echo esc_html( $i ); ?>
-						{
-							background-image: url(
-							<?php
-							echo esc_url( wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_slider_post_' . $i ) ) ) );
-							?>
-							);
-							height: 750px;
-						}
-						.header-content h2 {
-							color: chartreuse;
-						}
-						.header-content p {
-							color: white;
-						}
-						</style>
 					</div>
 				</div>
 				<?php endfor; ?>

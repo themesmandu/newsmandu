@@ -11,6 +11,11 @@
 require get_template_directory() . '/inc/class-newsmandu-wp-bootstrap-navwalker.php';
 
 /**
+ * Dynamic styles.
+ */
+require get_template_directory() . '/inc/dynamic-styles.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
