@@ -1,6 +1,6 @@
-=== Newsmandu ===
+=== Newsmandu Magazine ===
 Contributors: Themesmandu
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog
+Tags: Multiple Blog Layout, Custom Background, Custom Header, Custom Logo, Custom Menu, Featured Images, Footer Widgets, Left Sidebar, One Column, Right Sidebar, Theme Options, Threaded Comments, Custom Ad Area, Translation Ready, Category Color Select, Jombotron, Featured Post, Custom Slider.
 Requires at least: 5.2.2
 Tested up to: 4.8
 Requires PHP: 5.2.4
@@ -8,11 +8,10 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-Newsmandu is best suited for blog website.
+Newsmandu Magazine is best suited for blog website.
 
 == Description ==
-Newsmandu is a free WordPress theme with responsive and eye-catching design. The theme is designed for for bloggers, newspapers or journalist writing. It is ideal for bloggers, people who wants to share their thoughts online. Newsmandu theme allows you to write an article, post a blog post with ease.
-This theme is easy and simple to setup, and comes with various options for customization. It is cross-browser compatible, SEO-friendly, lightweight for speedy loading and compatible with almost all WordPress plugins. This theme doesn’t require you to have any programming skills, the theme documentation comes with step by step guide on how to install, configure and customize the theme. Documentation http://themesmandu.com/documentation/newsmandu/
+Newsmandu Magazine Theme is a clean, modern responsive Wordpress theme focused on magazine and news portal sites.  With the organized and attractive layouts, it is much easier to display your robust content throughout the theme. The sample demo content is just one click away with the import feature. This helps you quickly overview what the theme has to offer. Whether you want to have a magazine or newspaper style, this theme works well for both. Documentation http://themesmandu.com/documentation/newsmandu/
 
 == Installation ==
 
@@ -24,12 +23,12 @@ This theme is easy and simple to setup, and comes with various options for custo
 
 = Does this theme support any plugins? =
 
-Newsmandu includes support for Infinite Scroll in Jetpack.
+Newsmandu Magazine includes support for Infinite Scroll in Jetpack.
 
 == Copyright ==
 
-Newsmandu theme WordPress Theme, Copyright 2019 themesmandu.com
-Newsmandu theme is distributed under the terms of the GNU GPL
+Newsmandu Magazine theme WordPress Theme, Copyright 2019 themesmandu.com
+Newsmandu Magazine theme is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -44,7 +43,7 @@ GNU General Public License for more details.
 
 == Resources ==
 
-Newsmandu bundles the following third-party resources:
+Newsmandu Magazine bundles the following third-party resources:
 
 * Underscores, (C) 2012-2019 Automattic, Inc.,
 License: [GPLv2 or later]
