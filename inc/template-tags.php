@@ -164,7 +164,7 @@ if ( ! function_exists( 'newsmandu_comment' ) ) :
 
 			<div class="comment-metadata">
 				<?php
-						// Display author name.
+						/* translators: %s: Name of comment author name */
 						printf( __( '<span class="fn">%s</span> ', 'newsmandu' ), get_comment_author_link() );
 				?>
 				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" class="date">
