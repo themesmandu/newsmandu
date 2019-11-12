@@ -64,10 +64,16 @@ License: GPL-2.0+
 Source: http://tgmpluginactivation.com/
 
 * Google Fonts
+Fonts — SIL Open Font License, v1.1
+Source: https://fonts.google.com/
+
 * Stocksnap
-* Popper.js © 2016-2019 FEDERICO ZIVOLO & CONTRIBUTORS
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/
 
-
+* Popper.js
+License: © 2016-2019 FEDERICO ZIVOLO & CONTRIBUTORS, 
+Source: https://popper.js.org/
 == Changelog ==
 
 = 1.0 - November 12 2019 =
