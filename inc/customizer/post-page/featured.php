@@ -2,7 +2,7 @@
 /**
  * Newsmandu-Magazine theme customizer for selecting featured post in blog page.
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 /**

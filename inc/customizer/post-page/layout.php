@@ -4,7 +4,7 @@
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object.
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 	$wp_customize->add_setting(
@@ -22,13 +22,13 @@
 			$wp_customize,
 			'blog_layout',
 			array(
-				'label'    => __( 'Layout Style', 'Newsmandu-Magazine-magazine' ),
+				'label'    => __( 'Layout Style', 'newsmandu-magazine' ),
 				'section'  => 'blog_options',
 				'settings' => 'blog_layout',
 				'type'     => 'select',
 				'choices'  => array(
-					'list'     => esc_html__( 'List', 'Newsmandu-Magazine-magazine' ),
-					'standard' => esc_html__( 'Standard', 'Newsmandu-Magazine-magazine' ),
+					'list'     => esc_html__( 'List', 'newsmandu-magazine' ),
+					'standard' => esc_html__( 'Standard', 'newsmandu-magazine' ),
 				),
 				'priority' => '15',
 			)

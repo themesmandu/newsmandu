@@ -2,7 +2,7 @@
 /**
  * Newsmandu-Magazine functions and definitions for blog page pagination.
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 	$wp_customize->add_setting(
@@ -20,13 +20,13 @@
 			$wp_customize,
 			'blog_pagination_mode',
 			array(
-				'label'    => __( 'Posts page navigation', 'Newsmandu-Magazine-magazine' ),
+				'label'    => __( 'Posts page navigation', 'newsmandu-magazine' ),
 				'section'  => 'blog_options',
 				'settings' => 'blog_pagination_mode',
 				'type'     => 'select',
 				'choices'  => array(
-					'standard' => __( 'Standard', 'Newsmandu-Magazine-magazine' ),
-					'numeric'  => __( 'Numeric', 'Newsmandu-Magazine-magazine' ),
+					'standard' => __( 'Standard', 'newsmandu-magazine' ),
+					'numeric'  => __( 'Numeric', 'newsmandu-magazine' ),
 				),
 				'priority' => '20',
 			)

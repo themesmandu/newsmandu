@@ -4,7 +4,7 @@
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object.
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 	$wp_customize->add_setting(
@@ -22,14 +22,14 @@
 			$wp_customize,
 			'sidebar_position',
 			array(
-				'label'    => __( 'Sidebar Displays', 'Newsmandu-Magazine-magazine' ),
+				'label'    => __( 'Sidebar Displays', 'newsmandu-magazine' ),
 				'section'  => 'general_options',
 				'settings' => 'sidebar_position',
 				'type'     => 'select',
 				'choices'  => array(
-					'right' => __( 'Right sidebar', 'Newsmandu-Magazine-magazine' ),
-					'left'  => __( 'Left sidebar', 'Newsmandu-Magazine-magazine' ),
-					'none'  => __( 'No sidebar', 'Newsmandu-Magazine-magazine' ),
+					'right' => __( 'Right sidebar', 'newsmandu-magazine' ),
+					'left'  => __( 'Left sidebar', 'newsmandu-magazine' ),
+					'none'  => __( 'No sidebar', 'newsmandu-magazine' ),
 				),
 				'priority' => '15',
 			)

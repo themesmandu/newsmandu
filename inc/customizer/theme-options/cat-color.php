@@ -2,15 +2,15 @@
 /**
  * Newsmandu-Magazine Theme color selector for category.
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 	// Category color selector.
 	$wp_customize->add_section(
 		'Newsmandu-Magazine_category_color',
 		array(
-			'title'       => esc_html__( 'Category Color Select', 'Newsmandu-Magazine-magazine' ),
-			'description' => esc_html__( 'Category Section Color Selector. (Category color will change only in top story section.)', 'Newsmandu-Magazine-magazine' ),
+			'title'       => esc_html__( 'Category Color Select', 'newsmandu-magazine' ),
+			'description' => esc_html__( 'Category Section Color Selector. (Category color will change only in top story section.)', 'newsmandu-magazine' ),
 			'panel'       => 'frontpage_options',
 		)
 	);

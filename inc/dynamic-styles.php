@@ -2,7 +2,7 @@
 /**
  * Theme specific dynamic styles.
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 /**

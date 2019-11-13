@@ -2,7 +2,7 @@
 /**
  * Newsmandu Theme Customizer for front page slider section
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 /* Add dropdown post control */

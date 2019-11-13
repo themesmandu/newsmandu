@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 if ( ! function_exists( 'newsmandu_setup' ) ) :

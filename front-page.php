@@ -7,7 +7,7 @@
  * appear.
  * Learn more: https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 get_header();

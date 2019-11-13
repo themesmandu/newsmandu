@@ -1,24 +1,24 @@
 <?php
 /**
- * Newsmandu-Magazine Theme customizer Footer option.
+ * Newsmandu Theme customizer Footer option.
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 $wp_customize->add_panel(
 	'footer_option',
 	array(
-		'title'           => __( 'Footer Settings', 'Newsmandu-Magazine-magazine' ),
+		'title'           => __( 'Footer Settings', 'newsmandu-magazine' ),
 		'priority'        => 190,
-		'active_callback' => 'Newsmandu-Magazine_set_front_page',
+		'active_callback' => 'newsmandu_set_front_page',
 	)
 );
 // Add footer section.
 $wp_customize->add_section(
-	'Newsmandu-Magazine_footer_section',
+	'newsmandu_footer_section',
 	array(
-		'title'       => esc_html__( 'Footer Section', 'Newsmandu-Magazine-magazine' ),
-		'description' => esc_html__( 'Footer Section options.', 'Newsmandu-Magazine-magazine' ),
+		'title'       => esc_html__( 'Footer Section', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'Footer Section options.', 'newsmandu-magazine' ),
 		'panel'       => 'footer_option',
 	)
 );
@@ -34,9 +34,9 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'footer_instagram_title',
 	array(
-		'label'       => esc_html__( 'Footer Instagram Title', 'Newsmandu-Magazine-magazine' ),
-		'description' => esc_html__( 'Enter the title for the instagram feeds ', 'Newsmandu-Magazine-magazine' ),
-		'section'     => 'Newsmandu-Magazine_footer_section',
+		'label'       => esc_html__( 'Footer Instagram Title', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'Enter the title for the instagram feeds ', 'newsmandu-magazine' ),
+		'section'     => 'newsmandu_footer_section',
 		'type'        => 'text',
 	)
 );
@@ -51,9 +51,9 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'footer_instagram',
 	array(
-		'label'       => esc_html__( 'Footer Instagram Shortcode', 'Newsmandu-Magazine-magazine' ),
-		'description' => esc_html__( 'Paste the shortcode of smash balloon plugin to display the instagram feeds ', 'Newsmandu-Magazine-magazine' ),
-		'section'     => 'Newsmandu-Magazine_footer_section',
+		'label'       => esc_html__( 'Footer Instagram Shortcode', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'Paste the shortcode of smash balloon plugin to display the instagram feeds ', 'newsmandu-magazine' ),
+		'section'     => 'newsmandu_footer_section',
 		'type'        => 'text',
 	)
 );
@@ -68,9 +68,9 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'footer_copyright_text',
 	array(
-		'label'       => esc_html__( 'Footer Copyright Text', 'Newsmandu-Magazine-magazine' ),
-		'description' => esc_html__( 'This text will appear before &copy; on footer copyright section', 'Newsmandu-Magazine-magazine' ),
-		'section'     => 'Newsmandu-Magazine_footer_section',
+		'label'       => esc_html__( 'Footer Copyright Text', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'This text will appear before &copy; on footer copyright section', 'newsmandu-magazine' ),
+		'section'     => 'newsmandu_footer_section',
 		'type'        => 'textarea',
 	)
 );

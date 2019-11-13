@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Newsmandu-Magazine
+ * @package Newsmandu
  */
 
 get_header();
