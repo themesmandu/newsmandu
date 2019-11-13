@@ -73,6 +73,20 @@ Source: https://stocksnap.io/
 * Popper.js
 License: © 2016-2019 FEDERICO ZIVOLO & CONTRIBUTORS, 
 Source: https://popper.js.org/
+
+* Screenshot
+sea.JPG
+https://stocksnap.io/photo/U4ML8WV1I2
+
+StockSnap_S4P1EEYET5.JPG
+https://stocksnap.io/photo/S4P1EEYET5
+
+StockSnap_6JEHS8PBHP.JPG
+https://stocksnap.io/photo/6JEHS8PBHP
+
+StockSnap_XT3HZBE9GI.JPG
+https://stocksnap.io/photo/XT3HZBE9GI
+
 == Changelog ==
 
 = 1.0 - November 13 2019 =
