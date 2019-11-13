@@ -27,7 +27,7 @@
 			<span></span>
 		</div>
 		<header id="top-header" class="site-header" role="banner">
-			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magizine' ); ?></a>
+			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
 			<?php if ( get_theme_mod( 'top_menu_toggle' ) ) : ?>
 			<div class="top-menu">
 				<div class="container">
@@ -133,7 +133,7 @@
 								$newsmandu_slider_post = new WP_Query( array( 'p' => get_theme_mod( 'newsmandu_slider_post_' . $i ) ) );
 								while ( $newsmandu_slider_post->have_posts() ) :
 									$newsmandu_slider_post->the_post();
-									$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magizine' ) );
+									$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magazine' ) );
 									if ( $categories_list ) {
 										?>
 								<span class="frontpage-cat-links"><?php echo wp_kses_post( $categories_list ); ?></span>

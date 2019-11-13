@@ -60,19 +60,19 @@ function newsmandu_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'     => esc_html__( 'Contact Form 7', 'newsmandu-magizine' ),
+			'name'     => esc_html__( 'Contact Form 7', 'newsmandu-magazine' ),
 			'slug'     => 'contact-form-7',
 			'required' => true,
 		),
 
 		array(
-			'name'     => esc_html__( 'Newsletter', 'newsmandu-magizine' ),
+			'name'     => esc_html__( 'Newsletter', 'newsmandu-magazine' ),
 			'slug'     => 'newsletter',
 			'required' => true,
 		),
 
 		array(
-			'name'     => esc_html__( 'Smash Balloon Instagram Feed', 'newsmandu-magizine' ),
+			'name'     => esc_html__( 'Smash Balloon Instagram Feed', 'newsmandu-magazine' ),
 			'slug'     => 'instagram-feed',
 			'required' => true,
 		),
@@ -88,7 +88,7 @@ function newsmandu_register_required_plugins() {
 		* Only uncomment the strings in the config array if you want to customize the strings.
 		*/
 		$config = array(
-			'id'           => 'newsmandu-magizine',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+			'id'           => 'newsmandu-magazine',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 			'default_path' => '',                      // Default absolute path to bundled plugins.
 			'menu'         => 'tgmpa-install-plugins', // Menu slug.
 			'has_notices'  => true,                    // Show admin notices or not.

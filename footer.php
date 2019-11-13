@@ -67,13 +67,13 @@
 				<div class="author col-md-6">
 					<?php
 								/* translators: 1: Theme name, 2: Theme author. */
-								printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu-magizine' ), 'newsmandu-magizine', '<a href="">Thememandu</a>' );
+								printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu-magazine' ), 'Newsmandu Magazine', '<a href="">Thememandu</a>' );
 					?>
 				</div>
 			</div><!-- .site-info -->
 		</div>
 	</div>
-	<button class="up-btn" id="up-btn" title="<?php echo esc_html( __( 'Go to top', 'newsmandu-magizine' ) ); ?>"
+	<button class="up-btn" id="up-btn" title="<?php echo esc_html( __( 'Go to top', 'newsmandu-magazine' ) ); ?>"
 		style="display: block;"><i class="fas fa-chevron-up"></i></button>
 </footer>
 

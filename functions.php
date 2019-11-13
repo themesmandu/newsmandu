@@ -20,9 +20,9 @@ if ( ! function_exists( 'newsmandu_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Newsmandu, use a find and replace
-		 * to change 'newsmandu-magizine' to the name of your theme in all the template files.
+		 * to change 'newsmandu-magazine' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'newsmandu-magizine', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'newsmandu-magazine', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -51,9 +51,9 @@ if ( ! function_exists( 'newsmandu_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary'     => esc_html__( 'Primary', 'newsmandu-magizine' ),
-				'top_menu'    => esc_html__( 'Top Menu', 'newsmandu-magizine' ),
-				'social_menu' => esc_html__( 'Social Menu', 'newsmandu-magizine' ),
+				'primary'     => esc_html__( 'Primary', 'newsmandu-magazine' ),
+				'top_menu'    => esc_html__( 'Top Menu', 'newsmandu-magazine' ),
+				'social_menu' => esc_html__( 'Social Menu', 'newsmandu-magazine' ),
 			)
 		);
 
@@ -138,9 +138,9 @@ add_action( 'after_setup_theme', 'newsmandu_content_width', 0 );
 function newsmandu_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'newsmandu-magizine' ),
+			'name'          => esc_html__( 'Sidebar', 'newsmandu-magazine' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'newsmandu-magizine' ),
+			'description'   => esc_html__( 'Add widgets here.', 'newsmandu-magazine' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h5 class="widget-title">',
@@ -149,9 +149,9 @@ function newsmandu_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Newsletter-widget', 'newsmandu-magizine' ),
+			'name'          => esc_html__( 'Newsletter-widget', 'newsmandu-magazine' ),
 			'id'            => 'newswidget',
-			'description'   => esc_html__( 'Add widgets here.', 'newsmandu-magizine' ),
+			'description'   => esc_html__( 'Add widgets here.', 'newsmandu-magazine' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h5 class="widget-title">',
@@ -160,9 +160,9 @@ function newsmandu_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Front Page Sidebar', 'newsmandu-magizine' ),
+			'name'          => esc_html__( 'Front Page Sidebar', 'newsmandu-magazine' ),
 			'id'            => 'fpsidebar',
-			'description'   => esc_html__( 'Add widgets here.', 'newsmandu-magizine' ),
+			'description'   => esc_html__( 'Add widgets here.', 'newsmandu-magazine' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h5 class="widget-title">',
@@ -173,9 +173,9 @@ function newsmandu_widgets_init() {
 		register_sidebar(
 			array(
 				/* translators: %d: footer widget number. */
-				'name'          => sprintf( esc_html__( 'Footer %d', 'newsmandu-magizine' ), $i ),
+				'name'          => sprintf( esc_html__( 'Footer %d', 'newsmandu-magazine' ), $i ),
 				'id'            => 'footer-' . $i,
-				'description'   => esc_html__( 'Add widgets here.', 'newsmandu-magizine' ),
+				'description'   => esc_html__( 'Add widgets here.', 'newsmandu-magazine' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',

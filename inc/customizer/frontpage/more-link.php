@@ -18,8 +18,8 @@
 			$wp_customize,
 			'more_link',
 			array(
-				'label'       => __( 'Read More button', 'newsmandu-magizine' ),
-				'description' => __( 'Enter the button name which is a link to the full post. You can leave this blank if you want to hide the button.', 'newsmandu-magizine' ),
+				'label'       => __( 'Read More button', 'newsmandu-magazine' ),
+				'description' => __( 'Enter the button name which is a link to the full post. You can leave this blank if you want to hide the button.', 'newsmandu-magazine' ),
 				'section'     => 'top_stories',
 				'type'        => 'text',
 			)

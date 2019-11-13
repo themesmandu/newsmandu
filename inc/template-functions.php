@@ -262,7 +262,7 @@ function newsmandu_latest_skip_post() {
 			</div>
 			<div class="latest-entries col-md-8">
 				<?php
-				$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magizine' ) );
+				$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magazine' ) );
 				if ( $categories_list ) {
 					/* translators: 1: list of categories. */
 					echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
@@ -399,7 +399,7 @@ if ( ! function_exists( 'newsmandu_header_page_title' ) ) :
 <header class="entry-header pb-4">
 		<h1 class="entry-title">
 			<?php /* translators: %s: search query. */ ?>
-			<?php printf( esc_html__( 'Search Results for: %s', 'newsmandu-magizine' ), get_search_query() ); ?></h1>
+			<?php printf( esc_html__( 'Search Results for: %s', 'newsmandu-magazine' ), get_search_query() ); ?></h1>
 			</header>
 </div>
 			<?php
@@ -408,7 +408,7 @@ if ( ! function_exists( 'newsmandu_header_page_title' ) ) :
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 <header class="entry-header pb-4">
 		<h1 class="entry-title">
-			<span><?php echo esc_html__( 'Oops!', 'newsmandu-magizine' ); ?></span><?php echo esc_html__( ' That page can&#39;t be found.', 'newsmandu-magizine' ); ?>
+			<span><?php echo esc_html__( 'Oops!', 'newsmandu-magazine' ); ?></span><?php echo esc_html__( ' That page can&#39;t be found.', 'newsmandu-magazine' ); ?>
 		</h1>
 
 		<div class="error-404 not-found">

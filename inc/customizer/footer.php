@@ -8,7 +8,7 @@
 $wp_customize->add_panel(
 	'footer_option',
 	array(
-		'title'           => __( 'Footer Settings', 'newsmandu-magizine' ),
+		'title'           => __( 'Footer Settings', 'newsmandu-magazine' ),
 		'priority'        => 190,
 		'active_callback' => 'newsmandu_set_front_page',
 	)
@@ -17,8 +17,8 @@ $wp_customize->add_panel(
 $wp_customize->add_section(
 	'newsmandu_footer_section',
 	array(
-		'title'       => esc_html__( 'Footer Section', 'newsmandu-magizine' ),
-		'description' => esc_html__( 'Footer Section options.', 'newsmandu-magizine' ),
+		'title'       => esc_html__( 'Footer Section', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'Footer Section options.', 'newsmandu-magazine' ),
 		'panel'       => 'footer_option',
 	)
 );
@@ -34,8 +34,8 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'footer_instagram_title',
 	array(
-		'label'       => esc_html__( 'Footer Instagram Title', 'newsmandu-magizine' ),
-		'description' => esc_html__( 'Enter the title for the instagram feeds ', 'newsmandu-magizine' ),
+		'label'       => esc_html__( 'Footer Instagram Title', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'Enter the title for the instagram feeds ', 'newsmandu-magazine' ),
 		'section'     => 'newsmandu_footer_section',
 		'type'        => 'text',
 	)
@@ -51,8 +51,8 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'footer_instagram',
 	array(
-		'label'       => esc_html__( 'Footer Instagram Shortcode', 'newsmandu-magizine' ),
-		'description' => esc_html__( 'Paste the shortcode of smash balloon plugin to display the instagram feeds ', 'newsmandu-magizine' ),
+		'label'       => esc_html__( 'Footer Instagram Shortcode', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'Paste the shortcode of smash balloon plugin to display the instagram feeds ', 'newsmandu-magazine' ),
 		'section'     => 'newsmandu_footer_section',
 		'type'        => 'text',
 	)
@@ -68,8 +68,8 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'footer_copyright_text',
 	array(
-		'label'       => esc_html__( 'Footer Copyright Text', 'newsmandu-magizine' ),
-		'description' => esc_html__( 'This text will appear before &copy; on footer copyright section', 'newsmandu-magizine' ),
+		'label'       => esc_html__( 'Footer Copyright Text', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'This text will appear before &copy; on footer copyright section', 'newsmandu-magazine' ),
 		'section'     => 'newsmandu_footer_section',
 		'type'        => 'textarea',
 	)

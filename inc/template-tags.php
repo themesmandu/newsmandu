@@ -25,7 +25,7 @@ if ( ! function_exists( 'newsmandu_entry_summary' ) ) :
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu-magizine' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu-magazine' ),
 				'after'  => '</div>',
 			)
 		);
@@ -59,7 +59,7 @@ if ( ! function_exists( 'newsmandu_posted_by' ) ) :
 	function newsmandu_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'By %s', 'post author', 'newsmandu-magizine' ),
+			esc_html_x( 'By %s', 'post author', 'newsmandu-magazine' ),
 			'<span class="author vcard"><a class="url fn n bypostauthor" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -76,13 +76,13 @@ if ( ! function_exists( 'newsmandu_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magizine' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magazine' ) );
 			if ( $categories_list ) {
 				echo '<span class="cat-links fot-tag"><i class="far fa-folder"></i>' . $categories_list . '</span>'; // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'newsmandu-magizine' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'newsmandu-magazine' ) );
 			if ( $tags_list ) {
 				echo '<span class="tags-links fot-tag"><i class="fas fa-tags"></i>' . $tags_list . '</span>'; // WPCS: XSS OK.
 			}
@@ -99,7 +99,7 @@ if ( ! function_exists( 'newsmandu_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'newsmandu-magizine' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'newsmandu-magazine' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -142,7 +142,7 @@ if ( ! function_exists( 'newsmandu_comment' ) ) :
 			case 'pingback':
 			case 'trackback':
 				?>
-	<div class="pingback-entry"><span class="pingback-heading"><?php esc_html_e( 'Pingback:', 'newsmandu-magizine' ); ?></span>
+	<div class="pingback-entry"><span class="pingback-heading"><?php esc_html_e( 'Pingback:', 'newsmandu-magazine' ); ?></span>
 				<?php comment_author_link(); ?></div>
 				<?php
 				break;
@@ -165,13 +165,13 @@ if ( ! function_exists( 'newsmandu_comment' ) ) :
 			<div class="comment-metadata">
 				<?php
 						/* translators: %s: Name of comment author name */
-						printf( __( '<span class="fn">%s</span> ', 'newsmandu-magizine' ), get_comment_author_link() );
+						printf( __( '<span class="fn">%s</span> ', 'newsmandu-magazine' ), get_comment_author_link() );
 				?>
 				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" class="date">
 					<?php
 
 							printf(/* translators: 1: date, 2: time */
-								__( '%1$s at %2$s', 'newsmandu-magizine' ),
+								__( '%1$s at %2$s', 'newsmandu-magazine' ),
 								get_comment_date(),
 								get_comment_time()
 							);
@@ -185,14 +185,14 @@ if ( ! function_exists( 'newsmandu_comment' ) ) :
 					if ( $comment->comment_approved === '0' ) {
 						?>
 					<em
-						class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'newsmandu-magizine' ); ?></em><br />
+						class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'newsmandu-magazine' ); ?></em><br />
 						<?php
 					}
 					?>
 
 				</div><!-- .comment-details -->
 					<?php
-						edit_comment_link( __( '(Edit)', 'newsmandu-magizine' ), '  ', '' );
+						edit_comment_link( __( '(Edit)', 'newsmandu-magazine' ), '  ', '' );
 					?>
 			</div><!-- .comment-meta -->
 			<div class="reply">

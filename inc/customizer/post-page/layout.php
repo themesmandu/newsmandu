@@ -22,13 +22,13 @@
 			$wp_customize,
 			'blog_layout',
 			array(
-				'label'    => __( 'Layout Style', 'newsmandu-magizine' ),
+				'label'    => __( 'Layout Style', 'newsmandu-magazine' ),
 				'section'  => 'blog_options',
 				'settings' => 'blog_layout',
 				'type'     => 'select',
 				'choices'  => array(
-					'list'     => esc_html__( 'List', 'newsmandu-magizine' ),
-					'standard' => esc_html__( 'Standard', 'newsmandu-magizine' ),
+					'list'     => esc_html__( 'List', 'newsmandu-magazine' ),
+					'standard' => esc_html__( 'Standard', 'newsmandu-magazine' ),
 				),
 				'priority' => '15',
 			)

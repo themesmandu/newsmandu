@@ -32,7 +32,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu-magizine' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu-magazine' ),
 				'after'  => '</div>',
 			)
 		);
@@ -46,7 +46,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'newsmandu-magizine' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'newsmandu-magazine' ),
 						array(
 							'span' => array(
 								'class' => array(),

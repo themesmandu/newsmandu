@@ -24,7 +24,7 @@ if ( get_post_type() === 'post' ) {
 		?>
 			<i class="fas fa-folder"></i>
 		<?php
-			$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magizine' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magazine' ) );
 		if ( $categories_list ) {
 			/* translators: 1: list of categories. */
 			echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
@@ -57,14 +57,14 @@ if ( get_post_type() === 'post' ) {
 			the_content(
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					esc_html__( 'Continue reading%s', 'newsmandu-magizine' ),
+					esc_html__( 'Continue reading%s', 'newsmandu-magazine' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				)
 			);
 
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu-magizine' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu-magazine' ),
 					'after'  => '</div>',
 				)
 			);
