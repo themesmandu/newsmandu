@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 if ( post_password_required() ) {

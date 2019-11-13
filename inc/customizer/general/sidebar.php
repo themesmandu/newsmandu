@@ -1,10 +1,10 @@
 <?php
 /**
- * Newsmandu Theme Customizer for side bar.
+ * Newsmandu-Magazine Theme Customizer for side bar.
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object.
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 	$wp_customize->add_setting(
@@ -12,7 +12,7 @@
 		array(
 			'default'           => 'right',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'newsmandu_sanitize_sidebar_position',
+			'sanitize_callback' => 'Newsmandu-Magazine_sanitize_sidebar_position',
 			'capability'        => 'edit_theme_options',
 		)
 	);
@@ -22,14 +22,14 @@
 			$wp_customize,
 			'sidebar_position',
 			array(
-				'label'    => __( 'Sidebar Displays', 'newsmandu-magazine' ),
+				'label'    => __( 'Sidebar Displays', 'Newsmandu-Magazine-magazine' ),
 				'section'  => 'general_options',
 				'settings' => 'sidebar_position',
 				'type'     => 'select',
 				'choices'  => array(
-					'right' => __( 'Right sidebar', 'newsmandu-magazine' ),
-					'left'  => __( 'Left sidebar', 'newsmandu-magazine' ),
-					'none'  => __( 'No sidebar', 'newsmandu-magazine' ),
+					'right' => __( 'Right sidebar', 'Newsmandu-Magazine-magazine' ),
+					'left'  => __( 'Left sidebar', 'Newsmandu-Magazine-magazine' ),
+					'none'  => __( 'No sidebar', 'Newsmandu-Magazine-magazine' ),
 				),
 				'priority' => '15',
 			)

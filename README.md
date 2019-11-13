@@ -1,1 +1,1 @@
-# newsmandu
+# Newsmandu-Magazine

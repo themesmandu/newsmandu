@@ -10,7 +10,7 @@
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 /* Check if Class Exists. */

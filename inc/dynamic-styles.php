@@ -2,9 +2,8 @@
 /**
  * Theme specific dynamic styles.
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
-
 
 /**
  * Output generated a line of CSS from customizer values in header output.

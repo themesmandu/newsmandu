@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 $newsmandu_content = get_theme_mod( 'blog_layout' ) === 'list' ? '-list' : '';

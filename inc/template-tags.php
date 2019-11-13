@@ -4,7 +4,7 @@
  *
  * Some of the functionality here could be replaced by core features.
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 if ( ! function_exists( 'newsmandu_entry_summary' ) ) :

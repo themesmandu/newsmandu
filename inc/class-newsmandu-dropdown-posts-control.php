@@ -2,7 +2,7 @@
 /**
  * Customizer custom controls
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  * @subpackage Newsmandu
  * @since newsmandu 1.0.0
  */

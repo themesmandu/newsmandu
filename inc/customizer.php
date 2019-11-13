@@ -4,7 +4,7 @@
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object.
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 /**

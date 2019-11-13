@@ -2,7 +2,7 @@
 /**
  * Newsmandu theme customizer for read more button
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 	$wp_customize->add_setting(

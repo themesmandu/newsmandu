@@ -6,7 +6,6 @@
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-
 class Newsmandu_Toggle_Switch_Custom_Control extends WP_Customize_Control {
 		/**
 		 * The type of control being rendered

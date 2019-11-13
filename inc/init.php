@@ -2,13 +2,13 @@
 /**
  * Load files
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 /**
  * Load WordPress nav walker.
  */
-require get_template_directory() . '/inc/class-newsmandu-wp-bootstrap-navwalker.php';
+require get_template_directory() . '/inc/class-Newsmandu-Magazine-wp-bootstrap-navwalker.php';
 
 /**
  * Dynamic styles.

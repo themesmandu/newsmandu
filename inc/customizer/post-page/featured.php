@@ -1,8 +1,8 @@
 <?php
 /**
- * Newsmandu theme customizer for selecting featured post in blog page.
+ * Newsmandu-Magazine theme customizer for selecting featured post in blog page.
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 /**

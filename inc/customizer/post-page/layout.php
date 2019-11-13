@@ -1,10 +1,10 @@
 <?php
 /**
- * Newsmandu Theme Customizer for blog post layout.
+ * Newsmandu-Magazine Theme Customizer for blog post layout.
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object.
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 	$wp_customize->add_setting(
@@ -12,7 +12,7 @@
 		array(
 			'default'           => 'standard',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'newsmandu_sanitize_blog_layout',
+			'sanitize_callback' => 'Newsmandu-Magazine_sanitize_blog_layout',
 			'capability'        => 'edit_theme_options',
 		)
 	);
@@ -22,13 +22,13 @@
 			$wp_customize,
 			'blog_layout',
 			array(
-				'label'    => __( 'Layout Style', 'newsmandu-magazine' ),
+				'label'    => __( 'Layout Style', 'Newsmandu-Magazine-magazine' ),
 				'section'  => 'blog_options',
 				'settings' => 'blog_layout',
 				'type'     => 'select',
 				'choices'  => array(
-					'list'     => esc_html__( 'List', 'newsmandu-magazine' ),
-					'standard' => esc_html__( 'Standard', 'newsmandu-magazine' ),
+					'list'     => esc_html__( 'List', 'Newsmandu-Magazine-magazine' ),
+					'standard' => esc_html__( 'Standard', 'Newsmandu-Magazine-magazine' ),
 				),
 				'priority' => '15',
 			)

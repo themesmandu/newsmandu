@@ -4,26 +4,26 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 ?>
 <?php if ( get_theme_mod( 'mainmenu_dropdown_mode' ) !== 'bootstrap' ) { ?>
 
 <nav class="navbar navbar-expand-lg main-navigation nav-search appear-left">
-    <?php } else { ?>
-    <nav class="navbar navbar-expand-lg main-navigation nav-search">
-        <?php } ?>
-        <div class="container">
+	<?php } else { ?>
+	<nav class="navbar navbar-expand-lg main-navigation nav-search">
+		<?php } ?>
+		<div class="container">
 
-            <button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                data-target="#navbarmenus">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+			<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+				data-target="#navbarmenus">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 
-            <?php
+			<?php
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'primary',
@@ -38,10 +38,10 @@
 			);
 			?>
 
-            <?php
+			<?php
 			get_template_part( 'template-parts/navigation/add-item', 'search-form' );
 			?>
 
 
-        </div><!-- .container -->
-    </nav><!-- .site-navigation -->
+		</div><!-- .container -->
+	</nav><!-- .site-navigation -->

@@ -5,7 +5,7 @@
  * @link https://getbootstrap.com/docs/4.3/components/jumbotron/
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 $heading    = get_theme_mod( 'banner_title' );

@@ -2,7 +2,7 @@
 /**
  * Sanitize functions.
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 /**

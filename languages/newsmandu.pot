@@ -1,7 +1,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Newsmandu 1.0.0\n"
+"Project-Id-Version: Newsmandu-Magazine 1.0.0\n"
 "POT-Creation-Date: 2019-06-06 13:00+0800\n"
 "PO-Revision-Date: 2019-06-06 13:00+0800\n"
 "Last-Translator: dinevthemes <post@dinevthemes.com>\n"

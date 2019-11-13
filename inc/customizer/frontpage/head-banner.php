@@ -4,7 +4,7 @@
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object for front page banner.
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 $wp_customize->add_section(

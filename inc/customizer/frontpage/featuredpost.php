@@ -3,7 +3,7 @@
  *
  * The front page customizer setting for featured post and top stories section
  *
- * @package Newsmandu
+ * @package Newsmandu-Magazine
  */
 
 $wp_customize->add_section(
