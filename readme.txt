@@ -1,6 +1,6 @@
 === Newsmandu-Magazine ===
 Contributors: Themesmandu
-Tags: custom-background, custom-logo, custom-menu, featured-images, theme-options, threaded-comments.
+Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, left-sidebar, one-column, right-sidebar, theme-options, threaded-comments, translation-ready
 Requires at least: 5.2.2
 Tested up to: 4.8
 Requires PHP: 5.2.4
