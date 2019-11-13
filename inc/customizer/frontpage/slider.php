@@ -54,7 +54,7 @@ for ( $i = 0; $i < 4; $i++ ) {
 				'section'     => 'frontpage_slider',
 
 				'input_attrs' => array(
-					'posts_per_page' => -1,
+					'posts_per_page' => 10000,
 					'orderby'        => 'name',
 					'order'          => 'ASC',
 				),

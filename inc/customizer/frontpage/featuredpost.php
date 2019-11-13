@@ -94,7 +94,7 @@ for ( $i = 0; $i < 3; $i++ ) {
 				'section'     => 'featured_post',
 
 				'input_attrs' => array(
-					'posts_per_page' => -1,
+					'posts_per_page' => 10000,
 					'orderby'        => 'name',
 					'order'          => 'ASC',
 				),
@@ -149,7 +149,7 @@ for ( $i = 0; $i <= 3; $i++ ) {
 				'section'     => 'featured_post_Second',
 
 				'input_attrs' => array(
-					'posts_per_page' => -1,
+					'posts_per_page' => 10000,
 					'orderby'        => 'name',
 					'order'          => 'ASC',
 				),

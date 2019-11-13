@@ -234,9 +234,9 @@ require get_template_directory() . '/inc/init.php';
  * @param array $classes Classes for the menu items.
  * @return array
  */
-function wildspirit_add_classes_on_link_attributes( $classes ) {
+function newsmandu_magazine_add_classes_on_link_attributes( $classes ) {
 	$classes['class'] = 'nav-link';
 	return $classes;
 }
-add_filter( 'nav_menu_link_attributes', 'wildspirit_add_classes_on_link_attributes' );
+add_filter( 'nav_menu_link_attributes', 'newsmandu_magazine_add_classes_on_link_attributes' );
 
