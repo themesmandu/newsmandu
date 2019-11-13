@@ -75,10 +75,10 @@ License: © 2016-2019 FEDERICO ZIVOLO & CONTRIBUTORS,
 Source: https://popper.js.org/
 == Changelog ==
 
-= 1.0 - November 12 2019 =
+= 1.0 - November 13 2019 =
 * Initial release.
 
 == Upgrade Notice ==
 
-= 1.0 - November 12 2019 =
+= 1.0 - November 13 2019 =
 * Initial release.
