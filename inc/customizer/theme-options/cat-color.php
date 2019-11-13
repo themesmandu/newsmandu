@@ -9,8 +9,8 @@
 	$wp_customize->add_section(
 		'newsmandu_category_color',
 		array(
-			'title'       => esc_html__( 'Category Color Select', 'newsmandu' ),
-			'description' => esc_html__( 'Category Section Color Selector. (Category color will change only in top story section.)', 'newsmandu' ),
+			'title'       => esc_html__( 'Category Color Select', 'newsmandu-magizine' ),
+			'description' => esc_html__( 'Category Section Color Selector. (Category color will change only in top story section.)', 'newsmandu-magizine' ),
 			'panel'       => 'frontpage_options',
 		)
 	);

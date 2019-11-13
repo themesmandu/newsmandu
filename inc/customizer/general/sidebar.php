@@ -22,14 +22,14 @@
 			$wp_customize,
 			'sidebar_position',
 			array(
-				'label'    => __( 'Sidebar Displays', 'newsmandu' ),
+				'label'    => __( 'Sidebar Displays', 'newsmandu-magizine' ),
 				'section'  => 'general_options',
 				'settings' => 'sidebar_position',
 				'type'     => 'select',
 				'choices'  => array(
-					'right' => __( 'Right sidebar', 'newsmandu' ),
-					'left'  => __( 'Left sidebar', 'newsmandu' ),
-					'none'  => __( 'No sidebar', 'newsmandu' ),
+					'right' => __( 'Right sidebar', 'newsmandu-magizine' ),
+					'left'  => __( 'Left sidebar', 'newsmandu-magizine' ),
+					'none'  => __( 'No sidebar', 'newsmandu-magizine' ),
 				),
 				'priority' => '15',
 			)

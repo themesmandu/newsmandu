@@ -20,13 +20,13 @@
 			$wp_customize,
 			'blog_pagination_mode',
 			array(
-				'label'    => __( 'Posts page navigation', 'newsmandu' ),
+				'label'    => __( 'Posts page navigation', 'newsmandu-magizine' ),
 				'section'  => 'blog_options',
 				'settings' => 'blog_pagination_mode',
 				'type'     => 'select',
 				'choices'  => array(
-					'standard' => __( 'Standard', 'newsmandu' ),
-					'numeric'  => __( 'Numeric', 'newsmandu' ),
+					'standard' => __( 'Standard', 'newsmandu-magizine' ),
+					'numeric'  => __( 'Numeric', 'newsmandu-magizine' ),
 				),
 				'priority' => '20',
 			)

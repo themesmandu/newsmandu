@@ -10,7 +10,7 @@ require get_template_directory() . '/inc/class-newsmandu-dropdown-posts-control.
 $wp_customize->add_section(
 	'frontpage_slider',
 	array(
-		'title'    => __( 'Front Page slider', 'newsmandu' ),
+		'title'    => __( 'Front Page slider', 'newsmandu-magizine' ),
 		'panel'    => 'frontpage_options',
 		'priority' => 25,
 	)
@@ -29,7 +29,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'slider_toggle',
 		array(
-			'label'   => esc_html__( 'Show Slider Section', 'newsmandu' ),
+			'label'   => esc_html__( 'Show Slider Section', 'newsmandu-magizine' ),
 			'section' => 'frontpage_slider',
 		)
 	)
@@ -49,7 +49,7 @@ for ( $i = 0; $i < 4; $i++ ) {
 			'newsmandu_slider_post_' . $i,
 			array(
 				/* translators: %d: slider number */
-				'label'       => sprintf( esc_html__( 'Select post for slider %d', 'newsmandu' ), $j ),
+				'label'       => sprintf( esc_html__( 'Select post for slider %d', 'newsmandu-magizine' ), $j ),
 
 				'section'     => 'frontpage_slider',
 

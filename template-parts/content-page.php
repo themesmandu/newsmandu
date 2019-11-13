@@ -25,7 +25,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu-magizine' ),
 				'after'  => '</div>',
 			)
 		);
@@ -37,7 +37,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current page */
-						__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'newsmandu' ),
+						__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'newsmandu-magizine' ),
 						get_the_title()
 					),
 					'<footer class="entry-footer"><span class="edit-link">',

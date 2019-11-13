@@ -21,7 +21,7 @@
 			$wp_customize,
 			'top_menu_toggle',
 			array(
-				'label'   => esc_html__( 'Show Top Menu Section', 'newsmandu' ),
+				'label'   => esc_html__( 'Show Top Menu Section', 'newsmandu-magizine' ),
 				'section' => 'general_options',
 			)
 		)
@@ -40,8 +40,8 @@
 			$wp_customize,
 			'phone_number',
 			array(
-				'label'       => __( 'Phone Number', 'newsmandu' ),
-				'description' => __( 'Enter the phone number of the site.', 'newsmandu' ),
+				'label'       => __( 'Phone Number', 'newsmandu-magizine' ),
+				'description' => __( 'Enter the phone number of the site.', 'newsmandu-magizine' ),
 				'section'     => 'general_options',
 				'type'        => 'text',
 			)
@@ -61,8 +61,8 @@
 			$wp_customize,
 			'contact_email',
 			array(
-				'label'       => __( 'Email', 'newsmandu' ),
-				'description' => __( 'Enter the email address of the site.', 'newsmandu' ),
+				'label'       => __( 'Email', 'newsmandu-magizine' ),
+				'description' => __( 'Enter the email address of the site.', 'newsmandu-magizine' ),
 				'section'     => 'general_options',
 				'type'        => 'text',
 			)

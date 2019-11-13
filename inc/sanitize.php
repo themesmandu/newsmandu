@@ -21,8 +21,8 @@ function newsmandu_customize_partial_blogname() {
  */
 function newsmandu_sanitize_menubar_mode( $input ) {
 	$valid = array(
-		'standard' => __( 'Standard', 'newsmandu' ),
-		'alt'      => __( 'Alternative', 'newsmandu' ),
+		'standard' => __( 'Standard', 'newsmandu-magizine' ),
+		'alt'      => __( 'Alternative', 'newsmandu-magizine' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
@@ -39,8 +39,8 @@ function newsmandu_sanitize_menubar_mode( $input ) {
  */
 function newsmandu_sanitize_mainmenu_dropdown_mode( $input ) {
 	$valid = array(
-		'default'   => __( 'Default', 'newsmandu' ),
-		'bootstrap' => __( 'Bootstrap', 'newsmandu' ),
+		'default'   => __( 'Default', 'newsmandu-magizine' ),
+		'bootstrap' => __( 'Bootstrap', 'newsmandu-magizine' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
@@ -57,8 +57,8 @@ function newsmandu_sanitize_mainmenu_dropdown_mode( $input ) {
  */
 function newsmandu_sanitize_mainmenu_style( $input ) {
 	$valid = array(
-		'regular' => __( 'Regular', 'newsmandu' ),
-		'fixed'   => __( 'Fixed', 'newsmandu' ),
+		'regular' => __( 'Regular', 'newsmandu-magizine' ),
+		'fixed'   => __( 'Fixed', 'newsmandu-magizine' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
@@ -75,9 +75,9 @@ function newsmandu_sanitize_mainmenu_style( $input ) {
  */
 function newsmandu_sanitize_sidebar_position( $input ) {
 	$valid = array(
-		'right' => __( 'Right sidebar', 'newsmandu' ),
-		'left'  => __( 'Left sidebar', 'newsmandu' ),
-		'none'  => __( 'No sidebar', 'newsmandu' ),
+		'right' => __( 'Right sidebar', 'newsmandu-magizine' ),
+		'left'  => __( 'Left sidebar', 'newsmandu-magizine' ),
+		'none'  => __( 'No sidebar', 'newsmandu-magizine' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
@@ -94,8 +94,8 @@ function newsmandu_sanitize_sidebar_position( $input ) {
  */
 function newsmandu_sanitize_blog_pagination_mode( $input ) {
 	$valid = array(
-		'standard' => __( 'Standard', 'newsmandu' ),
-		'numeric'  => __( 'Numeric', 'newsmandu' ),
+		'standard' => __( 'Standard', 'newsmandu-magizine' ),
+		'numeric'  => __( 'Numeric', 'newsmandu-magizine' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
@@ -112,8 +112,8 @@ function newsmandu_sanitize_blog_pagination_mode( $input ) {
  */
 function newsmandu_sanitize_blog_layout( $input ) {
 	$valid = array(
-		'list'     => esc_html__( 'List', 'newsmandu' ),
-		'standard' => esc_html__( 'Standard', 'newsmandu' ),
+		'list'     => esc_html__( 'List', 'newsmandu-magizine' ),
+		'standard' => esc_html__( 'Standard', 'newsmandu-magizine' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
@@ -159,8 +159,8 @@ if ( ! function_exists( 'newsmandu_switch_sanitize' ) ) {
  */
 function newsmandu_sanitize_player_atc_style( $input ) {
 	$valid = array(
-		'dropdown' => __( 'Dropdown', 'newsmandu' ),
-		'popup'    => __( 'Popup', 'newsmandu' ),
+		'dropdown' => __( 'Dropdown', 'newsmandu-magizine' ),
+		'popup'    => __( 'Popup', 'newsmandu-magizine' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {

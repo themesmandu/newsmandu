@@ -9,7 +9,7 @@
 $wp_customize->add_section(
 	'featured_post',
 	array(
-		'title'    => __( 'Front Page Featured Area 1', 'newsmandu' ),
+		'title'    => __( 'Front Page Featured Area 1', 'newsmandu-magizine' ),
 		'panel'    => 'frontpage_options',
 		'priority' => 25,
 	)
@@ -28,7 +28,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'featured_post_toggle',
 		array(
-			'label'   => esc_html__( 'Show Featured Area 1 Section', 'newsmandu' ),
+			'label'   => esc_html__( 'Show Featured Area 1 Section', 'newsmandu-magizine' ),
 			'section' => 'featured_post',
 		)
 	)
@@ -46,8 +46,8 @@ $wp_customize->add_control(
 		$wp_customize,
 		'featured_title',
 		array(
-			'label'       => __( 'Featured Section Title', 'newsmandu' ),
-			'description' => __( 'Enter the title for the featured section.', 'newsmandu' ),
+			'label'       => __( 'Featured Section Title', 'newsmandu-magizine' ),
+			'description' => __( 'Enter the title for the featured section.', 'newsmandu-magizine' ),
 			'section'     => 'featured_post',
 			'type'        => 'text',
 		)
@@ -66,8 +66,8 @@ $wp_customize->add_control(
 		$wp_customize,
 		'featured_sub_title',
 		array(
-			'label'       => __( 'Featured Section Sub Title', 'newsmandu' ),
-			'description' => __( 'Enter the sub title for the featured section.', 'newsmandu' ),
+			'label'       => __( 'Featured Section Sub Title', 'newsmandu-magizine' ),
+			'description' => __( 'Enter the sub title for the featured section.', 'newsmandu-magizine' ),
 			'section'     => 'featured_post',
 			'type'        => 'text',
 		)
@@ -89,7 +89,7 @@ for ( $i = 0; $i < 3; $i++ ) {
 			'newsmandu_featured_post_' . $i,
 			array(
 				/* translators: %d: slider number */
-				'label'       => sprintf( esc_html__( 'Select post for featured post %d', 'newsmandu' ), $j ),
+				'label'       => sprintf( esc_html__( 'Select post for featured post %d', 'newsmandu-magizine' ), $j ),
 
 				'section'     => 'featured_post',
 
@@ -105,7 +105,7 @@ for ( $i = 0; $i < 3; $i++ ) {
 $wp_customize->add_section(
 	'featured_post_Second',
 	array(
-		'title'    => __( 'Front Page Featured Area 2', 'newsmandu' ),
+		'title'    => __( 'Front Page Featured Area 2', 'newsmandu-magizine' ),
 		'panel'    => 'frontpage_options',
 		'priority' => 25,
 	)
@@ -124,7 +124,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'featured_post_second_toggle',
 		array(
-			'label'   => esc_html__( 'Show Featured Area 2 Section', 'newsmandu' ),
+			'label'   => esc_html__( 'Show Featured Area 2 Section', 'newsmandu-magizine' ),
 			'section' => 'featured_post_Second',
 		)
 	)
@@ -144,7 +144,7 @@ for ( $i = 0; $i <= 3; $i++ ) {
 			'newsmandu_featured_second_post_' . $i,
 			array(
 				/* translators: %d: slider number */
-				'label'       => sprintf( esc_html__( 'Select post for featured post %d', 'newsmandu' ), $j ),
+				'label'       => sprintf( esc_html__( 'Select post for featured post %d', 'newsmandu-magizine' ), $j ),
 
 				'section'     => 'featured_post_Second',
 
@@ -160,7 +160,7 @@ for ( $i = 0; $i <= 3; $i++ ) {
 $wp_customize->add_section(
 	'top_stories',
 	array(
-		'title'    => __( 'Front Page Top Stories Post Setting', 'newsmandu' ),
+		'title'    => __( 'Front Page Top Stories Post Setting', 'newsmandu-magizine' ),
 		'panel'    => 'frontpage_options',
 		'priority' => 25,
 	)
@@ -179,7 +179,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'top_stories_toggle',
 		array(
-			'label'   => esc_html__( 'Show Top Stories Post Section', 'newsmandu' ),
+			'label'   => esc_html__( 'Show Top Stories Post Section', 'newsmandu-magizine' ),
 			'section' => 'top_stories',
 		)
 	)
@@ -193,10 +193,10 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'newsmandu_post_page_dropdown',
 	array(
-		'label'       => esc_html__( 'Select page for description and background image of top stories section', 'newsmandu' ),
+		'label'       => esc_html__( 'Select page for description and background image of top stories section', 'newsmandu-magizine' ),
 		'description' => esc_html__(
 			'Note: Selected page\'s title, description and featured image will be used in top stories section as a background.',
-			'newsmandu'
+			'newsmandu-magizine'
 		),
 		'section'     => 'top_stories',
 		'type'        => 'dropdown-pages',

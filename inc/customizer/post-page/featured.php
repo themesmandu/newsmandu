@@ -14,7 +14,7 @@ function newsmandu_post_list( $args = array() ) {
 	$args       = wp_parse_args( $args, array( 'numberposts' => '-1' ) );
 	$posts      = get_posts( $args );
 	$output     = array();
-	$output[''] = esc_html__( '&mdash; Select Post &mdash;', 'newsmandu' );
+	$output[''] = esc_html__( '&mdash; Select Post &mdash;', 'newsmandu-magizine' );
 	foreach ( $posts as $post ) {
 		$thetitle  = $post->post_title;
 		$getlength = strlen( $thetitle );
@@ -44,7 +44,7 @@ function newsmandu_post_list( $args = array() ) {
 			$wp_customize,
 			'post_dropdown_setting',
 			array(
-				'label'    => __( 'Featured Post', 'newsmandu' ),
+				'label'    => __( 'Featured Post', 'newsmandu-magizine' ),
 				'section'  => 'blog_options',
 				'settings' => 'post_dropdown_setting',
 				'type'     => 'select',

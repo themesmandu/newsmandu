@@ -42,7 +42,7 @@ function newsmandu_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'general_options',
 		array(
-			'title'      => __( 'General Settings', 'newsmandu' ),
+			'title'      => __( 'General Settings', 'newsmandu-magizine' ),
 			'capability' => 'edit_theme_options',
 			'priority'   => 160,
 		)
@@ -60,7 +60,7 @@ function newsmandu_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'blog_options',
 		array(
-			'title'      => __( 'Posts page Settings', 'newsmandu' ),
+			'title'      => __( 'Posts page Settings', 'newsmandu-magizine' ),
 			'capability' => 'edit_theme_options',
 			'priority'   => 170,
 		)
@@ -79,7 +79,7 @@ function newsmandu_customize_register( $wp_customize ) {
 	$wp_customize->add_panel(
 		'frontpage_options',
 		array(
-			'title'           => __( 'Front Page Settings', 'newsmandu' ),
+			'title'           => __( 'Front Page Settings', 'newsmandu-magizine' ),
 			'priority'        => 190,
 			'active_callback' => 'newsmandu_set_front_page',
 		)
@@ -107,7 +107,7 @@ function newsmandu_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'ad_section',
 		array(
-			'title'      => __( 'Advertisement Settings', 'newsmandu' ),
+			'title'      => __( 'Advertisement Settings', 'newsmandu-magizine' ),
 			'capability' => 'edit_theme_options',
 			'priority'   => 160,
 		)

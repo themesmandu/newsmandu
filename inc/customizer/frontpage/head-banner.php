@@ -10,7 +10,7 @@
 $wp_customize->add_section(
 	'frontpage_banner',
 	array(
-		'title'    => __( 'Head Banner', 'newsmandu' ),
+		'title'    => __( 'Head Banner', 'newsmandu-magizine' ),
 		'panel'    => 'frontpage_options',
 		'priority' => 20,
 	)
@@ -29,7 +29,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'header_toggle',
 		array(
-			'label'   => esc_html__( 'Show Header Section', 'newsmandu' ),
+			'label'   => esc_html__( 'Show Header Section', 'newsmandu-magizine' ),
 			'section' => 'frontpage_banner',
 		)
 	)
@@ -48,7 +48,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'banner_title',
 		array(
-			'label'    => __( 'Heading', 'newsmandu' ),
+			'label'    => __( 'Heading', 'newsmandu-magizine' ),
 			'section'  => 'frontpage_banner',
 			'settings' => 'banner_title',
 			'type'     => 'text',
@@ -70,7 +70,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'banner_subtitle',
 		array(
-			'label'    => __( 'Sub-Heading', 'newsmandu' ),
+			'label'    => __( 'Sub-Heading', 'newsmandu-magizine' ),
 			'section'  => 'frontpage_banner',
 			'settings' => 'banner_subtitle',
 			'type'     => 'text',
@@ -92,7 +92,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'banner_button_label',
 		array(
-			'label'    => __( 'Button Label', 'newsmandu' ),
+			'label'    => __( 'Button Label', 'newsmandu-magizine' ),
 			'section'  => 'frontpage_banner',
 			'settings' => 'banner_button_label',
 			'type'     => 'text',
@@ -113,7 +113,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'banner_button_link',
 		array(
-			'label'    => __( 'Button Link', 'newsmandu' ),
+			'label'    => __( 'Button Link', 'newsmandu-magizine' ),
 			'section'  => 'frontpage_banner',
 			'settings' => 'banner_button_link',
 			'type'     => 'text',
@@ -136,7 +136,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'banner_text_color',
 		array(
-			'label'   => esc_html__( 'Text Color For Heading And Sub-Heading', 'newsmandu' ),
+			'label'   => esc_html__( 'Text Color For Heading And Sub-Heading', 'newsmandu-magizine' ),
 			'section' => 'frontpage_banner',
 		)
 	)
@@ -156,7 +156,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'banner_button_text_color',
 		array(
-			'label'   => esc_html__( 'Button Text Color', 'newsmandu' ),
+			'label'   => esc_html__( 'Button Text Color', 'newsmandu-magizine' ),
 			'section' => 'frontpage_banner',
 		)
 	)
@@ -176,7 +176,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'banner_button_bg_color',
 		array(
-			'label'   => esc_html__( 'Button Background Color', 'newsmandu' ),
+			'label'   => esc_html__( 'Button Background Color', 'newsmandu-magizine' ),
 			'section' => 'frontpage_banner',
 		)
 	)
@@ -197,7 +197,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'banner_bg_color',
 		array(
-			'label'   => esc_html__( 'Background Color', 'newsmandu' ),
+			'label'   => esc_html__( 'Background Color', 'newsmandu-magizine' ),
 			'section' => 'frontpage_banner',
 		)
 	)
@@ -218,7 +218,7 @@ $wp_customize->add_control(
 		'banner_bg_image',
 		array(
 			'section' => 'frontpage_banner',
-			'label'   => __( 'Background Image', 'newsmandu' ),
+			'label'   => __( 'Background Image', 'newsmandu-magizine' ),
 			'width'   => 1900,
 			'height'  => 1080,
 		)
