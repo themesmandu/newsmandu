@@ -1,4 +1,4 @@
-=== Newsmandu-Magazine ===
+=== Newsmandu Magazine ===
 Contributors: Themesmandu
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, left-sidebar, one-column, right-sidebar, theme-options, threaded-comments, translation-ready
 Requires at least: 5.2.2
@@ -79,13 +79,19 @@ sea.JPG
 https://stocksnap.io/photo/U4ML8WV1I2
 
 StockSnap_S4P1EEYET5.JPG
+License: CC0 1.0 Universal (CC0 1.0)
 https://stocksnap.io/photo/S4P1EEYET5
 
+
 StockSnap_6JEHS8PBHP.JPG
+License: CC0 1.0 Universal (CC0 1.0)
 https://stocksnap.io/photo/6JEHS8PBHP
 
+
 StockSnap_XT3HZBE9GI.JPG
+License: CC0 1.0 Universal (CC0 1.0)
 https://stocksnap.io/photo/XT3HZBE9GI
+
 
 == Changelog ==
 

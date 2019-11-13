@@ -71,10 +71,10 @@
 							itemprop="url"><?php bloginfo( 'name' ); ?></a>
 							<?php
 						endif;
-						$newsmandu_description = get_bloginfo( 'description', 'display' );
-						if ( $newsmandu_description || is_customize_preview() ) :
+						$newsmandu_magazine_description = get_bloginfo( 'description', 'display' );
+						if ( $newsmandu_magazine_description || is_customize_preview() ) :
 							?>
-						<p class="site-description"><?php echo wp_kses_post( $newsmandu_description ); ?></p>
+						<p class="site-description"><?php echo wp_kses_post( $newsmandu_magazine_description ); ?></p>
 						<?php endif; ?>
 							<?php
 						} else {
@@ -101,7 +101,7 @@
 			}
 
 			// header page title.
-			newsmandu_header_page_title();
+			newsmandu_magazine_header_page_title();
 
 			if ( is_front_page() && ! is_home() ) {
 				// head banner on the front page if it enabled.
@@ -130,9 +130,9 @@
 						<div class="header-content">
 							<div class="container">
 								<?php
-								$newsmandu_slider_post = new WP_Query( array( 'p' => get_theme_mod( 'newsmandu_slider_post_' . $i ) ) );
-								while ( $newsmandu_slider_post->have_posts() ) :
-									$newsmandu_slider_post->the_post();
+								$newsmandu_magazine_slider_post = new WP_Query( array( 'p' => get_theme_mod( 'newsmandu_magazine_slider_post_' . $i ) ) );
+								while ( $newsmandu_magazine_slider_post->have_posts() ) :
+									$newsmandu_magazine_slider_post->the_post();
 									$categories_list = get_the_category_list( esc_html__( ', ', 'newsmandu-magazine' ) );
 									if ( $categories_list ) {
 										?>

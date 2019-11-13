@@ -25,7 +25,7 @@ if ( is_home() ) {
 <div class="container <?php echo ( get_theme_mod( 'post_dropdown_setting' ) ? 'standard-container' : ' ' ); ?>">
 	<div class="row">
 
-		<div id="primary" class="content-area<?php newsmandu_content_class(); ?>">
+		<div id="primary" class="content-area<?php newsmandu_magazine_content_class(); ?>">
 		<main id="main" class="site-main" role="main">
 
 	<?php

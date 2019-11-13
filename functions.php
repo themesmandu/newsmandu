@@ -7,7 +7,7 @@
  * @package Newsmandu
  */
 
-if ( ! function_exists( 'newsmandu_setup' ) ) :
+if ( ! function_exists( 'newsmandu_magazine_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'newsmandu_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function newsmandu_setup() {
+	function newsmandu_magazine_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -115,7 +115,7 @@ if ( ! function_exists( 'newsmandu_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'newsmandu_setup' );
+add_action( 'after_setup_theme', 'newsmandu_magazine_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -124,18 +124,18 @@ add_action( 'after_setup_theme', 'newsmandu_setup' );
  *
  * @global int $content_width
  */
-function newsmandu_content_width() {
+function newsmandu_magazine_content_width() {
 	// This variable is intended to be overruled from themes.
-	$GLOBALS['content_width'] = apply_filters( 'newsmandu_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'newsmandu_magazine_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'newsmandu_content_width', 0 );
+add_action( 'after_setup_theme', 'newsmandu_magazine_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function newsmandu_widgets_init() {
+function newsmandu_magazine_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'newsmandu-magazine' ),
@@ -184,12 +184,12 @@ function newsmandu_widgets_init() {
 		);
 	}
 }
-add_action( 'widgets_init', 'newsmandu_widgets_init' );
+add_action( 'widgets_init', 'newsmandu_magazine_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function newsmandu_scripts() {
+function newsmandu_magazine_scripts() {
 
 	// Bootstrap reboot styles.
 	wp_enqueue_style( 'bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'newsmandu-style' ), '4.1.2' );
@@ -201,7 +201,7 @@ function newsmandu_scripts() {
 	wp_enqueue_style( 'newsmandu-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
 	// Loading main stylesheet.
-	wp_enqueue_style( 'main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'newsmandu-style' ), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'newsmandu-magazine-main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'newsmandu-style' ), wp_get_theme()->get( 'Version' ) );
 
 	// Add font-awesome fonts, used in the main stylesheet.
 	wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'newsmandu-style' ), '5.7.2' );
@@ -221,7 +221,7 @@ function newsmandu_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'newsmandu_scripts' );
+add_action( 'wp_enqueue_scripts', 'newsmandu_magazine_scripts' );
 
 /**
  * Load theme required files.

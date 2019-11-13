@@ -12,7 +12,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function newsmandu_customize_register( $wp_customize ) {
+function newsmandu_magazine_customize_register( $wp_customize ) {
 	/**
 	 *
 	 * Add postMessage support for site title and description for the Theme Customizer.
@@ -25,7 +25,7 @@ function newsmandu_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.navbar-brand',
-				'render_callback' => 'newsmandu_starter_customize_partial_blogname',
+				'render_callback' => 'newsmandu_magazine_starter_customize_partial_blogname',
 			)
 		);
 	}
@@ -81,7 +81,7 @@ function newsmandu_customize_register( $wp_customize ) {
 		array(
 			'title'           => __( 'Front Page Settings', 'newsmandu-magazine' ),
 			'priority'        => 190,
-			'active_callback' => 'newsmandu_set_front_page',
+			'active_callback' => 'newsmandu_magazine_set_front_page',
 		)
 	);
 	/**
@@ -116,14 +116,14 @@ function newsmandu_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/ad.php';
 }
 	// END Options.
-	add_action( 'customize_register', 'newsmandu_customize_register' );
+	add_action( 'customize_register', 'newsmandu_magazine_customize_register' );
 	/**
 	 *
 	 * Helper function for Contextual Control
 	 * Whether the static page is set to a front displays
 	 * https://developer.wordpress.org/reference/classes/wp_customize_control/active_callback/
 	 */
-function newsmandu_set_front_page() {
+function newsmandu_magazine_set_front_page() {
 	if ( 'page' === get_option( 'show_on_front' ) ) {
 		return true;
 	}
@@ -131,10 +131,10 @@ function newsmandu_set_front_page() {
 	/**
 	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 	 */
-function newsmandu_customize_preview_js() {
+function newsmandu_magazine_customize_preview_js() {
 	wp_enqueue_script( 'newsmandu-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '25032018', true );
 }
-	add_action( 'customize_preview_init', 'newsmandu_customize_preview_js' );
+	add_action( 'customize_preview_init', 'newsmandu_magazine_customize_preview_js' );
 	/**
 	 * This will generate a line of CSS for use in header output. If the setting
 	 * ($mod_name) has no defined value, the CSS will not be output.
@@ -150,7 +150,7 @@ function newsmandu_customize_preview_js() {
 	 * @param bool   $echo Optional. Whether to print directly to the page (default: true).
 	 * @return string Returns a single line of CSS with selectors and a property.
 	 */
-function newsmandu_generate_css( $selector, $style, $mod_name, $prefix = '', $postfix = '', $echo = true ) {
+function newsmandu_magazine_generate_css( $selector, $style, $mod_name, $prefix = '', $postfix = '', $echo = true ) {
 	$return = '';
 	$mod    = esc_html( get_theme_mod( $mod_name ) );
 	if ( ! empty( $mod ) ) {
@@ -176,17 +176,17 @@ function newsmandu_generate_css( $selector, $style, $mod_name, $prefix = '', $po
  *
  * @see add_action('wp_head',$func)
  */
-function newsmandu_customizer_css() {
+function newsmandu_magazine_customizer_css() {
 	?>
 <!--Customizer CSS-->
 <style type="text/css">
 	<?php
-	newsmandu_generate_css( '.front-page .jumbotron', 'background-color', 'banner_bg_color' );
-	newsmandu_generate_css( '.front-page .jumbotron h1, .front-page .jumbotron p', 'color', 'banner_text_color' );
-	newsmandu_generate_css( '.front-page .jumbotron a.btn', 'color', 'banner_button_text_color' );
-	newsmandu_generate_css( '.front-page .jumbotron a.btn', 'background-color', 'banner_button_bg_color' );
+	newsmandu_magazine_generate_css( '.front-page .jumbotron', 'background-color', 'banner_bg_color' );
+	newsmandu_magazine_generate_css( '.front-page .jumbotron h1, .front-page .jumbotron p', 'color', 'banner_text_color' );
+	newsmandu_magazine_generate_css( '.front-page .jumbotron a.btn', 'color', 'banner_button_text_color' );
+	newsmandu_magazine_generate_css( '.front-page .jumbotron a.btn', 'background-color', 'banner_button_bg_color' );
 	?>
 </style>
 	<?php
 }
-add_action( 'wp_head', 'newsmandu_customizer_css' );
+add_action( 'wp_head', 'newsmandu_magazine_customizer_css' );

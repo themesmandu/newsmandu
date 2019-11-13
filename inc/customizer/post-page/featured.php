@@ -10,7 +10,7 @@
  *
  * @param array $args posts.
  */
-function newsmandu_post_list( $args = array() ) {
+function newsmandu_magazine_post_list( $args = array() ) {
 	$args       = wp_parse_args( $args, array( 'numberposts' => '-1' ) );
 	$posts      = get_posts( $args );
 	$output     = array();
@@ -48,7 +48,7 @@ function newsmandu_post_list( $args = array() ) {
 				'section'  => 'blog_options',
 				'settings' => 'post_dropdown_setting',
 				'type'     => 'select',
-				'choices'  => newsmandu_post_list(),
+				'choices'  => newsmandu_magazine_post_list(),
 				'priority' => '10',
 			)
 		)

@@ -7,7 +7,7 @@
  * @package Newsmandu
  */
 
-$newsmandu_content = get_theme_mod( 'blog_layout' ) === 'list' ? '-list' : '';
+$newsmandu_magazine_content = get_theme_mod( 'blog_layout' ) === 'list' ? '-list' : '';
 ?>
 
 <?php
@@ -17,7 +17,7 @@ $newsmandu_content = get_theme_mod( 'blog_layout' ) === 'list' ? '-list' : '';
 	 */
 
 	get_template_part(
-		'template-parts/post/preview' . $newsmandu_content,
+		'template-parts/post/preview' . $newsmandu_magazine_content,
 		get_post_format()
 	);
 

@@ -22,10 +22,10 @@
 			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		?>
 		<div class="entry-summary card-text">
-			<?php newsmandu_entry_summary(); ?>
+			<?php newsmandu_magazine_entry_summary(); ?>
 		</div>
 		<footer class="entry-footer">
-			<?php newsmandu_entry_footer(); ?>
+			<?php newsmandu_magazine_entry_footer(); ?>
 		</footer>
 	</div>
 	<?php
@@ -33,8 +33,8 @@
 		?>
 
 	<div class="entry-meta card-footer">
-		<?php newsmandu_posted_on(); ?>
-		<?php newsmandu_posted_by(); ?>
+		<?php newsmandu_magazine_posted_on(); ?>
+		<?php newsmandu_magazine_posted_by(); ?>
 	</div>
 
 		<?php

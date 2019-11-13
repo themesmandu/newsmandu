@@ -8,19 +8,19 @@
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function newsmandu_pingback_header() {
+function newsmandu_magazine_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'newsmandu_pingback_header' );
+add_action( 'wp_head', 'newsmandu_magazine_pingback_header' );
 /**
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
  * @return array
  */
-function newsmandu_body_classes( $classes ) {
+function newsmandu_magazine_body_classes( $classes ) {
 	/* using mobile browser */
 	if ( wp_is_mobile() ) {
 		$classes[] = 'wp-is-mobile';
@@ -53,14 +53,14 @@ function newsmandu_body_classes( $classes ) {
 	}
 	return $classes;
 }
-add_filter( 'body_class', 'newsmandu_body_classes' );
+add_filter( 'body_class', 'newsmandu_magazine_body_classes' );
 /**
  * Adds custom classes to the array of post classes.
  *
  * @param array $classes Classes for the article element.
  * @return array
  */
-function newsmandu_post_classes( $classes ) {
+function newsmandu_magazine_post_classes( $classes ) {
 	$classes[] = ( has_post_thumbnail() ? 'has-thumbnail' : 'no-thumbnail' );
 	if ( is_front_page() || is_home() || is_archive() ) {
 		$classes[] = 'post-preview';
@@ -73,7 +73,7 @@ function newsmandu_post_classes( $classes ) {
 	}
 	return $classes;
 }
-add_action( 'post_class', 'newsmandu_post_classes' );
+add_action( 'post_class', 'newsmandu_magazine_post_classes' );
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
  * a 'Continue reading' link.
@@ -81,7 +81,7 @@ add_action( 'post_class', 'newsmandu_post_classes' );
  * @param string $link link for link text.
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
-function newsmandu_excerpt_more( $link ) {
+function newsmandu_magazine_excerpt_more( $link ) {
 	if ( is_admin() ) {
 		return $link;
 	}
@@ -100,18 +100,18 @@ function newsmandu_excerpt_more( $link ) {
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ...
  */
-function newsmandu_remove_box() {
+function newsmandu_magazine_remove_box() {
 	return '';
 }
-add_filter( 'excerpt_more', 'newsmandu_remove_box' );
-add_filter( 'the_content_more_link', 'newsmandu_excerpt_more' );
+add_filter( 'excerpt_more', 'newsmandu_magazine_remove_box' );
+add_filter( 'the_content_more_link', 'newsmandu_magazine_excerpt_more' );
 /**
  * Responsive Image class from Bootstrap
  * which appended to automatically generated image classes
  *
  * @param string $html responsive image class.
  */
-function newsmandu_bootstrap_class_images( $html ) {
+function newsmandu_magazine_bootstrap_class_images( $html ) {
 	$classes = 'img-fluid'; // separated by spaces, e.g. 'img image-link'
 	// check if there are already classes assigned to the anchor.
 	if ( preg_match( '/<img.*? class="/', $html ) ) {
@@ -121,65 +121,65 @@ function newsmandu_bootstrap_class_images( $html ) {
 	}
 	return $html;
 }
-add_filter( 'the_content', 'newsmandu_bootstrap_class_images', 10 );
+add_filter( 'the_content', 'newsmandu_magazine_bootstrap_class_images', 10 );
 /**
  * Added table class from Bootstrap
  *
  * @param string $content boottrap table class.
  */
-function newsmandu_bootstrap_table_class( $content ) {
+function newsmandu_magazine_bootstrap_table_class( $content ) {
 	return str_replace( '<table', '<table class="table"', $content );
 }
-add_filter( 'the_content', 'newsmandu_bootstrap_table_class' );
+add_filter( 'the_content', 'newsmandu_magazine_bootstrap_table_class' );
 /**
  * Adds a class to the navigation links of posts
  */
-function newsmandu_posts_link_attributes() {
+function newsmandu_magazine_posts_link_attributes() {
 	return 'class="btn btn-light"';
 }
-add_filter( 'next_posts_link_attributes', 'newsmandu_posts_link_attributes' );
-add_filter( 'previous_posts_link_attributes', 'newsmandu_posts_link_attributes' );
+add_filter( 'next_posts_link_attributes', 'newsmandu_magazine_posts_link_attributes' );
+add_filter( 'previous_posts_link_attributes', 'newsmandu_magazine_posts_link_attributes' );
 /**
  * Comment form container.
  */
-function newsmandu_comment_form_wrap_start() {
+function newsmandu_magazine_comment_form_wrap_start() {
 	echo '<div class="card my-4"><div class="card-body">';
 }
 /**
  * Comment form wrapper.
  */
-function newsmandu_comment_form_wrap_end() {
+function newsmandu_magazine_comment_form_wrap_end() {
 	echo '</div></div>';
 }
-add_action( 'comment_form_after', 'newsmandu_comment_form_wrap_end' );
-add_action( 'comment_form_before', 'newsmandu_comment_form_wrap_start' );
+add_action( 'comment_form_after', 'newsmandu_magazine_comment_form_wrap_end' );
+add_action( 'comment_form_before', 'newsmandu_magazine_comment_form_wrap_start' );
 /**
  * Add custom class to comment reply link.
  *
  * @param string $content comment reply link class.
  */
-function newsmandu_comment_reply_link( $content ) {
+function newsmandu_magazine_comment_reply_link( $content ) {
 	$extra_classes = 'btn btn-primary';
 	return preg_replace( '/comment-reply-link/', 'comment-reply-link ' . $extra_classes, $content );
 }
-add_filter( 'comment_reply_link', 'newsmandu_comment_reply_link', 99 );
+add_filter( 'comment_reply_link', 'newsmandu_magazine_comment_reply_link', 99 );
 /**
  * Custom Excerpt lengths.
  */
-function newsmandu_custom_excerpt_length() {
+function newsmandu_magazine_custom_excerpt_length() {
 	return 16;
 }
-add_filter( 'excerpt_length', 'newsmandu_custom_excerpt_length' );
+add_filter( 'excerpt_length', 'newsmandu_magazine_custom_excerpt_length' );
 /**
  * Use front-page.php when Front page displays is set to a static page.
  *
  * @param string $template front-page.php.
  * @return string The template to be used: blank if is_home() is true (defaults to index.php), else $template.
  */
-function newsmandu_front_page( $template ) {
+function newsmandu_magazine_front_page( $template ) {
 	return is_home() ? '' : $template;
 }
-add_filter( 'frontpage_template', 'newsmandu_front_page' );
+add_filter( 'frontpage_template', 'newsmandu_magazine_front_page' );
 /**
  * Custom filter to add col class.
  */
@@ -195,7 +195,7 @@ add_filter( 'input_class', 'col_class_filter' );
 /**
  * Displays latest post entries
  */
-function newsmandu_latest_post() {
+function newsmandu_magazine_latest_post() {
 	$latest_posts = new WP_Query(
 		array(
 			'posts_per_page'      => 4,
@@ -217,12 +217,12 @@ function newsmandu_latest_post() {
 				);
 				?>
 				<div class="categories">
-					<?php newsmandu_category( get_the_id() ); ?>
+					<?php newsmandu_magazine_category( get_the_id() ); ?>
 				</div>
 			</div>
 			<div class="latest-entries">
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<?php newsmandu_posted_on(); ?>
+				<?php newsmandu_magazine_posted_on(); ?>
 				<?php if ( is_home() || is_front_page() ) : ?>
 				<p><?php the_excerpt(); ?></p>
 			<?php endif; ?>
@@ -236,7 +236,7 @@ function newsmandu_latest_post() {
 /**
  * Displays skipped latest post entries
  */
-function newsmandu_latest_skip_post() {
+function newsmandu_magazine_latest_skip_post() {
 	global $post;
 	$latest_posts = new WP_Query(
 		array(
@@ -269,8 +269,8 @@ function newsmandu_latest_skip_post() {
 				}
 				?>
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<i class="fas fa-user-alt"><?php newsmandu_posted_by(); ?></i>
-				<i class="far fa-calendar-alt"><?php newsmandu_posted_on(); ?></i>
+				<i class="fas fa-user-alt"><?php newsmandu_magazine_posted_by(); ?></i>
+				<i class="far fa-calendar-alt"><?php newsmandu_magazine_posted_on(); ?></i>
 				<p><?php the_excerpt(); ?></p>
 			</div>
 		</div>	
@@ -281,7 +281,7 @@ function newsmandu_latest_skip_post() {
 /**
  * Navigation for single post
  */
-function newsmandu_navigation() {
+function newsmandu_magazine_navigation() {
 	if ( ! is_singular( 'post' ) ) {
 		return;
 	}
@@ -329,7 +329,7 @@ endif;
 /**
  * Displays author details.
  */
-function newsmandu_authors_profile() {
+function newsmandu_magazine_authors_profile() {
 	if ( get_the_author_meta( 'description' ) ) :
 		?>
 		<div class="row">
@@ -356,7 +356,7 @@ function newsmandu_authors_profile() {
  *
  * @param string $post_id Id of the category taxonomy.
  */
-function newsmandu_category( $post_id ) {
+function newsmandu_magazine_category( $post_id ) {
 	$cats = wp_get_post_terms( $post_id, 'category' );
 	foreach ( $cats as $cat ) {
 		?>
@@ -367,14 +367,14 @@ function newsmandu_category( $post_id ) {
 	}
 }
 
-if ( ! function_exists( 'newsmandu_header_page_title' ) ) :
+if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 
 	/**
 	 * Display page title on header.
 	 *
 	 * @since 1.0.0
 	 */
-	function newsmandu_header_page_title() {
+	function newsmandu_magazine_header_page_title() {
 		if ( is_front_page() ) :
 			return;
 		elseif ( is_home() || is_singular() ) :

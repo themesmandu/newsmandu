@@ -10,7 +10,7 @@
  *
  * @return void
  */
-function newsmandu_customize_partial_blogname() {
+function newsmandu_magazine_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -19,7 +19,7 @@ function newsmandu_customize_partial_blogname() {
  *
  * @param string $input Menu bar layout.
  */
-function newsmandu_sanitize_menubar_mode( $input ) {
+function newsmandu_magazine_sanitize_menubar_mode( $input ) {
 	$valid = array(
 		'standard' => __( 'Standard', 'newsmandu-magazine' ),
 		'alt'      => __( 'Alternative', 'newsmandu-magazine' ),
@@ -37,7 +37,7 @@ function newsmandu_sanitize_menubar_mode( $input ) {
  *
  * @param string $input options.
  */
-function newsmandu_sanitize_mainmenu_dropdown_mode( $input ) {
+function newsmandu_magazine_sanitize_mainmenu_dropdown_mode( $input ) {
 	$valid = array(
 		'default'   => __( 'Default', 'newsmandu-magazine' ),
 		'bootstrap' => __( 'Bootstrap', 'newsmandu-magazine' ),
@@ -55,7 +55,7 @@ function newsmandu_sanitize_mainmenu_dropdown_mode( $input ) {
  *
  * @param string $input options.
  */
-function newsmandu_sanitize_mainmenu_style( $input ) {
+function newsmandu_magazine_sanitize_mainmenu_style( $input ) {
 	$valid = array(
 		'regular' => __( 'Regular', 'newsmandu-magazine' ),
 		'fixed'   => __( 'Fixed', 'newsmandu-magazine' ),
@@ -73,7 +73,7 @@ function newsmandu_sanitize_mainmenu_style( $input ) {
  *
  * @param string $input Sidebar position options.
  */
-function newsmandu_sanitize_sidebar_position( $input ) {
+function newsmandu_magazine_sanitize_sidebar_position( $input ) {
 	$valid = array(
 		'right' => __( 'Right sidebar', 'newsmandu-magazine' ),
 		'left'  => __( 'Left sidebar', 'newsmandu-magazine' ),
@@ -92,7 +92,7 @@ function newsmandu_sanitize_sidebar_position( $input ) {
  *
  * @param string $input navigation mode options.
  */
-function newsmandu_sanitize_blog_pagination_mode( $input ) {
+function newsmandu_magazine_sanitize_blog_pagination_mode( $input ) {
 	$valid = array(
 		'standard' => __( 'Standard', 'newsmandu-magazine' ),
 		'numeric'  => __( 'Numeric', 'newsmandu-magazine' ),
@@ -110,7 +110,7 @@ function newsmandu_sanitize_blog_pagination_mode( $input ) {
  *
  * @param string $input blog layout options.
  */
-function newsmandu_sanitize_blog_layout( $input ) {
+function newsmandu_magazine_sanitize_blog_layout( $input ) {
 	$valid = array(
 		'list'     => esc_html__( 'List', 'newsmandu-magazine' ),
 		'standard' => esc_html__( 'Standard', 'newsmandu-magazine' ),
@@ -132,19 +132,19 @@ function newsmandu_sanitize_blog_layout( $input ) {
  * @param bool $checked Whether the checkbox is checked.
  * @return bool Whether the checkbox is checked.
  */
-function newsmandu_sanitize_checkbox( $checked ) {
+function newsmandu_magazine_sanitize_checkbox( $checked ) {
 	// Boolean check.
 	return ( ( isset( $checked ) && true === $checked ) ? true : false );
 }
 
-if ( ! function_exists( 'newsmandu_switch_sanitize' ) ) {
+if ( ! function_exists( 'newsmandu_magazine_switch_sanitize' ) ) {
 	/**
 	 * Switch sanitization
 	 *
 	 * @param  int $input  input to be sanitized.
 	 * @return int  Sanitized value
 	 */
-	function newsmandu_switch_sanitize( $input ) {
+	function newsmandu_magazine_switch_sanitize( $input ) {
 		if ( true === $input ) {
 			return 1;
 		} else {
@@ -157,7 +157,7 @@ if ( ! function_exists( 'newsmandu_switch_sanitize' ) ) {
  *
  * @param string $input options.
  */
-function newsmandu_sanitize_player_atc_style( $input ) {
+function newsmandu_magazine_sanitize_player_atc_style( $input ) {
 	$valid = array(
 		'dropdown' => __( 'Dropdown', 'newsmandu-magazine' ),
 		'popup'    => __( 'Popup', 'newsmandu-magazine' ),
@@ -169,14 +169,14 @@ function newsmandu_sanitize_player_atc_style( $input ) {
 
 	return '';
 }
-if ( ! function_exists( 'newsmandu_iframe_sanitize' ) ) {
+if ( ! function_exists( 'newsmandu_magazine_iframe_sanitize' ) ) {
 	/**
 	 * Iframe sanitization.
 	 *
 	 * @param  string $input    input value.
 	 * @return integer  Sanitized value
 	 */
-	function newsmandu_iframe_sanitize( $input ) {
+	function newsmandu_magazine_iframe_sanitize( $input ) {
 		return wp_kses( $input, expanded_alowed_tags() );
 	}
 }

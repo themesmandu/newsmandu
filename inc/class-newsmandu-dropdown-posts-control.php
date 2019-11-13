@@ -18,7 +18,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
  *
  * @see WP_Customize_Control
  */
-class Newsmandu_Dropdown_Posts_Control extends WP_Customize_Control {
+class newsmandu_magazine_Dropdown_Posts_Control extends WP_Customize_Control {
 
 	/**
 	 * Control type.

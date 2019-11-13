@@ -20,12 +20,12 @@ $wp_customize->add_setting(
 	'slider_toggle',
 	array(
 		'default'           => 0,
-		'sanitize_callback' => 'newsmandu_switch_sanitize',
+		'sanitize_callback' => 'newsmandu_magazine_switch_sanitize',
 	)
 );
 
 $wp_customize->add_control(
-	new Newsmandu_Toggle_Switch_Custom_Control(
+	new newsmandu_magazine_Toggle_Switch_Custom_Control(
 		$wp_customize,
 		'slider_toggle',
 		array(
@@ -38,15 +38,15 @@ $wp_customize->add_control(
 for ( $i = 0; $i < 4; $i++ ) {
 	$j = $i + 1;
 	$wp_customize->add_setting(
-		'newsmandu_slider_post_' . $i,
+		'newsmandu_magazine_slider_post_' . $i,
 		array(
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		new Newsmandu_Dropdown_Posts_Control(
+		new newsmandu_magazine_Dropdown_Posts_Control(
 			$wp_customize,
-			'newsmandu_slider_post_' . $i,
+			'newsmandu_magazine_slider_post_' . $i,
 			array(
 				/* translators: %d: slider number */
 				'label'       => sprintf( esc_html__( 'Select post for slider %d', 'newsmandu-magazine' ), $j ),

@@ -12,7 +12,7 @@ get_header();
 
 <div class="container">
 	<div class="row">
-		<div id="primary" class="content-area <?php newsmandu_content_class(); ?>">
+		<div id="primary" class="content-area <?php newsmandu_magazine_content_class(); ?>">
 			<main id="main" class="site-main" role="main">
 			<?php
 			if ( have_posts() ) :

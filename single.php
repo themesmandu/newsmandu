@@ -29,13 +29,13 @@ get_header();
 			?>
 			<section class="author-area">
 				<div class="container">
-					<?php newsmandu_authors_profile(); ?>
+					<?php newsmandu_magazine_authors_profile(); ?>
 				</div>
 			</section>
 			<section class="latest-post">
 				<h2>You may also like</h2>
 				<div class="row top-post">
-					<?php newsmandu_latest_post(); ?>
+					<?php newsmandu_magazine_latest_post(); ?>
 				</div>
 			</section>
 			<?php
@@ -43,7 +43,7 @@ get_header();
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
-			newsmandu_navigation();
+			newsmandu_magazine_navigation();
 
 		endwhile; // End of the loop.
 		?>

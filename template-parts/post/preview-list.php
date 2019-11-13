@@ -25,15 +25,15 @@
 		if ( get_post_type() === 'post' ) {
 			?>
 			<div class="entry-meta">
-			<?php newsmandu_posted_on(); ?>
-			<?php newsmandu_posted_by(); ?>
+			<?php newsmandu_magazine_posted_on(); ?>
+			<?php newsmandu_magazine_posted_by(); ?>
 			</div>
 			<?php
 		}
 		?>
 		
 			<div class="entry-summary card-text mb-auto">
-				<?php newsmandu_entry_summary(); ?>
+				<?php newsmandu_magazine_entry_summary(); ?>
 			</div>
 		</div>
 			

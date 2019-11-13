@@ -16,11 +16,11 @@ if ( get_post_type() === 'post' ) {
 		<div class="entry-meta">
 			<i class="fas fa-user-alt"></i>
 		<?php
-			newsmandu_posted_by();
+			newsmandu_magazine_posted_by();
 		?>
 			<i class="far fa-calendar-alt"></i>
 		<?php
-			newsmandu_posted_on();
+			newsmandu_magazine_posted_on();
 		?>
 			<i class="fas fa-folder"></i>
 		<?php
@@ -72,7 +72,7 @@ if ( get_post_type() === 'post' ) {
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php newsmandu_entry_footer(); ?>
+		<?php newsmandu_magazine_entry_footer(); ?>
 	</footer>
 
 </div><!-- .card-body -->

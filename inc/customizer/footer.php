@@ -10,12 +10,12 @@ $wp_customize->add_panel(
 	array(
 		'title'           => __( 'Footer Settings', 'newsmandu-magazine' ),
 		'priority'        => 190,
-		'active_callback' => 'newsmandu_set_front_page',
+		'active_callback' => 'newsmandu_magazine_set_front_page',
 	)
 );
 // Add footer section.
 $wp_customize->add_section(
-	'newsmandu_footer_section',
+	'newsmandu_magazine_footer_section',
 	array(
 		'title'       => esc_html__( 'Footer Section', 'newsmandu-magazine' ),
 		'description' => esc_html__( 'Footer Section options.', 'newsmandu-magazine' ),
@@ -36,7 +36,7 @@ $wp_customize->add_control(
 	array(
 		'label'       => esc_html__( 'Footer Instagram Title', 'newsmandu-magazine' ),
 		'description' => esc_html__( 'Enter the title for the instagram feeds ', 'newsmandu-magazine' ),
-		'section'     => 'newsmandu_footer_section',
+		'section'     => 'newsmandu_magazine_footer_section',
 		'type'        => 'text',
 	)
 );
@@ -53,7 +53,7 @@ $wp_customize->add_control(
 	array(
 		'label'       => esc_html__( 'Footer Instagram Shortcode', 'newsmandu-magazine' ),
 		'description' => esc_html__( 'Paste the shortcode of smash balloon plugin to display the instagram feeds ', 'newsmandu-magazine' ),
-		'section'     => 'newsmandu_footer_section',
+		'section'     => 'newsmandu_magazine_footer_section',
 		'type'        => 'text',
 	)
 );
@@ -70,7 +70,7 @@ $wp_customize->add_control(
 	array(
 		'label'       => esc_html__( 'Footer Copyright Text', 'newsmandu-magazine' ),
 		'description' => esc_html__( 'This text will appear before &copy; on footer copyright section', 'newsmandu-magazine' ),
-		'section'     => 'newsmandu_footer_section',
+		'section'     => 'newsmandu_magazine_footer_section',
 		'type'        => 'textarea',
 	)
 );

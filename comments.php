@@ -28,8 +28,8 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$newsmandu_comment_count = get_comments_number();
-			if ( '1' === $newsmandu_comment_count ) {
+			$newsmandu_magazine_comment_count = get_comments_number();
+			if ( '1' === $newsmandu_magazine_comment_count ) {
 				printf(// WPCS: XSS OK.
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'newsmandu-magazine' ),
@@ -38,8 +38,8 @@ if ( post_password_required() ) {
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $newsmandu_comment_count, 'comments title', 'newsmandu-magazine' ) ),
-					number_format_i18n( $newsmandu_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $newsmandu_magazine_comment_count, 'comments title', 'newsmandu-magazine' ) ),
+					number_format_i18n( $newsmandu_magazine_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'callback'    => 'newsmandu_comment',
+					'callback'    => 'newsmandu_magazine_comment',
 					'avatar_size' => 55,
 				)
 			);

@@ -1,6 +1,6 @@
 <?php
 /**
- * Class Name: newsmandu_WP_Bootstrap_Navwalker
+ * Class Name: newsmandu_magazine_WP_Bootstrap_Navwalker
  * Description: A custom WordPress nav walker class to implement the Bootstrap 4 navigation style in a custom theme using the WordPress built in menu manager.
  * Modified to make the parent link of the drop-down menu clickable, line 178 And fixed function name separate > separate.
  * Author: Edward McIntyre - @twittem, WP Bootstrap, William Patton - @pattonwebz
@@ -14,13 +14,13 @@
  */
 
 /* Check if Class Exists. */
-if ( ! class_exists( 'newsmandu_WP_Bootstrap_Navwalker' ) ) {
+if ( ! class_exists( 'newsmandu_magazine_WP_Bootstrap_Navwalker' ) ) {
 	/**
-	 * Newsmandu_WP_Bootstrap_Navwalker class.
+	 * newsmandu_magazine_WP_Bootstrap_Navwalker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class Newsmandu_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+	class newsmandu_magazine_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 		/**
 		 * Starts the list before the elements are added.

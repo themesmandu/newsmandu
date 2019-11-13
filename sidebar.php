@@ -12,14 +12,14 @@ if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_position' ) =
 }
 
 if ( get_theme_mod( 'sidebar_position' ) === 'right' ) {
-	$newsmandu_sidebar_order = 'order-last';
+	$newsmandu_magazine_sidebar_order = 'order-last';
 } elseif ( get_theme_mod( 'sidebar_position' ) === 'left' ) {
-	$newsmandu_sidebar_order = 'order-first';
+	$newsmandu_magazine_sidebar_order = 'order-first';
 } else {
-	$newsmandu_sidebar_order = 'order-last';
+	$newsmandu_magazine_sidebar_order = 'order-last';
 }
 ?>
 
-<aside id="secondary" class="widget-area col-md-4 <?php echo esc_attr( $newsmandu_sidebar_order ); ?>">		
+<aside id="secondary" class="widget-area col-md-4 <?php echo esc_attr( $newsmandu_magazine_sidebar_order ); ?>">		
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside>

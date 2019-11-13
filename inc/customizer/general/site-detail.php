@@ -12,12 +12,12 @@
 		'top_menu_toggle',
 		array(
 			'default'           => 0,
-			'sanitize_callback' => 'newsmandu_switch_sanitize',
+			'sanitize_callback' => 'newsmandu_magazine_switch_sanitize',
 		)
 	);
 
 	$wp_customize->add_control(
-		new Newsmandu_Toggle_Switch_Custom_Control(
+		new newsmandu_magazine_Toggle_Switch_Custom_Control(
 			$wp_customize,
 			'top_menu_toggle',
 			array(

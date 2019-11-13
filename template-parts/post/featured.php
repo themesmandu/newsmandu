@@ -11,16 +11,16 @@
 
 <?php
 // Get featured post ID.
-$newsmandu_featured_id = absint( get_theme_mod( 'post_dropdown_setting' ) );
+$newsmandu_magazine_featured_id = absint( get_theme_mod( 'post_dropdown_setting' ) );
 
-if ( empty( $newsmandu_featured_id ) ) {
+if ( empty( $newsmandu_magazine_featured_id ) ) {
 	return;
 }
 
-$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $newsmandu_featured_id ), 'full' );
+$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $newsmandu_magazine_featured_id ), 'full' );
 
 	// Getting post by ID.
-	$query = new WP_Query( 'p=' . $newsmandu_featured_id );
+	$query = new WP_Query( 'p=' . $newsmandu_magazine_featured_id );
 while ( $query->have_posts() ) :
 	$query->the_post();
 	?>

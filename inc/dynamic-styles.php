@@ -14,7 +14,7 @@
  *
  * @see add_action('wp_head',$func)
  */
-function newsmandu_slider_dynamic_css() {
+function newsmandu_magazine_slider_dynamic_css() {
 	for ( $i = 0; $i < 4; $i++ ) :
 		?>
 		<!-- Style for slider background -->
@@ -23,7 +23,7 @@ function newsmandu_slider_dynamic_css() {
 		{
 			background-image: url(
 			<?php
-			echo esc_url( wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_slider_post_' . $i ) ) ) );
+			echo esc_url( wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_magazine_slider_post_' . $i ) ) ) );
 			?>
 			);
 			height: 750px;
@@ -39,4 +39,4 @@ function newsmandu_slider_dynamic_css() {
 	endfor;
 
 }
-add_action( 'wp_head', 'newsmandu_slider_dynamic_css' );
+add_action( 'wp_head', 'newsmandu_magazine_slider_dynamic_css' );
