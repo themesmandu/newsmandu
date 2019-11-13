@@ -16,11 +16,11 @@
 /* Check if Class Exists. */
 if ( ! class_exists( 'newsmandu_magazine_WP_Bootstrap_Navwalker' ) ) {
 	/**
-	 * newsmandu_magazine_WP_Bootstrap_Navwalker class.
+	 * Newsmandu magazine WP_Bootstrap_Navwalker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class newsmandu_magazine_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+	class Newsmandu_Magazine_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 		/**
 		 * Starts the list before the elements are added.

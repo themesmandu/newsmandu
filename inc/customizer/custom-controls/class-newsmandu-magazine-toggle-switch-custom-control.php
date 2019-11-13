@@ -1,12 +1,12 @@
 <?php
 /**
-	 * Toggle Switch Custom Control
-	 *
-	 * @author Anthony Hortin <http://maddisondesigns.com>
-	 * @license http://www.gnu.org/licenses/gpl-2.0.html
-	 * @link https://github.com/maddisondesigns
-	 */
-class newsmandu_magazine_Toggle_Switch_Custom_Control extends WP_Customize_Control {
+ * Toggle Switch Custom Control
+ *
+ * @author Anthony Hortin <http://maddisondesigns.com>
+ * @license http://www.gnu.org/licenses/gpl-2.0.html
+ * @link https://github.com/maddisondesigns
+ */
+class Newsmandu_Magazine_Toggle_Switch_Custom_Control extends WP_Customize_Control {
 		/**
 		 * The type of control being rendered
 		 */
