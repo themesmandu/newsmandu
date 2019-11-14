@@ -117,7 +117,7 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 			$add_below = 'div-comment';
 		} ?>
 
-<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
+<<?php echo wp_kses_post( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
 	id="comment-<?php comment_ID(); ?>">
 
 		<?php
@@ -149,14 +149,14 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 			<div class="comment-metadata">
 				<?php
 						/* translators: %s: Name of comment author name */
-						printf( __( '<span class="fn">%s</span> ', 'newsmandu-magazine' ), get_comment_author_link() );
+						printf( wp_kses_post( '<span class="fn">%s</span> ', 'newsmandu-magazine' ), get_comment_author_link() );
 				?>
-				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" class="date">
+				<a href="<?php echo esc_url( htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ); ?>" class="date">
 					<?php
 							printf(/* translators: 1: date, 2: time */
-								__( '%1$s at %2$s', 'newsmandu-magazine' ),
-								get_comment_date(),
-								get_comment_time()
+								esc_html__( '%1$s at %2$s', 'newsmandu-magazine' ),
+								esc_html( get_comment_date() ),
+								esc_html( get_comment_time() )
 							);
 					?>
 				</a>
@@ -168,7 +168,7 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 					if ( '0' === $comment->comment_approved ) {
 						?>
 					<em
-						class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'newsmandu-magazine' ); ?></em><br />
+						class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'newsmandu-magazine' ); ?></em><br />
 						<?php
 					}
 					?>
