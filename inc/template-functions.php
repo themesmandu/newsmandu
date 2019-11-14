@@ -381,7 +381,9 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 			?>
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 	<header class="entry-header pb-4">
-		<h1 class="entry-title"><?php single_post_title(); ?></h1>
+			<?php
+			the_title( sprintf( '<h1 class="entry-title">' ), '</h1>' );
+			?>
 	</header>
 </div>
 			<?php
@@ -408,7 +410,7 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 <header class="entry-header pb-4">
 		<h1 class="entry-title">
-			<span><?php echo esc_html__( 'Oops!', 'newsmandu-magazine' ); ?></span><?php echo esc_html__( ' That page can&#39;t be found.', 'newsmandu-magazine' ); ?>
+			<span><?php echo esc_html__( 'Oops!', 'newsmandu' ); ?></span><?php echo esc_html__( ' That page can&#39;t be found.', 'newsmandu-magazine' ); ?>
 		</h1>
 
 		<div class="error-404 not-found">
