@@ -33,7 +33,7 @@
 					'menu_id'         => false,
 					'depth'           => 8,
 					'menu_class'      => 'navbar-nav',
-					'fallback_cb'     => 'newsmandu_magazine_WP_Bootstrap_Navwalker::fallback',
+					'fallback_cb'     => 'Newsmandu_Magazine_WP_Bootstrap_Navwalker::fallback',
 				)
 			);
 			?>

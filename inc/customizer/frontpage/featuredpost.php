@@ -24,7 +24,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new newsmandu_magazine_Toggle_Switch_Custom_Control(
+	new Newsmandu_Magazine_Toggle_Switch_Custom_Control(
 		$wp_customize,
 		'featured_post_toggle',
 		array(
@@ -84,7 +84,7 @@ for ( $i = 0; $i < 3; $i++ ) {
 		)
 	);
 	$wp_customize->add_control(
-		new newsmandu_magazine_Dropdown_Posts_Control(
+		new Newsmandu_Magazine_Dropdown_Posts_Control(
 			$wp_customize,
 			'newsmandu_magazine_featured_post_' . $i,
 			array(
@@ -120,7 +120,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new newsmandu_magazine_Toggle_Switch_Custom_Control(
+	new Newsmandu_Magazine_Toggle_Switch_Custom_Control(
 		$wp_customize,
 		'featured_post_second_toggle',
 		array(
@@ -139,7 +139,7 @@ for ( $i = 0; $i <= 3; $i++ ) {
 		)
 	);
 	$wp_customize->add_control(
-		new newsmandu_magazine_Dropdown_Posts_Control(
+		new Newsmandu_Magazine_Dropdown_Posts_Control(
 			$wp_customize,
 			'newsmandu_magazine_featured_second_post_' . $i,
 			array(
@@ -175,7 +175,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new newsmandu_magazine_Toggle_Switch_Custom_Control(
+	new Newsmandu_Magazine_Toggle_Switch_Custom_Control(
 		$wp_customize,
 		'top_stories_toggle',
 		array(

@@ -7,7 +7,7 @@
 
 	// Category color selector.
 	$wp_customize->add_section(
-		'Newsmandu-Magazine_category_color',
+		'newsmandu_magazine_category_color',
 		array(
 			'title'       => esc_html__( 'Category Color Select', 'newsmandu-magazine' ),
 			'description' => esc_html__( 'Category Section Color Selector. (Category color will change only in top story section.)', 'newsmandu-magazine' ),
@@ -35,7 +35,7 @@
 				'category_bg_color_' . $category->term_id,
 				array(
 					'label'   => $category->name . ' Background Color',
-					'section' => 'Newsmandu-Magazine_category_color',
+					'section' => 'newsmandu_magazine_category_color',
 				)
 			)
 		);
@@ -53,7 +53,7 @@
 				'category_color_' . $category->term_id,
 				array(
 					'label'   => $category->name . ' Text Color',
-					'section' => 'Newsmandu-Magazine_category_color',
+					'section' => 'newsmandu_magazine_category_color',
 				)
 			)
 		);

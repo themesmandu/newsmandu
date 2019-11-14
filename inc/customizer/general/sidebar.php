@@ -12,7 +12,7 @@
 		array(
 			'default'           => 'right',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'Newsmandu-Magazine_sanitize_sidebar_position',
+			'sanitize_callback' => 'newsmandu_magazine_sanitize_sidebar_position',
 			'capability'        => 'edit_theme_options',
 		)
 	);

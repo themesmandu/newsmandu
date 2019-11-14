@@ -14,7 +14,7 @@
  */
 
 /* Check if Class Exists. */
-if ( ! class_exists( 'newsmandu_magazine_WP_Bootstrap_Navwalker' ) ) {
+if ( ! class_exists( 'Newsmandu_Magazine_WP_Bootstrap_Navwalker' ) ) {
 	/**
 	 * Newsmandu magazine WP_Bootstrap_Navwalker class.
 	 *

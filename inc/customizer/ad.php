@@ -9,7 +9,7 @@
 		'ad_setting1',
 		array(
 			'default'           => '',
-			'sanitize_callback' => 'Newsmandu-Magazine_iframe_sanitize',
+			'sanitize_callback' => 'newsmandu_magazine_iframe_sanitize',
 		)
 	);
 
@@ -29,7 +29,7 @@
 		'ad_setting2',
 		array(
 			'default'           => '',
-			'sanitize_callback' => 'Newsmandu-Magazine_iframe_sanitize',
+			'sanitize_callback' => 'newsmandu_magazine_iframe_sanitize',
 		)
 	);
 
@@ -49,7 +49,7 @@
 		'ad_setting3',
 		array(
 			'default'           => '',
-			'sanitize_callback' => 'Newsmandu-Magazine_iframe_sanitize',
+			'sanitize_callback' => 'newsmandu_magazine_iframe_sanitize',
 		)
 	);
 
@@ -69,7 +69,7 @@
 		'ad_setting4',
 		array(
 			'default'           => '',
-			'sanitize_callback' => 'Newsmandu-Magazine_iframe_sanitize',
+			'sanitize_callback' => 'newsmandu_magazine_iframe_sanitize',
 		)
 	);
 

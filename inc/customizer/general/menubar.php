@@ -12,7 +12,7 @@
 		array(
 			'default'           => 'standard',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'Newsmandu-Magazine_sanitize_menubar_mode',
+			'sanitize_callback' => 'newsmandu_magazine_sanitize_menubar_mode',
 			'capability'        => 'edit_theme_options',
 		)
 	);
@@ -40,7 +40,7 @@
 		array(
 			'default'           => 'default',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'Newsmandu-Magazine_sanitize_mainmenu_dropdown_mode',
+			'sanitize_callback' => 'newsmandu_magazine_sanitize_mainmenu_dropdown_mode',
 			'capability'        => 'edit_theme_options',
 		)
 	);

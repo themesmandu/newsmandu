@@ -25,7 +25,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new newsmandu_magazine_Toggle_Switch_Custom_Control(
+	new Newsmandu_Magazine_Toggle_Switch_Custom_Control(
 		$wp_customize,
 		'header_toggle',
 		array(

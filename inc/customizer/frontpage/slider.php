@@ -25,7 +25,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new newsmandu_magazine_Toggle_Switch_Custom_Control(
+	new Newsmandu_Magazine_Toggle_Switch_Custom_Control(
 		$wp_customize,
 		'slider_toggle',
 		array(
@@ -44,7 +44,7 @@ for ( $i = 0; $i < 4; $i++ ) {
 		)
 	);
 	$wp_customize->add_control(
-		new newsmandu_magazine_Dropdown_Posts_Control(
+		new Newsmandu_Magazine_Dropdown_Posts_Control(
 			$wp_customize,
 			'newsmandu_magazine_slider_post_' . $i,
 			array(
