@@ -33,7 +33,7 @@ function newsmandu_magazine_customize_register( $wp_customize ) {
 		/**
 		* Custom customizer controls.
 		*/
-		require get_template_directory() . '/inc/customizer/custom-controls/class-newsmandu-toggle-switch-custom-control.php';
+		require get_template_directory() . '/inc/customizer/custom-controls/class-newsmandu-magazine-toggle-switch-custom-control.php';
 	}
 	/**
 	 *

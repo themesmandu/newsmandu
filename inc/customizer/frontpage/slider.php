@@ -6,7 +6,7 @@
  */
 
 /* Add dropdown post control */
-require get_template_directory() . '/inc/class-newsmandu-dropdown-posts-control.php';
+require get_template_directory() . '/inc/class-newsmandu-magazine-dropdown-posts-control.php';
 $wp_customize->add_section(
 	'frontpage_slider',
 	array(
