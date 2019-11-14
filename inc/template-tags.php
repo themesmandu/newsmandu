@@ -13,16 +13,13 @@ if ( ! function_exists( 'newsmandu_magazine_entry_summary' ) ) :
 	 * Template part which displays post excerpts on the posts page.
 	 */
 	function newsmandu_magazine_entry_summary() {
-
 		global $post;
 		$has_more = strpos( $post->post_content, '<!--more' );
-
 		if ( $has_more ) {
 			the_content();
 		} else {
 			the_excerpt();
 		}
-
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'newsmandu-magazine' ),
@@ -31,7 +28,6 @@ if ( ! function_exists( 'newsmandu_magazine_entry_summary' ) ) :
 		);
 	}
 endif;
-
 if ( ! function_exists( 'newsmandu_magazine_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
@@ -46,12 +42,9 @@ if ( ! function_exists( 'newsmandu_magazine_posted_on' ) ) :
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() )
 		);
-
 		echo '<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>'; // WPCS: XSS OK.
-
 	}
 endif;
-
 if ( ! function_exists( 'newsmandu_magazine_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
@@ -62,12 +55,9 @@ if ( ! function_exists( 'newsmandu_magazine_posted_by' ) ) :
 			esc_html_x( 'By %s', 'post author', 'newsmandu-magazine' ),
 			'<span class="author vcard"><a class="url fn n bypostauthor" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
-
 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
 	}
 endif;
-
 if ( ! function_exists( 'newsmandu_magazine_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -80,21 +70,17 @@ if ( ! function_exists( 'newsmandu_magazine_entry_footer' ) ) :
 			if ( $categories_list ) {
 				echo '<span class="cat-links fot-tag"><i class="far fa-folder"></i>' . $categories_list . '</span>'; // WPCS: XSS OK.
 			}
-
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'newsmandu-magazine' ) );
 			if ( $tags_list ) {
 				echo '<span class="tags-links fot-tag"><i class="fas fa-tags"></i>' . $tags_list . '</span>'; // WPCS: XSS OK.
 			}
 		}
-
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link fot-tag">';
 			comments_popup_link( 'Leave a Comment', '<i class="far fa-comment"></i> 1', '<i class="far fa-comments"></i> %', '', 'Comments are off for this post' );
-
 			echo '</span>';
 		}
-
 		edit_post_link(
 			sprintf(
 				wp_kses(
@@ -113,8 +99,6 @@ if ( ! function_exists( 'newsmandu_magazine_entry_footer' ) ) :
 		);
 	}
 endif;
-
-
 if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 	/**
 	 * Used as a callback by wp_list_comments() for displaying the comments.
@@ -155,8 +139,8 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 			<figure>
 				<?php
 						// Display avatar unless size is set to 0.
-				if ( $args['avatar_size'] !== 0 ) {
-					$avatar_size = ! empty( $args['avatar_size'] ) ? $args['avatar_size'] : 70; // set default avatar size
+				if ( 0 !== $args['avatar_size'] ) {
+					$avatar_size = ! empty( $args['avatar_size'] ) ? $args['avatar_size'] : 70; // set default avatar size.
 					echo get_avatar( $comment, $avatar_size );
 				}
 				?>
@@ -169,7 +153,6 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 				?>
 				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" class="date">
 					<?php
-
 							printf(/* translators: 1: date, 2: time */
 								__( '%1$s at %2$s', 'newsmandu-magazine' ),
 								get_comment_date(),
@@ -182,7 +165,7 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 					<div class="comment-text"><?php comment_text(); ?></div><!-- .comment-text -->
 					<?php
 							// Display comment moderation text.
-					if ( $comment->comment_approved === '0' ) {
+					if ( '0' === $comment->comment_approved ) {
 						?>
 					<em
 						class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'newsmandu-magazine' ); ?></em><br />
@@ -222,8 +205,6 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 		endswitch; // End comment_type check.
 	}
 endif;
-
-
 /**
  * Display the class for layout div wrapper.
  *
@@ -233,7 +214,6 @@ function newsmandu_magazine_layout_class( $classes = '' ) {
 	// Separates classes with a single space.
 	echo 'class="' . join( ' ', newsmandu_magazine_set_layout_class( $classes ) ) . '"'; // WPCS: XSS OK.
 }
-
 /**
  * Adds custom class.
  *
@@ -241,24 +221,18 @@ function newsmandu_magazine_layout_class( $classes = '' ) {
  * @return array
  */
 function newsmandu_magazine_set_layout_class( $class = '' ) {
-
 	// Define classes array.
 	$classes = array();
-
 	// Grid classes.
 	if ( ( is_home() || is_archive() ) && ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = '';
 	}
-
 	$classes = array_map( 'esc_attr', $classes );
-
 	// Apply filters to entry post class for child theming.
 	$classes = apply_filters( 'newsmandu_magazine_set_layout_class', $classes );
-
 	// Classes array.
 	return array_unique( $classes );
 }
-
 /**
  * Display the class for content wrapper div.
  *
@@ -268,7 +242,6 @@ function newsmandu_magazine_content_class( $classes = '' ) {
 	// Separates classes with a single space.
 	echo ' ' . join( ' ', newsmandu_magazine_set_content_class( $classes ) );// WPCS: XSS OK.
 }
-
 /**
  * Adds custom class.
  *
@@ -276,28 +249,22 @@ function newsmandu_magazine_content_class( $classes = '' ) {
  * @return array
  */
 function newsmandu_magazine_set_content_class( $class = '' ) {
-
 	// Define classes array.
 	$classes = array();
 	if ( is_single() ) {
 		$classes[] = 'col-md-10';
 	}
 	$classes[] = 'col-md-8';
-
 	// Centered.
 	if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_position' ) === 'none' ) {
 		$classes[] = 'offset-md-2';
 	}
-
 	$classes = array_map( 'esc_attr', $classes );
-
 	// Apply filters to entry post class for child theming.
 	$classes = apply_filters( 'newsmandu_magazine_set_content_class', $classes );
-
 	// Classes array.
 	return array_unique( $classes );
 }
-
 /**
  * Condition function.
  * This is a static front page and not the latest posts page.
@@ -342,7 +309,6 @@ function expanded_alowed_tags() {
 	$my_allowed['style'] = array(
 		'types' => array(),
 	);
-
 	// script.
 	$my_allowed['script'] = array(
 		'src' => array(),
