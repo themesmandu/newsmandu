@@ -8,10 +8,10 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-Newsmandu-Magazine is best suited for blog website.
+Newsmandu Magazine is best suited for blog website.
 
 == Description ==
-Newsmandu-Magazine Theme is a clean, modern responsive Wordpress theme focused on magazine and news portal sites.  With the organized and attractive layouts, it is much easier to display your robust content throughout the theme. The sample demo content is just one click away with the import feature. This helps you quickly overview what the theme has to offer. Whether you want to have a magazine or newspaper style, this theme works well for both. Documentation http://themesmandu.com/documentation/Newsmandu-Magazine/. Demo http://demo.themesmandu.com/newsmandu/.
+Newsmandu Magazine Theme is a clean, modern responsive Wordpress theme focused on magazine and news portal sites.  With the organized and attractive layouts, it is much easier to display your robust content throughout the theme. The sample demo content is just one click away with the import feature. This helps you quickly overview what the theme has to offer. Whether you want to have a magazine or newspaper style, this theme works well for both. Documentation http://themesmandu.com/documentation/Newsmandu Magazine/. Demo http://demo.themesmandu.com/newsmandu/.
 
 == Installation ==
 
@@ -23,12 +23,12 @@ Newsmandu-Magazine Theme is a clean, modern responsive Wordpress theme focused o
 
 = Does this theme support any plugins? =
 
-Newsmandu-Magazine includes support for Infinite Scroll in Jetpack.
+Newsmandu Magazine includes support for Infinite Scroll in Jetpack.
 
 == Copyright ==
 
-Newsmandu-Magazine theme WordPress Theme, Copyright 2019 themesmandu.com
-Newsmandu-Magazine theme is distributed under the terms of the GNU GPL
+Newsmandu Magazine theme WordPress Theme, Copyright 2019 themesmandu.com
+Newsmandu Magazine theme is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -43,7 +43,7 @@ GNU General Public License for more details.
 
 == Resources ==
 
-Newsmandu-Magazine bundles the following third-party resources:
+Newsmandu Magazine bundles the following third-party resources:
 
 * Underscores, (C) 2012-2019 Automattic, Inc.,
 License: [GPLv2 or later]
