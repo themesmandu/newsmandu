@@ -377,7 +377,7 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 	function newsmandu_magazine_header_page_title() {
 		if ( is_front_page() ) :
 			return;
-		elseif ( is_home() || is_singular() ) :
+		elseif ( is_singular() ) :
 			?>
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 	<header class="entry-header pb-4">
@@ -417,6 +417,14 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 			<?php get_search_form(); ?>
 		</div>
 		</header>
+</div>
+			<?php
+		elseif ( is_home() ) :
+			?>
+<div class="header-img" style="background-image:url( <?php header_image(); ?> );">
+	<header class="entry-header pb-4">
+		<h1 class="entry-title"><?php single_post_title(); ?></h1>
+	</header>
 </div>
 			<?php
 		endif;
