@@ -85,7 +85,7 @@ https://stocksnap.io/photo/S4P1EEYET5
 
 StockSnap_6JEHS8PBHP.JPG
 License: CC0 1.0 Universal (CC0 1.0)
-https://stocksnap.io/photo/6JEHS8PBHP
+https://stocksnap.io/photo/6JEHS8PBHP   
 
 
 StockSnap_XT3HZBE9GI.JPG
@@ -100,5 +100,7 @@ https://stocksnap.io/photo/XT3HZBE9GI
 
 == Upgrade Notice ==
 
-= 1.0 - November 13 2019 =
-* Initial release.
+= 1.0.1 - November 13 2019 =
+
+* Updated release.
+fixed header title, theme options
