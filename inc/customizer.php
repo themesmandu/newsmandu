@@ -104,7 +104,7 @@ function newsmandu_magazine_customize_register( $wp_customize ) {
 	 *
 	 * Add Panel Advertisment Section Settings
 	 */
-	$wp_customize->add_section(
+	$wp_customize->add_panel(
 		'ad_section',
 		array(
 			'title'      => __( 'Advertisement Settings', 'newsmandu-magazine' ),
@@ -113,7 +113,9 @@ function newsmandu_magazine_customize_register( $wp_customize ) {
 		)
 	);
 	// load destination color picker option.
-	require get_template_directory() . '/inc/customizer/ad.php';
+	require get_template_directory() . '/inc/customizer/ad/adforheader.php';
+	require get_template_directory() . '/inc/customizer/ad/adforfrontpage.php';
+	require get_template_directory() . '/inc/customizer/ad/adforblog.php';
 }
 	// END Options.
 	add_action( 'customize_register', 'newsmandu_magazine_customize_register' );
