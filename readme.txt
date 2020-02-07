@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Newsmandu Magazine is best suited for blog website.
 
 == Description ==
-Newsmandu Magazine Theme is a clean, modern responsive Wordpress theme focused on magazine and news portal sites.  With the organized and attractive layouts, it is much easier to display your robust content throughout the theme. The sample demo content is just one click away with the import feature. This helps you quickly overview what the theme has to offer. Whether you want to have a magazine or newspaper style, this theme works well for both. Documentation http://themesmandu.com/documentation/Newsmandu Magazine/.
+Newsmandu Magazine Theme is a clean, modern responsive WordPress theme focused on magazine and news portal sites.  With the organized and attractive layouts, it is much easier to display your robust content throughout the theme. The sample demo content is just one click away with the import feature. This helps you quickly overview what the theme has to offer. Whether you want to have a magazine or newspaper style, this theme works well for both. Documentation http://themesmandu.com/documentation/Newsmandu Magazine/.
 
 == Installation ==
 
