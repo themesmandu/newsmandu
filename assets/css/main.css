@@ -31,12 +31,6 @@ a:link {
     cursor: pointer;
 }
 
-a:focus,
-a:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
 a:hover {
     text-decoration: none;
 }
@@ -69,11 +63,6 @@ label {
     font-weight: 700;
     color: #353638;
     display: block;
-}
-
-input:active,
-input:focus {
-    box-shadow: none !important;
 }
 
 input,
