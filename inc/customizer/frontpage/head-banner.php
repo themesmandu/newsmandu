@@ -116,7 +116,7 @@ $wp_customize->add_control(
 			'label'    => __( 'Button Link', 'newsmandu-magazine' ),
 			'section'  => 'frontpage_banner',
 			'settings' => 'banner_button_link',
-			'type'     => 'text',
+			'type'     => 'url',
 		)
 	)
 );

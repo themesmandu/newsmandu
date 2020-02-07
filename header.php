@@ -117,7 +117,7 @@
 				<?php
 				for ( $i = 0; $i < 4; $i++ ) :
 					?>
-				<li data-target="#header-slider" data-slide-to="<?php echo esc_html( $i ); ?>"
+				<li data-target="#header-slider" data-slide-to="<?php echo esc_attr( $i ); ?>"
 					class="<?php echo esc_html( 0 === $i ? 'active' : '' ); ?>"></li>
 				<?php endfor; ?>
 			</ul>
@@ -125,7 +125,7 @@
 				<?php
 				for ( $i = 0; $i < 4; $i++ ) :
 					?>
-				<div class="carousel-item <?php echo esc_html( 'carousel-item-' . $i ); ?> <?php echo esc_html( 0 === $i ? 'active' : '' ); ?>">
+				<div class="carousel-item <?php echo esc_attr( 'carousel-item-' . $i ); ?> <?php echo esc_html( 0 === $i ? 'active' : '' ); ?>">
 					<div class="carousel-wrap">
 						<div class="header-content">
 							<div class="container">
@@ -144,9 +144,9 @@
 										href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 								</h2>
 								<p><i class="fas fa-user-alt"><span class="detail"><a
-												href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_the_author(); ?></a></span></i>
+												href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author() ); ?></a></span></i>
 									<i class="far fa-calendar-alt"><span class="detail"><a
-												href="<?php echo esc_url( get_permalink() ); ?>"><?php echo get_the_date(); ?></a></span></i>
+												href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_date() ); ?></a></span></i>
 								</p>
 									<?php
 							endwhile;

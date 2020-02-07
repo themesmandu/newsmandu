@@ -13,7 +13,7 @@ get_header();
 <div class="container">
 	<div class="row">
 
-	<div id="primary" class="content-area <?php echo esc_html( col_class_filter() ); ?> ">
+	<div id="primary" class="content-area <?php echo esc_attr( col_class_filter() ); ?> ">
 		<main id="main" class="site-main">
 
 		<?php

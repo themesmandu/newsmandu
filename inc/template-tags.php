@@ -78,7 +78,7 @@ if ( ! function_exists( 'newsmandu_magazine_entry_footer' ) ) :
 		}
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link fot-tag">';
-			comments_popup_link( 'Leave a Comment', '<i class="far fa-comment"></i> 1', '<i class="far fa-comments"></i> %', '', 'Comments are off for this post' );
+			comments_popup_link( __( 'Leave a Comment', 'newsmandu-magazine' ), '<i class="far fa-comment"></i> 1', '<i class="far fa-comments"></i> %', '', __( 'Comments are off for this post', 'newsmandu-magazine' ) );
 			echo '</span>';
 		}
 		edit_post_link(
@@ -133,7 +133,7 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 			default:
 				if ( 'div' !== $args['style'] ) {
 					?>
-	<div id="div-comment-<?php comment_ID(); ?>" class="comment-meta">
+	<div id="div-comment-<?php esc_attr( comment_ID() ); ?>" class="comment-meta">
 			<?php } ?>
 		<div class="comment-author vcard">
 			<figure>

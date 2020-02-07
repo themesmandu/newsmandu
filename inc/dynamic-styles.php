@@ -19,7 +19,7 @@ function newsmandu_magazine_slider_dynamic_css() {
 		?>
 		<!-- Style for slider background -->
 		<style>
-		.carousel-item-<?php echo esc_html( $i ); ?>
+		.carousel-item-<?php echo absint( $i ); ?>
 		{
 			background-image: url(
 			<?php

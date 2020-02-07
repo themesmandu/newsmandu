@@ -360,7 +360,7 @@ function newsmandu_magazine_category( $post_id ) {
 	$cats = wp_get_post_terms( $post_id, 'category' );
 	foreach ( $cats as $cat ) {
 		?>
-		<span class="cat-links" style="background-color:<?php echo esc_html( get_theme_mod( 'category_bg_color_' . $cat->term_id ) ); ?>" > <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" style="color:<?php echo esc_html( get_theme_mod( 'category_color_' . $cat->term_id ) ); ?>"><?php echo esc_html( $cat->name ); ?> </a> </span> 
+		<span class="cat-links" style="background-color:<?php echo esc_attr( get_theme_mod( 'category_bg_color_' . $cat->term_id ) ); ?>" > <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" style="color:<?php echo esc_attr( get_theme_mod( 'category_color_' . $cat->term_id ) ); ?>"><?php echo esc_html( $cat->name ); ?> </a> </span> 
 
 
 		<?php

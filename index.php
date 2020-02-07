@@ -22,7 +22,7 @@ if ( is_home() ) {
 	get_template_part( 'template-parts/post/featured' );
 }
 ?>
-<div class="container <?php echo ( get_theme_mod( 'post_dropdown_setting' ) ? 'standard-container' : ' ' ); ?>">
+<div class="container <?php echo ( esc_attr( get_theme_mod( 'post_dropdown_setting' ) ? 'standard-container' : ' ' ) ); ?>">
 	<div class="row">
 
 		<div id="primary" class="content-area<?php newsmandu_magazine_content_class(); ?>">
