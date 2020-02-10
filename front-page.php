@@ -41,7 +41,7 @@ get_header();
 						$newsmandu_magazine_featured_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ) ) );
 						$newsmandu_magazine_featured_title       = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ) )->post_title );
 						$newsmandu_magazine_featured_date        = get_the_date( '', get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ) );
-						$author_id                      = get_post_field( 'post_author', get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ) );
+						$author_id                               = get_post_field( 'post_author', get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ) );
 						$newsmandu_magazine_featured_author      = get_the_author_meta( 'display_name', $author_id );
 						$newsmandu_magazine_featured_author_link = get_author_posts_url( $author_id );
 						$newsmandu_magazine_featured_category    = get_the_term_list( get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ), 'category' );
@@ -83,7 +83,7 @@ get_header();
 						$newsmandu_magazine_featured_second_image       = wp_get_attachment_url( get_post_thumbnail_id( get_theme_mod( 'newsmandu_magazine_featured_second_post_' . $i ) ) );
 						$newsmandu_magazine_featured_second_title       = apply_filters( 'the_title', get_post( get_theme_mod( 'newsmandu_magazine_featured_second_post_' . $i ) )->post_title );
 						$newsmandu_magazine_featured_second_date        = get_the_date( '', get_theme_mod( 'newsmandu_magazine_featured_second_post_' . $i ) );
-						$author_id_2                           = get_post_field( 'post_author', get_theme_mod( 'newsmandu_magazine_featured_second_post_' . $i ) );
+						$author_id_2                                    = get_post_field( 'post_author', get_theme_mod( 'newsmandu_magazine_featured_second_post_' . $i ) );
 						$newsmandu_magazine_featured_second_author      = get_the_author_meta( 'display_name', $author_id_2 );
 						$newsmandu_magazine_featured_second_author_link = get_author_posts_url( $author_id_2 );
 						?>
@@ -101,7 +101,7 @@ get_header();
 							<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_magazine_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_magazine_featured_second_title ); ?></a></h2>
 							<?php endif; ?>
 							<div class="meta">
-								<i class="fas fa-user-alt"><a href="<?php echo esc_url( $newsmandu_magazine_featured_second_author_link ); ?>"><?php echo esc_html__('By', 'newsmandu-magazine'); ?> <?php echo esc_html( $newsmandu_magazine_featured_second_author ); ?></a></i>
+								<i class="fas fa-user-alt"><a href="<?php echo esc_url( $newsmandu_magazine_featured_second_author_link ); ?>"><?php echo esc_html__( 'By', 'newsmandu-magazine' ); ?> <?php echo esc_html( $newsmandu_magazine_featured_second_author ); ?></a></i>
 								<i class="far fa-calendar-alt"><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_magazine_featured_second_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_magazine_featured_second_date ); ?></a></i>
 							</div>
 						</div>

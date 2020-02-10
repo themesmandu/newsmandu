@@ -73,7 +73,7 @@
 			</div><!-- .site-info -->
 		</div>
 	</div>
-	<button class="up-btn" id="up-btn" title="<?php echo esc_html__( 'Go to top', 'newsmandu-magazine' ); ?>"
+	<button class="up-btn" id="up-btn" title="<?php echo esc_attr__( 'Go to top', 'newsmandu-magazine' ); ?>"
 		style="display: block;"><i class="fas fa-chevron-up"></i></button>
 </footer>
 
