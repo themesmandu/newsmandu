@@ -104,3 +104,10 @@ https://stocksnap.io/photo/XT3HZBE9GI
 
 * Updated release.
 fixed header title, theme options
+
+== Upgrade Notice ==
+
+= 1.0.2 - February 2020 =
+
+* Updated release.
+fixed keyboard navigation, skip-links and bugs fixes.
