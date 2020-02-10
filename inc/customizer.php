@@ -115,7 +115,6 @@ function newsmandu_magazine_customize_register( $wp_customize ) {
 	// load destination color picker option.
 	require get_template_directory() . '/inc/customizer/ad/adforheader.php';
 	require get_template_directory() . '/inc/customizer/ad/adforfrontpage.php';
-	require get_template_directory() . '/inc/customizer/ad/adforblog.php';
 }
 	// END Options.
 	add_action( 'customize_register', 'newsmandu_magazine_customize_register' );
