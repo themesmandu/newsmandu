@@ -8,6 +8,16 @@ jQuery(document).ready(function($) {
         });
     });
 
+    $('.main-navigation ul li a').focus(function(){
+        $(this).parent().addClass('focus');
+    });
+
+    $('.main-navigation .sub-menu li').last().focusout(function(){
+        $('.main-navigation li').removeClass('focus');
+    });
+
+
+ 
     // Add class in navigation bar
 
     $(window).scroll(function() {
