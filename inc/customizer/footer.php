@@ -69,7 +69,7 @@ $wp_customize->add_control(
 	'footer_copyright_text',
 	array(
 		'label'       => esc_html__( 'Footer Copyright Text', 'newsmandu-magazine' ),
-		'description' => esc_html__( 'This text will appear before &copy; on footer copyright section', 'newsmandu-magazine' ),
+		'description' => esc_html__( 'This text will appear on footer copyright section', 'newsmandu-magazine' ),
 		'section'     => 'newsmandu_magazine_footer_section',
 		'type'        => 'textarea',
 	)
