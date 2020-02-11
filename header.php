@@ -57,10 +57,10 @@
 				</div>
 			</div>
 			<?php endif; ?>
-			<?php if ( ! get_theme_mod( 'ad_setting1' ) || ! bloginfo( 'name' ) || ! has_custom_logo() ) : ?>
+			<?php if ( ! get_theme_mod( 'ad_setting1' ) || ! get_bloginfo( 'name' ) || ! has_custom_logo() ) : ?>
 			<div class="site-logo">
 				<div class="container">
-				<?php if ( ! bloginfo( 'name' ) || ! has_custom_logo() ) : ?>
+				<?php if ( ! get_bloginfo( 'name' ) || ! has_custom_logo() ) : ?>
 					<div class="site-branding">
 						<?php if ( ! has_custom_logo() ) { ?>
 							<?php if ( is_front_page() && is_home() ) : ?>
@@ -163,6 +163,6 @@
 				<?php endfor; ?>
 			</div>
 		</div>
-		<?php endif; ?>
-		<?php endif; ?>
+		<?php endif; ?> <!-- End of div header slider -->
+		<?php endif; ?> <!-- end for condition check of is home page -->
 		<div id="content" class="content-wrap">

@@ -27,11 +27,7 @@ get_header();
 			 */
 			get_template_part( 'template-parts/post/single', get_post_format() );
 			?>
-			<section class="author-area">
-				<div class="container">
-					<?php newsmandu_magazine_authors_profile(); ?>
-				</div>
-			</section>
+			<?php newsmandu_magazine_authors_profile(); ?>
 			<section class="latest-post">
 				<h2><?php echo esc_html__( 'You may also like' ); ?></h2>
 				<div class="row top-post">

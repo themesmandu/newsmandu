@@ -45,60 +45,64 @@ GNU General Public License for more details.
 
 Newsmandu Magazine bundles the following third-party resources:
 
-* Underscores, (C) 2012-2019 Automattic, Inc.,
+* Underscores, (C) 2012-2019 Automattic, Inc.
+Source: https://underscores.me/
 License: [GPLv2 or later]
 license Url: https://github.com/Automattic/underscores.me/blob/master/license.txt
-Source: https://underscores.me/
 
 * Bootstrap, Copyright (c) 2011-2019 Twitter, Inc.
+Source: https://getbootstrap.com/
 License: MIT
 license Url: https://github.com/twbs/bootstrap/blob/master/LICENSE
-Source: https://getbootstrap.com/
 
-* Font Awesome,
+* Font Awesome
+Source: https://fontawesome.com/
 License: Icons — CC BY 4.0 License
 Fonts — SIL OFL 1.1 License
 license Url: https://fontawesome.com/v4.7.0/license/
-Source: https://fontawesome.com/
 
 * TGM-Plugin-Activation, Copyright (c) 2011, Thomas Griffin
+Source: http://tgmpluginactivation.com/
 License: GPL-2.0+
 license Url: https://github.com/TGMPA/TGM-Plugin-Activation/blob/develop/LICENSE.md
-Source: http://tgmpluginactivation.com/
 
 * Google Fonts
+Source: https://fonts.google.com/
 Fonts — SIL Open Font License, v1.1
 license Url: https://opensource.org/licenses/OFL-1.1
-Source: https://fonts.google.com/
 
 * Stocksnap
+Source: https://stocksnap.io/
 License: CC0 1.0 Universal (CC0 1.0)
 license Url: https://stocksnap.io/license
-Source: https://stocksnap.io/
 
 * Popper.js
+Source: https://popper.js.org/
 License: © 2016-2019 FEDERICO ZIVOLO & CONTRIBUTORS, 
 license Url: https://github.com/popperjs/popper-core/blob/master/LICENSE.md
-Source: https://popper.js.org/
 
 * Screenshot
 sea.JPG
+Source: https://stocksnap.io/photo/U4ML8WV1I2
 License: CC0 1.0 Universal (CC0 1.0)
-https://stocksnap.io/photo/U4ML8WV1I2
+license Url: https://stocksnap.io/license
 
 StockSnap_S4P1EEYET5.JPG
+Source: https://stocksnap.io/photo/S4P1EEYET5
 License: CC0 1.0 Universal (CC0 1.0)
-https://stocksnap.io/photo/S4P1EEYET5
+license Url: https://stocksnap.io/license
 
 
 StockSnap_6JEHS8PBHP.JPG
+Source: https://stocksnap.io/photo/6JEHS8PBHP   
 License: CC0 1.0 Universal (CC0 1.0)
-https://stocksnap.io/photo/6JEHS8PBHP   
+license Url: https://stocksnap.io/license
 
 
 StockSnap_XT3HZBE9GI.JPG
+Source: https://stocksnap.io/photo/XT3HZBE9GI
 License: CC0 1.0 Universal (CC0 1.0)
-https://stocksnap.io/photo/XT3HZBE9GI
+license Url: https://stocksnap.io/license
 
 
 == Changelog ==
@@ -115,7 +119,14 @@ fixed header title, theme options
 
 == Upgrade Notice ==
 
-= 1.0.2 - February 2020 =
+= 1.0.2 - February 8 2020 =
 
 * Updated release.
 fixed keyboard navigation, skip-links and bugs fixes.
+
+== Upgrade Notice ==
+
+= 1.0.3 - February 11 2020 =
+
+* Updated release.
+fixed keyboard navigation, skip-links, advertisement text area, code clean and other bugs fixes.
