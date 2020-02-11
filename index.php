@@ -21,8 +21,13 @@ get_header();
 if ( is_home() ) {
 	get_template_part( 'template-parts/post/featured' );
 }
+if ( get_theme_mod( 'post_dropdown_setting' ) ) {
+	$container_class = 'standard-container';
+} else {
+	$container_class = ' ';
+}
 ?>
-<div class="container <?php echo ( esc_attr( get_theme_mod( 'post_dropdown_setting' ) ? 'standard-container' : ' ' ) ); ?>">
+<div class="container <?php echo esc_attr( $container_class ); ?>">
 	<div class="row">
 
 		<div id="primary" class="content-area<?php newsmandu_magazine_content_class(); ?>">

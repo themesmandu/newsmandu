@@ -58,7 +58,7 @@ if ( get_post_type() === 'post' ) {
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					esc_html__( 'Continue reading%s', 'newsmandu-magazine' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
+					'<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span>'
 				)
 			);
 
