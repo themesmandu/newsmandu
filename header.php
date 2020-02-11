@@ -57,8 +57,10 @@
 				</div>
 			</div>
 			<?php endif; ?>
+			<?php if ( ! get_theme_mod( 'ad_setting1' ) || ! bloginfo( 'name' ) || ! has_custom_logo() ) : ?>
 			<div class="site-logo">
 				<div class="container">
+				<?php if ( ! bloginfo( 'name' ) || ! has_custom_logo() ) : ?>
 					<div class="site-branding">
 						<?php if ( ! has_custom_logo() ) { ?>
 							<?php if ( is_front_page() && is_home() ) : ?>
@@ -82,6 +84,7 @@
 						}
 						?>
 					</div>
+					<?php endif; ?> <!-- End of condition for site-banding div -->
 					<?php if ( get_theme_mod( 'ad_setting1' ) ) : ?>
 					<div class = 'ad-area'>
 						<?php echo wp_kses( get_theme_mod( 'ad_setting1' ), expanded_alowed_tags() ); ?>
@@ -89,6 +92,7 @@
 					<?php endif; ?> <!-- End of ad-area1 -->
 				</div>
 			</div>
+			<?php endif; ?> <!-- End of condition for site-logo div -->
 			<?php
 			if ( get_theme_mod( 'menubar_mode' ) === 'alt' ) {
 				// alternative navigation bar:
