@@ -133,7 +133,7 @@ if ( ! function_exists( 'newsmandu_magazine_comment' ) ) :
 			default:
 				if ( 'div' !== $args['style'] ) {
 					?>
-	<div id="div-comment-<?php esc_attr( comment_ID() ); ?>" class="comment-meta">
+	<div id="div-comment-<?php comment_ID(); ?>" class="comment-meta">
 			<?php } ?>
 		<div class="comment-author vcard">
 			<figure>
