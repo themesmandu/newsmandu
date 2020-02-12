@@ -73,7 +73,7 @@
 				<div class="author col-md-6">
 					<?php
 								/* translators: 1: Theme name, 2: Theme author. */
-								printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu-magazine' ), 'Newsmandu Magazine', '<a href="">Thememandu</a>' );
+								printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu-magazine' ), 'Newsmandu Magazine', '<a href="">Themesmandu</a>' );
 					?>
 				</div>
 			</div><!-- .site-info -->
