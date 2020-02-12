@@ -7,7 +7,6 @@
  * @package Newsmandu
  */
 
-
 // Setting toggle section.
 $wp_customize->add_setting(
 	'skip_blog_toggle',
