@@ -8,15 +8,27 @@ jQuery(document).ready(function($) {
         });
     });
 
+    // Menu show and hide in focus attributes
+
     $('.main-navigation ul li a').focus(function(){
         $(this).parent().addClass('focus');
     });
 
-    $('.main-navigation .sub-menu li').last().focusout(function(){
-        $('.main-navigation li').removeClass('focus');
+    $('.main-navigation ul li a').focusout(function(){
+        if(!$(this).parent().hasClass('menu-item-has-children')) {
+            $(this).parent().removeClass('focus');
+        }
     });
 
+    $('.main-navigation ul .sub-menu .menu-item:last-child').focusout(function() {
+        if(!$(this).hasClass('focus')) {
+            $(this).parent().parent().removeClass('focus');
+        }
+    });
 
+    $(window).click(function(){
+        $('.main-navigation ul li').removeClass('focus');
+    });
  
     // Add class in navigation bar
 
