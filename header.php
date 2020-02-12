@@ -57,7 +57,7 @@
 				</div>
 			</div>
 			<?php endif; ?>
-			<?php if ( get_theme_mod( 'ad_setting1' ) || get_bloginfo( 'name' ) || has_custom_logo() ) : ?>
+			<?php if ( get_theme_mod( 'ad_setting1' ) ||  get_bloginfo( 'name' ) ||  has_custom_logo() ) : ?>
 			<div class="site-logo">
 				<div class="container">
 				<?php if ( get_bloginfo( 'name' ) || has_custom_logo() ) : ?>
