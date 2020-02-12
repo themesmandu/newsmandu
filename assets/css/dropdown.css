@@ -215,6 +215,10 @@
         opacity: 0.7;
     }
 
+    #menu:focus {
+        border-color: #ffc107;;
+    }
+
     #menu span {
         display: block;
     }
