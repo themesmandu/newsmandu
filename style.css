@@ -24,11 +24,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .skip-link {
     font-size: 14px;
     font-weight: 600;
-    color: #000000;
+    color: #ffffff;
     position: absolute;
     top: 100%;
     left: 15px;
     z-index: 99;
+    padding: 5px 12px;
+    background-color: #007bff;
 }
 .skip-link :focus {
     scroll-behavior: smooth;
