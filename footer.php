@@ -13,11 +13,13 @@
 
 </div><!-- #content -->
 <footer id="footer">
+	<?php if ( is_active_sidebar( 'newswidget' ) ) : ?>
 	<div class="newsletter-widgets">
 		<div class="container">
 			<?php dynamic_sidebar( 'Newsletter-widget' ); ?>
 		</div>
 	</div>
+	<?php endif; ?> <!-- End of div newsletter -->
 	<?php if ( get_theme_mod( 'footer_instagram_title' ) || get_theme_mod( 'footer_instagram' ) ) : ?>
 	<div class="footer-gallery">
 		<?php if ( get_theme_mod( 'footer_instagram_title' ) ) : ?>
@@ -27,7 +29,7 @@
 			<?php echo do_shortcode( get_theme_mod( 'footer_instagram' ) ); ?>
 		<?php endif; ?>
 	</div>
-	<?php endif; ?>
+	<?php endif; ?> <!-- end of footer gallery -->
 	<div class="bottom-footer">
 		<div class="container">
 			<?php
@@ -47,6 +49,7 @@
 				<?php endforeach; ?>
 			</div>
 			<?php } ?>
+			<?php if ( has_nav_menu( 'social_menu' ) ) : ?>
 			<div class="row footer-social">
 				<div class="col-sm-12">
 				<?php
@@ -60,10 +63,13 @@
 				?>
 						</div>
 			</div>
+			<?php endif; ?> <!-- end of footer social div -->
 			<div class="site-info row">
+				<?php if ( get_theme_mod( 'footer_copyright_text' ) ) : ?>
 				<div class="copyright-text col-md-6">
 					<p><?php echo esc_html( get_theme_mod( 'footer_copyright_text' ) ); ?></p>
 				</div>
+				<?php endif; ?>
 				<div class="author col-md-6">
 					<?php
 								/* translators: 1: Theme name, 2: Theme author. */
