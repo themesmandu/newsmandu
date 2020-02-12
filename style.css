@@ -17,12 +17,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* -- Skip Link Styles -- */
 
+#top-header {
+    position: relative;
+}
+
 .skip-link {
     font-size: 14px;
     font-weight: 600;
     color: #000000;
     position: absolute;
-    top: 15%;
+    top: 100%;
     left: 15px;
     z-index: 99;
 }

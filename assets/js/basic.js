@@ -8,6 +8,17 @@ jQuery(document).ready(function($) {
         });
     });
 
+    // Add class in navigation bar
+
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 200) {
+            $('.main-navigation').addClass('fixed');
+        } else {
+            $('.main-navigation').removeClass('fixed');
+        }
+    });
+
     // Menu show and hide in focus attributes
 
     $('.main-navigation ul li a').focus(function(){
@@ -28,17 +39,7 @@ jQuery(document).ready(function($) {
 
     $(window).click(function(){
         $('.main-navigation ul li').removeClass('focus');
-    });
- 
-    // Add class in navigation bar
-
-    $(window).scroll(function() {
-        var height = $(window).scrollTop();
-        if (height > 200) {
-            $('.main-navigation').addClass('fixed');
-        } else {
-            $('.main-navigation').removeClass('fixed');
-        }
+        $('#navbarmenus').removeClass('show');
     });
 
     // Added class on dropdown menu span
@@ -61,6 +62,12 @@ jQuery(document).ready(function($) {
 
     $('.search-form .close-icon').click(function() {
         $('.search-form').removeClass('search-form-show');
+    });
+
+    // Menu bar show and hide in focus attributes
+
+    $('#navbarmenus .menu-item:last-child').focusout(function() {
+        $('#navbarmenus, .menu-overlay-bg').removeClass('show');
     });
 
     // To top Java Script
