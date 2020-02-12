@@ -352,6 +352,31 @@ function newsmandu_magazine_authors_profile() {
 		<?php
 	endif;
 }
+/**
+ * Displays Skip to the content link.
+ */
+function newsmandu_magazine_skip_link() {
+	if ( ( is_front_page() && get_theme_mod( 'slider_toggle' ) && get_theme_mod( 'skip_frontpage_toggle' ) ) ) :
+		?>
+			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
+		<?php
+	endif;
+	if ( ( is_archive() && get_theme_mod( 'skip_archive_toggle' ) ) ) :
+		?>
+		<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
+		<?php
+	endif;
+	if ( ( is_single() && get_theme_mod( 'skip_single_toggle' ) ) ) :
+		?>
+		<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
+		<?php
+	endif;
+	if ( ( is_home() && get_theme_mod( 'skip_blog_toggle' ) ) ) :
+		?>
+		<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
+		<?php
+	endif;
+}
 
 /**
  * Display category name and styles on front page.
@@ -381,7 +406,7 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 	function newsmandu_magazine_header_page_title() {
 		if ( is_front_page() ) :
 			return;
-		elseif ( is_singular() && header_image() ) :
+		elseif ( is_singular() && get_header_image() ) :
 			?>
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 	<header class="entry-header pb-4">
@@ -391,7 +416,7 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 	</header>
 </div>
 			<?php
-		elseif ( is_archive() && header_image() ) :
+		elseif ( is_archive() && get_header_image() ) :
 			?>
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 <header class="entry-header pb-4">
@@ -399,7 +424,7 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 		</header>
 </div>
 			<?php
-		elseif ( is_search() && header_image() ) :
+		elseif ( is_search() && get_header_image() ) :
 			?>
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 <header class="entry-header pb-4">
@@ -409,7 +434,7 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 			</header>
 </div>
 			<?php
-		elseif ( is_404() && header_image() ) :
+		elseif ( is_404() && get_header_image() ) :
 			?>
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 <header class="entry-header pb-4">
@@ -423,7 +448,7 @@ if ( ! function_exists( 'newsmandu_magazine_header_page_title' ) ) :
 		</header>
 </div>
 			<?php
-		elseif ( is_home() && header_image() ) :
+		elseif ( is_home() && get_header_image() ) :
 			?>
 <div class="header-img" style="background-image:url( <?php header_image(); ?> );">
 	<header class="entry-header pb-4">

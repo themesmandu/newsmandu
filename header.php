@@ -27,9 +27,7 @@
 			<span></span>
 		</div>
 		<header id="top-header" class="site-header" role="banner">
-			<?php if ( get_theme_mod( 'slider_toggle' ) ) : ?>
-			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
-			<?php endif; ?> <!-- end of skip link -->
+			<?php newsmandu_magazine_skip_link(); ?>
 			<?php if ( get_theme_mod( 'top_menu_toggle' ) ) : ?>
 			<div class="top-menu">
 				<div class="container">
