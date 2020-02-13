@@ -59,11 +59,11 @@
 							'theme_location' => 'social_menu',
 						)
 					);
-									endif;
+					endif;
 				?>
-						</div>
-			</div>
-			<?php endif; ?> <!-- end of footer social div -->
+				</div>
+			</div> <!-- end of footer social div -->
+			<?php endif; ?>
 			<div class="site-info row">
 				<?php if ( get_theme_mod( 'footer_copyright_text' ) ) : ?>
 				<div class="copyright-text col-md-6">
@@ -72,8 +72,8 @@
 				<?php endif; ?>
 				<div class="author col-md-6">
 					<?php
-								/* translators: 1: Theme name, 2: Theme author. */
-								printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu-magazine' ), 'Newsmandu Magazine', '<a href="">Themesmandu</a>' );
+						/* translators: 1: Theme name, 2: Theme author. */
+						printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsmandu-magazine' ), 'Newsmandu Magazine', '<a href="">Themesmandu</a>' );
 					?>
 				</div>
 			</div><!-- .site-info -->

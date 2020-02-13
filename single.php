@@ -29,7 +29,7 @@ get_header();
 			?>
 			<?php newsmandu_magazine_authors_profile(); ?>
 			<section class="latest-post">
-				<h2><?php echo esc_html__( 'You may also like' ); ?></h2>
+				<h2><?php echo esc_html__( 'You may also like', 'newsmandu-magazine' ); ?></h2>
 				<div class="row top-post">
 					<?php newsmandu_magazine_latest_post(); ?>
 				</div>

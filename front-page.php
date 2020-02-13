@@ -54,7 +54,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 				<div class="entries-desc">
-						<?php echo wp_kses_post( $newsmandu_magazine_featured_category ); ?>	<span>|</span><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_magazine_featured_date ); ?></a> 
+						<?php echo wp_kses_post( $newsmandu_magazine_featured_category ); ?><span>|</span><a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_magazine_featured_date ); ?></a> 
 						<?php if ( $newsmandu_magazine_featured_title ) : ?>
 						<h2><a href="<?php echo esc_url( get_permalink( get_theme_mod( 'newsmandu_magazine_featured_post_' . $i ) ) ); ?>"><?php echo esc_html( $newsmandu_magazine_featured_title ); ?></a></h2>
 					<?php endif; ?>
@@ -66,7 +66,7 @@ get_header();
 					<?php endif; ?>
 				</div>	
 			</div>
-					<?php endforeach; ?>
+			<?php endforeach; ?>
 		</div>
 			<?php endif; ?><!-- End of featured post toggle -->
 		<?php endif; ?><!-- End of Active count Loop -->
