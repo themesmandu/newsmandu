@@ -177,7 +177,7 @@ if ( ! function_exists( 'newsmandu_magazine_iframe_sanitize' ) ) {
 	 * @return integer  Sanitized value
 	 */
 	function newsmandu_magazine_iframe_sanitize( $input ) {
-		return wp_kses( $input, expanded_alowed_tags() );
+		return wp_kses( $input, newsmandu_magazine_expanded_alowed_tags() );
 	}
 }
 

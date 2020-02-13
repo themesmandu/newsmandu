@@ -62,19 +62,19 @@ function newsmandu_magazine_register_required_plugins() {
 		array(
 			'name'     => esc_html__( 'Contact Form 7', 'newsmandu-magazine' ),
 			'slug'     => 'contact-form-7',
-			'required' => true,
+			'required' => false,
 		),
 
 		array(
 			'name'     => esc_html__( 'Newsletter', 'newsmandu-magazine' ),
 			'slug'     => 'newsletter',
-			'required' => true,
+			'required' => false,
 		),
 
 		array(
 			'name'     => esc_html__( 'Smash Balloon Instagram Feed', 'newsmandu-magazine' ),
 			'slug'     => 'instagram-feed',
-			'required' => true,
+			'required' => false,
 		),
 	);
 

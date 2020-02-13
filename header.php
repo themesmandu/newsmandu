@@ -87,7 +87,7 @@
 					<?php endif; ?> <!-- End of condition for site-banding div -->
 					<?php if ( get_theme_mod( 'ad_setting1' ) ) : ?>
 					<div class = 'ad-area'>
-						<?php echo wp_kses( get_theme_mod( 'ad_setting1' ), expanded_alowed_tags() ); ?>
+						<?php echo wp_kses( get_theme_mod( 'ad_setting1' ), newsmandu_magazine_expanded_alowed_tags() ); ?>
 					</div>
 					<?php endif; ?> <!-- End of ad-area1 -->
 				</div>

@@ -26,7 +26,7 @@
 		<h2><?php echo esc_html( get_theme_mod( 'footer_instagram_title' ) ); ?></h2>
 		<?php endif; ?>
 		<?php if ( get_theme_mod( 'footer_instagram' ) ) : ?>
-			<?php echo do_shortcode( get_theme_mod( 'footer_instagram' ) ); ?>
+			<?php echo wp_kses( do_shortcode( get_theme_mod( 'footer_instagram' ) ), newsmandu_magazine_expanded_alowed_tags() ); ?>
 		<?php endif; ?>
 	</div>
 	<?php endif; ?> <!-- end of footer gallery -->

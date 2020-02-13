@@ -72,7 +72,7 @@ get_header();
 		<?php endif; ?><!-- End of Active count Loop -->
 			<?php if ( get_theme_mod( 'ad_setting2' ) ) : ?>
 		<div class = 'ad-area'>
-				<?php echo wp_kses( get_theme_mod( 'ad_setting2' ), expanded_alowed_tags() ); ?>
+				<?php echo wp_kses( get_theme_mod( 'ad_setting2' ), newsmandu_magazine_expanded_alowed_tags() ); ?>
 		</div>
 		<?php endif; ?> <!-- End of ad-area1 -->
 			<?php if ( 0 !== count( $activesec ) ) : ?>
@@ -158,7 +158,7 @@ get_header();
 		</div>
 		<?php if ( get_theme_mod( 'ad_setting3' ) ) : ?>
 		<div class = 'ad-area'>
-			<?php echo wp_kses( get_theme_mod( 'ad_setting3' ), expanded_alowed_tags() ); ?>
+			<?php echo wp_kses( get_theme_mod( 'ad_setting3' ), newsmandu_magazine_expanded_alowed_tags() ); ?>
 		</div>
 		<?php endif; ?> <!-- End of ad-area2 -->
 		<div class="row">

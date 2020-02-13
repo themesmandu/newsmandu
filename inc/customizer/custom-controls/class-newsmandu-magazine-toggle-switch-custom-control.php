@@ -15,7 +15,7 @@ class Newsmandu_Magazine_Toggle_Switch_Custom_Control extends WP_Customize_Contr
 		 * Enqueue our scripts and styles
 		 */
 	public function enqueue() {
-		wp_enqueue_style( 'toggle-switch', get_template_directory_uri() . '/assets/admin/customizer/toggle-switch.css', array(), '1.0', 'all' );
+		wp_enqueue_style( 'newsmandu-magazine-toggle-switch', get_template_directory_uri() . '/assets/admin/customizer/toggle-switch.css', array(), '1.0', 'all' );
 	}
 		/**
 		 * Render the control in the customizer

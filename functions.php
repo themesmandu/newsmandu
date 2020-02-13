@@ -43,10 +43,10 @@ if ( ! function_exists( 'newsmandu_magazine_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Custom Image Sizes.
-		add_image_size( 'newsmandu-thumb-750-300', 750, 300, true ); // crop.
-		add_image_size( 'newsmandu-featured-900-600', 900, 600, true ); // crop.
-		add_image_size( 'newsmandu-1080-400', 1080, 400, true );
-		add_image_size( 'newsmandu-cover-image', 1200, 9999 );
+		add_image_size( 'newsmandu-magazine-thumb-750-300', 750, 300, true ); // crop.
+		add_image_size( 'newsmandu-magazine-featured-900-600', 900, 600, true ); // crop.
+		add_image_size( 'newsmandu-magazine-1080-400', 1080, 400, true );
+		add_image_size( 'newsmandu-magazine-cover-image', 1200, 9999 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -198,7 +198,7 @@ function newsmandu_magazine_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'newsmandu-style' ), '4.1.2' );
 
 	// Theme styles.
-	wp_enqueue_style( 'newsmandu-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'newsmandu-magazine-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
 	// Loading main stylesheet.
 	wp_enqueue_style( 'newsmandu-magazine-main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'newsmandu-style' ), wp_get_theme()->get( 'Version' ) );
@@ -212,10 +212,10 @@ function newsmandu_magazine_scripts() {
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.min.js', array(), '4.1.2', true );
 
 	// Theme added JavaScript: Added by Developers.
-	wp_enqueue_script( 'newsmandu-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'newsmandu-magazine-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
 	// Font Nunito And Advent Pro.
-	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap', true );
+	wp_enqueue_style( 'newsmandu-magazine-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

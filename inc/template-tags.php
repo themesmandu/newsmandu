@@ -275,7 +275,7 @@ function newsmandu_magazine_is_frontpage() {
 /**
  *  Filters tags.
  */
-function expanded_alowed_tags() {
+function newsmandu_magazine_expanded_alowed_tags() {
 	$my_allowed = wp_kses_allowed_html( 'post' );
 	// iframe.
 	$my_allowed['iframe'] = array(
