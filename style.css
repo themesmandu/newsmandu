@@ -30,10 +30,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     left: 15px;
     z-index: 99;
     padding: 5px 12px;
-    background-color: #007bff;
+    background-color: #000000;
 }
-.skip-link :focus {
+.skip-link:focus {
     scroll-behavior: smooth;
+    border: 2px solid #007bff;
 }
 
 .skip-link:hover {

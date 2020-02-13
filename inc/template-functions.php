@@ -340,7 +340,7 @@ function newsmandu_magazine_authors_profile() {
 						</div>
 						<div class="author-detail col-md-9">
 							<div class="author-name">
-								<h3><?php echo esc_html__( 'Author:','newsmandu-magazine' ); ?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( the_author_meta( 'display_name' ) ); ?></a></h3>
+								<h3><?php echo esc_html__( 'Author:', 'newsmandu-magazine' ); ?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( the_author_meta( 'display_name' ) ); ?></a></h3>
 							</div>
 							<div class="author-desc">
 								<p><?php echo esc_textarea( the_author_meta( 'description' ) ); ?></p>

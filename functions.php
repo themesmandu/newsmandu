@@ -192,19 +192,19 @@ add_action( 'widgets_init', 'newsmandu_magazine_widgets_init' );
 function newsmandu_magazine_scripts() {
 
 	// Bootstrap reboot styles.
-	wp_enqueue_style( 'bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'newsmandu-style' ), '4.1.2' );
+	wp_enqueue_style( 'bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'newsmandu-magazine-style' ), '4.1.2' );
 
 	// Bootstrap styles.
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'newsmandu-style' ), '4.1.2' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'newsmandu-magazine-style' ), '4.1.2' );
 
 	// Theme styles.
 	wp_enqueue_style( 'newsmandu-magazine-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
 	// Loading main stylesheet.
-	wp_enqueue_style( 'newsmandu-magazine-main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'newsmandu-style' ), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'newsmandu-magazine-main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'newsmandu-magazine-style' ), wp_get_theme()->get( 'Version' ) );
 
 	// Add font-awesome fonts, used in the main stylesheet.
-	wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'newsmandu-style' ), '5.7.2' );
+	wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'newsmandu-magazine-style' ), '5.7.2' );
 
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
 	wp_enqueue_script( 'jquery' );
