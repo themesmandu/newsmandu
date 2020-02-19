@@ -689,13 +689,16 @@ article p img {
 }
 
 .blog #primary {
-    margin-top: -80px;
     background-color: #ffffff;
     position: unset;
 }
 
-.blog #primary:before,
-.single #primary:before,
+.blog #primary.with-banner {
+    margin-top: -80px;
+}
+
+.blog #primary.with-banner:before,
+.single #primary.with-banner:before,
 .featured-section.with-slider:before,
 .featured-section.with-banner:before {
     content: '';
@@ -764,8 +767,11 @@ article p img {
 /* -- Single Page Styles -- */
 
 .single #primary {
-    margin: -30px 0 0;
     position: unset;
+}
+
+.single #primary.with-banner {
+    margin: -30px 0 0;
 }
 
 .single #primary:before {
