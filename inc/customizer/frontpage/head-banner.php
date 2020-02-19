@@ -104,7 +104,7 @@ $wp_customize->add_setting(
 	'banner_button_link',
 	array(
 		'default'           => '',
-		'sanitize_callback' => 'esc_url',
+		'sanitize_callback' => 'esc_url_raw',
 	)
 );
 
