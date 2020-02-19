@@ -770,12 +770,13 @@ article p img {
 }
 
 .single #primary.with-banner {
+    background-color: #ffffff;
     margin: -30px 0 0;
 }
 
-.single #primary:before {
+.single #primary.with-banner:before {
     height: 30px;
-    top: -15px;
+    top: -30px;
 }
 
 .single article.card {
@@ -1678,14 +1679,14 @@ article {
         font-size: 12px;
     }
 
-    .single #primary:before {
+    .single #primary.with-banner:before {
         height: 30px;
         top: -15px;
     }
 
-    .blog #primary:before,
-    .single #primary:before,
-    .featured-section:before {
+    .blog #primary.with-banner:before,
+    .single #primary.with-banner:before,
+    .featured-section.with-slider:before {
         width: 30%;
     }
 
@@ -1877,14 +1878,14 @@ article {
         font-size: 12px;
     }
 
-    .single #primary:before {
+    .single #primary.with-banner:before {
         height: 30px;
         top: -13px;
     }
 
-    .blog #primary:before,
-    .single #primary:before,
-    .featured-section:before {
+    .blog #primary.with-banner:before,
+    .single #primary.with-banner:before,
+    .featured-section.with-slider:before {
         width: 34%;
     }
 
@@ -2106,14 +2107,14 @@ article {
         font-size: 12px;
     }
 
-    .single #primary:before {
+    .single #primary.with-banner:before {
         height: 30px;
         top: -15px;
     }
 
-    .blog #primary:before,
-    .single #primary:before,
-    .featured-section:before {
+    .blog #primary.with-banner:before,
+    .single #primary.with-banner:before,
+    .featured-section.with-slider:before {
         width: 38%;
     }
 
@@ -2301,9 +2302,9 @@ article {
         margin: auto;
     }
 
-    .blog #primary:before,
-    .single #primary:before,
-    .featured-section:before {
+    .blog #primary.with-banner:before,
+    .single #primary.with-banner:before,
+    .featured-section.with-slider:before {
         display: none;
     }
 
@@ -2339,14 +2340,14 @@ article {
         font-size: 12px;
     }
 
-    .single #primary:before {
+    .single #primary.with-banner:before {
         height: 30px;
         top: -15px;
     }
 
-    .blog #primary:before,
-    .single #primary:before,
-    .featured-section:before {
+    .blog #primary.with-banner:before,
+    .single #primary.with-banner:before,
+    .featured-section.with-slider:before {
         width: 64%;
     }
 
