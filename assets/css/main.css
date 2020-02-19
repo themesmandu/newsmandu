@@ -29,6 +29,7 @@ a {
 
 a:link {
     cursor: pointer;
+    outline-color: #2e5ea2;
 }
 
 a:hover {
@@ -73,10 +74,18 @@ select,
 .comment-respond .comment-form-comment textarea {
     font-size: 15px;
     color: #777777;
-    outline: none;
     border: 1px solid rgba(0, 0, 0, .14);
     width: 100%;
     padding: 12px 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+a:focus,
+button:focus {
+    outline-color: rgba(0, 123, 255, 1) !important;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, .3) !important;
 }
 
 input[type="submit"] {
@@ -687,7 +696,8 @@ article p img {
 
 .blog #primary:before,
 .single #primary:before,
-.featured-section.with-slider:before {
+.featured-section.with-slider:before,
+.featured-section.with-banner:before {
     content: '';
     width: 42%;
     height: 80px;
@@ -1157,7 +1167,8 @@ article {
     position: relative;
 }
 
-.featured-section.with-slider .container {
+.featured-section.with-slider .container,
+.featured-section.with-banner .container  {
     margin-top: -150px;
     padding-right: 55px;
 }
