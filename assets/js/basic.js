@@ -1,12 +1,18 @@
 jQuery(document).ready(function($) {
     // Skip to content smooth scroll JavaScript
 
-    $(document).ready(function() {
-        $('.skip-link').click(function(skip) {
-            skip.preventDefault();
-            $('html, body').animate({scrollTop: $(this.hash).offset().top }, 500);
+    $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $('.skip-link').click(function(event) {
+          if (this.hash !== '') {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({ scrollTop: $(hash).offset().top }, 500, function(){
+                window.location.hash = hash;
+            });
+          }
         });
-    });
+      });
 
     // Add class in navigation bar
 

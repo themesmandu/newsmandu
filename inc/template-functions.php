@@ -358,22 +358,22 @@ function newsmandu_magazine_authors_profile() {
 function newsmandu_magazine_skip_link() {
 	if ( ( is_front_page() && get_theme_mod( 'slider_toggle' ) && get_theme_mod( 'skip_frontpage_toggle' ) ) ) :
 		?>
-			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
+			<a class="skip-link" href="#content"><?php _e( 'To the content', 'newsmandu-magazine' ); ?></a>
 		<?php
 	endif;
 	if ( ( is_archive() && get_theme_mod( 'skip_archive_toggle' ) ) ) :
 		?>
-		<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
+		<a class="skip-link" href="#content"><?php _e( 'To the content', 'newsmandu-magazine' ); ?></a>
 		<?php
 	endif;
 	if ( ( is_single() && get_theme_mod( 'skip_single_toggle' ) ) ) :
 		?>
-		<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
+		<a class="skip-link" href="#content"><?php _e( 'To the content', 'newsmandu-magazine' ); ?></a>
 		<?php
 	endif;
 	if ( ( is_home() && get_theme_mod( 'skip_blog_toggle' ) ) ) :
 		?>
-		<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
+		<a class="skip-link" href="#content"><?php _e( 'To the content', 'newsmandu-magazine' ); ?></a>
 		<?php
 	endif;
 }
