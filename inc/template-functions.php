@@ -356,7 +356,7 @@ function newsmandu_magazine_authors_profile() {
  * Displays Skip to the content link.
  */
 function newsmandu_magazine_skip_link() {
-	if ( ( is_front_page() && get_theme_mod( 'slider_toggle' ) && get_theme_mod( 'skip_frontpage_toggle' ) ) ) :
+	if ( ( is_front_page() && get_theme_mod( 'slider_toggle' ) || get_theme_mod( 'header_toggle' ) && get_theme_mod( 'skip_frontpage_toggle' ) ) ) :
 		?>
 			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'newsmandu-magazine' ); ?></a>
 		<?php

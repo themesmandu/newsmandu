@@ -259,6 +259,10 @@ function newsmandu_magazine_set_content_class( $class = '' ) {
 	if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_position' ) === 'none' ) {
 		$classes[] = 'offset-md-2';
 	}
+	// NO header image.
+	if ( get_header_image() ) {
+		$classes [] = 'with-banner';
+	}
 	$classes = array_map( 'esc_attr', $classes );
 	// Apply filters to entry post class for child theming.
 	$classes = apply_filters( 'newsmandu_magazine_set_content_class', $classes );
