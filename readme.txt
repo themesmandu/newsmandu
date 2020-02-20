@@ -137,3 +137,10 @@ fixed keyboard navigation, skip-links, advertisement text area, code clean and o
 
 * Updated release.
 fixed keyboard navigation, skip-links and minor bug fixes.
+
+== Upgrade Notice ==
+
+= 1.0.5 - February 20 2020 =
+
+* Updated release.
+fixed keyboard navigation, skip-links, design issues and minor bug fixes.
