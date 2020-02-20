@@ -618,10 +618,9 @@ article time.published.updated {
 
 .widget_search .form .field {
     border: none;
-}
-
-.widget_search .form .input-group {
-    box-shadow: 2px 1px 25px 2px grey;
+    background-color: #333333;
+    color: #cdcfd2;
+    border-radius: 0;
 }
 
 .widget-area .widget h5 {
