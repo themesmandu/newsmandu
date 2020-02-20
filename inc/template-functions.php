@@ -187,7 +187,7 @@ function col_class_filter() {
 	if ( is_single() && get_header_image() && ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_position' ) === 'none' ) {
 		return 'col-md-12 with-banner';
 	}
-	if ( is_single() && is_active_sidebar( 'sidebar-1' ) && get_header_image() ) {
+	if ( is_single() && get_header_image() || is_active_sidebar( 'sidebar-1' ) ) {
 		return 'col-md-8 with-banner';
 	}
 }
