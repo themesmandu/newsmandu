@@ -53,8 +53,6 @@ function newsmandu_magazine_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/general/sidebar.php';
 	/* Section for entering the phone no.*/
 	require get_template_directory() . '/inc/customizer/general/site-detail.php';
-	/* Section for showing skip links*/
-	require get_template_directory() . '/inc/customizer/general/skip-link.php';
 	/**
 	 *
 	 * Add Section

@@ -27,7 +27,7 @@
 			<span></span>
 		</div>
 		<header id="top-header" class="site-header" role="banner">
-			<?php newsmandu_magazine_skip_link(); ?>
+			<a class="skip-link" href="#content"><?php _e( 'To the content', 'newsmandu-magazine' ); ?></a>
 			<?php if ( get_theme_mod( 'top_menu_toggle' ) ) : ?>
 			<div class="top-menu">
 				<div class="container">
