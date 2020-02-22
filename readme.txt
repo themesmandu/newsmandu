@@ -144,3 +144,10 @@ fixed keyboard navigation, skip-links and minor bug fixes.
 
 * Updated release.
 fixed keyboard navigation, skip-links, design issues and minor bug fixes.
+
+== Upgrade Notice ==
+
+= 1.0.6 - February 23 2020 =
+
+* Updated release.
+fixed keyboard navigation & skip-links.
